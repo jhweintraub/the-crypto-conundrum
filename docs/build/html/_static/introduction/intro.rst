@@ -5,7 +5,7 @@ If you&#39;ve come to this then you&#39;ve probably caught the Crypto fever goin
 Who am I
 ===========
 
-TESTINGMy name is Josh Weintraub. I'm just a guy studying Computer Science with an obsession for Cryptocurrency
+My name is Josh Weintraub. I'm just a guy studying Computer Science with an obsession for Cryptocurrency
 
 
 

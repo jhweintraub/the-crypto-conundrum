@@ -3,7 +3,7 @@ Coin Suggestions
 
 If you've kept reading to this point congratulations, as you finally have enough information for me to give you my recommendations on which coins to buy. I give you all the prior information so that you have the tools to research these on your own and know what to look for. 
 
-Before reading I have to restate this again: **I am not a financial advisor and none of this is financial advice. You are taking a financial risk I am not liable for any losses you may incur by following anything you read here.**
+Before reading I have to restate this again: **I am not a financial advisor. This is NOT financial advice. You are taking a financial risk I am not liable for any losses you may incur while trading due to reading this website.**
 
 I plan on doing a deep dive on these in later posts but this is my short version introduction to each of them.
 

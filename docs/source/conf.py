@@ -37,6 +37,7 @@ extensions = [
 master_doc = 'index'
 
 
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -52,6 +53,12 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+# html_logo = 'ethereum.svg'
+html_theme_options = {
+    'logo_only': False,
+    'display_version': False,
+    'collapse_navigation': True,
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

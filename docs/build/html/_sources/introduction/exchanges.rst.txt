@@ -27,11 +27,11 @@ For example, Kraken has several coins not available on Coinbase, and Binance has
 
 Robinhood
 ----------
-" **My friend said he just bought it on Robinhood. Can't I just do that?"**
+"**My friend said he just bought it on Robinhood. Can't I just do that?"**
 
 This is an important distinction. Robinhood is **NOT** a cryptocurrency exchange, and you don't really own any cryptocurrency when you buy with them. Buying, selling, and holding on Robinhood is **NOT** recommended. 
 
-The key phrase here is " **not your keys, not your crypto**". What that means is that when you "buy" on robinhood, they're just issuing you a statement that says you bought a certain amount of cryptocurrency and they hold it for you. You CANNOT send it to anyone, all you can do is sell it back to robinhood. In this sense you don't really own cryptocurrency cause you can't do anything with it. The reason this is different from say Coinbase who does that is that Coinbase and all other exchanges will provide both proof of their reserves and let you send it off the exchange. 
+The key phrase here is "**not your keys, not your crypto**". What that means is that when you "buy" on robinhood, they're just issuing you a statement that says you bought a certain amount of cryptocurrency and they hold it for you. You CANNOT send it to anyone, all you can do is sell it back to robinhood. In this sense you don't really own cryptocurrency cause you can't do anything with it. The reason this is different from say Coinbase who does that is that Coinbase and all other exchanges will provide both proof of their reserves and let you send it off the exchange. 
 
 Traditional Exchanges like Coinbase are custodial as well, meaning they hold it for you. However, If you buy bitcoin on Coinbase you can send it off of coinbase to a different address that you own, and do with it what you want. When Robinhood owns all of it and you can't do anything with it it opens the door to questionable fraud where they can lock you out of your own funds. This is what happened with Dogecoin and Gamestop, where the price was incredibly high and Robinhood arbitrarily suspended anybody's ability to buy or sell it. At that point you're out of luck. 
 
@@ -40,6 +40,6 @@ This risk is endemic to any exchange but the chances that Coinbase or Kraken or 
 Now What?
 ----------
 
-**"Alright so I bought some bitcoin, now what do I do".**
+**"Alright so I bought some bitcoin, now what do I do?"**
 
 That depends. When you buy the crypto like Bitcoin on an exchange like Coinbase, they essentially hold it for you and you can take it off and do with it what you like, much like a Bank and an ATM. If you plan on just holding it and selling it then you have nothing to do, just keep it on Coinbase and go about your life until you want to sell it and transfer it back to your bank account. Be Aware though, you WILL be required to pay capital gains Taxes on your sale if applicable. If you want to spend it then you should consider transferring it to an external wallet. However, this is not recommended for beginners, and only for more advanced users.

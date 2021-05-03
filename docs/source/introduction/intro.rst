@@ -1,4 +1,4 @@
-**Start Here!**
+Start Here!
 ==================================================================
 If you&#39;ve come to this then you&#39;ve probably caught the Crypto fever going on right now and want to know how you can get in on this sweet action and earn yourself a Lambo. Well look no further because i&#39;m here to teach you about investing in the world of Cryptocurrency.
 

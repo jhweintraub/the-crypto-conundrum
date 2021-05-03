@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Crypto-Bismol"
+project = "The Crypto-Conundrum"
 copyright = '2021, Josh Weintraub'
 author = 'Josh Weintraub'
 

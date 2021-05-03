@@ -3,10 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Crypto-Bismol, the future of finance.
-======================================================
+The Crypto-Conundrum, future of finance or the next Mortgage Bubble?
+=====================================================================
 
-Welcome to [Insert Name], my guide to the world of Cryptocurrency. It's here that i've chronicled all of my thoughts on Cryptocurrency and investing in it. For people new to the world of Crypto click on "Start here!" to read through the complete beginner's guide
+Welcome to The Crypto-Conundrum, my guide to the world of Cryptocurrency. It's here that i've chronicled all of my thoughts on Cryptocurrency and investing in it. For people new to the world of Crypto click on "Start here!" to read through the complete beginner's guide
 
 .. toctree::
    :maxdepth: 1

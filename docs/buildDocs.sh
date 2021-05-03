@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 ################################################################################
 # File:    buildDocs.sh
 # Purpose: Script that builds our documentation using sphinx and updates GitHub
@@ -82,6 +81,3 @@ git commit -am "${msg}"
 git push deploy gh-pages --force
  
 popd # return to main repo sandbox root
- 
-# exit cleanly
-exit 0

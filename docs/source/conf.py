@@ -58,7 +58,11 @@ html_theme_options = {
     'logo_only': False,
     'display_version': False,
     'collapse_navigation': True,
+
 }
+
+html_show_sourcelink = False
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

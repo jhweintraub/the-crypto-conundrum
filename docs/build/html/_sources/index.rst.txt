@@ -1,9 +1,9 @@
-.. Crypto-Bismol documentation master file, created by
+.. The Crypto-Conundrum documentation master file, created by
    sphinx-quickstart on Fri Apr 30 19:20:10 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-The Crypto-Conundrum, future of finance or the next Mortgage Bubble?
+The Crypto-Conundrum, future of finance or the next mortgage Bubble?
 =====================================================================
 
 Welcome to The Crypto-Conundrum, my guide to the world of Cryptocurrency. It's here that i've chronicled all of my thoughts on Cryptocurrency and investing in it. For people new to the world of Crypto click on "Start here!" to read through the complete beginner's guide

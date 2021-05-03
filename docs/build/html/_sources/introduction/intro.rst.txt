@@ -14,13 +14,14 @@ My Background
 
 
 1. A bachelor's in CS
-2. Currently working towards a Masters in Cyberscurity from a top 10 Technical University
+2. Currently working towards a Masters in Cyberscurity at the Georgia Institute of Technology
 3. 2 years experience as a Blockchain Engineer
-4. 3 Years Experience as a Web Developer
+4. 3 Years Experience as a Full-Stack Web Developer
 5. Top 25 Nationally Ranked Collegiate Debater
+6. 3-Years as a Cryptocurrency Investor
 
 I've spent 8 years as a Competitive Nationally Ranked collegiate Debater, honing my public speaking and persuasive skills, and I want to use those communication skills to help teach people about Cryptocurrency.
 
 Disclaimer
 ***************************
-**I am not a Financial Advisor. Nothing said here is financial advice. I am not liable for any losses you may incur while investing**
+**I am not a Financial Advisor. Nothing said here is financial advice. I am not liable for any losses you may incur while investing. Investing in Cryptocurrency is a financial risk and you should do your own research prior to any purchases.**

@@ -1,5 +1,5 @@
-**The Blockchain**
-===================
+The Blockchain
+===============
 
 How does it work?
 ------------------
@@ -31,7 +31,7 @@ I think this video explains it best:
 Security
 ---------
 
-Why is the Decentralization Superior?
+Why is Decentralization Superior?
 **************************************
 
 Every time a transaction occurs it propagates throughout the network of people running it (nodes) and they come to a consensus on the current status of the network after every transaction. This is better for security because while a hacker would only have to infiltrate one server at a bank to steal your money, to hack the blockchain they would have to infiltrate thousands of machines at once to create false transaction records. When no one person controls the system, no one person can cause chaos and destroy everything.

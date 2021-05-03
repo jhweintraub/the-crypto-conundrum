@@ -1,6 +1,6 @@
 Start Here!
 ==================================================================
-If you&#39;ve come to this then you&#39;ve probably caught the Crypto fever going on right now and want to know how you can get in on this sweet action and earn yourself a Lambo. Well look no further because i&#39;m here to teach you about investing in the world of Cryptocurrency.
+If you&#39;ve come to this then you&#39;ve probably caught the Crypto fever going on right now and want to know how you can get in on this sweet action and earn yourself a Lambo. Well look no further because I&#39;m here to teach you about investing in the world of Cryptocurrency.
 
 Who am I
 ===========
@@ -13,7 +13,7 @@ My Background
 ****************************
 
 
-1. A bachelor's in CS
+1. A bachelor's in CS from the University of Georgia (Go Dawgs!)
 2. Currently working towards a Masters in Cyberscurity at the Georgia Institute of Technology
 3. 2 years experience as a Blockchain Engineer
 4. 3 Years Experience as a Full-Stack Web Developer

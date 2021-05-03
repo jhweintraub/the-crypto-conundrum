@@ -23,6 +23,9 @@ Welcome to The Crypto-Conundrum, my guide to the world of Cryptocurrency. It's h
    introduction/coin_suggestions
 
 
+Shoutout to Roey Shoshan for coming up with the name!
+
+
 
 Indices and tables
 ==================

@@ -22,7 +22,11 @@ Transaction Fees
 	Every transaction contains a transaction "fee", a small amount added to the transaction that gets paid by the sender, to the person who adds the block to the chain. Think of it like a credit card transaction. The store you are exchanging with pays the credit card company for the ability to take cards, but with this you pay a small fee to process the transaction in exchange for the ability to use cryptocurrency. This fee is independent of the amount being sent, meaning if you send $5 or $5 million the fee should be the same. You can increase this fee to incentivize the transaction to be sent faster, or a lower one if you're willing to wait for your transaction to be confirmed.
 
 
-This video explains it very well: https://www.youtube.com/watch?v=bBC-nXj3Ng4
+I think this video explains it best:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bBC-nXj3Ng4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Security
 ---------
@@ -31,6 +35,12 @@ Why is the Decentralization Superior?
 **************************************
 
 Every time a transaction occurs it propagates throughout the network of people running it (nodes) and they come to a consensus on the current status of the network after every transaction. This is better for security because while a hacker would only have to infiltrate one server at a bank to steal your money, to hack the blockchain they would have to infiltrate thousands of machines at once to create false transaction records. When no one person controls the system, no one person can cause chaos and destroy everything.
+
+I think Vitalik Buterin (founder of ethereum) said it Best:
+
+	"I happily played World of Warcaft during 2007-2010, but one day Blizzard removed the damage component from my beloved warlock's Siphon Life spell. I cried myself to sleep, and on that day I realized what horrors centralized services can bring".
+
+	--  Vitalik Buterin, actual quote.
 
 Does this mean that cryptocurrency is unhackable?
 **************************************************

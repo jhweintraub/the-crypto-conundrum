@@ -23,4 +23,4 @@ I've spent 8 years as a Competitive Nationally Ranked collegiate Debater, honing
 
 Disclaimer
 ***************************
-**I am not a Financial Advisor. Nothing said here is financial advise. I am not liable for any losses you may incur while investing**
+**I am not a Financial Advisor. Nothing said here is financial advice. I am not liable for any losses you may incur while investing**

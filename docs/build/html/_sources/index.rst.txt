@@ -9,7 +9,7 @@ Crypto-Bismol. My Guide to Cryptocurrency!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Start Here!
+   :caption: Contents:
 
    introduction/intro
    introduction/popular_questions

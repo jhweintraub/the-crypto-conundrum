@@ -58,7 +58,8 @@ html_theme_options = {
     'logo_only': False,
     'display_version': False,
     'collapse_navigation': True,
-
+    'analytics_id': 'UA-196042419-1',
+    'analytics_anonymize_ip': True
 }
 
 html_show_sourcelink = False

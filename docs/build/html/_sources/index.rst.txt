@@ -8,6 +8,8 @@ The Crypto-Conundrum, future of finance or the next mortgage Bubble?
 
 Welcome to The Crypto-Conundrum, my guide to the world of Cryptocurrency. It's here that i've chronicled all of my thoughts on Cryptocurrency and investing in it. For people new to the world of Crypto click on "Start here!" to read through the complete beginner's guide
 
+
+
 .. toctree::
    :maxdepth: 1
    :caption: Introduction:
@@ -33,3 +35,15 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
+.. raw:: html
+	
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-G3CTCDY3HQ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-G3CTCDY3HQ');
+	</script>

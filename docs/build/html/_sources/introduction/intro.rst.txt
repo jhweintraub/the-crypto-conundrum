@@ -16,14 +16,17 @@ My Background
 2. Currently working towards a Master's in Cyberscurity at the Georgia Institute of Technology
 3. 2 years experience as a Blockchain Engineer
 4. 3 Years Experience as a Full-Stack Web Developer
-5. Top 25 Nationally Ranked Collegiate Debater
+5. Top 30 Nationally Ranked Collegiate Debater
 6. 3-Years as a Cryptocurrency Investor
 
-I've spent 8 years as a competitive nationally ranked collegiate debater, honing my public speaking and persuasive skills. I want to use those communication skills to help teach people about Cryptocurrency.
+I've spent 8 years as a competitive nationally ranked debater, at the HS and collegiate level, honing my public speaking and persuasive skills. I want to use those communication skills to help teach people about Cryptocurrency.
 
 If you want to know more about me, check out  :download:`My Resume <resume.pdf>`.
 
 If you want to support the site, send Ether and Ethereum Tokens to **0xaB5409b0E5a66AcC9D63f668414539A60a5917C1**
+
+.. image:: images/bossassbitch.jpeg
+		:width: 120pt
 
 Disclaimer
 ***************************

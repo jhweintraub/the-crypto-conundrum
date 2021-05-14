@@ -29,6 +29,7 @@ Welcome to The Crypto-Conundrum, my guide to the world of Cryptocurrency. It's h
    investment-strategies/rules
    investment-strategies/exit_strategies
    investment-strategies/due-dilligence
+   investment-strategies/security
 
 
 

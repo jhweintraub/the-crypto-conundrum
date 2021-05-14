@@ -40,7 +40,6 @@ Be wary of:
 	#. Various subreddits.
 	#. Discord Servers. 
 	#. Celebrities and Influencers
-	#. Elon Musk
 
 
 Crypto-Youtubers

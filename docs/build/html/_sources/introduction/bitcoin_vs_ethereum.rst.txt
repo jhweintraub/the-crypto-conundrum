@@ -8,6 +8,8 @@ Not necessarily. It's worth the most, but if you've ever spoken with me you know
 Scalability Issues
 -------------------
 
+**"Bitcoin doesn't scale?"**
+
 No it doesn't. If you ask me or most people in the ethereum community, they'll tell you that the bitcoin maximalists are willfully ignorant of this problem. The bitcoin blockchain was revolutionary for its time, literally creating the concept of the blockchain. It's not the best though. The first mover advantage can only get you so far, if you don't innovate to keep your lead, and the Bitcoin community has no plans to improve. 
 
 In its simplest terms, bitcoin blocks are created and processed at fixed intervals with fixed size. As more people try to use it to make transfers, the fees will become exorbitantly high, and speed incredibly slow. This is because transactions work on the auction model. Higher transaction fees incentivize miners to include it in the block, with the transactions with the highest fees being picked up first. 

@@ -9,6 +9,19 @@ The Crypto-Conundrum, future of finance or the next mortgage Bubble?
 Welcome to The Crypto-Conundrum, my guide to the world of Cryptocurrency. It's here that i've chronicled all of my thoughts on Cryptocurrency and investing in it. For people new to the world of Crypto click on "Start here!" to read through the complete beginner's guide
 
 
+If you a fan of the site please consider taking `This brief survey <https://forms.gle/xYaQFdG1pkACNz4d9>`_ to help me better understand how to improving the site. 
+
+I have plans on writing more articles on a wide range of topics. They take time to thoroughly research and write, so please be patient.
+
+Planned article series include:
+	#. Concluding the investment rules & strategies series
+	#. Deep-Dives into the coins listed in the `Coin Suggestions <https://thecryptoconundrum.net/introduction/coin_suggestions.html>`_ page.
+	#. Extended technical deep-dive into Ethereum and Ethereum 2.0
+	#. Current events breakdown
+
+
+Shoutout to Roey Shoshan for coming up with the name
+
 
 .. toctree::
    :maxdepth: 1
@@ -38,7 +51,6 @@ Welcome to The Crypto-Conundrum, my guide to the world of Cryptocurrency. It's h
 
 
 
-Shoutout to Roey Shoshan for coming up with the name!
 
 
 

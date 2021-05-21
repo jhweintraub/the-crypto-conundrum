@@ -13,6 +13,7 @@ There are a few rules that I think should generally apply to all trades. I'll ex
 #. Ensure your investment is safe.
 #. Be confident.
 #. Diversify.
+#. Staking. Set it & forget it.
 
 
 Let's talk about each one of those a little more in depth. 

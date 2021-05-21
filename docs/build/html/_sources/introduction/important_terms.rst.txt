@@ -65,11 +65,11 @@ Circulating Supply & Total Supply
 
 Market Cap 
 	Same as with Stocks, it is the Value of all the tokens in circulation
-	``Market Cap = Circulating Supply \ Price per Token``
+	``Market Cap = Circulating Supply * Price per Token``
 
 	There is also something known as a fully-diluted market cap. This is the value of the market cap if all tokens were in circulation
 
-	``Fully-Diluted Market Cap = Total Supply \ Price per Token``
+	``Fully-Diluted Market Cap = Total Supply * Price per Token``
 
 
 Investing Terminology

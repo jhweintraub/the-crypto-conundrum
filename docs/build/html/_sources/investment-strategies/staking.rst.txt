@@ -1,6 +1,6 @@
 Mining and Staking
 ======================
-If you've been on Coinbase, or any major exchange, you may have noticed an option presented to holders of certain coins known as "staking". This is a core concept for for ethereum and for many large cryptocurrencies. Hopefully, in this article you can get a new understanding of what staking is, how it works, and why you should do it. 
+If you've been on Coinbase, or any major exchange, you may have noticed an option presented to holders of certain coins known as "staking". This is a core concept for for Ethereum and for many large cryptocurrencies. Hopefully, in this article you can get a new understanding of what staking is, how it works, and why you should do it. 
 
 "Staking" is the term used for people participating in a `Proof-of-Stake based Cryptocurrency <https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/>`_. This is a consensus algorithm that is used to run the network. 
 
@@ -15,7 +15,7 @@ What is consensus
 Proof of Work
 ---------------
 
-In Bitcoin, this algorithm is known as Proof-of-Work (link needed). This algorithm allows any person to add a block to the chain, provided they first solve a difficult mathematical puzzle. In its simplest terms, this involves using computers to guess a very large secret number, very quickly. Being the first person to guess this number successfully gets to add the block to the chain. This privilege comes with a substantial monetary reward, paid out in cryptocurrency. The people who do this are known as "miners". For people in the tech-world, this is done using the `SHA-256 Hash algorithm <https://en.wikipedia.org/wiki/SHA-2>`_.
+In Bitcoin, this algorithm is known as `Proof-of-Work <https://en.wikipedia.org/wiki/Proof_of_work>`_. This algorithm allows any person to add a block to the chain, provided they first solve a difficult mathematical puzzle. In its simplest terms, this involves using computers to guess a very large secret number, very quickly. Being the first person to guess this number successfully gets to add the block to the chain. This privilege comes with a substantial monetary reward, paid out in cryptocurrency. The people who do this are known as "miners". For people in the tech-world, this is done using the `SHA-256 Hash algorithm <https://en.wikipedia.org/wiki/SHA-2>`_ for Bitcoin.
 
 The person who adds the block to the chain gets two things:
 	#. The sum of all the transaction fees of the transactions included in the block.
@@ -27,16 +27,19 @@ The problem is that these miners do not cooperate with eachother. They are compe
 
 Image Source: `3Blue1Brown <https://www.youtube.com/watch?v=bBC-nXj3Ng4&t=1130s>`_.
 
+
+*It is important to note, that when people talking about the energy usage associated with Bitcoin, it is the energy needed to run the computers, which must come from somewhere. As I write this (May 2021), most of that energy still comes from fossil fuels, which is environmentally very damaging. If we were to switch to entirely renewables to power these operations it would become less of an issue. The power consumption itself is worrying but the source is a larger concern in terms of environmentalism.*
+
 Halvings
 ---------
 
-This coinbase reward is present in all currencies, regardless of its consensus algorithm. However, in coins like bitcoin, the value can change. In Bitcoin's algorithm, this number decreases over time, until eventually it reaches zero. When the value of the reward drops, this is known as a "halving", because the reward gets cut in half.
+This coinbase reward is present in many proof-of-work currencies such as Bitcoin. However, in coins like Bitcoin, the value can change. In Bitcoin's algorithm, this number decreases over time, until eventually it reaches zero. When the value of the reward drops, this is known as a "halving", because the reward gets cut in half.
 
 .. image:: images/halving_chart.png
 
-Using math, this system works out to the last new bitcoin being created at a supply of 21 Million. This won't happen for a very long time. When it does though, this doesn't mean miners won't have anything to do. When the last bitcoin is mined, miners will still receive the transaction fees for each transaction they confirm. 
+Using math, this system works out to the last new bitcoin being created at a supply of 21 Million. This won't happen for a very long time. When it does though, this doesn't mean miners won't have anything to do. When the last bitcoin is mined, miners will still receive the transaction fees for each transaction they confirm in their mined-block.
 
-In coins like Ethereum, this halving doesn't occur. This is because the reward is set by the community and has no hard cap of coins. However, and I will explain this in a later article, it is expected that with current supply and changes to the network, ethereum's supply should stablize at around ``~120 Million Ether``
+In coins like Ethereum, this halving doesn't occur. This is because the reward is set by the community and has no hard cap of coins. However, and I will explain this in a later article, it is expected that with current supply and changes to the network protocol, ethereum's supply should stablize at around ``~120 Million Ether``
 
 
 Proof of Stake
@@ -46,9 +49,12 @@ In Proof of Stake, this system is more streamlined. Anyone can still propose a b
 
 You need a stake in the outcome and skin in the game to prevent people from acting dishonestly. There are no miners, only "stakers". You first put up a bond in cryptocurrency for the right to propose blocks. If you propose a block that is rejected by the network, or act dishonestly, your bond is liquidated and you forfeit the right to it. This creates a financial incentive to be honest. 
 
-The network then randomly selects a person from the pool of stakers to propose each block. However, unlike a Proof-of-Work system, where only the person who approves the block profits, everyone profits in a proof of stake system. 
+The network then randomly selects a person from the pool of stakers to propose each block. If your stake is larger, your chance of being selected to produce a given block rises as well. However, unlike a Proof-of-Work system, where only the person who approves the block profits, everyone profits in a proof of stake system. 
 
-Even if you don't propose a block, by confirming valid blocks and rejecting invalid ones proposed by others, you are rewarded with a small amount of cryptocurrency. You still must put up a "bond" to do this. This amount earned by stakers fluctuates based on the number of stakers in the network and the community-designated reward. There is no longer a coinbase-reward, for each block. However, because the people creating the block no longer need to expend large amounts of energy to do so, there is no major loss on profitability.
+Even if you don't propose a block, by confirming valid blocks and rejecting invalid ones proposed by others, you are rewarded with a small amount of cryptocurrency. You still must put up a "bond" to do this. This amount earned by stakers fluctuates based on the number of stakers in the network and the community-designated reward. This also includes eliminating the block reward, creating a fixed supply of tokens. However, since the people creating the block no longer need to expend large amounts of energy to do so, there is no major loss on profitability. People forging the new blocks also earn the transaction fees associated with each transaction. This preserves the `auction model of transaction fees <https://www.bitcoinsuisse.com/research/decrypt/transaction-fees-markets-for-block-space>`_ to incentivize participation in the network, without making it too cumbersome. 
+
+
+Proof of Stake does NOT change anything about block timing, size, cost, etc. It is only a way to deciding how blocks are created and a consensus is reached.
 
 
 This system has 3 main advantages:
@@ -59,7 +65,7 @@ This system has 3 main advantages:
 Why should I stake my coins?
 ------------------------------
 
-If you plan on holding your coins for a long time, thinking they'll appreciate, then staking is a no-brainer. It's basically like earning interest on them, while also helping to secure the network. By staking Ethereum, you can earn `anywhere from 4-22% APY <https://ethereumprice.org/eth-2-calculator/>`_. It also helps to secure the network you are invested in by making it harder for a hacker to attack it. The amount earned fluctuates depending based on the number of people currently staking at any given time. 
+If you plan on holding your coins for a long time, thinking they'll appreciate, then staking is a no-brainer. It's basically like earning interest on them, while also helping to secure the network. By staking Ethereum, you can earn `anywhere from 4-22% APY <https://ethereumprice.org/eth-2-calculator/>`_. It also helps to secure the network you are invested in by making it harder for a hacker to attack it. The amount earned fluctuates depending on the number of people currently staking at any given time. 
 
 .. image:: images/staking_rewards.png
 
@@ -79,9 +85,9 @@ Pools:
 .. image:: images/rocketpool.png
 
 Self-Staking:
-	This is the most technically-difficult and only recommended for advanced users. It involves running a computer with the validating-node software yourself. This can be done on the cloud through services like AWS, or locally on your own machine. This gives the user the highest reward, as they don't have to pay any fees to anyone. However, there is an upfront cost that must be paid in order to run the machine. If it's on the cloud, it's an AWS bill. If it's building a machine at-home, its the cost of materials, etc. It's also important to make sure you are capable of maintaining a sufficiently fast and stable internet connection, as well as constant 24-hour power supply. Any outtages will reduce your earnings and miss blocks to validate. It's important to note that by running it yourself, you won't earn any more raw coins than anyone else, you simply get to keep more as you don't have to pay fees to anyone. If you are staking on ethereum, Keep that in mind before doing so. In terms of actually doing so, there are many `great guides <https://someresat.medium.com/guide-to-staking-on-ethereum-2-0-ubuntu-prysm-56f681646f74>`_ to staking, and is not very difficult. However, due to its complexity only power users and those with technical background are advised to do so.
+	This is the most technically-difficult and only recommended for advanced users. It involves running a computer with the validating-node software yourself. This can be done on the cloud through services like AWS, or locally on your own machine. This gives the user the highest reward, as they don't have to pay any fees to anyone. However, there is an upfront cost that must be paid in order to run the machine. If it's on the cloud, it's an AWS bill. If it's building a machine at-home, its the cost of materials, etc. It's also important to make sure you are capable of maintaining a sufficiently fast and stable internet connection, as well as constant 24-hour power supply. Any outtages will reduce your earnings and miss blocks to validate. It's important to note that by running it yourself, you won't earn any more raw coins than anyone else, you simply get to keep more as you don't have to pay fees to anyone. In terms of actually setting it up, there are many `great guides <https://someresat.medium.com/guide-to-staking-on-ethereum-2-0-ubuntu-prysm-56f681646f74>`_ to staking, and is not very difficult. However, due to its complexity only power users and those with technical background are advised to.
 
 Use `this site <https://www.stakingrewards.com/earn/ethereum-2-0>`_, to find out what your staking rewards could be, and the best choice for you
 
-**If you are plannong on staking ethereum, those coins are going to be LOCKED AND ILLIQUID for at least the next 1-2 years until the upgrade to ethereum 2.0 is complete.**
+**If you are planning on staking Ethereum, those coins are going to be LOCKED AND ILLIQUID for at least the next 1-2 years until the upgrade to ethereum 2.0 is complete.**
 

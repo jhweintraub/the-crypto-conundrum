@@ -25,6 +25,8 @@ The problem is that these miners do not cooperate with eachother. They are compe
 
 .. image:: images/pow.png
 
+Image Source: `3Blue1Brown <https://www.youtube.com/watch?v=bBC-nXj3Ng4&t=1130s>`_.
+
 Halvings
 ---------
 

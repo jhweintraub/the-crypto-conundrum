@@ -48,6 +48,8 @@ If you owned a $5M diamond, would you go around town telling everyone? Probably 
 
 .. image:: images/wrench_attack.png
 
+Image Source: `XKCD <https://xkcd.com/538/>`_
+
 We call this the *$5 wrench attack*. The best way to avoid this is to **NOT TELL ANYONE HOW MUCH YOU HAVE**. Be humble, and be private.
 
 There are other things you should do. For example, if you have a very large amount of coins, consider splitting it into multiple different wallets. If something happens and you are extorted, this can help you avoid having to give up all of your keys. You could also consider placing it into a multi-signature wallet, and distributing the keys to multiple places/people you trust. Just be very careful with who you trust, and the ways they store it. Many large corporations and Non-Profit-Foundations use multi-sig wallets controlled by high ranking executives.

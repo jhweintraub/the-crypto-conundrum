@@ -15,6 +15,8 @@ As thousands of transactions occur every second, these transactions get bundled 
 
 When you say that you own "A bitcoin", what that really means is that there's a transaction line somewhere in the blockchain that says someone gave you 1 Bitcoin. There's no actual coin or value relating to any particular coin. It is simply a notation that says you own something in theory.
 
+Image Source: `3Blue1Brown <https://www.youtube.com/watch?v=bBC-nXj3Ng4&t=1130s>`_.
+
 
 Transaction Fees
 -----------------

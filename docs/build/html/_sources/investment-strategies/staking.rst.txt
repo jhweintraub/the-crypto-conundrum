@@ -83,11 +83,3 @@ Use `this site <https://www.stakingrewards.com/earn/ethereum-2-0>`_, to find out
 
 **If you are plannong on staking ethereum, those coins are going to be LOCKED AND ILLIQUID for at least the next 1-2 years until the upgrade to ethereum 2.0 is complete.**
 
-
-
-
-
- 
-
-
-

@@ -46,6 +46,7 @@ Shoutout to Roey Shoshan for coming up with the name
    investment-strategies/due-dilligence
    investment-strategies/security
    investment-strategies/confidence
+   investment-strategies/staking
 
 
 

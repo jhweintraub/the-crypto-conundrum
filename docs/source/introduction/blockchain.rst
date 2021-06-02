@@ -44,6 +44,9 @@ I think Vitalik Buterin (Inventor of Ethereum) said it Best:
 
 	--  Vitalik Buterin, actual quote.
 
+.. image:: images/decentralization.jpg
+
+
 Does this mean that Cryptocurrency is unhackable?
 **************************************************
 

@@ -26,7 +26,7 @@ The Issues:
 
 	#. Inflation vs. Deflation. 
 		#. Many people coming from the Bitcoin world have expressed reasonable concern about inflation. This comes from the rate at which new coins are created. This amount can change at any time with a community vote, and has in the past.
-		#. Ethereum has no halving mechanism, and no of a hard-cap, like Bitcoin's ``~21 Million``. 
+		#. Ethereum has no halving mechanism, and no hard-cap, like Bitcoin's ``~21 Million``. 
 
 EIP-1559 was not necesarrily intended to solve the latter, but in a way, it does. Let's look at what it does. Fair warning, this gets complicated so i'm going to do my very best to explain it. 
 
@@ -41,7 +41,7 @@ If you recall, the current gas limit is ``~12.5M gas`` per block. For each trans
 
 The *Base Fee* is a new value, representing the minimal amount a transaction can pay in fees. For example, if a block's *Base Fee* is ``50 Gwei/gas``, then no transaction can be included with less than that amount. You can have more, but no less. Anything extra you pay above the base fee is known as a *Miner Tip*. This goes directly to the miner.
 
-Alongside the base fee, eip-1559 also changes gas limit itself. For each successive block, a miner can increase the gas limit can ``± 12.5%`` per block, up to a limit of ``25M gas`` at its peak (2x the current limit). However, miner's can't exclusively choose to just keep block size large. The block size either increases or decreases based on the network congestion. Each time the block size goes up, so does the base fee
+Alongside the base fee, eip-1559 also changes gas limit itself. For each successive block, a miner can increase the gas limit can change ``± 12.5%`` per block, up to a limit of ``25M gas`` at its peak (2x the current limit). However, miner's can't exclusively choose to just keep block size large. The block size either increases or decreases based on the network congestion. Each time the block size goes up, so does the base fee
 
 When the number of transactions waiting to be confirmed is high, the successive blocks will increase size, and the base fee. This allows more transactions, but at a higher cost. The idea of this is to at some point make the fee high enough to dissuade some users from making a trade at that very moment. When this occurs, the network congestion will fall. 
 
@@ -53,20 +53,20 @@ When this congestion falls, so does the base fee and the block size. This contin
 
 You can set a base fee manually, lower than the current block base fee. If this happens then your transaction will sit in the waiting-pool (mempool) until a block with an equal or lower base fee.
 
-In case you're worried about block size changing, `don't be <https://notes.ethereum.org/@vbuterin/eip_1559_spikes>`_. 
+In case you're worried about block size changes causing more centralization, `don't be <https://notes.ethereum.org/@vbuterin/eip_1559_spikes>`_. 
 
 Issuance
 ---------
 
-For **every** block, the base-fee is **burned**. It is taken out of circulation. This means that for every transaction, **only** the *miner tip* will go to them directly. This is so that you can still choose to pay extra for a faster confirmation if you wish. For each block they produce, the miners **ONLY** get these tips, and the block reward, which is the same. 
+For **every** block, the base-fee is **burned**. It is taken out of circulation. This means that for every transaction, **only** the *miner tip* will go to them directly. This is so that you can still choose to pay extra for a faster confirmation if you wish. For each block they produce, the miners **ONLY** get these tips, and the block reward, which won't change unless decided by the community. 
 
 For reference, ether's issuance rate is currently at about ``~4.5% / year``. It is predicted that after this is implemented, it could stablize at ``~0.5-1% / year``. 
 
-However, over time, with periods of high network congestion, the amount of ether burned from the base fee can be **HIGHER** than the block reward. Creating a **NEGATIVE token issuance** per block. There is more taken out of existance than entering. 
+However, over time, with periods of high network congestion, the amount of ether burned from the base fee can be **HIGHER** than the block reward. Creating a **NEGATIVE token issuance** per block. There is more taken out of existence than entering. 
 
-This makes Ether deflationary. As a token holder, this is very good for you. Tbecause as ether supply starts to come down, your holdings become more valuable. If you're submitting a transaction, then this doesn't effect you anyways cause that eth is already being taken out of your account in the form of transaction fees. 
+This makes Ether deflationary. As a token holder, this is very good for you. As ether supply starts to come down, your holdings become more valuable. If you're submitting a transaction, then this doesn't effect you anyways cause that eth is already being taken out of your account in the form of transaction fees. 
 
-For reference, take a look at this chart. If eip-1559 were implemented years ago what the issuance rate would look like. Negative issurance is when the line goes below 0.
+For reference, take a look at this chart. If eip-1559 were implemented years ago what the issuance rate would look like. Negative issuance is when the line goes below 0.
 
 .. image:: images/1559_issuance.png
 
@@ -99,3 +99,5 @@ Thanks to community consensus and a large public support campaign the eip was ap
 I also think that the controversy and long road this proposal took to be implemented is a testament to the resillience and forward thinking nature of the Ethereum community. It shows just how many people are cconstantly committed to identifying and solving problems facing Ethereum.
 
 It's one of the things that originally drew me to Ethereum, and i'm excited to see where it goes from here. 
+
+I hope you enjoyed this series on Ethereum. The next article is a technically-detailed explanation of Ethereum for developers and people with tech backgrounds. It's not needed at all unless you're really interested in the inner mechanism that makes it work. 

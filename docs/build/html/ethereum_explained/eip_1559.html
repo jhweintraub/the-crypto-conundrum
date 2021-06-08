@@ -213,7 +213,7 @@
 <li><dl class="simple">
 <dt>Inflation vs. Deflation.</dt><dd><ol class="arabic simple">
 <li><p>Many people coming from the Bitcoin world have expressed reasonable concern about inflation. This comes from the rate at which new coins are created. This amount can change at any time with a community vote, and has in the past.</p></li>
-<li><p>Ethereum has no halving mechanism, and no of a hard-cap, like Bitcoin’s <code class="docutils literal notranslate"><span class="pre">~21</span> <span class="pre">Million</span></code>.</p></li>
+<li><p>Ethereum has no halving mechanism, and no hard-cap, like Bitcoin’s <code class="docutils literal notranslate"><span class="pre">~21</span> <span class="pre">Million</span></code>.</p></li>
 </ol>
 </dd>
 </dl>
@@ -229,21 +229,21 @@
 <p>Before we start, it’s important you understand how gas works. Check out the link <a class="reference external" href="https://thecryptoconundrum.net/ethereum_explained/gas.html#">here</a>. This is because it is a major change to how it operates.</p>
 <p>If you recall, the current gas limit is <code class="docutils literal notranslate"><span class="pre">~12.5M</span> <span class="pre">gas</span></code> per block. For each transaction per in the block, there is no gas floor only people trying to outbid eachother for space. This means there is no reasonable expectation of how little you can pay and still be included in a block. The solution to this is to introduce a new block parameter, <em>The Base Fee</em>. This is a value included in the block alongside hashes, gas limits, timestamps, etc.</p>
 <p>The <em>Base Fee</em> is a new value, representing the minimal amount a transaction can pay in fees. For example, if a block’s <em>Base Fee</em> is <code class="docutils literal notranslate"><span class="pre">50</span> <span class="pre">Gwei/gas</span></code>, then no transaction can be included with less than that amount. You can have more, but no less. Anything extra you pay above the base fee is known as a <em>Miner Tip</em>. This goes directly to the miner.</p>
-<p>Alongside the base fee, eip-1559 also changes gas limit itself. For each successive block, a miner can increase the gas limit can <code class="docutils literal notranslate"><span class="pre">±</span> <span class="pre">12.5%</span></code> per block, up to a limit of <code class="docutils literal notranslate"><span class="pre">25M</span> <span class="pre">gas</span></code> at its peak (2x the current limit). However, miner’s can’t exclusively choose to just keep block size large. The block size either increases or decreases based on the network congestion. Each time the block size goes up, so does the base fee</p>
+<p>Alongside the base fee, eip-1559 also changes gas limit itself. For each successive block, a miner can increase the gas limit can change <code class="docutils literal notranslate"><span class="pre">±</span> <span class="pre">12.5%</span></code> per block, up to a limit of <code class="docutils literal notranslate"><span class="pre">25M</span> <span class="pre">gas</span></code> at its peak (2x the current limit). However, miner’s can’t exclusively choose to just keep block size large. The block size either increases or decreases based on the network congestion. Each time the block size goes up, so does the base fee</p>
 <p>When the number of transactions waiting to be confirmed is high, the successive blocks will increase size, and the base fee. This allows more transactions, but at a higher cost. The idea of this is to at some point make the fee high enough to dissuade some users from making a trade at that very moment. When this occurs, the network congestion will fall.</p>
 <p>When this congestion falls, so does the base fee and the block size. This continues until the size and fee reach a natural <em>equilibrium</em>. The same thing occurs in the opposite direction. When congestion is low, the block size and base fee will decrease to encourage more transactions. This is until activity picks up slightly, and equilibrium is reached oncemore.</p>
 <img alt="../_images/1559_ex.png" src="../_images/1559_ex.png" />
 <p><em>Image Source: Finematics Youtube</em></p>
 <p>You can set a base fee manually, lower than the current block base fee. If this happens then your transaction will sit in the waiting-pool (mempool) until a block with an equal or lower base fee.</p>
-<p>In case you’re worried about block size changing, <a class="reference external" href="https://notes.ethereum.org/&#64;vbuterin/eip_1559_spikes">don’t be</a>.</p>
+<p>In case you’re worried about block size changes causing more centralization, <a class="reference external" href="https://notes.ethereum.org/&#64;vbuterin/eip_1559_spikes">don’t be</a>.</p>
 </div>
 <div class="section" id="issuance">
 <h2>Issuance<a class="headerlink" href="#issuance" title="Permalink to this headline">¶</a></h2>
-<p>For <strong>every</strong> block, the base-fee is <strong>burned</strong>. It is taken out of circulation. This means that for every transaction, <strong>only</strong> the <em>miner tip</em> will go to them directly. This is so that you can still choose to pay extra for a faster confirmation if you wish. For each block they produce, the miners <strong>ONLY</strong> get these tips, and the block reward, which is the same.</p>
+<p>For <strong>every</strong> block, the base-fee is <strong>burned</strong>. It is taken out of circulation. This means that for every transaction, <strong>only</strong> the <em>miner tip</em> will go to them directly. This is so that you can still choose to pay extra for a faster confirmation if you wish. For each block they produce, the miners <strong>ONLY</strong> get these tips, and the block reward, which won’t change unless decided by the community.</p>
 <p>For reference, ether’s issuance rate is currently at about <code class="docutils literal notranslate"><span class="pre">~4.5%</span> <span class="pre">/</span> <span class="pre">year</span></code>. It is predicted that after this is implemented, it could stablize at <code class="docutils literal notranslate"><span class="pre">~0.5-1%</span> <span class="pre">/</span> <span class="pre">year</span></code>.</p>
-<p>However, over time, with periods of high network congestion, the amount of ether burned from the base fee can be <strong>HIGHER</strong> than the block reward. Creating a <strong>NEGATIVE token issuance</strong> per block. There is more taken out of existance than entering.</p>
-<p>This makes Ether deflationary. As a token holder, this is very good for you. Tbecause as ether supply starts to come down, your holdings become more valuable. If you’re submitting a transaction, then this doesn’t effect you anyways cause that eth is already being taken out of your account in the form of transaction fees.</p>
-<p>For reference, take a look at this chart. If eip-1559 were implemented years ago what the issuance rate would look like. Negative issurance is when the line goes below 0.</p>
+<p>However, over time, with periods of high network congestion, the amount of ether burned from the base fee can be <strong>HIGHER</strong> than the block reward. Creating a <strong>NEGATIVE token issuance</strong> per block. There is more taken out of existence than entering.</p>
+<p>This makes Ether deflationary. As a token holder, this is very good for you. As ether supply starts to come down, your holdings become more valuable. If you’re submitting a transaction, then this doesn’t effect you anyways cause that eth is already being taken out of your account in the form of transaction fees.</p>
+<p>For reference, take a look at this chart. If eip-1559 were implemented years ago what the issuance rate would look like. Negative issuance is when the line goes below 0.</p>
 <img alt="../_images/1559_issuance.png" src="../_images/1559_issuance.png" />
 <img alt="../_images/eth_burnt.jpg" src="../_images/eth_burnt.jpg" />
 </div>
@@ -265,6 +265,7 @@
 </dl>
 <p>I also think that the controversy and long road this proposal took to be implemented is a testament to the resillience and forward thinking nature of the Ethereum community. It shows just how many people are cconstantly committed to identifying and solving problems facing Ethereum.</p>
 <p>It’s one of the things that originally drew me to Ethereum, and i’m excited to see where it goes from here.</p>
+<p>I hope you enjoyed this series on Ethereum. The next article is a technically-detailed explanation of Ethereum for developers and people with tech backgrounds. It’s not needed at all unless you’re really interested in the inner mechanism that makes it work.</p>
 </div>
 </div>
 

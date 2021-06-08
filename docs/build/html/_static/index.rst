@@ -14,10 +14,10 @@ If you a fan of the site please consider taking `This brief survey <https://form
 I have plans on writing more articles on a wide range of topics. They take time to thoroughly research and write, so please be patient.
 
 Planned article series include:
-	#. Concluding the investment rules & strategies series
-	#. Deep-Dives into the coins listed in the `Coin Suggestions <https://thecryptoconundrum.net/introduction/coin_suggestions.html>`_ page.
-	#. Extended technical deep-dive into Ethereum and Ethereum 2.0
-	#. Current events breakdown
+   #. Deep-Dives into the coins listed in the `Coin Suggestions <https://thecryptoconundrum.net/introduction/coin_suggestions.html>`_ page.
+   #. Deep-dives into major Dapps, such as Uniswap, DeFi, and governance.
+   #. Current events breakdown.
+
 
 
 Shoutout to Roey Shoshan for coming up with the name

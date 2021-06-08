@@ -35,7 +35,7 @@ Using a supply-demand structure, eip-1559 attempts to create a transaction-fee *
 Fee Structures
 ---------------
 
-Before we start, it's important you understand how gas works. Check out the link <here>. This is because it is a major change to how it operates. 
+Before we start, it's important you understand how gas works. Check out the link `here <https://thecryptoconundrum.net/ethereum_explained/gas.html#>`_. This is because it is a major change to how it operates. 
 
 If you recall, the current gas limit is ``~12.5M gas`` per block. For each transaction per in the block, there is no gas floor only people trying to outbid eachother for space. This means there is no reasonable expectation of how little you can pay and still be included in a block. The solution to this is to introduce a new block parameter, *The Base Fee*. This is a value included in the block alongside hashes, gas limits, timestamps, etc.
 

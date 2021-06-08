@@ -58,6 +58,7 @@ It's as easy as clicking a button. Install metamask and click the button below t
 		});
 
 		async function getAccount() {
+		  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
 		  const account = accounts[0];
 		  showAccount.innerHTML = account;
 		}

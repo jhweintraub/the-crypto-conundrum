@@ -139,6 +139,3 @@ If you have an address you plan on using for a long time or soliciting payments,
 .. image:: images/ens_tx.png
 	:width: 300px
 
-Disclaimer
-------------
-

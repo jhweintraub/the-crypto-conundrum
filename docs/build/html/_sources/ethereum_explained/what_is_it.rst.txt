@@ -5,10 +5,10 @@ This is the first article in a series, explaining everything the beginner needs 
 	#. What is Ethereum?
 	#. How does it work?
 	#. How do I use it?
+	#. What are transaction fees?
 	#. What are Ethereum Tokens?
 	#. What is Ethereum 2.0?
 	#. What is EIP-1559?
-	#. What is Layer 2?
 
 By the end of this series, you should know almost everything you need to know about how Ethereum works, it's current status, and where it's going.
 

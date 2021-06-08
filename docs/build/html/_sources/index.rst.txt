@@ -39,6 +39,20 @@ Shoutout to Roey Shoshan for coming up with the name
 
 .. toctree::
    :maxdepth: 1
+   :caption: Ethereum, Explained: 
+
+   ethereum_explained/what_is_it
+   ethereum_explained/how_it_works
+   ethereum_explained/usability
+   ethereum_explained/gas
+   ethereum_explained/tokens
+   ethereum_explained/eth2
+   ethereum_explained/eip_1559
+   ethereum_explained/developers_corner
+
+
+.. toctree::
+   :maxdepth: 1
    :caption: Investment Rules:  
 
    investment-strategies/rules

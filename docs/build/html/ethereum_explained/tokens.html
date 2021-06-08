@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Tokens &mdash; The Crypto-Conundrum v1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ethereum 2.0" href="eth2.html" />
+    <link rel="prev" title="Transaction Fees" href="gas.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> The Crypto-Conundrum
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">Start Here!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#who-am-i">Who am I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/popular_questions.html">Most Popular Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/blockchain.html">The Blockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/exchanges.html">Exchanges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/origins.html">Coin Origins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/important_terms.html">Important Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/bitcoin_vs_ethereum.html">Bitcoin Vs. Ethereum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/picking_coins.html">Picking the Right Coins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/coin_suggestions.html">Coin Suggestions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Ethereum, Explained:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="what_is_it.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_is_it.html#what-is-ethereum">What is Ethereum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_it_works.html">How Ethereum Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usability.html">How do I use it</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gas.html">Transaction Fees</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tokens</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-do-tokens-work">How do tokens work?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#erc-20-fungible">ERC-20 (Fungible)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#erc-721-non-fungible-nft-s">ERC-721 (Non-Fungible) (NFT’s)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stablecoins">Stablecoins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wrapped-tokens">Wrapped Tokens</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eth2.html">Ethereum 2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eip_1559.html">EIP-1559</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers_corner.html">Developers Corner</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Investment Rules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/rules.html">General Strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/exit_strategies.html">Define your exit strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/due-dilligence.html">Doing your Due-Dilligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/security.html">Securing your investment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/confidence.html">Be Confident</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/staking.html">Mining and Staking</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">The Crypto-Conundrum</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Tokens</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tokens">
+<h1>Tokens<a class="headerlink" href="#tokens" title="Permalink to this headline">¶</a></h1>
+<p>Tokens are an integral part of any cryptocurrency platform. They are tradeable assets, managed by smart contracts, holdable by any address.</p>
+<p>There are many different types of tokens, with their own value and use case. In this article, we’re going to walk through the 4 main types of tokens, what they do, and why we need them.</p>
+<div class="section" id="how-do-tokens-work">
+<h2>How do tokens work?<a class="headerlink" href="#how-do-tokens-work" title="Permalink to this headline">¶</a></h2>
+<p>All tokens are simply complicated smart contracts. Owning Ether means having line in the blockchain history of receiving Ether. These contracts act more like a normal database you would see at a bank. Just as your bank’s database says “x person’s account has y amount of money”, these contracts work the same way.</p>
+<p>The smart contract maintains a data structure and a collection of everyone’s balances. There is an array in the contract, that maps an address to a balance. So when you receive 1 Chainlink, the contract merely says: <em>add 1 to this address’ balance</em>. This address can be a user or a contract. When your wallet says you own 1 of these tokens, it merely checks the contract for your balance, and tells you.</p>
+<p>Because they are contracts, all token transactions must be paid in Ether. This is why the cost may be different. An Ether transfer costs <code class="docutils literal notranslate"><span class="pre">~21,000</span> <span class="pre">gas</span></code>, but a chainlink token transfer may cost <code class="docutils literal notranslate"><span class="pre">~65,000</span> <span class="pre">gas</span></code>. This must be paid in Ether only. This is also what I mean when I say the price of Ether is tied to the popularity of the network. You can’t use one without the other. Be aware of this before attempting to make transfers you cannot pay for. This also means that anyone in the world anywhere can build and deploy a token.</p>
+<p>There is also a permissioned element, that allows you to delegate control. Much as a bank will allow you to authorize someone to spend on your behalf, this works the same way. You can delegate permission to another address to spend a certain amount of money on your behalf, an <em>allowance</em>. This is often used by smart contracts such as uniswap. Let’s assume you own <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">BAT</span> <span class="pre">token</span></code>. If you want to trade for example: <code class="docutils literal notranslate"><span class="pre">50</span> <span class="pre">BAT</span></code> for Ether, you would authorize the Uniswap contract to spend <code class="docutils literal notranslate"><span class="pre">50</span> <span class="pre">BAT</span></code> and move it elsewhere. When you do, the BAT contract removes <code class="docutils literal notranslate"><span class="pre">50</span> <span class="pre">BAT</span></code> from your balance, and also takes away <code class="docutils literal notranslate"><span class="pre">50</span> <span class="pre">BAT</span></code> from Uniswap’s allowance. This allows contracts to move funds around and do complicated things for you.</p>
+<p>The way these contracts are built are known as <em>Token Standards</em>, a functional, minimum, and uniform specification for the token’s functionality. There are many, but the two main I’ll be discussing are Fungible (ERC-20) and Non-Fungible (ERC-721, NFT’s). ERC-20 stands for Ethereum Request for Comments.</p>
+</div>
+<div class="section" id="erc-20-fungible">
+<h2>ERC-20 (Fungible)<a class="headerlink" href="#erc-20-fungible" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://ethereum.org/en/developers/docs/standards/tokens/erc-20/">ERC-20 Token Stanard</a> is all about fungibility. Fungibility is the concept of how two assets of the same class are interchangeable. Take out a dollar bill from your wallet. That $1 dollar bills is fungible. This means that it can be traded for another dollar bill at the bank and have the value be the same. It is replaceable. Ether is fungible, because all Ether is exactly the same and replaceable. From a uniqueness perspective, your Ether is exactly the same as someone elses, and therefore has exactly the same value.</p>
+<p>New ones can be created and be exactly the same as previous ones, meaning they are cheap and easy to produce (gas wise). This is how most tokens are (Chainlink, BAT, Uniswap, etc.).</p>
+<p>Because they are all the same, they are often the ones used in governance in utility. For example, using a chainlink oracle. By sending chainlink, you are entitled to use their services based on how much. Given that these are in high demand, having all tokens be of equal value is important. The same goes with governance. You vote on something by depositing your tokens into a contract. The more tokens you have, the more voting power. This makes it efficient to determine the results by a simple tally for-or-against something. All of these things could theoretically be done with Non-Fungible tokens, but it would be a mess to implement.</p>
+</div>
+<div class="section" id="erc-721-non-fungible-nft-s">
+<h2>ERC-721 (Non-Fungible) (NFT’s)<a class="headerlink" href="#erc-721-non-fungible-nft-s" title="Permalink to this headline">¶</a></h2>
+<p>This is the one you’ve probably heard about. It’s what NFT’s are, Non-Fungible-Tokens. Unlike the ERC-20, every one of these is unique, because it has a tokenId, essentially a tracking number. Each one of these has what’s known as a <em>“URI”</em> (Uniform-Resource-Indicator). This denotes its uniqueness, as no-two tokens can have the same one. This tokenId, is used to recover the information related to this token. If the token represents a GIF, then the Id is used to recover the paintaing.</p>
+<p>However, this information is not stored on the chain. If your token is ownership of a GIF, it would be incredibly expensive and difficult to store on-chain. The token ID is merely used to identify a location, off chain, where the info is held. Let’s take this GIF example again. Let’s say the GIF you own is stored on a database somewhere, maintained by a company, that also faciliates auctions and sales. They generate some publicly-accessible API data about that GIF, its properties, and its ownership and put it out on the web. Your tokenId is the link to this data, which includes the location of the gif you own. This information will be unique, so it can’t be reproduced. Let me show you an example.</p>
+<a class="reference internal image-reference" href="../_images/nft_ex.jpg"><img alt="../_images/nft_ex.jpg" src="../_images/nft_ex.jpg" style="width: 200px;" /></a>
+<p>This is an image (shrunken) created by artist <a class="reference external" href="https://rarible.com/hashhead">HashHead</a>, and available on <a class="reference external" href="https://rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:878395?tab=details">Rarible</a>. It’s token ID is <code class="docutils literal notranslate"><span class="pre">878395</span></code> and the contract that keeps track of it is <a class="reference external" href="https://etherscan.io/address/0x60f80121c31a0d46b5279700f9df786054aa5ee5#readContract">0x60F80121C31A0d46B5279700f9DF786054aa5eE5</a>.</p>
+<p>When we look up the tokenURI, the contract gives us <a class="reference external" href="https://bafybeigxtcy3bxztt5ohu4dcsuodwpnhluiu76d65uc4r3i55f6ysznxtq.ipfs.dweb.link/">this link</a>. This URL is unique, and determined by a service known as the <a class="reference external" href="https://ipfs.io">Interplanetary File Service (IPFS)</a>. It contains the following data (JSON)</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SHA-Llama #9&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;SHA-Llama #9 of 10. Created using the SHA256 hash of the scaffold-level genome assembly of Lama glama (llama). Genome assembly can be found at https://www.ncbi.nlm.nih.gov/datasets/genomes/.&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;ipfs://ipfs/Qme5i8CawAVEvUNkHBgAq9JWBKAJHsqbeFScmJtbSBQkui/image.jpeg&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;external_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:878395&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;Size&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;trait_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Size&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;15000 x 15000 px&quot;</span>
+                <span class="p">}</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>As you can see, there’s a field called <em>image</em>. Visiting it pulls up the image I have displayed above. The point of this is that as the application Rarible hosts the image and a way to determine that you are the owner. Anyone can copy it, but the original version is there and identifiable.</p>
+<dl>
+<dt><strong>“Couldn’t I just download the image and make my own NFT out of it and then it’s not unique anymore?”</strong></dt><dd><dl class="simple">
+<dt>So you could try, but you would run into a few problems:</dt><dd><ol class="arabic simple">
+<li><dl class="simple">
+<dt>The link above, generated by the IPFS is unique, because it’s a hash. This means it’s procedurally generated based on the content its hosting, and even changing the data by one letter would create a totally different one. If you were to try and upload the exact same image to rarible, it wouldn’t work because the resulting link, and therefore tokenID would be the same. You would have to alter the image or the name in some way, which would make it a different NFT. If you changed the name, the image would be the same but the link would be different.</dt><dd><ul class="simple">
+<li><p>How that effects the value is a more complicated question. Part of what makes a painting valuable is recognizability. If you could copy the Mona Lisa exactly, but it’s name had to be something like <em>Mona Lisa #2</em>, it wouldn’t be worth much because it’s not the original.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>The site could theoretically put in a system to try and prevent you from uploading the same image. I don’t know if any do but they could try.</p></li>
+<li><p>You could get sued for copyright infringement and/or theft of intellectual property . Not saying you would but it’s always a possibility, especially if you tried to sell it.</p></li>
+<li><p>You could try to upload it to another NFT platform, but there’s always the risk that it would be less popular and not worth much. Someone else could also come after you again on that platform, because they can prove they created the same artwork somewhere else.</p></li>
+</ol>
+</dd>
+</dl>
+<p>NFT theft is a real issue, and one of the reasons that artwork is not always the best use of NFT’s. This is why many have suggested updates to the protocol that would include identifying information on-chain.</p>
+<p>Unfortunately, this is one of the few parts of cryptocurrency that cannot always be decentralized, because it relies trust a central entity to mint and disperse new NFT’s. This is a system that partly <em>relies on human enforcement</em>. Using this for non-artwork projects such as concert tickets or vaccine passports this system is not susceptible to this kind of forgery. This is because you wouldn’t be able to just create a new platform for vaccine passports or concert tickets and have it be recognized. If you bought a ticketmaster ticket NFT, you couldn’t just create your own ticket master and fake ticket, because the venue would check based on the ticketmaster contracts.</p>
+<p>This is more of a technical explanation of how they work, now what they’re capable of or why they matter. I’ve done that work <a class="reference external" href="https://thecryptoconundrum.net/introduction/picking_coins.html#nft-s">here</a></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="stablecoins">
+<h2>Stablecoins<a class="headerlink" href="#stablecoins" title="Permalink to this headline">¶</a></h2>
+<p>Stablecoins are arguably one of the most essential aspects of the DeFi space, and an important aspect of increasing adoption. Like the name suggests, their value is <em>stable</em>. It is pegged to the value of a real world asset, and therefore doesn’t fluctuate. Most of them are pegged to the <strong>US Dollar</strong>. They do a very good job of maintaining their value, and have never fluctuated more than 1 or 2 cents from them. They are ERC-20 tokens, and they can only be minted by first locking up other assets with an equal value. Some are centralized, and issued by trusted entities, and some are minted through oracle price appraisals and managed by DAO’s. They have different systems, but all rely on 2 main sources to stay stable.</p>
+<p>There is stability because people believe it is stable. I know it sounds circular, but hear me out. Like all cryptocurrencies, their price is determined by supply and demand; what people will buy and sell them for. They stay stable because nobody believes the price is going to dramatically rise or fall. Nobody buys for <code class="docutils literal notranslate"><span class="pre">$0.98</span></code> because nobody will sell it for that. Nobody sells for <code class="docutils literal notranslate"><span class="pre">$1.02</span></code> because nobody on the other side will buy it because they know it’s only worth <code class="docutils literal notranslate"><span class="pre">$1</span></code>.</p>
+<p>The more stablecoins there are, the better this system works. This is through what is known as <em>arbitrage</em>, and takes advantage of the nature of multiple coins and exchanges. It occurs when prices on two different platforms diverge, and you can buy low on one and sell high on another, for the same asset. If the value of <em>US-Dollar Coin ($USDC)</em> suddenly goes up to <code class="docutils literal notranslate"><span class="pre">$1.005</span></code> on <em>Uniswap</em>, but has stayed at <code class="docutils literal notranslate"><span class="pre">$1</span></code> on <em>Balancer</em>, then traders will immediately trade other stablecoins for USDC on <em>Balancer</em>, and sell it on <em>Uniswap</em> for a profit. This drives the price down on <em>Uniswap</em>, and back towards equilibrium. With more exchanges and coins, this makes it easier for arbitrage to occur and thus keeps more stable pressure on the coin.</p>
+<p>The second thing keeping these coins stable, is that they are collateralized. This means that their value is minted only by locking up an equal value asset. For some, this locking and distribution is done through a central entity. This is how <a class="reference external" href="https://tether.to">Tether</a>, operates. You send them fiat money, and they give you the <a class="reference external" href="https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7">Tether Stablecoin</a>. This is also how <a class="reference external" href="https://www.coinbase.com/price/usdc">US Dollar Coin</a> operates, operated by Coinbase. They will mint new tokens when receiving money, and burn it by paying back out in fiat.</p>
+<p>Then there’s <strong>Dai</strong>, a stablecoin controlled by Maker (a DAO), controlled entirely on chain. Dai is generated through a financial instrument called a <em>Collateralized Debt Position (CDP)</em>. Think of it like taking out a loan, except decentralized. To mint new Dai, a user must first deposit a crypto-asset into what is known as a <em>Maker Vault</em>. This is your collateral, and the protocol generates a debt, in Dai. The amount you deposit, is an overcollatoralization. This means you deposit more value than you receive back in Dai. This is a debt, and to get your collateral back you have to repay the outstanding Dai, plus a stability fee that accrues on your outstanding Dai. The reason you have to overcollateralize, is to ensure that Dai stays stable. If your only collateralized an exact amount, a rapid price crash of the underlying asset would severely devalue the Dai it generates. Only doing it this way allows the price to stay stable at <code class="docutils literal notranslate"><span class="pre">$1</span></code> even in the event of an Eth price crash. We just saw this occur when eth dropped from <code class="docutils literal notranslate"><span class="pre">$4.4K</span></code> to <code class="docutils literal notranslate"><span class="pre">$2k</span></code> but Dai didn’t waver. If the amount of your collateral drops below the value of the your outstanding debt, it is automatically liquidated through an on-chain auction. Kind of like storage wars. If you don’t pay your storage fees, they auction off what’s inside it. The value of collateral deposits are determined by <a class="reference external" href="https://thecryptoconundrum.net/introduction/important_terms.html#technology">oracles</a>. There is also a governance token, <a class="reference external" href="https://makerdao.com/en/governance">Maker ($MKR)</a>, which is used for dao members to decide things like collateralization rate, oracle selection, and liquidation procedures.</p>
+<p>This is a very brief explanation. The long details of Maker are so complicated they could take an entire post. I suggest you check out the <a class="reference external" href="https://makerdao.com/en/whitepaper">whitepaper</a>, for a fuller understanding.</p>
+</div>
+<div class="section" id="wrapped-tokens">
+<h2>Wrapped Tokens<a class="headerlink" href="#wrapped-tokens" title="Permalink to this headline">¶</a></h2>
+<p>Wrapped Tokens are an interesting use case for token standards. Creating one is known as tokenization, the digitization of a different digital asset onto the Ethereum blockchain. It is an ERC-20 version, of a different, non-native asset. Any cryptocurrency that wasn’t already on the Ethereum blockchain, can be tokenized as a wrapped token. I’ll give you the two most popular examples.</p>
+<dl class="simple">
+<dt>Wrapped Ether:</dt><dd><p>It’s literally just <a class="reference external" href="https://weth.io/">an ERC-20 version of Ether</a>. To get it you deposit Ether into the contract, and receive an exact amount of wrapped Ether (wETH). It works the other way as well, converting wrapped Ether back to regular Ether at a <code class="docutils literal notranslate"><span class="pre">1:1</span></code> ratio. However, you cannot use it to pay transaction fees. Its function is to make it easier for smart contracts to trade Ether. When some of the original decentralized exchanges were being built, the developers found it extremely difficult to build in support for both <code class="docutils literal notranslate"><span class="pre">ERC-20</span> <span class="pre">&lt;-&gt;</span> <span class="pre">ERC-20</span></code> swaps and <code class="docutils literal notranslate"><span class="pre">Ether</span> <span class="pre">&lt;-&gt;</span> <span class="pre">ERC-20</span></code> swaps. By tokenizing Ether, they can build one set of protocols for all swaps, and make both yours and their lives easier. Because of its importance to decentralized exchanges, DeFi protocols, and smaller supply, it often has a much higher return for providing it as liquidity.</p>
+</dd>
+<dt>Wrapped Bitcoin:</dt><dd><p>The <a class="reference external" href="https://wbtc.network/">tokenization of Bitcoin</a>. If you’ve heard of the phrase “Bitcoin on Ethereum”, this is what it refers to. It’s an ERC-20 token that is exchangeable for Bitcoin at a <code class="docutils literal notranslate"><span class="pre">1:1</span></code> ratio. It was created to allow Bitcoin holders to participate in DeFi by lending it out and providing liquidity. It typically works by exchanging through a trusted custodian who holds both wrapped Bitcoin (wBTC) and regular Bitcoin (BTC). Trading in BTC means minting new wBTC, and exchanging back to regular BTC means burning wBTC. It is maintained by a DAO and has a fully verifiable system with proof-of-reserves, as every wBTC is backed by regular BTC. While this system is centralized now, there are people working on solutions to decentralize it later instead of trusted custodians.</p>
+</dd>
+</dl>
+<p>Any asset can be wrapped, as long as someone is willing to act as custodian, and there are already many other wrapped coins such as: wrapped-monero (0XMR), wrapped-filecoin (WFIL), wrapped-Zcash (WZEC), etc.</p>
+<p>There is also a movement gaining popularity on what is known as a <a class="reference external" href="https://thesecuritytokenstandard.org/">security-token</a>. These would represent the digitization of a real-world asset, or security such as a stock. It follows a different token standard known as ERC-1400. They are still very new and not widely adopted yet, so I may return to this article to update it if necesarry.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="eth2.html" class="btn btn-neutral float-right" title="Ethereum 2.0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="gas.html" class="btn btn-neutral float-left" title="Transaction Fees" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Josh Weintraub.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-196042419-1', 'auto');
+    
+    ga('set', 'anonymizeIp', true);
+    
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

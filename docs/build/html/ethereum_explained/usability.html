@@ -227,19 +227,19 @@
 <p><a class="reference external" href="https://metamask.io/">Metamask</a>, is arguably the most versatile of all wallet applications. Its main version is a <a class="reference external" href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn">Google-Chrome-Extension</a> that allows you to access your cryptocurrency whenever you use the web, simply by clicking on the extension. It gives you access to send and receive with incredible ease. Simply simply download the program and follow the steps to set up your wallet, and then add it to your toolbar. When you visit a website that is configured for metamask, it use the information available to it to create new transactions and send them for you.</p>
 <p>It’s as easy as clicking a button. Install metamask and click the button below to see!</p>
 <button class="enableEthereumButton">Enable Ethereum</button>
-<h2>Your Address: <span class="showAccount"></span></h2>
+<h4>Your Address: <span class="showAccount"></span></h4>
 <script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>
 
 <script type="text/javascript">
 
         const ethereumButton = document.querySelector('.enableEthereumButton');
+        const showAccount = document.querySelector('.showAccount');
 
         ethereumButton.addEventListener('click', () => {
           getAccount();
         });
 
         async function getAccount() {
-          const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
           const account = accounts[0];
           showAccount.innerHTML = account;
         }

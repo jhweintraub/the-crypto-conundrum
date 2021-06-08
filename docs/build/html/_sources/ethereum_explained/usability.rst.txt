@@ -45,19 +45,19 @@ It's as easy as clicking a button. Install metamask and click the button below t
 .. raw:: html
 
 	<button class="enableEthereumButton">Enable Ethereum</button>
-	<h2>Your Address: <span class="showAccount"></span></h2>
+	<h4>Your Address: <span class="showAccount"></span></h4>
 	<script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>
 
 	<script type="text/javascript">
 		
 		const ethereumButton = document.querySelector('.enableEthereumButton');
+		const showAccount = document.querySelector('.showAccount');
 
 		ethereumButton.addEventListener('click', () => {
 		  getAccount();
 		});
 
 		async function getAccount() {
-		  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
 		  const account = accounts[0];
 		  showAccount.innerHTML = account;
 		}

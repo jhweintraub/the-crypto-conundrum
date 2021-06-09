@@ -257,6 +257,7 @@
 </div>
 <p>We first declare an event and its parameters. In this case it’s <em>transfer</em> and it requires a sender, a recipient, and a value. When the function <em>send</em> is executed, it will publish this metadata to the chain alongside the rest of the transaction, as JSON data. This is done with the keyword <em>emit</em>. We can view this on a <a class="reference external" href="https://etherscan.io/tx/0x265d64a8d0e7f86cae84d29bc9b86dc796b0eaae9e84a99d0b1e82b17609b622#eventlog">block explorer</a> beautified to look like this</p>
 <img alt="../_images/events.png" src="../_images/events.png" />
+<p><em>Image Source: Etherscan.io</em></p>
 <p>We can see the value of all the inputs. This is a high-level topic but because we used the keyword <em>indexed</em> on the two addresses, the EVM has classified them as topics. This is so that the EVM can more easily classify and reference them later. If we were to not use the <em>indexed</em> keyword, they would be below in the <em>data</em> category, alongside <em>value</em></p>
 <p>The address listed is address of the contract that emitted the log. This is necesarry because a contract may invoke a function on another contract, known as an <em>internal transaction</em>. This is still considered part of the main initial transaction for block purposes and is useful to keep track of transaction history.</p>
 <p>More detailed information can be found <a class="reference external" href="https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378">here</a>./</p>
@@ -268,6 +269,7 @@
 <p>This is a good question. The answer is that Bitcoin doesn’t actually have the concept of an account balance. When you go to a website, that site specifically has indexed the blockchain on their own and created a local copy that they then serve to you. It looks through your transaction history and calculates how much Bitcoin you have, instead of looking at the chain directly for every query. This would be very slow. Your balance is the sum of all of your previously income transaction values. Each transaction has a BTC value. Imagine you wanted to send 5 BTC. Your wallet takes several transactions from your history, and bundles them together until the sum of their values is <cite>&gt;=5 BTC</cite>. It then takes that amount, and sends it, and returns the extra unsused Bitcoin to you.</p>
 <p>Look at this example transaction</p>
 <img alt="../_images/btc_tx.png" src="../_images/btc_tx.png" />
+<p><em>Image Source: Blockchain.com</em></p>
 <p>You can see that the input is multiple transactions until the amount is high enough to send it out to other places. This also means that amount you pay in transaction depends on how many inputs and outputs you need. If you look below you’ll see that transaction fee is measured in sat/Byte. The Bytes is the number of transactions together, and the sat is the amount of BTC you are willing to pay for each of those bytes (sat = satoshi = 1e-18 BTC).</p>
 <p>Obviously this is a bad way of doing things because if you transact in smaller amounts, when you want to make a larger transaction those fees can add up. It’s also just incredibly redundant, and prohibits layer-2 scaling solutions such as rollups and sidechains. This is why the only substantial Bitcoin proposed-scaling-solution is the Lightning Network, a side-channel implementation with its own set of problems.</p>
 <p>On Ethereum, in order for contracts to be able to support the ability to transfer values, it must re-imagine this. I.E you must be able to query the amount of Ether in any address in existence and have a native balance value for each address in existence. This means that when you make a transaction, it is much simpler for the network to send coins around, and simplifies many API’s and operations.</p>
@@ -277,6 +279,7 @@
 <h2>Blockchain as a State Machine<a class="headerlink" href="#blockchain-as-a-state-machine" title="Permalink to this headline">¶</a></h2>
 <p>State Machines, if you’ve ever read this book, you’re probably breaking out into a cold-sweat right now</p>
 <a class="reference internal image-reference" href="../_images/sipser.png"><img alt="../_images/sipser.png" src="../_images/sipser.png" style="width: 180pt;" /></a>
+<p><em>Image Source: Michael Siper, Introduction to the theory of computation, 3rd edition</em></p>
 <p>Don’t worry, I’m going to keep it simple. The entire Ethereum network, at any given moment, can be represented as a state. Every time a transaction occurs, the state changes. Therefore we can represent the network as a state machine. The following examples are in the <a class="reference external" href="https://ethereum.org/en/whitepaper/">Ethereum Whitepaper</a>.</p>
 <p>Think of it like this</p>
 <p><code class="docutils literal notranslate"><span class="pre">APPLY(S,TX)</span> <span class="pre">-&gt;</span> <span class="pre">S'</span> <span class="pre">or</span> <span class="pre">ERROR</span></code> where S = The current State and TX = The transaction value.</p>
@@ -303,6 +306,7 @@
 <p>“All Ethereum clients include an EVM implementation”</p>
 </div></blockquote>
 <img alt="../_images/evm.png" src="../_images/evm.png" />
+<p><em>Image Source: Ethereum Foundation, ethereum.org</em></p>
 </div>
 <div class="section" id="bytecode-sourcecode-and-abi">
 <h2>Bytecode, Sourcecode, and ABI<a class="headerlink" href="#bytecode-sourcecode-and-abi" title="Permalink to this headline">¶</a></h2>

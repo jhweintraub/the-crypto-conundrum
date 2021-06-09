@@ -38,6 +38,8 @@ These values are automatically calculated by your wallet. They will pick varying
 
 .. image:: images/gas_tracker.png
 
+*Image Source: Etherscan.io*
+
 This also means that at times when network usage is high, the gas price can go up as well. This is because everyone is constantly bidding higher than one-another to have their transaction included in a block, with limited space.
 
 

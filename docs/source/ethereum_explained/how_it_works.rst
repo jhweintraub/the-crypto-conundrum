@@ -64,6 +64,8 @@ A smart contract operates autonomously, but must be called by a human. When you 
 
 .. image:: images/sc_diagram.jpg
 
+Image Source: `Enuke Software <https://www.enukesoftware.com/blockchain-application-development.html>`_
+
 These contracts have their own unique programming language, which can be written like any other language would. It's very similar to Java or Python
 
 You must pay a transaction fee anytime you wish you change the state of a contract. I.E anytime you want it to do something. If you want to change a value that costs Ether. However, to read a contract or get a current value, it is free. This can be done from a `block explorer <https://etherscan.io>`_, because if you wanted a contract to read from another contract, that you would have to pay for.

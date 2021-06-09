@@ -91,6 +91,8 @@ We first declare an event and its parameters. In this case it's *transfer* and i
 
 .. image:: images/events.png
 
+*Image Source: Etherscan.io*
+
 We can see the value of all the inputs. This is a high-level topic but because we used the keyword *indexed* on the two addresses, the EVM has classified them as topics. This is so that the EVM can more easily classify and reference them later. If we were to not use the *indexed* keyword, they would be below in the *data* category, alongside *value*
 
 The address listed is address of the contract that emitted the log. This is necesarry because a contract may invoke a function on another contract, known as an *internal transaction*. This is still considered part of the main initial transaction for block purposes and is useful to keep track of transaction history.
@@ -110,6 +112,8 @@ Look at this example transaction
 
 .. image:: images/btc_tx.png
 
+*Image Source: Blockchain.com*
+
 You can see that the input is multiple transactions until the amount is high enough to send it out to other places. This also means that amount you pay in transaction depends on how many inputs and outputs you need. If you look below you'll see that transaction fee is measured in sat/Byte. The Bytes is the number of transactions together, and the sat is the amount of BTC you are willing to pay for each of those bytes (sat = satoshi = 1e-18 BTC).
 
 
@@ -127,6 +131,8 @@ State Machines, if you've ever read this book, you're probably breaking out into
 
 .. image:: images/sipser.png
 	:width: 180pt
+
+*Image Source: Michael Siper, Introduction to the theory of computation, 3rd edition*
 
 Don't worry, I'm going to keep it simple. The entire Ethereum network, at any given moment, can be represented as a state. Every time a transaction occurs, the state changes. Therefore we can represent the network as a state machine. The following examples are in the `Ethereum Whitepaper <https://ethereum.org/en/whitepaper/>`_. 
 
@@ -170,6 +176,8 @@ The following information is provided by `Ethereum Website <https://ethereum.org
 	"All Ethereum clients include an EVM implementation"
 
 .. image:: images/evm.png
+
+*Image Source: Ethereum Foundation, ethereum.org*
 
 Bytecode, Sourcecode, and ABI
 -------------------------------

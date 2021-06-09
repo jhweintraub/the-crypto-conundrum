@@ -78,6 +78,8 @@ If you're using a complicated Dapp, such as Uniswap, this information will be fi
 
 For security reasons, it is suggested you alter metamask settings slightly. In your browser you should change the setting under "This can read and change site data" from *On All Sites* to *When you click the extension*. Metamask by default has this setting, which allows any website to access its features. Given that metamask can do things like view and alter things you copy, there lies the potential for drive-by attacks on malicious websites. By changing it to only have access when you click, this gives only selected sites access to metamask, when you click. This is best both for privacy and security.
 
+*All images sourced from Metamask*
+
 
 MyEtherWallet
 ---------------
@@ -109,6 +111,7 @@ Contract Interactions:
 	.. image:: images/contract_tx.png
 		:width: 300px
 
+*All Images sourced from MyEtherWallet*
 
 Etherscan
 -----------
@@ -122,6 +125,8 @@ You can also view the transaction history of any address including contract exec
 
 .. image:: images/etherscan_address.png
 
+
+*All images sourced from Etherscan.io*
 
 Ethereum Name Service (ENS)
 ----------------------------
@@ -139,3 +144,4 @@ If you have an address you plan on using for a long time or soliciting payments,
 .. image:: images/ens_tx.png
 	:width: 300px
 
+*Image Source: Metamask*

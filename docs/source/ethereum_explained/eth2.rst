@@ -60,6 +60,8 @@ other servers. These servers are constantly communicating to receive information
 
 .. image:: images/sharding.jpg
 
+*Original diagram by Hsiao-wei Wang, design by Quantstamp*
+
 This allows greater throughput as nodes only have to validate and store transactions on their individual shard. This means that transactions can also occur much faster without sacrificing centralization or security. Distributing the storage and load therefore prevents the nodes from having to store incredibly large amounts of chain data as time goes on, preventing decentralization and making it easy for anyone to run a node regardless of hardware.
 
 When sharding goes live, the original ethereum chain and all its data will be converted into one of the 64 shards.
@@ -80,6 +82,8 @@ After Eth2 is finished deploying, the future of Ethereum is uncertain. The found
 Vitalik has created the following roadmap
 
 .. image:: images/eth_roadmap.jpg
+
+*Image Source: Vitalik Buterin Website, vitalik.ca*
 
 **"Does Ethereum 2.0 mean the price of Ether is going to go up?"**
 

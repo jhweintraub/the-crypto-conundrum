@@ -9,7 +9,7 @@ The Crypto-Conundrum, future of finance or the next mortgage Bubble?
 Welcome to The Crypto-Conundrum, my guide to the world of Cryptocurrency. It's here that i've chronicled all of my thoughts on Cryptocurrency and investing in it. For people new to the world of Crypto click on "Start here!" to read through the complete beginner's guide
 
 
-If you a fan of the site please consider taking `This brief survey <https://forms.gle/xYaQFdG1pkACNz4d9>`_ to help me better understand how to improving the site. 
+If you a fan of the site please consider taking `This brief survey <https://forms.gle/xYaQFdG1pkACNz4d9>`_ to help me better understand how to improving the site.
 
 I have plans on writing more articles on a wide range of topics. They take time to thoroughly research and write, so please be patient.
 
@@ -39,7 +39,7 @@ Shoutout to Roey Shoshan for coming up with the name
 
 .. toctree::
    :maxdepth: 1
-   :caption: Ethereum, Explained: 
+   :caption: Ethereum, Explained:
 
    ethereum_explained/what_is_it
    ethereum_explained/how_it_works
@@ -53,7 +53,7 @@ Shoutout to Roey Shoshan for coming up with the name
 
 .. toctree::
    :maxdepth: 1
-   :caption: Investment Rules:  
+   :caption: Investment Rules:
 
    investment-strategies/rules
    investment-strategies/exit_strategies
@@ -61,6 +61,13 @@ Shoutout to Roey Shoshan for coming up with the name
    investment-strategies/security
    investment-strategies/confidence
    investment-strategies/staking
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Decentralized Applications:
+
+    dapps/uniswap
+
 
 
 
@@ -78,7 +85,7 @@ Indices and tables
 
 
 .. raw:: html
-	
+
    <!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-G3CTCDY3HQ"></script>
 	<script>

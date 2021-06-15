@@ -1,7 +1,7 @@
 Uniswap
 ========
 
-Uniswap is arguably the single-most important application to the Ethereum ecosystem. There are many like it, but it is undoubtedly the kind, with no near competitors. With thousands of different tokens being deployed, there needs to be a simple and decentralized way to exchange them. It is fast, decentralized, and easy to use.
+Uniswap is arguably the single-most important application to the Ethereum ecosystem. There are many like it, but it is undoubtedly the best of its kind, with no near competitors. With thousands of different tokens being deployed, there needs to be a simple and decentralized way to exchange them. It is fast, decentralized, and easy to use.
 
 Uniswap is a Decentralized Exchange (DEX) for tokens on the Ethereum blockchain. It gives you the ability to trade Ether, or any ERC-20 token, for something else. It does this by being what is known as an **Automated Market Maker (AMM)**
 

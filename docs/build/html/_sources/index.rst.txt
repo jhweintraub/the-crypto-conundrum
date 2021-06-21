@@ -68,6 +68,12 @@ Shoutout to Roey Shoshan for coming up with the name
 
     dapps/uniswap
 
+.. toctree::
+    :maxdepth: 1
+    :caption: Altcoins, Explained:
+
+    coins_explained/monero
+
 
 
 

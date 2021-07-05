@@ -67,6 +67,7 @@ Shoutout to Roey Shoshan for coming up with the name
     :caption: Decentralized Applications:
 
     dapps/uniswap
+    dapps/daos
 
 .. toctree::
     :maxdepth: 1

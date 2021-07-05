@@ -55,7 +55,8 @@ Monero relies primarily on obfuscation techniques to preserver your privacy. Thi
 
 It does this through three pieces of technology: Ring signatures, RingCT, and Stealth addresses. Bear with me here, this is conceptually difficult, even for me.
 
-When you have a Bitcoin transaction, you have **one** address. This address is derived from a singular encryption key. You give this address to anyone, and anyone can send you funds there. It never changes. When you use Monero, the address is obfuscated, so it **looks** like it's going to a different address every time. For Monero, you still have one address, but when you have a transaction, you're really using it to generate a *1-time-only* obscured address. The person sending knows it's you, but to observers it looks like a different address every time. This address is procedurally generated on every transaction to be different, but can always be linked back to your original address, but **only** if you have the original encryption keys. You could send 5 transactions to the same person, but if you tried to look at the blockchain it would look like you're transacting with 5-different people.
+Ring signatures
+****************
 
 First, to hide the sender, it uses Ring Signatures. When you send a transaction, the cryptographic-signature, that says you sent funds, is combined with the signatures of other random past-transactions. They are used as dummies. When all of the data is put together, it is *impossible* to know which person was the real sender and which others were fake. The more data you include, the harder it becomes.
 
@@ -63,13 +64,19 @@ First, to hide the sender, it uses Ring Signatures. When you send a transaction,
 
 Image Source: `2019 IEEE International Conference on Advanced Trends in Information Theory (ATIT) <https://www.semanticscholar.org/paper/Using-Ring-Signatures-For-An-Anonymous-E-Voting-Kurbatov-Kravchenko/a2c5c700f3f06cfe6bc633b1fe73f7916bab3435>`_
 
-Second is RingCT (Ring-Confidential-Transactions), which obscure the amount sent. This is done by creating a shared secret between the sender and the receiver. They use this to change the output value to something else publicly, but can be deduced and proven by the original transaction participants. Think of it like this. When you have a transaction, the input must be the same as the output. So the sender puts in ``10 XMR``, and the output is also ``10 XMR``.  ``1+2+3+4 = 3+5+2``. But, if you multiply the values by some constant like ``5``, you would get a different number. ``5*(1+2+3+4) = 5(3+5+2)``. If you looked at the transaction all you would see is ``50 = 50``, but we don't know what the original input was or the constant, and there's a lot of ways to factor ``50``. This problems gets very difficult for computers when the numbers get bigger.
+RingCT
+********
+RingCT (Ring-Confidential-Transactions), which obscure the amount sent. This is done by creating a shared secret between the sender and the receiver. They use this to change the output value to something else publicly, but can be deduced and proven by the original transaction participants. Think of it like this. When you have a transaction, the input must be the same as the output. So the sender puts in ``10 XMR``, and the output is also ``10 XMR``.  ``1+2+3+4 = 3+5+2``. But, if you multiply the values by some constant like ``5``, you would get a different number. ``5*(1+2+3+4) = 5(3+5+2)``. If you looked at the transaction all you would see is ``50 = 50``, but we don't know what the original input was or the constant, and there's a lot of ways to factor ``50``. This problems gets very difficult for computers when the numbers get bigger.
 
 .. image:: images/monero/ringCT.png
 
 Image source: `Exantech <https://blog.goodaudience.com/monero-confidential-transactions-or-send-i-know-not-what-to-someone-i-know-not-whither-337f20f0d64e?gi=b79aa72ebbba>`_
 
-Third is what's known as stealth-addresses. When you use Monero, you are actually creating two-keys, one for spending (spend-key) and for receiving (view-key). You need the view key to identify your incoming transactions, and the spend-key to send them back out. These are handled by the same wallet. But, you still have only one address. The address is derived from both of them together.
+Stealth Adresses
+******************
+When you have a Bitcoin transaction, you have **one** address. This address is derived from a singular encryption key. You give this address to anyone, and anyone can send you funds there. It never changes. When you use Monero, the address is obfuscated, so it **looks** like it's going to a different address every time. For Monero, you still have one address, but when you have a transaction, you're really using it to generate a *1-time-only* obscured address. The person sending knows it's you, but to observers it looks like a different address every time. This address is procedurally generated on every transaction to be different, but can always be linked back to your original address, but **only** if you have the original encryption keys. You could send 5 transactions to the same person, but if you tried to look at the blockchain it would look like you're transacting with 5-different people.
+
+When you use Monero, you are actually creating two-keys, one for spending (spend-key) and for receiving (view-key). You need the view key to identify your incoming transactions, and the spend-key to send them back out. These are handled by the same wallet. But, you still have only one address. The address is derived from both of them together.
 
 When you want to form a transaction, a sender uses your public spend-key, public view-key (taken from your address), and some other info to create a *one-time address*. You need the secret view-key to be able to recognize incoming transaction. Basically, the sender takes the one-time address and sends it out to the network. The receiver listens to all of the new transactions, checking every one against their secret view-key, until they find one that's theirs. You have created a secret between the sender and receiver of you that is verifiable to everyone, but still obscured. When you want to send the transaction, you then take the secret view-key and secret spend-keys to prove your ownership and form a new transaction. If someone stole your private view-key, all they would be able to do is view your funds. They would need the private spend-key to be able to spend it. If they had just the private spend-key, they could spend, but they wouldn't know how much or where from.
 
@@ -124,6 +131,9 @@ There's also a lot of things you can do as well to make it even more private: se
 **It uses Proof-of-work, isn't that bad cause Bitcoin uses it?**
 
 Yea kinda. It definitely uses a lot of energy, BUT the community is working on things like making is more resistant to centralized mining. It's energy usage is nowhere comparable to that of Bitcoin, and the rise of renewable energy makes it something I don't think is to be worried about. If you're worried about how that affects scalability, then see above where I talked about dynamic block sizing. It's not an ideal solution that maximizes decentralization, but it's better than nothing and with privacy features of Monero, I think it's a trade-off worth making.
+
+Price Predictions
+*******************
 
 **Jeez ok, we get it. Can you tell us now what you think the price is gonna go to?**
 

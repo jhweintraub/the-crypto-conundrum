@@ -74,6 +74,7 @@ Shoutout to Roey Shoshan for coming up with the name
     :caption: Altcoins, Explained:
 
     coins_explained/monero
+    coins_explained/polkadot
 
 
 

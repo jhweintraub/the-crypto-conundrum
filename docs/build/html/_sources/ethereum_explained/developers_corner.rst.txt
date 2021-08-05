@@ -144,7 +144,7 @@ In a real-world sense, iamgine the following: ``APPLY({ Alice: $50, Bob: $50 },"
 
 In actuality, how the current state is determined is mathematically very tedious and involves `Merkle-Patricia Trees <https://eth.wiki/en/fundamentals/patricia-tree>`_. Since this is not a CS Lecture, (and I barely understand it myself) i'm not going to walk through how those work, but I can try if there seems to be demand for it.
 
-This is important because we then can understand how smart contracts fit into this model. The use of a state machine allow the network to store the current state or values of a contract at any given time. Given as these contracts can have lots of variables to track, this is essential. It also allows us to to many layer-2 scaling operations off-chain. This I will explain later in the Layer 2 Page (update later with link).
+This is important because we then can understand how smart contracts fit into this model. The use of a state machine allow the network to store the current state or values of a contract at any given time. Given as these contracts can have lots of variables to track, this is essential. It also allows us to create many layer-2 scaling operations off-chain. This I will explain later.
 
 Ethereum Virtual Machine
 --------------------------

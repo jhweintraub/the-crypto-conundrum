@@ -13,6 +13,10 @@ The number is arbitrary and used to delineate it from others. Anyone in the worl
 
 It was initially proposed by Vitalik in 2018, and despite a very controversial road, is scheduled to go live sometime in mid-July. When this occurs, it will become a normal part of the Ethereum protocol. I may choose to update the other articles in this series if important, but I think it's such an important part of the protocol it deserves its own article. 
 
+Before we start, it's important you understand how gas works. Check out the link `here <https://thecryptoconundrum.net/ethereum_explained/gas.html#>`_. This is because it is a major change to how it operates. I highly recommend you read that before continuing but if you choose not to then I have included a TL;DR below
+
+	TL;DR - Every time you make an ethereum transaction, that transaction fee is paid in a a unit called *gas*. You pay a certain amount of ether for each unit of gas. The more complex your transaction, the more gas required. Faster confirmations mean paying more gas. Block size is measured in gas usage, with each block having a max amount that can be included. This limit can normally only be increased/decreased by a community vote. All gas/transaction fees go to the miners who make the blocks and process transactions.
+
 The Problem
 -------------
 
@@ -34,8 +38,6 @@ Using a supply-demand structure, eip-1559 attempts to create a transaction-fee *
 
 Fee Structures
 ---------------
-
-Before we start, it's important you understand how gas works. Check out the link `here <https://thecryptoconundrum.net/ethereum_explained/gas.html#>`_. This is because it is a major change to how it operates. 
 
 If you recall, the current gas limit is ``~12.5M gas`` per block. For each transaction per in the block, there is no gas floor only people trying to outbid eachother for space. This means there is no reasonable expectation of how little you can pay and still be included in a block. The solution to this is to introduce a new block parameter, *The Base Fee*. This is a value included in the block alongside hashes, gas limits, timestamps, etc.
 

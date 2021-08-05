@@ -33,8 +33,37 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Start Here!" href="introduction/intro.html" /> 
 
-    <!--  Styling for subscription form  -->
+    <!-- Begin Sendinblue Form -->
     <style>
+
+      .sib-form-block-1 {
+        padding:6px 0px;word-wrap:break-word;outline:none
+      }
+      
+      .sib-form-block-1 p,.sib-form-block-1 ol,.sib-form-block-1 ul {
+        text-align:inherit;margin:0;
+      }
+      
+      .sib-form-block-1 ol,.sib-form-block-1 ul{
+        list-style-position:inside
+      }
+
+      .sib-form-block__button-1 {
+        display:inline-block;
+        padding:6px 12px;
+        border:none;
+        overflow-wrap:break-word;
+        max-width:100%;
+        cursor:pointer
+      }
+
+      .sib-form-block__button-with-loader-1 {
+        min-height:40px;line-height:23px
+      }
+
+      .headings {
+        font-size: 20px;
+      }
       @font-face {
         font-display: block;
         font-family: Roboto;
@@ -72,12 +101,9 @@
         font-family: "Helvetica", sans-serif;
         color: #c0ccda;
       }
-
     </style>
-
-<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-
-<!--  End of stlying for subscription form  -->
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<!-- End of form styling -->
 
 </head>
 
@@ -320,8 +346,8 @@
           <footer>
 
 <!-- Start of subscribers list form -->
-<div class="sib-form" style="text-align: center;
-         background-color: #EFF2F7;                                 ">
+<div class="sib-form" style="text-align: left;
+         background-color: #ffffff;                                 ">
   <div id="sib-form-container" class="sib-form-container">
     <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
       <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
@@ -345,58 +371,58 @@
       </div>
     </div>
     <div></div>
-    <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid;">
-      <form id="sib-form" method="POST" action="https://bd7e77b6.sibforms.com/serve/MUIEAEchm8ZVNBEnzYTrwPFIUW53j_rM96d_Z8DOmrOxJyRgMHl5HeFHSF84wEXDLe9YJDqs5BuQSufJtDJ3jFBeoihpwdHO6kKxxfcIo_WS_ITKzHuYZwkd5cM4p0D2Mj_yHdb_2-zZJRC6Mzo7Dwp1bPx4HNcGWj9ROF7mxmTbZJIAKqzNzF_dOp97EaVXLiF4Ii9GXjfPg72o" data-type="subscription">
-        <div style="padding: 8px 0;">
-          <div class="sib-form-block" style="font-size:30px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;">
-            <p>Newsletter</p>
+    
+    <form id="sib-form" method="POST" action="https://bd7e77b6.sibforms.com/serve/MUIEAGp2Xmc8hJfNHIQEe2vzSI0k89BH-vd7wiLISIsh8me9mluiZQQ2kwbDuLniUgAYGmr75yqQIYHeM9Fn8aivcs4xFVib6jlqr2D7qFEvZs9Dowbstq5yC7BLcf-8GQ4zPREdITAeW2BR9QKbJlUtpncjNXhAc4n-q8q7p5IdASXZxKjiCm1PprSz8WHVaLQanm9tB3eSj8uL" data-type="subscription">
+      <div style="padding: 0px 0;">
+        <div class="sib-form-block-1" style="font-size:32px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;">
+          <p>Newsletter</p>
+        </div>
+      </div>
+      <div style="padding: 0px 0;">
+        <div class="sib-form-block-1" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;">
+          <div class="sib-text-form-block">
+            <p style="max-width:60%;">Subscribe to our newsletter and stay updated on new articles relases.&nbsp;</p>
           </div>
         </div>
-        <div style="padding: 8px 0;">
-          <div class="sib-form-block" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;">
-            <div class="sib-text-form-block">
-              <p>Subscribe to our newsletter and stay updated on new articles relases.&nbsp;</p>
-            </div>
-          </div>
-        </div>
-        <div style="padding: 8px 0;">
-          <div class="sib-input sib-form-block">
-            <div class="form__entry entry_block">
-              <div class="form__label-row ">
-                <label class="entry__label" style="font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3c4858;" for="EMAIL" data-required="*">
-                  Enter your email address to subscribe
-                </label>
+      </div>
+      <div style="padding: 0px 0;">
+        <div class="sib-input sib-form-block-1">
+          <div class="form__entry entry_block">
+            <div class="form__label-row ">
 
-                <div class="entry__field">
-                  <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
-                </div>
+              <div class="entry__field" style="max-width:60%;">
+                <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" data-required="true" required />
               </div>
-
-              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
-              </label>
-              <label class="entry__specification" style="font-size:12px; text-align:left; font-family:Helvetica, sans-serif; color:#8390A4;">
-                Provide your email address to subscribe. For e.g abc@xyz.com
-              </label>
             </div>
-          </div>
-        </div>
-        <div style="padding: 8px 0;">
-          <div class="sib-form-block" style="text-align: left">
-            <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#FFFFFF; background-color:#3E4857; border-radius:3px; border-width:0px;" form="sib-form" type="submit">
-              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
-                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
-              </svg>
-              SUBSCRIBE
-            </button>
-          </div>
-        </div>
 
-        <input type="text" name="email_address_check" value="" class="input--hidden">
-        <input type="hidden" name="locale" value="en">
-      </form>
-    </div>
+            <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
+            </label>
+            <label class="entry__specification" style="max-width:60%; font-size:14px; text-align:left; font-family:Helvetica, sans-serif; color:#8390A4;">
+              Provide your email address to subscribe. For e.g abc@xyz.com
+            </label>
+          </div>
+        </div>
+      </div>
+      <div style="padding: 8px 0;">
+        <div class="sib-form-block-1" style="text-align: left">
+          <button class="sib-form-block__button-1 sib-form-block__button-with-loader-1" style="max-width:60%;font-size:13px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#FFFFFF; background-color:#3E4857; border-radius:3px; border-width:0px;" form="sib-form" type="submit">
+            <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+              <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+            </svg>
+            SUBSCRIBE
+          </button>
+        </div>
+      </div>
+
+      <input type="text" name="email_address_check" value="" class="input--hidden">
+      <input type="hidden" name="locale" value="en">
+    </form>
+
   </div>
 </div>
+<!-- End code of subscriber list form -->
+
+<!-- Start code of subscribers list warnings/errors code-->
 <script>
   window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
   window.LOCALE = 'en';
@@ -419,7 +445,7 @@
   var AUTOHIDE = Boolean(0);
 </script>
 <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
-<!-- End code of subscriber list  -->
+<!-- End code of subscribers list warnings/errors code-->
 
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="introduction/intro.html" class="btn btn-neutral float-right" title="Start Here!" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>

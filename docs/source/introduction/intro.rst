@@ -11,13 +11,13 @@ My name is Josh Weintraub. I'm just a guy studying Computer Science with an obse
 My Background
 ****************************
 
-
 1. A bachelor's in CS from the University of Georgia (Go Dawgs!)
 2. Currently working towards a Master's in Cyberscurity at the Georgia Institute of Technology
-3. 2 years experience as a Blockchain Engineer
-4. 3 Years Experience as a Full-Stack Web Developer
-5. Top 30 Nationally Ranked Collegiate Debater
-6. 3-Years as a Cryptocurrency Investor
+3. 3 years experience as a Blockchain Engineer
+4. 4 Years Experience as a Full-Stack Web Developer
+5. Security+ Certified
+6. 4-Years as a Cryptocurrency Investor
+7. Top 30 Nationally Ranked Collegiate Debater
 
 I've spent 8 years as a competitive nationally ranked debater, at the HS and collegiate level, honing my public speaking and persuasive skills. I want to use those communication skills to help teach people about Cryptocurrency.
 

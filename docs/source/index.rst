@@ -204,7 +204,7 @@ Planned article series include:
 
 
 
-Shoutout to Roey Shoshan for coming up with the name
+Shoutout to Roey Shoshan for coming up with the name and `DaleJV <https://github.com/DaleJV>`_ helping with design and marketing.
 
 
 .. toctree::

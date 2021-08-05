@@ -63,6 +63,8 @@ It's as easy as clicking a button. Install metamask and click the button below t
 		  showAccount.innerHTML = account;
 		}
 	</script>
+	
+*If you are using the Brave Browser, you may need to disable the "Crypto wallets" extension built into your browser to get metamask to work. It is recommended you set metamask as your default wallet in Brave.
 
 By clicking on the little fox icon in your browser, you can see a homepage with information such as your balances, buttons to receive where you can view your address, send transactions, etc.
 

@@ -1,5 +1,5 @@
-Layer 2 Scaling
-=================
+Rollups and Sidechains
+=======================
 
 If you used Ethereum until around May of 2020, you may have noticed the fees were absurdly high. Too high to justify sending Ethereum, much less using a smart contract.
 
@@ -66,17 +66,21 @@ The most popular Optimistic rollup services currently are Arbitrum [link needed]
 ZK-Rollups
 ***********
 
-A ZK-Rollup stands for Zero-Knowledge Rollup, and is more targeted than an optimistic-one. Unlike optimistic rollups, ZK-Rollups are more specific and must be built for specific actions. Where an optimistic-rollup can support any arbitrary smart contract, a ZK-Rollup must have a smart contract built for a very specific task to process. This can be transactions, atomic swaps, specific contract-executions, etc. but must be planned ahead of time.
+A ZK-Rollup stands for Zero-Knowledge Rollup, and is more targeted than an optimistic-one. Unlike optimistic rollups, ZK-Rollups are more specific and must be built for specific actions. Where an optimistic-rollup can support any arbitrary smart contract, a ZK-Rollup must have a smart contract built for a very specific task to process. This can be transactions, atomic swaps, specific contract-executions, etc. but must be planned ahead of time, and the logic of the contract cannot be easily modified.
 
-The Zero-Knowledge part of it is a complicated mathematical concept whereby someone can prove that they are in possession of information without having to disclose what that information is. This is called a *Zero-Knowledge Succinct Non-Interactive Argument of Knowledge (ZK-SNARK)*. Imagine a tunnel with a door in the middle that requires a password. If someone comes in one side and out the other, you know the only way that's possible is because they know the password. However, they don't need to tell you the password to be able to prove it. This logic can be applied to batching transactions together on the blockchain. By submitting a ZK-Rollup, you can verify that each transaction within it is valid, **WITHOUT** having to send all the information on transactions to go with it.
+The Zero-Knowledge part of it is a complicated mathematical concept whereby someone can prove that they are in possession of information without having to disclose what that information is. This is called a *Zero-Knowledge Succinct Non-Interactive Argument of Knowledge (ZK-SNARK)*. Imagine a tunnel with a door in the middle that requires a password. If someone comes in one side and out the other, you know the only way that's possible is because they know the password. However, they don't need to tell you the password to be able to prove it.
+
+[image needed]
+
+This logic can be applied to batching transactions together on the blockchain. By submitting a ZK-Rollup, you can verify that each transaction within it is valid, **WITHOUT** having to send all the information on transactions to go with it.
 
 How exactly this is accomplished is the subject of heavy mathematical research, and not important to the scope of this article.
 
-Unlike optimistic rollups, transactions are checked for validity before being processed on-chain. The ZK-Rollup has a smart contract that the batch-nodes submit to. This contract does check each transaction to verify it is acceptable. This means that when the rollup is accepted, you can feel confident it is final, and cannot be rolled back. An invalid transaction would not pass the on-chain validity-checker. There is still an element of validity checking before then though, as batch-node operators and applications have a role to play in preventing you from doing things you should not be doing to begin with. Unlike optimistic rollups, ZK-Rollups use lower transaction fees on-chain, as their smart contract only has to verify information, rather than computing anything new. Optimistic rollups still have to do some on-chain computation to make state-changes to the network, but it is still inconsequential to the individual user of the rollup. Because of the on-chain verification system, many zk-rollup protocols require your deployed-contract be written in a different language than a layer-1 contract like Solidity [link needed]. On Starknet, the most popular ZK-Rollup protocol right now, this language is known as Cairo [link needed].
+Unlike optimistic rollups, transactions are checked for validity when being processed on-chain. The ZK-Rollup has a smart contract that the batch-nodes submit to. This contract does check each transaction to verify it is acceptable. This means that when the rollup is accepted, you can feel confident it is final, and cannot be rolled back. An invalid transaction would not pass the on-chain validity-check. There is still an element of validity checking before then though, as batch-node operators and applications have a role to play in preventing you from doing things you should not be doing to begin with. Unlike optimistic rollups, ZK-Rollups use lower transaction fees on-chain, as their smart contract only has to verify information, rather than computing anything new. Optimistic rollups still have to do some on-chain computation to make state-changes to the network, but it is still inconsequential to the individual user of the rollup.
+
+Because of the on-chain verification system, many zk-rollup protocols require your deployed-contract be written in a different language than a layer-1 contract like Solidity [link needed]. On Starknet, the most popular ZK-Rollup protocol right now, this language is known as Cairo [link needed]. There are however, projects in development like ZK-Sync [link needed], which aim to create a general-purpose ZK-Rollup system where any contract can be built in Solidity. It is also important to note that because each batch must be verified, it creates a much higher computational-burden on nodes to do the required complex-mathematics.
 
 This protocol has other benefits as well, creating things like increased anonymity from not having to disclose every transaction to the public chain. This is how coins like *ZCash* operate.
-
-The most popular ZK-Rollup protocol right now is Starknet [link needed]
 
 Sidechains
 -----------
@@ -120,12 +124,13 @@ Click on the option labeled *Custom RPC*, and you should see a form pop up. This
 +-----------------------+-------------------------------------+--------------+---------------------+--------------------------------------+
 | **Network Name**      | **RPC URL**                         | **Chain ID** | **Currency Symbol** | **Block Explorer URL**               |
 +-----------------------+-------------------------------------+--------------+---------------------+--------------------------------------+
-| Polygon/Matic Mainnet | https://rpc-mainnet.maticvigil.com/ | 137          | MATIC               | https://polygonscan.com/             |
+| Optimism              | https://mainnet.optimism.io/        | 10           | ETH                 | https://optimistic.etherscan.io/     |
 +-----------------------+-------------------------------------+--------------+---------------------+--------------------------------------+
 | xDai                  | https://rpc.xdaichain.com/          | 0x64         | xDai                | https://blockscout.com/xdai/mainnet/ |
 +-----------------------+-------------------------------------+--------------+---------------------+--------------------------------------+
-| Optimism              | https://mainnet.optimism.io/        | 10           | ETH                 | https://optimistic.etherscan.io/     |
+| Polygon/Matic Mainnet | https://rpc-mainnet.maticvigil.com/ | 137          | MATIC               | https://polygonscan.com/             |
 +-----------------------+-------------------------------------+--------------+---------------------+--------------------------------------+
+
 
 *The Block Explorer URL is the website in which you can see the information regarding your address and/or transaction made on the network*
 *It is recommended you fill in all fields, including the optional ones, so that you can properly identify all relevant information to your address for each transaction*.
@@ -174,7 +179,9 @@ This issue has 2 paths forward:
 Interoperability
 *****************
 
-The second issue with Layer-2 is also a sub-set of the user-experience. There is no Interoperability between networks. As of right now, there is not a way to move funds between layer-2 networks directly. If you wanted to move Dai from Optimism to Polygon, you cannot do it directly. Your only option is to move it back to the main-net, and then from the main-net to Polygon. This system can be slow, costly, and all-around a terrible user-experience. There are lots of dApps that are only available on one-chain. This means moving assets around from chain-to-chain depending on what application you want to use, and forcing developers to choose where to deploy. There is also not yet any understanding of how this will work with multi-chain systems like Polkadot [insert link] or other cross-chain transactions.
+The second issue with Layer-2 is also a sub-set of the user-experience. There is no Interoperability between networks. As of right now, there is not a way to move funds between layer-2 networks directly. If you wanted to move Dai from Optimism to Polygon, you cannot do it directly. Your only option is to move it back to the main-net, and then from the main-net to Polygon. This system can be slow, costly, and all-around a terrible user-experience. There are lots of dApps that are only available on one-chain. This means moving assets around from chain-to-chain depending on what application you want to use, and forcing developers to choose where to deploy. There is also not yet any understanding of how this will work with multi-chain systems like Polkadot [insert link] or other cross-chain transactions. If you want to do something involving multiple applications and protocols, they must all be available on the same layer-2 network. For example, taking out a flash loan to use for Uniswap arbitrage requires that both Uniswap and the flash-loan protocol be on the same rollup system. As time passes it is likely that more bridges will be built to connect rollups, however this timeframe and the exact nature of which is uncertain.
+
+It is also entirely possible that as Ethereum's layer-2 scales, the need and popularity of side chains will diminish greatly. The lower fees and speed is what drives demand on many side chains right now. Similarly, users and developers may begin to naturally congregate around one-or-two rollups, instead of a fractured system that will naturally resolve this Interoperability problem.
 
 Closing Thoughts
 ------------------

@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -29,9 +29,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -212,17 +214,19 @@
 <p>If you’ve been on any major cryptocurrency exchange, you may have noticed there’s a LOT of coins. There’s thousands of them, and they’re all different. Some of them are faster, some are more private, some are more versatile, or energy efficient, etc. Some are exactly the same with different names. Regardless, each of them has a role to play in the future of crypto. Every time a new coin pops up it tries to occupy a new niche corner of the market, used for a different reason. Because of this, a popular phrase has arisen: <em>the future is multi-chain</em>.</p>
 <p>In 1950, the Diner’s Club International program was created. It was the first credit card of its time. Now, over 70 years later there are hundreds of cards. Each one has a different set of interest rates, rewards, terms and conditions, etc. They each all vie for market-share, but for most people, owning a credit card is not a zero-sum game. You can have more than one, and which one you use for any purchase depends on context and circumstance. When making a business purchase, use the business card. Buying gas? use the card that gives cash back.</p>
 <p>In the future cryptocurrency will operate the same way. First there was Bitcoin, and it was what most people used for several years, without competition. Now, there are hundreds of different coins, and advanced wallet software gives you the power to use dozens of them from one application. However, while there are lots of different coins to choose from, it can be a pain to keep track of what you own, convert between them, and transfer funds over networks.</p>
-<dl class="simple">
-<dt>In its current form, the only way for most people to convert between Ethereum and Bitcoin is to either:</dt><dd><ol class="arabic simple">
-<li><p>Make a peer-to-peer transaction with someone in real life. Finding and trusting people to engage in these transactions is easier said than done.</p></li>
-<li><p>Send your coins to an exchange, sell Ethereum, and buy Bitcoin. This comes with its own cost. Selling your coins only to buy another has the potential to trigger a taxable-event in your country, that comes from a capital gain. You also have to pay the exchange fees every time you buy or sell. These fees can add up. This also presents a centralization bottleneck, which is to be avoided whenever possible.</p></li>
-<li><p>Use a wrapped token. However, this is good for gaining exposure to an investment asset, but not as a currency. Wrapped Monero  (WXMR) can be a useful investment tool, but doesn’t preserve its privacy-features, and operates on the Ethereum blockchain.</p></li>
+<dl class="docutils">
+<dt>In its current form, the only way for most people to convert between Ethereum and Bitcoin is to either:</dt>
+<dd><ol class="first last arabic simple">
+<li>Make a peer-to-peer transaction with someone in real life. Finding and trusting people to engage in these transactions is easier said than done.</li>
+<li>Send your coins to an exchange, sell Ethereum, and buy Bitcoin. This comes with its own cost. Selling your coins only to buy another has the potential to trigger a taxable-event in your country, that comes from a capital gain. You also have to pay the exchange fees every time you buy or sell. These fees can add up. This also presents a centralization bottleneck, which is to be avoided whenever possible.</li>
+<li>Use a wrapped token. However, this is good for gaining exposure to an investment asset, but not as a currency. Wrapped Monero  (WXMR) can be a useful investment tool, but doesn’t preserve its privacy-features, and operates on the Ethereum blockchain.</li>
 </ol>
 </dd>
-<dt>A <em>multi-chain future</em> necessitates an easier way to move funds and data between blockchains. It needs a decentralized option. Let’s look at the reasons why you may want something like this:</dt><dd><ol class="arabic simple">
-<li><p>Transacting in different coins. You may conduct most of your business in Ethereum. However, you decide that for one purchase you want to use Cardano. You could go to an exchange and buy Cardano and use that. But for the reasons I listed above, that’s not a great choice. You need to able to fluidly convert your existing Ether to Cardano quickly.</p></li>
-<li><p>Investing. Perhaps you want to move some of your crypto to a different coin as an investment strategy, because you think the price will go up. You don’t want to go through the problems of an exchange, and you don’t want to leave it on an exchange either. Maybe you think the price of Bitcoin is going to drop soon, and you want to convert it to a stable-coin. You could convert it to USDC on Ethereum at a stable price, and convert it back when you were ready.</p></li>
-<li><p>Cross-Chain applications. Let’s say you had an application on the Cardano blockchain, that monitored and used data from the Ethereum blockchain as input values to the contracts. You need a way for the two chains to send data back and forth.</p></li>
+<dt>A <em>multi-chain future</em> necessitates an easier way to move funds and data between blockchains. It needs a decentralized option. Let’s look at the reasons why you may want something like this:</dt>
+<dd><ol class="first last arabic simple">
+<li>Transacting in different coins. You may conduct most of your business in Ethereum. However, you decide that for one purchase you want to use Cardano. You could go to an exchange and buy Cardano and use that. But for the reasons I listed above, that’s not a great choice. You need to able to fluidly convert your existing Ether to Cardano quickly.</li>
+<li>Investing. Perhaps you want to move some of your crypto to a different coin as an investment strategy, because you think the price will go up. You don’t want to go through the problems of an exchange, and you don’t want to leave it on an exchange either. Maybe you think the price of Bitcoin is going to drop soon, and you want to convert it to a stable-coin. You could convert it to USDC on Ethereum at a stable price, and convert it back when you were ready.</li>
+<li>Cross-Chain applications. Let’s say you had an application on the Cardano blockchain, that monitored and used data from the Ethereum blockchain as input values to the contracts. You need a way for the two chains to send data back and forth.</li>
 </ol>
 </dd>
 </dl>
@@ -267,11 +271,12 @@
 <h3>DOT Token<a class="headerlink" href="#dot-token" title="Permalink to this headline">¶</a></h3>
 <p>The DOT token exists on the relay chain. I like to think of it’s use as part-way between Bitcoin and Ethereum. It is trade-able like Bitcoin, BUT it does not allow you to use smart contracts.</p>
 <p>The relay chain does <strong>NOT</strong> support native smart contracts. The relay chain is meant to be AS MINIMAL AS POSSIBLE. This is not to say that polkadot does not support smart contracts. It only means that if you want to deploy one, you need to do it on a para-chain, NOT the relay chain. Since these are deployed on para-chains, you must pay for transactions and contracts with <em>that para-chain’s</em> native token.</p>
-<dl class="simple">
-<dt>The DOT Token has three critical uses. Don’t worry if this doesn’t make complete sense yet, it will:</dt><dd><ol class="arabic simple">
-<li><p>Governance - Use your DOT token to vote on changes and upgrades to the network.</p></li>
-<li><p>Staking - Locking up your tokens to help secure the network - used by Nominators, and works similar to Ethereum but with slight differences.</p></li>
-<li><p>Bonding - Similar to staking, but the locked tokens are much greater, and gives you the right to actually create and attest to new blocks - Used by Validators.</p></li>
+<dl class="docutils">
+<dt>The DOT Token has three critical uses. Don’t worry if this doesn’t make complete sense yet, it will:</dt>
+<dd><ol class="first last arabic simple">
+<li>Governance - Use your DOT token to vote on changes and upgrades to the network.</li>
+<li>Staking - Locking up your tokens to help secure the network - used by Nominators, and works similar to Ethereum but with slight differences.</li>
+<li>Bonding - Similar to staking, but the locked tokens are much greater, and gives you the right to actually create and attest to new blocks - Used by Validators.</li>
 </ol>
 </dd>
 </dl>
@@ -281,12 +286,13 @@
 <h3>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h3>
 <p>This is part of the core of Polkadot. There are 4 types of users on Polkadot whom each have their own role in running the network. The role you fill defines things like your bond/stake requirements</p>
 <blockquote>
-<div><dl class="simple">
-<dt>User Types:</dt><dd><ol class="arabic simple">
-<li><p><strong>Validators</strong> - These are the top level users in the hierarchy of Polkadot. They are the most important people. They are essentially the <em>miners</em> of the Polkadot platform. They manage and run the relay chain. When new blocks are created on the relay chain, it is done by a validator. They are <em>heavily</em> bonded, with their very large token amount locked, because their work is so important.</p></li>
-<li><p><strong>Nominators</strong> - These are the people slightly below Nominators that keep them honest. Unlike Etheruem’s Proof of Stake, Polkadot uses <em>Nominated Proof of Stake</em>. In Ethereum, anyone can become a staker if they have enough Ether to stake. Every one of these stakers must attest to every valid block produced. In NPoS, you don’t have to do that. Instead, anyone can delegate their DOT tokens to another person, to stake on their behalf. The people you <em>nominate</em> in your place are the <em>validators</em>, and your stake is part of their bond. You are rewarded for providing part of their bond dependent on how much you provide. The onus is on you to pick someone honest and to monitor them to ensure they don’t lose your stake. The <strong>only job</strong> of the nominator is to delegate your DOT to a bond-holding validator, and ensure they act honestly. If they act dishonestly or get penalized, so do you.</p></li>
-<li><p><strong>Collators</strong> - Collators are kind of like the <em>helper-elves</em> of validators. Each validator is responsible for monitoring and verifying the authenticity of a specific para-chain. However, they must also simultaneously keep track of the relay-chain. This creates a significant amount of storage and bandwidth overhead for the validator to store 2 complete chains and monitor both in real time. The solution is to once again delegate authority to a lower entity. The Collator watches over the designated para-chain for the validator. They monitor it, identify its status, and report on its condition to the validator they work with. This information is included by the validator in their block on the relay-chain. They are not required to stake/bond anything. However, because they work very closely with the validator, the relationship between the two is defined between them. A likely scenario involves the validator requiring their collator to contribute to the bond as well to ensure that they have a stake in the outcome. The collator’s maintain a full-node on the respective para-chain, enabling them to create and monitor new blocks on the chain. For example, if your collator watches over the Bitcoin para-chain, think of them as being a miner and also a Collator simultaneously.</p></li>
-<li><p><strong>Fishermen</strong> - Think of Fishermen as auditors. They are not related to the block producing process, but rather watchers. They monitor the para-chains and relay-chain, looking for misbehavior and misconduct. If they spot people acting maliciously, they can turn them in and receive a reward. When they spot something fishy, they do have to put up a small bond however. If the network rejects their suspicious activity report, the bond is taken away. If it is approved they are rewarded, with the amount depending on the size and severity of the violation. They act independently and the process can be automated. In order to be a Fisherman, you must first run a full-node and be constantly vigilant.</p></li>
+<div><dl class="docutils">
+<dt>User Types:</dt>
+<dd><ol class="first last arabic simple">
+<li><strong>Validators</strong> - These are the top level users in the hierarchy of Polkadot. They are the most important people. They are essentially the <em>miners</em> of the Polkadot platform. They manage and run the relay chain. When new blocks are created on the relay chain, it is done by a validator. They are <em>heavily</em> bonded, with their very large token amount locked, because their work is so important.</li>
+<li><strong>Nominators</strong> - These are the people slightly below Nominators that keep them honest. Unlike Etheruem’s Proof of Stake, Polkadot uses <em>Nominated Proof of Stake</em>. In Ethereum, anyone can become a staker if they have enough Ether to stake. Every one of these stakers must attest to every valid block produced. In NPoS, you don’t have to do that. Instead, anyone can delegate their DOT tokens to another person, to stake on their behalf. The people you <em>nominate</em> in your place are the <em>validators</em>, and your stake is part of their bond. You are rewarded for providing part of their bond dependent on how much you provide. The onus is on you to pick someone honest and to monitor them to ensure they don’t lose your stake. The <strong>only job</strong> of the nominator is to delegate your DOT to a bond-holding validator, and ensure they act honestly. If they act dishonestly or get penalized, so do you.</li>
+<li><strong>Collators</strong> - Collators are kind of like the <em>helper-elves</em> of validators. Each validator is responsible for monitoring and verifying the authenticity of a specific para-chain. However, they must also simultaneously keep track of the relay-chain. This creates a significant amount of storage and bandwidth overhead for the validator to store 2 complete chains and monitor both in real time. The solution is to once again delegate authority to a lower entity. The Collator watches over the designated para-chain for the validator. They monitor it, identify its status, and report on its condition to the validator they work with. This information is included by the validator in their block on the relay-chain. They are not required to stake/bond anything. However, because they work very closely with the validator, the relationship between the two is defined between them. A likely scenario involves the validator requiring their collator to contribute to the bond as well to ensure that they have a stake in the outcome. The collator’s maintain a full-node on the respective para-chain, enabling them to create and monitor new blocks on the chain. For example, if your collator watches over the Bitcoin para-chain, think of them as being a miner and also a Collator simultaneously.</li>
+<li><strong>Fishermen</strong> - Think of Fishermen as auditors. They are not related to the block producing process, but rather watchers. They monitor the para-chains and relay-chain, looking for misbehavior and misconduct. If they spot people acting maliciously, they can turn them in and receive a reward. When they spot something fishy, they do have to put up a small bond however. If the network rejects their suspicious activity report, the bond is taken away. If it is approved they are rewarded, with the amount depending on the size and severity of the violation. They act independently and the process can be automated. In order to be a Fisherman, you must first run a full-node and be constantly vigilant.</li>
 </ol>
 </dd>
 </dl>
@@ -303,11 +309,12 @@
 </div>
 <div class="section" id="is-dot-an-eth-killer">
 <h2>Is DOT an “eth killer”<a class="headerlink" href="#is-dot-an-eth-killer" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt><strong>ABSOLUTELY NOT</strong>. In no sense is Polkadot even a competitor to Ethereum. This is true for a couple of reasons:</dt><dd><ol class="arabic simple">
-<li><p>Polkadot is not intended to be used as a primary currency. You won’t be paying for things with DOT like you would with Ether. That alone would take it out of competition. It uses a wallet and operates like all other cryptocurrencies, but the community has less interest in promoting direct-DOT-transfers over network upgrades.</p></li>
-<li><p>Polkadot does not support smart contracts. There is no DeFi, Uniswap, DAO’s, etc. on Polkadot. There are smart contracts and applications, but they are on a polkadot para-chain, NOT the relay chain. This means you’ll be using that para-chain’s coin to use those applications instead of DOT. Without native applications there is no way that DOT could or would compete with Ethererum.</p></li>
-<li><p>It doesn’t need to. Ethereum is meant to be the world’s decentralized computer. Polkadot servers a different niche purpose. It’s goal isn’t to be a decentralized computer, but simply to facilitate communication between blockchains. Ethereum’s growth doesn’t impinge upon Polkadot’s and vice versa. The two of them can grow together. In fact, if polkadot is successful in making onboarding to Ethereum easier, than its possible that Ether’s value will rise as well, because of its growth in popularity.</p></li>
+<dl class="docutils">
+<dt><strong>ABSOLUTELY NOT</strong>. In no sense is Polkadot even a competitor to Ethereum. This is true for a couple of reasons:</dt>
+<dd><ol class="first last arabic simple">
+<li>Polkadot is not intended to be used as a primary currency. You won’t be paying for things with DOT like you would with Ether. That alone would take it out of competition. It uses a wallet and operates like all other cryptocurrencies, but the community has less interest in promoting direct-DOT-transfers over network upgrades.</li>
+<li>Polkadot does not support smart contracts. There is no DeFi, Uniswap, DAO’s, etc. on Polkadot. There are smart contracts and applications, but they are on a polkadot para-chain, NOT the relay chain. This means you’ll be using that para-chain’s coin to use those applications instead of DOT. Without native applications there is no way that DOT could or would compete with Ethererum.</li>
+<li>It doesn’t need to. Ethereum is meant to be the world’s decentralized computer. Polkadot servers a different niche purpose. It’s goal isn’t to be a decentralized computer, but simply to facilitate communication between blockchains. Ethereum’s growth doesn’t impinge upon Polkadot’s and vice versa. The two of them can grow together. In fact, if polkadot is successful in making onboarding to Ethereum easier, than its possible that Ether’s value will rise as well, because of its growth in popularity.</li>
 </ol>
 </dd>
 </dl>

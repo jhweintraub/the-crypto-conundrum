@@ -100,7 +100,10 @@
 <li class="toctree-l1"><a class="reference internal" href="what_is_it.html#what-is-ethereum">What is Ethereum</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">How Ethereum Works</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#your-wallet">Your Wallet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#smart-contracts-explained">Smart Contracts Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#smart-contracts-explained">Smart Contracts Explained</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#block-explorers">Block Explorers</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="usability.html">How do I use it</a></li>
@@ -118,6 +121,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/security.html">Securing your investment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/confidence.html">Be Confident</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/staking.html">Mining and Staking</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Decentralized Applications:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/uniswap.html">Uniswap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/daos.html">Decentralized Governance and DAO’s</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Altcoins, Explained:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/monero.html">Monero (XMR)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/polkadot.html">Polkadot (DOT)</a></li>
 </ul>
 
             
@@ -245,16 +258,42 @@
 </div>
 <div class="section" id="smart-contracts-explained">
 <h2>Smart Contracts Explained<a class="headerlink" href="#smart-contracts-explained" title="Permalink to this headline">¶</a></h2>
-<p>In Ethereum, transactions are more complicated than Bitcoin. In Bitcoin, the only thing you can do is send from one person to another. In Ethereum, interacting with a Smart Contract, is a valid transaction that can be included in a block. This is because a smart contract, is just an application written in a programming language, like all other code.</p>
+<p>In Ethereum, transactions are more complicated than Bitcoin. In Bitcoin, the only thing you can do is send from one person to another. In Ethereum, interacting with a Smart Contract is a valid transaction, that can be included in a block. When you make one, it is processed same as a simple-transfer, and included in a block, alongside hundreds of others. To the network, it is not treated any different than a regular transaction, except that it contains more information to be processed. This is because a smart contract, is just an application written in a programming language, like all code.</p>
 <p>I want you to imagine, if you will, a lottery. Everyone across the nation goes to a store and buys a ticket and that money goes into the pot run by the government. The government is the centralized actor, and lottery operation relies on trust at a lot of stages. Trust that your money changes hands into a pot and everyone is honest. Trust that the government actually pays out to the winner, and so on and so forth.</p>
 <p>Smart Contracts are decentralized, autonomous, and transparent actors. Every part of the above system can be automated with code, eliminating the need to trust a central service. with a piece of code you can contribute to the pool directly, randomly select winners, and disperse rewards directly and anonymously. You only need to trust the code.</p>
-<p>It is the decentralization and automation of that responsibility, and instead allows you to trust code. Nobody can tamper with it. Everyone can view and audit it, to ensure its validity.</p>
+<p>It is the decentralization and automation of that responsibility, and instead allows you to trust code. Nobody can tamper with it. Once it is deployed, its code cannot be changed. It can be destroyed, if programmed to, but not changed. Everyone can view and audit it, to ensure its validity. This is why honesty is such an important part. If you write your contract in a malicious way to benefit yourself, everyone will notice, and won’t use your application.</p>
 <p>Much like regular web applications, you can interact with them without knowing at all how they work. Although they are complex pieces of code, with proper design, you can create and send transactions to them without having to know about the underlying code at all. If you’re interested in this, visit the Developer’s Corner at the end of this series.</p>
-<p>A smart contract operates autonomously, but must be called by a human. When you make a transaction, you call a specific contract, and a function within that contract. The contract operates in a pre-determined way. It has a balance, just like any wallet, and can send any coin or token to any other existing address, including another contract. Think of it like going to Google.com. Until you make a request to Google’s servers, they sit idle with the information you want, and then wait for your request information and process it, returning the expected results. This works the same way but decentralized.</p>
+<p>A smart contract operates autonomously, but must be called by a human. When you make a transaction, you call a specific contract, and a function within that contract. The contract operates in a pre-determined way. The way it operates is defined by the code, at the time it is deployed. Given the same inputs, it will always produce the same outputs. Contracts can call on other contracts to do things, on and on in an infinite chain. Keep in mind though, this process gets prohibitively expensive the more contracts you involve.</p>
+<p>Anyone in the world can deploy a smart contract, provided you pay the fee associated with it. The more complex the code, the higher your transaction fee will be. Whoever deploys it sets the rules of who is allowed to use it. You could say anyone can use it. You could limit it to only allowing specified addresses. You could even say anyone could use it provided they first met a series of conditions. The rules of which are defined in the source-code.</p>
+<p>It has a balance, just like any wallet, and can send any coin or token to any other existing address, including another contract. Think of it like going to Google.com. Until you make a request to Google’s servers, they sit idle with the information you want, and then wait for your request information and process it, returning the expected results. This works the same way but decentralized. Although it has a balance, it is autonomous, and nobody controls it. The difference between this and a wallet is that a wallet is software, operated by you, that sends transactions from your address. You cannot send a transaction as a contract. This means that even though it has a balance, and an address, there is no seed phrase that would allow you to act on behalf of the contract. Instead, you would write the code so that it does something like sending Ether to another person. The contract’s action to send Ether has to be initiated by your externally-owned-address (EOA), invoking the action on the contract. If you were to look at this afterwards, you would see only a single transaction. That transaction included your address as the initiator, the contract as the recipient, and all of the actions the contract took.</p>
+<p>A good example of this is that you could write a contract that says “on the directive of this specific address, send a specified amount of money to this other address”. You have to specify all factors like amount, who can invoke the contract, and everything you want the contract to do, when you write it, as it cannot be changed once deployed.</p>
 <img alt="../_images/sc_diagram.jpg" src="../_images/sc_diagram.jpg" />
 <p>Image Source: <a class="reference external" href="https://www.enukesoftware.com/blockchain-application-development.html">Enuke Software</a></p>
 <p>These contracts have their own unique programming language, which can be written like any other language would. It’s very similar to Java or Python</p>
-<p>You must pay a transaction fee anytime you wish you change the state of a contract. I.E anytime you want it to do something. If you want to change a value that costs Ether. However, to read a contract or get a current value, it is free. This can be done from a <a class="reference external" href="https://etherscan.io">block explorer</a>, because if you wanted a contract to read from another contract, that you would have to pay for.</p>
+<p>You must pay a transaction fee anytime you wish you change the state of a contract. I.E anytime you want it to do something. If you want to change a value that costs Ether. However, to read a contract or get a current value, it is free. You can get the value of <em>10,000</em> different addresses, and not pay a cent. However, the moment you want to change a value or send someone something, you have to pay.</p>
+<div class="section" id="block-explorers">
+<h3>Block Explorers<a class="headerlink" href="#block-explorers" title="Permalink to this headline">¶</a></h3>
+<p>When you make a transaction, it is public to the world. Anyone can view it from anywhere with an internet connection, or offline if you have a full download of the blockchain offline. This can be done from a <a class="reference external" href="https://etherscan.io">block explorer</a>. A <em>block-explorer</em> is simply a website that allows you to view any piece of data on the blockchain. You can go back to the first block, and look at the history of the first coins as they change hands up until the present. Any contract, its source code, and every transaction ever made to it can be viewed as well. They also include other useful information that the site personally compiles, such as fee estimates, important metrics, and usage analytics. This system of transparency is one of the things that makes the blockchain unique. There’s nowhere to hide.</p>
+<p>Each blockchain has its own block-explorer. They are fantastic resources to learn about all things in the ecosystem, how they work, etc.</p>
+<img alt="../_images/etherscan.png" src="../_images/etherscan.png" />
+<p><em>Etherscan Block-Explorer Homepage</em></p>
+<img alt="../_images/eoa_txs.png" src="../_images/eoa_txs.png" />
+<p><em>An Etherscan page for an individual non-contract address</em>.</p>
+<img alt="../_images/tether_txs.png" src="../_images/tether_txs.png" />
+<p><em>The Etherscan page for the Tether Token. It shows a list of all transactions in its history</em></p>
+<img alt="../_images/tether_functions.png" src="../_images/tether_functions.png" />
+<p><em>Some of the functions that the contract can perform when invoked, organized by if they are read or write functions</em></p>
+<img alt="../_images/tether_contract.png" src="../_images/tether_contract.png" />
+<p><em>The source code for the Tether token pictured above</em></p>
+<p>As you can see, there is a lot of information to parse through. But, there’s a ton of things you can learn and it can be fascinating to look through.</p>
+<dl class="simple">
+<dt>Two important things to keep in mind:</dt><dd><ol class="arabic simple">
+<li><p>This website is not a direct-node. The website operates a node, and has done its own indexing of the blockchain, and compiled this resource of information for you in real-time. It is updated with every new block. This allows them to give you more information than a normal node would.</p></li>
+<li><p>Etherscan has two pages for various tokens. One is the tracker, and the other is the contract. This is because a token is simply a complex-contract. This is discussed much more heavily in the <a class="reference external" href="https://thecryptoconundrum.net/ethereum_explained/tokens.html">tokens explained</a> page, so don’t worry if that doesn’t make sense yet. They will contain <em>almost all</em> of the same information, but by categorizing it this way, it provides a much better user-experience and is much cohesively organized. If you wanted to look at the source code, you will need to look at the <em>contract-page</em>. To see more broad-information about things like economics and availability, the token page is more apt.</p></li>
+</ol>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 

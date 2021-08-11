@@ -15,19 +15,19 @@ The keystore is a JSON file, created by the application at wallet creation, that
 Disclaimer
 ------------
 
-I have **NOT** been compensated for the promotion of any Ethereum related service or application, I'm just a fan. 
+I have **NOT** been compensated for the promotion of any Ethereum related service or application, I'm just a fan.
 
 I am **NOT** liable for any data that may be stolen, funds that may be lost, accidents that may occur, or anything else due to the improper use of these services or applications. Use at your own risk.
 
 Wallet Creation
 -----------------
 
-I recommend setting up your wallet with any of the following sources: 
+I recommend setting up your wallet with any of the following sources:
 	#. Metamask - A browser wallet operating as a chrome-extension, or a mobile application.
 	#. MyEtherWallet - A browser wallet operating out of a website.
 	#. MyCrypto App - Desktop Application and Website Wallet.
 
-If you plan on using your Cryptocurrency frequently, I recommend using Metamask, as it will easily allow you to send and receive. 
+If you plan on using your Cryptocurrency frequently, I recommend using Metamask, as it will easily allow you to send and receive.
 
 **It is highly recommended you generate your wallet keys on an air-gapped machine. This is one not connected to the internet. This is to ensure that malicious actors are not secretly observing your actions while generating your keys, and therefore able to steal them.**
 
@@ -40,7 +40,7 @@ Metamask
 
 `Metamask <https://metamask.io/>`_, is arguably the most versatile of all wallet applications. Its main version is a `Google-Chrome-Extension <https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn>`_ that allows you to access your cryptocurrency whenever you use the web, simply by clicking on the extension. It gives you access to send and receive with incredible ease. Simply simply download the program and follow the steps to set up your wallet, and then add it to your toolbar. When you visit a website that is configured for metamask, it use the information available to it to create new transactions and send them for you.
 
-It's as easy as clicking a button. Install metamask and click the button below to see! 
+It's as easy as clicking a button. Install metamask and click the button below to see!
 
 .. raw:: html
 
@@ -49,7 +49,7 @@ It's as easy as clicking a button. Install metamask and click the button below t
 	<script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>
 
 	<script type="text/javascript">
-		
+
 		const ethereumButton = document.querySelector('.enableEthereumButton');
 		const showAccount = document.querySelector('.showAccount');
 
@@ -63,6 +63,8 @@ It's as easy as clicking a button. Install metamask and click the button below t
 		  showAccount.innerHTML = account;
 		}
 	</script>
+
+*If you are using the Brave Browser, you may need to disable the "Crypto wallets" extension built into your browser to get metamask to work. It is recommended you set metamask as your default wallet in Brave.*
 
 By clicking on the little fox icon in your browser, you can see a homepage with information such as your balances, buttons to receive where you can view your address, send transactions, etc.
 
@@ -92,7 +94,7 @@ Example Transaction with MyEtherWallet
 
 Once you access your wallet and are dropped into the homepage, we can make a transaction. I'm going to walk you through 2: sending to another user, and interacting with a contract.
 
-Simple Transaction: 
+Simple Transaction:
 	Click around on the menu and the sidebar until you find *Send Transaction* and go to that page. You should see the following
 
 	.. image:: images/mew_tx.png
@@ -100,13 +102,13 @@ Simple Transaction:
 
 	On this page, you enter the same information you would on metamask: recipient, amount, transaction fee, etc. There is also a dropdown under *ETH* in case you want to send a token instead of Ether. You can edit the transaction fee, however it is automatically generated to be an average of other recent transactions. All you have to do is then click send.
 
-Contract Interactions: 
+Contract Interactions:
 	Click around on the sidebar until you find *Contract->Interact with Contract*. You will be prompted to input two things: an address, and an ABI. The ABI is essentially a schematic, of all the functions in the contract. Knowing this information will help your wallet correctly solicit the required inputs and form the transaction. If you know the contract address, finding the ABI is very simple. You simply go to `etherscan.io <https://etherscan.io>`_, and input the contract address. Then click on the *contract* tab and scroll down until you find *Contract ABI*. It should look something like this:
 
 	.. image:: images/contract_abi.png
 		:width: 700px
 
-	Copy this information and then input it back into the MyEtherWallet page. Once MyEtherWallet has this information, you can select a function you would like to execute from the dropdown list. Then all you have to do is fill out the form with the required inputs. The site will form the transaction for you and all you have to do is confirm it. 
+	Copy this information and then input it back into the MyEtherWallet page. Once MyEtherWallet has this information, you can select a function you would like to execute from the dropdown list. Then all you have to do is fill out the form with the required inputs. The site will form the transaction for you and all you have to do is confirm it.
 
 	.. image:: images/contract_tx.png
 		:width: 300px
@@ -116,7 +118,7 @@ Contract Interactions:
 Etherscan
 -----------
 
-Once your transaction has been initiated, you can view its status and information about it online, at a block explorer. Your wallet should give you a transaction hash, a long hex string of numbers and letters to identify it. Simply go to `etherscan.io <https://etherscan.io>`_ and in the bar put in your transaction hash, and view all the information. 
+Once your transaction has been initiated, you can view its status and information about it online, at a block explorer. Your wallet should give you a transaction hash, a long hex string of numbers and letters to identify it. Simply go to `etherscan.io <https://etherscan.io>`_ and in the bar put in your transaction hash, and view all the information.
 
 .. image:: images/etherscan_tx.png
 	:width: 700px
@@ -137,7 +139,7 @@ For example: the address of Ethereum creator Vitalik Buterin is ``0xd8da6bf26964
 
 Using the Ethereum Name Service, you can simply type ``Vitalik.eth`` into any ENS-enabled wallet, and see the above address automatically be inserted.
 
-The system functions through an on-chain smart contract, where each address is registered and represented by an NFT. You register your name by interacting with the contract through their `website <https://ens.domains>`_. 
+The system functions through an on-chain smart contract, where each address is registered and represented by an NFT. You register your name by interacting with the contract through their `website <https://ens.domains>`_.
 
 If you have an address you plan on using for a long time or soliciting payments, I highly suggest registering your domain, and can be done for very cheap.
 

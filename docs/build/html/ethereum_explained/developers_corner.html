@@ -125,6 +125,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/confidence.html">Be Confident</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/staking.html">Mining and Staking</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Decentralized Applications:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/uniswap.html">Uniswap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/daos.html">Decentralized Governance and DAO’s</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Altcoins, Explained:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/monero.html">Monero (XMR)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/polkadot.html">Polkadot (DOT)</a></li>
+</ul>
 
             
           
@@ -285,7 +295,7 @@
 <p><code class="docutils literal notranslate"><span class="pre">APPLY(S,TX)</span> <span class="pre">-&gt;</span> <span class="pre">S'</span> <span class="pre">or</span> <span class="pre">ERROR</span></code> where S = The current State and TX = The transaction value.</p>
 <p>In a real-world sense, iamgine the following: <code class="docutils literal notranslate"><span class="pre">APPLY({</span> <span class="pre">Alice:</span> <span class="pre">$50,</span> <span class="pre">Bob:</span> <span class="pre">$50</span> <span class="pre">},&quot;send</span> <span class="pre">$20</span> <span class="pre">from</span> <span class="pre">Alice</span> <span class="pre">to</span> <span class="pre">Bob&quot;)</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">Alice:</span> <span class="pre">$30,</span> <span class="pre">Bob:</span> <span class="pre">$70</span> <span class="pre">}</span></code>. It took the current state of all balances, processed a transaction, and returned the new state.</p>
 <p>In actuality, how the current state is determined is mathematically very tedious and involves <a class="reference external" href="https://eth.wiki/en/fundamentals/patricia-tree">Merkle-Patricia Trees</a>. Since this is not a CS Lecture, (and I barely understand it myself) i’m not going to walk through how those work, but I can try if there seems to be demand for it.</p>
-<p>This is important because we then can understand how smart contracts fit into this model. The use of a state machine allow the network to store the current state or values of a contract at any given time. Given as these contracts can have lots of variables to track, this is essential. It also allows us to to many layer-2 scaling operations off-chain. This I will explain later in the Layer 2 Page (update later with link).</p>
+<p>This is important because we then can understand how smart contracts fit into this model. The use of a state machine allow the network to store the current state or values of a contract at any given time. Given as these contracts can have lots of variables to track, this is essential. It also allows us to create many layer-2 scaling operations off-chain. This I will explain later.</p>
 </div>
 <div class="section" id="ethereum-virtual-machine">
 <h2>Ethereum Virtual Machine<a class="headerlink" href="#ethereum-virtual-machine" title="Permalink to this headline">¶</a></h2>

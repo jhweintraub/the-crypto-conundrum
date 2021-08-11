@@ -114,8 +114,7 @@ Look at this example transaction
 
 *Image Source: Blockchain.com*
 
-You can see that the input is multiple transactions until the amount is high enough to send it out to other places. This also means that amount you pay in transaction depends on how many inputs and outputs you need. If you look below you'll see that transaction fee is measured in sat/Byte. The Bytes is the number of transactions together, and the sat is the amount of BTC you are willing to pay for each of those bytes (sat = satoshi = 1e-18 BTC).
-
+You can see that the input is multiple transactions until the amount is high enough to send it out to other places. This also means that amount you pay in transaction depends on how many inputs and outputs you need. If you look below you'll see that transaction fee is measured in sat/Byte. The Bytes is the size of the transactions together, and the sat is the amount of BTC you are willing to pay for each of those bytes (sat = satoshi = 1e-18 BTC).
 
 Obviously this is a bad way of doing things because if you transact in smaller amounts, when you want to make a larger transaction those fees can add up. It's also just incredibly redundant, and prohibits layer-2 scaling solutions such as rollups and sidechains. This is why the only substantial Bitcoin proposed-scaling-solution is the Lightning Network, a side-channel implementation with its own set of problems.
 

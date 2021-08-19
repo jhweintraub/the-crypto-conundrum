@@ -3,7 +3,9 @@ Rollups and Sidechains
 
 If you used Ethereum until around May of 2020, you may have noticed the fees were absurdly high. Too high to justify sending Ethereum, much less using a smart contract.
 
-[Insert Chart]
+.. image:: images/Gasfeeshistory.png
+
+*Image Source: Coin Metrics Network Data Charts*
 
 This problem arose because there was simply too much demand, for too little block space. If Ethereum is ever going to see a worldwide adoption, then significant effort needs to be made to revamp how we submit transactions to the blockchain. The blockchain needs to be scalable. They need to be almost much faster than they are now, almost instantaneous. They need to be cheaper, fractions of pennies. Most importantly, these things need to be predictably low.
 
@@ -31,7 +33,7 @@ These roll-ups work in a very complicated way, involving a lot of high-level mat
 
 If you have an Ethereum address and wallet, you also have an equally valid wallet on layer-2. One mnemonic seed phrase can be used to generate the same wallet on each layer-2 network and side-chain. For example, if your wallet address is ``0xaB5409b0E5a66AcC9D63f668414539A60a5917C1``, then it is the same thing on Optimism, Polygon, xDai, etc. However, they are separate from the main chain. Just because you own ``1 Ether`` on mainnet, you do not own ``1 Ether`` on layer-2, unless you specifically acquire it by someone sending it to you.
 
-If you own an ENS domain, then you own it for the Ethereum main-net. This can mean making some planning as to which network you plan to use as your primary one, and registering an ENS domain there. ENS contract registrants are unique to that chain. It doesn't matter if you own it on *Skale* [site needed], if you're never going to use that network.
+If you own an ENS domain, then you own it for the Ethereum main-net. This can mean making some planning as to which network you plan to use as your primary one, and registering an ENS domain there. ENS contract registrants are unique to that chain. It doesn't matter if you own it on `Skale <https://skale.network/>`_ , if you're never going to use that network.
 
 The benefit of a roll-up, is that there is a *1-1* relationship between moving funds onto layer-2. ``1 Ether`` on main-net means you can move it to layer-2 and have exactly the same amount to spend. The same logic with tokens on layer-2 as well.
 
@@ -61,7 +63,7 @@ Yes and no. Technically, the transaction could be rolled-back during that period
 
 Think about it like the main-chain. When you submit your transaction it goes into a pool of pending-ones. Miners choose to pick up your transaction and include it because it is honest, and will not get rejected by the other nodes. Layer-2 works the same way. Operators of the Layer-2 OVM nodes will look at your honest transaction and include it in their roll-ups because it won't be invalidated later. They will choose not to include invalid transactions because of the penalties they incur for doing so. This is accomplished through a mix of honesty/trust, input validation from developers, and vigilance.
 
-The most popular Optimistic rollup services currently are Arbitrum [link needed] and Optimism [link needed]
+The most popular Optimistic rollup services currently are `Arbitrum <https://developer.offchainlabs.com/docs/rollup_basics>`_ and `Optimism <https://zerocap.com/optimism-the-new-scaling-solution-for-ethereum/>`_
 
 ZK-Rollups
 ***********
@@ -78,7 +80,7 @@ How exactly this is accomplished is the subject of heavy mathematical research, 
 
 Unlike optimistic rollups, transactions are checked for validity when being processed on-chain. The ZK-Rollup has a smart contract that the batch-nodes submit to. This contract does check each transaction to verify it is acceptable. This means that when the rollup is accepted, you can feel confident it is final, and cannot be rolled back. An invalid transaction would not pass the on-chain validity-check. There is still an element of validity checking before then though, as batch-node operators and applications have a role to play in preventing you from doing things you should not be doing to begin with. Unlike optimistic rollups, ZK-Rollups use lower transaction fees on-chain, as their smart contract only has to verify information, rather than computing anything new. Optimistic rollups still have to do some on-chain computation to make state-changes to the network, but it is still inconsequential to the individual user of the rollup.
 
-Because of the on-chain verification system, many zk-rollup protocols require your deployed-contract be written in a different language than a layer-1 contract like Solidity [link needed]. On Starknet, the most popular ZK-Rollup protocol right now, this language is known as Cairo [link needed]. There are however, projects in development like ZK-Sync [link needed], which aim to create a general-purpose ZK-Rollup system where any contract can be built in Solidity. It is also important to note that because each batch must be verified, it creates a much higher computational-burden on nodes to do the required complex-mathematics.
+Because of the on-chain verification system, many zk-rollup protocols require your deployed-contract be written in a different language than a layer-1 contract like `Solidity <https://docs.soliditylang.org/en/v0.8.7/>`_ . On Starknet, the most popular ZK-Rollup protocol right now, this language is known as `Cairo <https://www.cairo-lang.org/>`_ . There are however, projects in development like ZK-Sync [link needed], which aim to create a general-purpose ZK-Rollup system where any contract can be built in Solidity. It is also important to note that because each batch must be verified, it creates a much higher computational-burden on nodes to do the required complex-mathematics.
 
 This protocol has other benefits as well, creating things like increased anonymity from not having to disclose every transaction to the public chain. This is how coins like *ZCash* operate.
 
@@ -87,7 +89,7 @@ Sidechains
 
 You might have heard of something called a "Side-Chain". This is something that works VERY-similarly to Ethereum but is *not* Ethereum. A side-chain is simply an independent blockchain, that uses various elements of Ethereum within it. When you use a side-chain, you are not using Ethereum. Each side chain has its own native-coin that is used to pay transaction fees. Almost all of the main ethereum wallets support transactions on side-chains however. A side-chain operates in parallel to Ethereum, constantly reporting information back to it. However, it has its own applications, native tokens, consensus mechanisms, etc. When using a side chain, sending transactions and interacting with Dapps is **exactly** the same as the Ethereum *mainnet*, with a few configurations beforehand. The most popular is known as *Polygon (MATIC)*.
 
-The benefit of using a side chain is that they implement different ideas that are yet to be included on the Ethereum main chain. For example, Polygon scales faster than Ethereum, because it uses a proposed solution known as *Plasma* (citation needed) as well as a version of *Proof of Stake*, deployed before the Ethereum mainnet. This allow them to operate with more throughput and lower fees than Ethereum, through experimental features. Similarly, some of them have done this by sacrificing on things like decentralization, ease of use, etc.
+The benefit of using a side chain is that they implement different ideas that are yet to be included on the Ethereum main chain. For example, Polygon scales faster than Ethereum, because it uses a proposed solution known as `Plasma <https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/plasma/>`_ as well as a version of *Proof of Stake*, deployed before the Ethereum mainnet. This allow them to operate with more throughput and lower fees than Ethereum, through experimental features. Similarly, some of them have done this by sacrificing on things like decentralization, ease of use, etc.
 
 To get your coins onto this network so they can be spent, you may have to use soemthing called a bridge. A bridge is simply a set of smart contracts existing on each chain. They are used to keep track of token exchanges between networks. If you want to spend your Matic on Polygon, you first need to acquire Matic. This can be done by either moving your coins over a bridge, to the side-chain, or by having someone else send MATIC to your wallet.
 
@@ -111,11 +113,15 @@ It should also be noted that while it is possible to transfer funds between netw
 Joining Layer-2
 ******************
 
-Using a layer-2 provider is a very simple process, only requiring a little-bit of configurations. I'm going to walk you through the process of on and off-boarding using Metamask [cite needed]
+Using a layer-2 provider is a very simple process, only requiring a little-bit of configurations. I'm going to walk you through the process of on and off-boarding using `Metamask <https://metamask.io/>`_
 
-I'm going to jump forward and assume you've already got a metamask account set up. If you don't feel free to **click-here [cite needed]**, and see how.
+I'm going to jump forward and assume you've already got a metamask account set up. If you don't feel free to `click-here <https://thecryptoconundrum.net/ethereum_explained/usability.html#metamask>`_ , and see how.
 
-All we need to do is configure Metamask to check your balance, and send transactions, on a different set of node. This is a very simple procedure. First, open your metamask wallet and click on the top button labeled *Ethereum Mainnet* [picture needed]. This will show you the list of all Ethereum networks pre-loaded by Metamask, and can be easily switched to by you.
+All we need to do is configure Metamask to check your balance, and send transactions, on a different set of node. This is a very simple procedure. First, open your metamask wallet and click on the top button labeled *Ethereum Mainnet* 
+
+.. image:: images/MetamaskMainetOption.PNG 
+
+This will show you the list of all Ethereum networks pre-loaded by Metamask, and can be easily switched to by you.
 
 *You can ignore all of the ones labeled Testnet. These are alternative networks used by developers to help build and test their applications before deploying to the mainnet. They are irrelevant to us.*
 
@@ -138,7 +144,7 @@ Click on the option labeled *Custom RPC*, and you should see a form pop up. This
 
 If everything was input and saved correctly, you should now be on the  Layer-2 network. You can select which network you are using by selecting from the dropdown menu at the top. Metamask should update your shown balance when switching networks. When using the layer-2 network, all transactions and balances are routed through the specific layer-2 nodes. This is what the field *RPC URL* is for.
 
-[images needed]
+.. image:: images/RPC.PNG
 
 Bridges
 *******
@@ -151,7 +157,7 @@ Sending funds via a bridge is as simple as using any other smart-contract. First
 
 From here, you simply follow the on-screen instructions. You input the amount of your coin/token you want moved across the bridge and it tells you how much you can expect in return. This amount will vary based on factors such as transaction fees. It should be noted that this is still a smart-contract interaction, and any funds movement must still be paid for in that chain's native coin. Moving Ether to Polygon means paying the fee in Ether. Moving it back means paying a fee in MATIC, and so on.
 
-[insert image]
+.. image:: images/Bridge.PNG
 
 *If you are sending a token across the bridge, instead of the native coin, you may first be prompted to execute a transaction to approve the application to move funds. This is normal. This is due to how token contracts work, in which the smart contract needs you to grant it permission to move your tokens for you across the bridge. This transaction must be executed before the funds movement occurs.*
 

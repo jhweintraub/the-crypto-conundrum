@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,11 +31,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -83,7 +84,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduction:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">Start Here!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#who-am-i">Who am I</a></li>
@@ -96,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../introduction/picking_coins.html">Picking the Right Coins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/coin_suggestions.html">Coin Suggestions</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Ethereum, Explained:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Ethereum, Explained:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/what_is_it.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/what_is_it.html#what-is-ethereum">What is Ethereum</a></li>
@@ -109,7 +110,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/layer2.html">Rollups and Sidechains</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/developers_corner.html">Developers Corner</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Investment Rules:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Investment Rules:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="rules.html">General Strategy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exit_strategies.html">Define your exit strategy</a></li>
@@ -125,12 +126,12 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="staking.html">Mining and Staking</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Decentralized Applications:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Decentralized Applications:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dapps/uniswap.html">Uniswap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dapps/daos.html">Decentralized Governance and DAO’s</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Altcoins, Explained:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Altcoins, Explained:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../coins_explained/monero.html">Monero (XMR)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../coins_explained/polkadot.html">Polkadot (DOT)</a></li>
@@ -207,12 +208,11 @@
 <div class="section" id="being-confident">
 <h2>Being confident<a class="headerlink" href="#being-confident" title="Permalink to this headline">¶</a></h2>
 <p>Having confidence in your decisions is one of the most important aspects of trading successfully. When prices start you may start to sweat.</p>
-<dl class="docutils">
-<dt>Ask yourself these questions:</dt>
-<dd><ol class="first last arabic simple">
-<li>Do I have too much invested? Am I overleveraged?</li>
-<li>What is my timeframe?</li>
-<li>Have I done my due-dilligence?</li>
+<dl class="simple">
+<dt>Ask yourself these questions:</dt><dd><ol class="arabic simple">
+<li><p>Do I have too much invested? Am I overleveraged?</p></li>
+<li><p>What is my timeframe?</p></li>
+<li><p>Have I done my due-dilligence?</p></li>
 </ol>
 </dd>
 </dl>
@@ -222,17 +222,20 @@
 <div class="section" id="am-i-overleveraged">
 <h2>Am I overleveraged?<a class="headerlink" href="#am-i-overleveraged" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>Have you invested more than you are willing to lose or are financially comfortable with losing. If the answer to this is no, then you should stop. At this point you’re no better off than betting it all on black at the roulette table. You should not be spending your rent money or money you desparately need on crypto. If you’re spending more than you are able, then a dip could be your unravelling. While crypto can also be financial freedom, it can also be your trip to the poor house if you’re not careful. Take a risk, but use caution.</div></blockquote>
+<div><p>Have you invested more than you are willing to lose or are financially comfortable with losing. If the answer to this is no, then you should stop. At this point you’re no better off than betting it all on black at the roulette table. You should not be spending your rent money or money you desparately need on crypto. If you’re spending more than you are able, then a dip could be your unravelling. While crypto can also be financial freedom, it can also be your trip to the poor house if you’re not careful. Take a risk, but use caution.</p>
+</div></blockquote>
 </div>
 <div class="section" id="what-is-my-timeframe">
 <h2>What is my timeframe?<a class="headerlink" href="#what-is-my-timeframe" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>Getting in now makes you an early adopter. However, prices will rise and fall as with any market. How long are you willing to hold onto your investment? If you’re worried by a dip or a price fall, then your timeframe may be too short. It takes companies decades to raise billions of dollars, to build a massive userbase, and to change the world. As it stands now even Bitcoin, the first cryptocurrency, has only been around since 2008. Ethereum has only been around since 2013. Etc. Think long term. Think about what it means for this technology to truly change everything and how long that could take. When you have a vision like this, dips are no longer terrifying, but opportunistic. Think about your long term-strategy before freaking out over price changes.</div></blockquote>
+<div><p>Getting in now makes you an early adopter. However, prices will rise and fall as with any market. How long are you willing to hold onto your investment? If you’re worried by a dip or a price fall, then your timeframe may be too short. It takes companies decades to raise billions of dollars, to build a massive userbase, and to change the world. As it stands now even Bitcoin, the first cryptocurrency, has only been around since 2008. Ethereum has only been around since 2013. Etc. Think long term. Think about what it means for this technology to truly change everything and how long that could take. When you have a vision like this, dips are no longer terrifying, but opportunistic. Think about your long term-strategy before freaking out over price changes.</p>
+</div></blockquote>
 </div>
 <div class="section" id="have-i-done-my-due-dilligence">
 <h2>Have I done my due-dilligence<a class="headerlink" href="#have-i-done-my-due-dilligence" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>The reason you may be tempted to sell your crypto when prices fall is because you don’t know what you’ve bought. You may have fallen for the FOMO. When you know that the decision you’ve made is a good one in the long term, that can only come from DD, you will be less tempted to sell. You will be less willing to accept a loss and hold through the rough patch. If you bought Ethereum cause everyone was talking about it, a dip is daunting. If you know the ins-and-outs, and the possibilities it holds, and everything you can know, you will be unfazed by swings.</div></blockquote>
+<div><p>The reason you may be tempted to sell your crypto when prices fall is because you don’t know what you’ve bought. You may have fallen for the FOMO. When you know that the decision you’ve made is a good one in the long term, that can only come from DD, you will be less tempted to sell. You will be less willing to accept a loss and hold through the rough patch. If you bought Ethereum cause everyone was talking about it, a dip is daunting. If you know the ins-and-outs, and the possibilities it holds, and everything you can know, you will be unfazed by swings.</p>
+</div></blockquote>
 </div>
 <div class="section" id="final-remarks">
 <h2>Final remarks<a class="headerlink" href="#final-remarks" title="Permalink to this headline">¶</a></h2>

@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -13,8 +13,6 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -31,10 +29,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -84,7 +83,7 @@
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+              <p class="caption"><span class="caption-text">Introduction:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">Start Here!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#who-am-i">Who am I</a></li>
@@ -97,7 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../introduction/picking_coins.html">Picking the Right Coins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/coin_suggestions.html">Coin Suggestions</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Ethereum, Explained:</span></p>
+<p class="caption"><span class="caption-text">Ethereum, Explained:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="what_is_it.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="what_is_it.html#what-is-ethereum">What is Ethereum</a></li>
@@ -120,7 +119,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Investment Rules:</span></p>
+<p class="caption"><span class="caption-text">Investment Rules:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/rules.html">General Strategy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/exit_strategies.html">Define your exit strategy</a></li>
@@ -129,12 +128,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/confidence.html">Be Confident</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/staking.html">Mining and Staking</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Decentralized Applications:</span></p>
+<p class="caption"><span class="caption-text">Decentralized Applications:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dapps/uniswap.html">Uniswap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dapps/daos.html">Decentralized Governance and DAO’s</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Altcoins, Explained:</span></p>
+<p class="caption"><span class="caption-text">Altcoins, Explained:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../coins_explained/monero.html">Monero (XMR)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../coins_explained/polkadot.html">Polkadot (DOT)</a></li>
@@ -220,31 +219,31 @@
 <p>In Ethereum, a smart contract is writen in a custom programming language, known as <strong>Solidity</strong> (although there are others such as <strong>Vyper</strong>). By spending ethereum as a transaction fee, you can cause the contract to execute in a pre-determined way. <a class="reference external" href="https://hackernoon.com/turing-completeness-and-the-ethereum-blockchain-c5a93b865c1a#:~:text=Solidity%2C%20the%20Turing%20complete%20language,deployed%20once%20on%20the%20blockchain.&amp;text=A%20hacker%20can%20run%20any,to%20create%20an%20unauthorized%20effect.">Solidity is turing-complete</a>, statically typed, supports inheritance, libraries, and complex user-defined types among other features.</p>
 <p>Take the following code snippet of an example smart contract:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*version number*/</span>
-<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span>
+<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="o">;</span>
 
 <span class="cm">/*contract name*/</span>
-<span class="n">contract</span> <span class="n">example_contract</span> <span class="p">{</span>
+<span class="n">contract</span> <span class="n">example_contract</span> <span class="o">{</span>
 
         <span class="cm">/*function name with parameters and return values*/</span>
-        <span class="n">function</span> <span class="nf">add</span><span class="p">(</span><span class="n">uint256</span> <span class="n">a</span><span class="p">,</span> <span class="n">uint256</span> <span class="n">b</span><span class="p">)</span> <span class="n">returns</span> <span class="p">(</span><span class="n">uint256</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+        <span class="n">function</span> <span class="nf">add</span><span class="o">(</span><span class="n">uint256</span> <span class="n">a</span><span class="o">,</span> <span class="n">uint256</span> <span class="n">b</span><span class="o">)</span> <span class="n">returns</span> <span class="o">(</span><span class="n">uint256</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
 
-        <span class="p">}</span>
-<span class="p">}</span>
+        <span class="o">}</span>
+<span class="o">}</span>
 </pre></div>
 </div>
 <p>This is a smart-contract written in <em>Solidity</em>. It’s name is <em>example_contract</em> It contains a single function, called <em>add</em>. This is a function that takes an input of two-numbers and adds them together, returning their sum. When you deploy this contract, it is given its own address, much like your wallet. If you wanted execute this contract, you would initiate a transaction with the contract’s address, and execution information. This information includes the name of the function you are calling, the input values, cryptographic signatures, etc.</p>
 <p>Because the contract has a valid address, when deployed it can also do things such as hold balances like a normal wallet. This allows you to do things such as send Ether and various tokens to it to hold, and distribute. However, nobody owns the private key to this address. If you wanted to withdraw from the contract, you would have to write in various functions to allow you to do so. Take this example code.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="o">;</span>
 
-<span class="n">contract</span> <span class="n">example_contract2</span> <span class="p">{</span>
+<span class="n">contract</span> <span class="n">example_contract2</span> <span class="o">{</span>
 
-        <span class="n">uint256</span> <span class="n">balance</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">uint256</span> <span class="n">balance</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
 
-        <span class="n">function</span> <span class="nf">send_ether</span><span class="p">(</span><span class="n">address</span> <span class="n">payable</span> <span class="n">recipient</span><span class="p">)</span> <span class="n">payable</span> <span class="p">{</span>
-                <span class="n">balance</span> <span class="o">+=</span> <span class="n">msg</span><span class="p">.</span><span class="na">value</span><span class="p">;</span> <span class="cm">/*msg.value is the transaction value*/</span>
-        <span class="p">}</span>
-<span class="p">}</span>
+        <span class="n">function</span> <span class="nf">send_ether</span><span class="o">(</span><span class="n">address</span> <span class="n">payable</span> <span class="n">recipient</span><span class="o">)</span> <span class="n">payable</span> <span class="o">{</span>
+                <span class="n">balance</span> <span class="o">+=</span> <span class="n">msg</span><span class="o">.</span><span class="na">value</span><span class="o">;</span> <span class="cm">/*msg.value is the transaction value*/</span>
+        <span class="o">}</span>
+<span class="o">}</span>
 </pre></div>
 </div>
 <p>This code contains a method that allows you to store and send ether from one person to another. If you see the word <em>payable</em> means that if you call this method, you can send ether alongside the input value of a recipient, and the contract will do with it what you specify. If you don’t specify to send it somewhere, then it will hold the amount in its account balance for the contract. This is useful because it allows you to specify what to do if someone sends ether to the contract address, alongside relevant nput data. For applications like DeFi, or that involve sending money around, it is a very powerful tool for trustless funds exchanges.</p>
@@ -255,18 +254,18 @@
 <div class="section" id="logs">
 <h2>Logs<a class="headerlink" href="#logs" title="Permalink to this headline">¶</a></h2>
 <p>You also have the option to publish the metadata about a transaction, that you define. These logs are known as <em>events</em>. Take the following code.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="o">;</span>
 
 <span class="c1">//Declare an Event</span>
-<span class="n">event</span> <span class="nf">transfer</span><span class="p">(</span><span class="n">address</span> <span class="n">indexed</span> <span class="n">_from</span><span class="p">,</span> <span class="n">address</span> <span class="n">indexed</span> <span class="n">_to</span><span class="p">,</span> <span class="n">uint</span> <span class="n">_value</span><span class="p">);</span>
+<span class="n">event</span> <span class="nf">transfer</span><span class="o">(</span><span class="n">address</span> <span class="n">indexed</span> <span class="n">_from</span><span class="o">,</span> <span class="n">address</span> <span class="n">indexed</span> <span class="n">_to</span><span class="o">,</span> <span class="n">uint</span> <span class="n">_value</span><span class="o">);</span>
 
 
-<span class="n">contract</span> <span class="n">example_contract2</span> <span class="p">{</span>
+<span class="n">contract</span> <span class="n">example_contract2</span> <span class="o">{</span>
 
-        <span class="n">function</span> <span class="nf">send_ether</span><span class="p">(</span><span class="n">address</span> <span class="n">payable</span> <span class="n">recipient</span><span class="p">)</span> <span class="n">payable</span> <span class="p">{</span>
-                <span class="n">emit</span> <span class="nf">transfer</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="na">sender</span><span class="p">,</span> <span class="n">recipient</span><span class="p">,</span> <span class="n">msg</span><span class="p">.</span><span class="na">value</span><span class="p">);</span>
-        <span class="p">}</span>
-<span class="p">}</span>
+        <span class="n">function</span> <span class="nf">send_ether</span><span class="o">(</span><span class="n">address</span> <span class="n">payable</span> <span class="n">recipient</span><span class="o">)</span> <span class="n">payable</span> <span class="o">{</span>
+                <span class="n">emit</span> <span class="nf">transfer</span><span class="o">(</span><span class="n">msg</span><span class="o">.</span><span class="na">sender</span><span class="o">,</span> <span class="n">recipient</span><span class="o">,</span> <span class="n">msg</span><span class="o">.</span><span class="na">value</span><span class="o">);</span>
+        <span class="o">}</span>
+<span class="o">}</span>
 </pre></div>
 </div>
 <p>We first declare an event and its parameters. In this case it’s <em>transfer</em> and it requires a sender, a recipient, and a value. When the function <em>send</em> is executed, it will publish this metadata to the chain alongside the rest of the transaction, as JSON data. This is done with the keyword <em>emit</em>. We can view this on a <a class="reference external" href="https://etherscan.io/tx/0x265d64a8d0e7f86cae84d29bc9b86dc796b0eaae9e84a99d0b1e82b17609b622#eventlog">block explorer</a> beautified to look like this</p>
@@ -335,36 +334,41 @@
 </div>
 <div class="section" id="transaction-lifecycle">
 <h2>Transaction lifecycle<a class="headerlink" href="#transaction-lifecycle" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>What happens when you want to send a transaction. There are several steps:</dt><dd><ol class="arabic simple">
-<li><dl class="simple">
-<dt>Constructing the raw transaction. This is in the form of a signed raw transaction hex. Your wallet constructs the raw transaction data, and signs it with your private key. This contains several fields:</dt><dd><ol class="arabic simple">
-<li><p>The Nonce, in hex. The unsigned integer that represents your transaction count, to prevent double-spends. It is incremented every time you make a transaction, to prevent replay transactions.</p></li>
-<li><p>Gas Price, in hex.</p></li>
-<li><p>Gas Limit, in hex.</p></li>
-<li><p>the recipient, the “to” field.</p></li>
-<li><p>the transaction value, in ether, also in hex.</p></li>
-<li><dl class="simple">
-<dt>Extra transaction data. Only necesarry for a smart contract interaction. Calculated automatically by your wallet. If you want to do it yourself though, it’s very easy:</dt><dd><ol class="arabic simple">
-<li><dl class="simple">
-<dt>Take the sha3 of the function signature from the contract ABI, without the parameter names.</dt><dd><ul class="simple">
-<li><p>If the function signature is <code class="docutils literal notranslate"><span class="pre">mint(address</span> <span class="pre">to)</span></code>, then you should only use <code class="docutils literal notranslate"><span class="pre">mint(address)</span></code>. This is because the EVM doesn’t care about the parameters, it just needs to be able to identify the function.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">web3.utils.sha3(&quot;mint(address)&quot;)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">0x7f9c8b4781db704d0917ecead0efa9e769fadacf34db8e74afcc18c0c8f35497</span></code></p></li>
+<dl class="docutils">
+<dt>What happens when you want to send a transaction. There are several steps:</dt>
+<dd><ol class="first last arabic simple">
+<li><dl class="first docutils">
+<dt>Constructing the raw transaction. This is in the form of a signed raw transaction hex. Your wallet constructs the raw transaction data, and signs it with your private key. This contains several fields:</dt>
+<dd><ol class="first last arabic">
+<li>The Nonce, in hex. The unsigned integer that represents your transaction count, to prevent double-spends. It is incremented every time you make a transaction, to prevent replay transactions.</li>
+<li>Gas Price, in hex.</li>
+<li>Gas Limit, in hex.</li>
+<li>the recipient, the “to” field.</li>
+<li>the transaction value, in ether, also in hex.</li>
+<li><dl class="first docutils">
+<dt>Extra transaction data. Only necesarry for a smart contract interaction. Calculated automatically by your wallet. If you want to do it yourself though, it’s very easy:</dt>
+<dd><ol class="first last arabic">
+<li><dl class="first docutils">
+<dt>Take the sha3 of the function signature from the contract ABI, without the parameter names.</dt>
+<dd><ul class="first last">
+<li>If the function signature is <code class="docutils literal notranslate"><span class="pre">mint(address</span> <span class="pre">to)</span></code>, then you should only use <code class="docutils literal notranslate"><span class="pre">mint(address)</span></code>. This is because the EVM doesn’t care about the parameters, it just needs to be able to identify the function.</li>
+<li><code class="docutils literal notranslate"><span class="pre">web3.utils.sha3(&quot;mint(address)&quot;)</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">0x7f9c8b4781db704d0917ecead0efa9e769fadacf34db8e74afcc18c0c8f35497</span></code></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>Take the first <em>4</em> bytes of the hash -&gt; <code class="docutils literal notranslate"><span class="pre">0x7f9c8b47</span></code></p></li>
-<li><dl class="simple">
-<dt>Take the input parameters, and convert to bytes32, a 32-byte hex string. If the value of the string is less than 32-bytes, pad it on the left. If it is an address, or already in hex form, just do the padding, no extra conversion required.</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">0xaB5409b0E5a66AcC9D63f668414539A60a5917C1</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">000000000000000000000000aB5409b0E5a66AcC9D63f668414539A60a5917C</span></code></p></li>
+<li>Take the first <em>4</em> bytes of the hash -&gt; <code class="docutils literal notranslate"><span class="pre">0x7f9c8b47</span></code></li>
+<li><dl class="first docutils">
+<dt>Take the input parameters, and convert to bytes32, a 32-byte hex string. If the value of the string is less than 32-bytes, pad it on the left. If it is an address, or already in hex form, just do the padding, no extra conversion required.</dt>
+<dd><ul class="first last">
+<li><code class="docutils literal notranslate"><span class="pre">0xaB5409b0E5a66AcC9D63f668414539A60a5917C1</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">000000000000000000000000aB5409b0E5a66AcC9D63f668414539A60a5917C</span></code></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>Repeat for each input parameter, and append to the function signature.</p></li>
+<li>Repeat for each input parameter, and append to the function signature.</li>
 </ol>
 </dd>
 </dl>
@@ -373,13 +377,13 @@
 </dd>
 </dl>
 </li>
-<li><p>Sign the transaction with your private key.</p></li>
-<li><p>Submit your transaction request by sending it to a local node. This means that the transaction construction and signing can be done offline. This is often to protect the secrecy of the security key and prevent transaction tampering. You can do this using <a class="reference external" href="https://etherscan.io/pushTx">Etherscan’s nodes</a> by submitting the raw transaction data.</p></li>
-<li><p>The node will propagate the unconfirmed transaction to its peers, if they choose they will add it to their mempool. Some may reject it if they feel the gas is too low or if the transaction is invalid. This is because the mempool has a finite size.</p></li>
-<li><p>The transaction sits in the mempool until a miner chooses to include it in a block. They include it in the block and execute the transactions and mine it until completion.</p></li>
-<li><p>Nodes propagate the new block and state information through its peers. If the block is accepted, they will add it to their chain. If not, they ignore it.</p></li>
-<li><p>Propagation continues until the entire network has the updated blocks.</p></li>
-<li><p>Process repeats indefinitely.</p></li>
+<li>Sign the transaction with your private key.</li>
+<li>Submit your transaction request by sending it to a local node. This means that the transaction construction and signing can be done offline. This is often to protect the secrecy of the security key and prevent transaction tampering. You can do this using <a class="reference external" href="https://etherscan.io/pushTx">Etherscan’s nodes</a> by submitting the raw transaction data.</li>
+<li>The node will propagate the unconfirmed transaction to its peers, if they choose they will add it to their mempool. Some may reject it if they feel the gas is too low or if the transaction is invalid. This is because the mempool has a finite size.</li>
+<li>The transaction sits in the mempool until a miner chooses to include it in a block. They include it in the block and execute the transactions and mine it until completion.</li>
+<li>Nodes propagate the new block and state information through its peers. If the block is accepted, they will add it to their chain. If not, they ignore it.</li>
+<li>Propagation continues until the entire network has the updated blocks.</li>
+<li>Process repeats indefinitely.</li>
 </ol>
 </dd>
 </dl>

@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -13,8 +13,6 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -31,10 +29,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -84,7 +83,7 @@
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+              <p class="caption"><span class="caption-text">Introduction:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">Start Here!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#who-am-i">Who am I</a></li>
@@ -97,7 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../introduction/picking_coins.html">Picking the Right Coins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/coin_suggestions.html">Coin Suggestions</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Ethereum, Explained:</span></p>
+<p class="caption"><span class="caption-text">Ethereum, Explained:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/what_is_it.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/what_is_it.html#what-is-ethereum">What is Ethereum</a></li>
@@ -110,7 +109,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/layer2.html">Rollups and Sidechains</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/developers_corner.html">Developers Corner</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Investment Rules:</span></p>
+<p class="caption"><span class="caption-text">Investment Rules:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="rules.html">General Strategy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exit_strategies.html">Define your exit strategy</a></li>
@@ -125,12 +124,12 @@
 <li class="toctree-l1"><a class="reference internal" href="confidence.html">Be Confident</a></li>
 <li class="toctree-l1"><a class="reference internal" href="staking.html">Mining and Staking</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Decentralized Applications:</span></p>
+<p class="caption"><span class="caption-text">Decentralized Applications:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dapps/uniswap.html">Uniswap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dapps/daos.html">Decentralized Governance and DAO’s</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Altcoins, Explained:</span></p>
+<p class="caption"><span class="caption-text">Altcoins, Explained:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../coins_explained/monero.html">Monero (XMR)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../coins_explained/polkadot.html">Polkadot (DOT)</a></li>
@@ -205,52 +204,58 @@
 <div class="section" id="doing-your-own-research-dyor">
 <h2>Doing your own Research (DYOR)<a class="headerlink" href="#doing-your-own-research-dyor" title="Permalink to this headline">¶</a></h2>
 <p>Look at the website homepage.</p>
-<dl class="simple">
-<dt>If you’re a coder, some of the things you can look for:</dt><dd><ol class="arabic simple">
-<li><p>Do they have a public Github? Check it out and look through the code</p></li>
-<li><dl class="simple">
-<dt>Have they deployed various smart contracts already? Go through those on the Blockchain Explorer.</dt><dd><ol class="loweralpha simple">
-<li><p>Has an outside entity audited it? Has someone checked it for known security vulnerabilities?</p></li>
-<li><p>Is it similar to or a copy of another contract? Since Smart contracts are public, many scams will copy the code of a defunct project and use it as their own. This is not a red flag in and of itself, but it can be a telltale sign.</p></li>
-<li><p>Does the code line up with their description?</p></li>
+<dl class="docutils">
+<dt>If you’re a coder, some of the things you can look for:</dt>
+<dd><ol class="first last arabic simple">
+<li>Do they have a public Github? Check it out and look through the code</li>
+<li><dl class="first docutils">
+<dt>Have they deployed various smart contracts already? Go through those on the Blockchain Explorer.</dt>
+<dd><ol class="first last loweralpha">
+<li>Has an outside entity audited it? Has someone checked it for known security vulnerabilities?</li>
+<li>Is it similar to or a copy of another contract? Since Smart contracts are public, many scams will copy the code of a defunct project and use it as their own. This is not a red flag in and of itself, but it can be a telltale sign.</li>
+<li>Does the code line up with their description?</li>
 </ol>
 </dd>
 </dl>
 </li>
-<li><p>Identify the developers and look at their Github’s previous projects. Are they similar and do they have experience?</p></li>
+<li>Identify the developers and look at their Github’s previous projects. Are they similar and do they have experience?</li>
 </ol>
 </dd>
-<dt>Important Tokenomics Questions:</dt><dd><ol class="arabic simple">
-<li><p>What is the circulating and total supply?</p></li>
-<li><dl class="simple">
-<dt>How many current holders are there?</dt><dd><ol class="loweralpha simple">
-<li><p>Do institutional backers and developers have their liquidity locked for a period of time?</p></li>
-<li><p>Is there anyone holding more than <code class="docutils literal notranslate"><span class="pre">3%</span></code> of the supply?</p></li>
+<dt>Important Tokenomics Questions:</dt>
+<dd><ol class="first last arabic simple">
+<li>What is the circulating and total supply?</li>
+<li><dl class="first docutils">
+<dt>How many current holders are there?</dt>
+<dd><ol class="first last loweralpha">
+<li>Do institutional backers and developers have their liquidity locked for a period of time?</li>
+<li>Is there anyone holding more than <code class="docutils literal notranslate"><span class="pre">3%</span></code> of the supply?</li>
 </ol>
 </dd>
 </dl>
 </li>
-<li><p>Where is its value derived from?</p></li>
-<li><p>Can I buy it from major exchanges and institutions, or only on Decentralized Exchanges?</p></li>
+<li>Where is its value derived from?</li>
+<li>Can I buy it from major exchanges and institutions, or only on Decentralized Exchanges?</li>
 </ol>
 </dd>
-<dt>In a time where FOMO is rampant, it’s easy for people on the internet to pump and dump coins. Ask yourself where your information is coming from:</dt><dd><ol class="arabic simple">
-<li><p>Is it being shilled by other people on Reddit?</p></li>
-<li><p>Are major news or crypto outlets talking about it?</p></li>
-<li><p>Who is the person you’re taking advice from?</p></li>
-<li><p>Is analysis being made from a technical perspective or a business one?</p></li>
+<dt>In a time where FOMO is rampant, it’s easy for people on the internet to pump and dump coins. Ask yourself where your information is coming from:</dt>
+<dd><ol class="first last arabic simple">
+<li>Is it being shilled by other people on Reddit?</li>
+<li>Are major news or crypto outlets talking about it?</li>
+<li>Who is the person you’re taking advice from?</li>
+<li>Is analysis being made from a technical perspective or a business one?</li>
 </ol>
 </dd>
 </dl>
 <p>Social media can be useful sources of information, but you should do your own research on anything you read.
 Be skeptical, but also open minded.</p>
 <p><strong>Trust, but verify.</strong></p>
-<dl class="simple">
-<dt>Be wary of:</dt><dd><ol class="arabic simple">
-<li><p>Youtube personalities</p></li>
-<li><p>Various subreddits.</p></li>
-<li><p>Discord Servers.</p></li>
-<li><p>Celebrities and Influencers</p></li>
+<dl class="docutils">
+<dt>Be wary of:</dt>
+<dd><ol class="first last arabic simple">
+<li>Youtube personalities</li>
+<li>Various subreddits.</li>
+<li>Discord Servers.</li>
+<li>Celebrities and Influencers</li>
 </ol>
 </dd>
 </dl>
@@ -268,13 +273,14 @@ Be skeptical, but also open minded.</p>
 <div class="section" id="reddit-discord">
 <h2>Reddit &amp; Discord<a class="headerlink" href="#reddit-discord" title="Permalink to this headline">¶</a></h2>
 <p>I’m going to get a lot of hate for this, but it’s important that you know.</p>
-<dl class="simple">
-<dt>Reddit can also be a powerful tool to bring people together, but there’s a lot of dumb-assery. There are many subreddits such as</dt><dd><ol class="arabic simple">
-<li><p><a class="reference external" href="https://reddit.com/r/cryptomoonshots">/r/Cryptomoonshots</a>.</p></li>
-<li><p><a class="reference external" href="https://reddit.com/r/cryptomoon">/r/Cryptomoon</a>.</p></li>
-<li><p><a class="reference external" href="https://reddit.com/r/ico">/r/ICO</a>.</p></li>
-<li><p><a class="reference external" href="https://reddit.com/r/satoshistreetbets">/r/SatoshiStreetBets</a>.</p></li>
-<li><p><a class="reference external" href="https://reddit.com/r/unicryptpresales">/r/UnicryptPresales</a>.</p></li>
+<dl class="docutils">
+<dt>Reddit can also be a powerful tool to bring people together, but there’s a lot of dumb-assery. There are many subreddits such as</dt>
+<dd><ol class="first last arabic simple">
+<li><a class="reference external" href="https://reddit.com/r/cryptomoonshots">/r/Cryptomoonshots</a>.</li>
+<li><a class="reference external" href="https://reddit.com/r/cryptomoon">/r/Cryptomoon</a>.</li>
+<li><a class="reference external" href="https://reddit.com/r/ico">/r/ICO</a>.</li>
+<li><a class="reference external" href="https://reddit.com/r/satoshistreetbets">/r/SatoshiStreetBets</a>.</li>
+<li><a class="reference external" href="https://reddit.com/r/unicryptpresales">/r/UnicryptPresales</a>.</li>
 </ol>
 </dd>
 </dl>

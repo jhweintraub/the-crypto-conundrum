@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -13,8 +13,6 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -31,10 +29,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -84,7 +83,7 @@
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+              <p class="caption"><span class="caption-text">Introduction:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">Start Here!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#who-am-i">Who am I</a></li>
@@ -97,7 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../introduction/picking_coins.html">Picking the Right Coins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/coin_suggestions.html">Coin Suggestions</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Ethereum, Explained:</span></p>
+<p class="caption"><span class="caption-text">Ethereum, Explained:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="what_is_it.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="what_is_it.html#what-is-ethereum">What is Ethereum</a></li>
@@ -131,7 +130,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="developers_corner.html">Developers Corner</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Investment Rules:</span></p>
+<p class="caption"><span class="caption-text">Investment Rules:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/rules.html">General Strategy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/exit_strategies.html">Define your exit strategy</a></li>
@@ -140,12 +139,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/confidence.html">Be Confident</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/staking.html">Mining and Staking</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Decentralized Applications:</span></p>
+<p class="caption"><span class="caption-text">Decentralized Applications:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dapps/uniswap.html">Uniswap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dapps/daos.html">Decentralized Governance and DAO’s</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Altcoins, Explained:</span></p>
+<p class="caption"><span class="caption-text">Altcoins, Explained:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../coins_explained/monero.html">Monero (XMR)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../coins_explained/polkadot.html">Polkadot (DOT)</a></li>
@@ -222,10 +221,16 @@
 <p>This problem arose because there was simply too much demand, for too little block space. If Ethereum is ever going to see a worldwide adoption, then significant effort needs to be made to revamp how we submit transactions to the blockchain. The blockchain needs to be scalable. They need to be almost much faster than they are now, almost instantaneous. They need to be cheaper, fractions of pennies. Most importantly, these things need to be predictably low.</p>
 <p>Part of the reason why I, and many other crypto-fans, dislike Bitcoin is its scalability issues. As it grew in popularity the fees became way too high and the times way too long for it to be a <em>medium of exchange</em>. That’s where the <em>store of value</em> narrative comes into play. It’s simply not practical to exchange with Bitcoin, so people started discussing it as an asset only worth holding. Without changes and updates, Ethereum could go the same way as fees and execution time rise significantly.</p>
 <p>Luckily, the Ethereum community has been hard at work on this problem for many years now, and it seems that they have come to a form of consensus on the solution: Layer 2. Using a series of intricate mathematics that even I barely understand, a layer-2 system has the potential to dramatically scale Ethereum hundreds of times over and eliminate the transaction fee problems. It is currently the best proposed-solution to help scale Ethereum, without sacrificing decentralization and security. However, it does come with some problems, and is by no-means a silver bullet.</p>
+<p>The following information might get pretty complicated, so I want to clear something up first. <em>Layer-1</em> is the blockchain itself. Whenever you hear that, just think blockchain in its current state. <em>Layer-2</em> is an application layer that sits <em>on-top of</em> layer-1, and reports to it. Layer-2 is an independent technology, taking advantage of existing blockchain-infrastructure.</p>
 <div class="section" id="block-space">
 <h2>Block Space<a class="headerlink" href="#block-space" title="Permalink to this headline">¶</a></h2>
 <p>If you’ve read <a class="reference external" href="https://thecryptoconundrum.net/ethereum_explained/gas.html#block-size">some of my previous posts about block-size,</a>, you’d know the problem with scalability is that block space is inherently very limited. Without increasing size, only a certain amount of transactions can fit into each block. This creates a natural bottleneck that forces up transaction fees as people bid to be included in that limited space. This causes the price of a transaction to rise to incredible heights as people continue to outbid each-other for limited space. Eventually the price gets so high people start to back-off transactions because it’s not worth it to do so anymore. It’s not worth it to send a <code class="docutils literal notranslate"><span class="pre">$5</span></code> transaction if it costs <code class="docutils literal notranslate"><span class="pre">$10</span></code> to be confirmed.</p>
-<p>The natural solution is to find a way to increase the amount of transactions that fit into a specific amount of space, thereby making each transaction data more efficient. This way you can fit more transaction data into a statically-sized block, without having to increase the size. The way this is done is by computing transactions off-chain, and moving it on-chain later. This is known as a Rollup</p>
+<p>The natural solution is to find a way to increase the amount of transactions that fit into a specific amount of space, thereby making each transaction data more efficient. This way you can fit more transaction data into a statically-sized block, without having to increase the size. This dillema of trading decentralization for scalability or security is what is known as the <em>Scalability Trilemma</em>. Coined by Vitalik Buterin, it describes the main issue facing blockchains. With our current understanding of cryptocurrency and blockchains, it is not feasible to achieve all three parts: decentralization, security, and scalability. Getting 2 requires sacrificing one. Chains like the Binance Smart Chain chose to sacrifice decentralization for scalability. Bitcoin sacrifices scalability for decentralization and security. In its current form Ethereum is similar to Bitcoin in this respect. It is secure and decentralized, but faces scalability issues. As a result, many have hailed layer-2 as the “holy-grail” of solving the scalability trilemma.</p>
+<img alt="../_images/trilemma.png" src="../_images/trilemma.png" />
+<p><em>Image Source: Vitalik Buterin, Vitalik.ca</em></p>
+<p>The way Layer-2 solves the scalability issue is by computing transactions off-chain, and moving it on-chain later. This is known as a Rollup. By computing things elsewhere and only publishing the results, it allows current levels of consumer hardware to still be able to run blockchain-nodes, preserving-decentralization. It also doesn’t require any change in layer-1 protocols, which preserves the current security models of the blockchain.</p>
+<p>I think Patrick Star can illustrate it well…</p>
+<a class="reference internal image-reference" href="../_images/meme.jpg"><img alt="../_images/meme.jpg" src="../_images/meme.jpg" style="width: 300px;" /></a>
 </div>
 <div class="section" id="rollups">
 <h2>Rollups<a class="headerlink" href="#rollups" title="Permalink to this headline">¶</a></h2>
@@ -238,12 +243,13 @@
 <p>The benefit of a roll-up, is that there is a <em>1-1</em> relationship between moving funds onto layer-2. <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Ether</span></code> on main-net means you can move it to layer-2 and have exactly the same amount to spend. The same logic with tokens on layer-2 as well.</p>
 <div class="section" id="how-roll-ups-work">
 <h3>How Roll-Ups Work<a class="headerlink" href="#how-roll-ups-work" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt>Using a roll-up has 4 steps:</dt><dd><ol class="arabic simple">
-<li><p>Users submit a transaction request to a roll-up node. This node is known as an <em>“aggregator”</em> and is specially made to process roll-ups. From the viewpoint of the user, this is done exactly the same as submitting a regular transaction. It might require a special wallet, or to configure your wallet to a specific network. However, once you’re configured you send transactions exactly the same as normal.</p></li>
-<li><p>The roll-up node waits as hundreds or thousands of transactions roll-in (pun intended), and bundles them together. It does a lot of math on them all, and generates a mathematical-proof. This proof can be used to verify the validity of each transaction inside the roll-up. This proof basically says “this is what the state of the blockchain would be if these transactions were processed on-chain. I did that computational work ahead of time, and now you just need to accept the work I did”.</p></li>
-<li><p>The node submits that roll-up information to the main Ethereum chain. This means that layer-2 solutions are <em>secured</em> by layer 1. It takes advantage of the security provided by the underlying blockchain without having to develop some of its own.</p></li>
-<li><p>The roll-up is placed on chain if valid, and transactions finalized.</p></li>
+<dl class="docutils">
+<dt>Using a roll-up has 4 steps:</dt>
+<dd><ol class="first last arabic simple">
+<li>Users submit a transaction request to a roll-up node. This node is known as an <em>“aggregator”</em> and is specially made to process roll-ups. From the viewpoint of the user, this is done exactly the same as submitting a regular transaction. It might require a special wallet, or to configure your wallet to a specific network. However, once you’re configured you send transactions exactly the same as normal.</li>
+<li>The roll-up node waits as hundreds or thousands of transactions roll-in (pun intended), and bundles them together. It does a lot of math on them all, and generates a mathematical-proof. This proof can be used to verify the validity of each transaction inside the roll-up. This proof basically says “this is what the state of the blockchain would be if these transactions were processed on-chain. I did that computational work ahead of time, and now you just need to accept the work I did”.</li>
+<li>The node submits that roll-up information to the main Ethereum chain. This means that layer-2 solutions are <em>secured</em> by layer 1. It takes advantage of the security provided by the underlying blockchain without having to develop some of its own.</li>
+<li>The roll-up is placed on chain if valid, and transactions finalized.</li>
 </ol>
 </dd>
 </dl>
@@ -283,8 +289,7 @@
 <p>The most popular is known as <em>Polygon (MATIC)</em>. Polygon is the name of the chain, and coin, and its symbol is <em>MATIC</em>. They are the same thing. Kind of how Ethereum is the name of the platform, and <em>Ether</em> is the name of the native-coin.</p>
 <p>The benefit of using a side chain is that they implement different ideas that are yet to be included on the Ethereum main chain. For example, Polygon scales faster than Ethereum, because it uses a proposed solution known as <a class="reference external" href="https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/plasma/">Plasma</a> as well as a version of <em>Proof of Stake</em>, deployed before the Ethereum mainnet. This allow them to operate with more throughput and lower fees than Ethereum, through experimental features. Similarly, some of them have done this by sacrificing on things like decentralization, ease of use, etc. I’m not going to elaborate on how Plasma works, as it’s not important right now.</p>
 <blockquote>
-<div><p>By reporting information back and forth, they can benefit from utilizing existing software and infrastructure without having to build their own. For example, a smart-contract can be deployed onto Polygon, from Ethereum, with <strong>ZERO code-changes</strong>. As a developer this is a huge draw, especially as many side-chains include very-low fees. Similarly, existing Ethereum-wallets can be utilized to work with side-chains with <em>minimal-configurations</em>. If they were to be their own blockchain, it would mean developing new tools and software from-scratch, which is a very costly and time-consuming endeavor. Similarly, it allows people to easily move-funds between networks if needed. A stand-alone blockchain would have no native-interoperability with the main Ethereum chain.</p>
-</div></blockquote>
+<div>By reporting information back and forth, they can benefit from utilizing existing software and infrastructure without having to build their own. For example, a smart-contract can be deployed onto Polygon, from Ethereum, with <strong>ZERO code-changes</strong>. As a developer this is a huge draw, especially as many side-chains include very-low fees. Similarly, existing Ethereum-wallets can be utilized to work with side-chains with <em>minimal-configurations</em>. If they were to be their own blockchain, it would mean developing new tools and software from-scratch, which is a very costly and time-consuming endeavor. Similarly, it allows people to easily move-funds between networks if needed. A stand-alone blockchain would have no native-interoperability with the main Ethereum chain.</div></blockquote>
 <p>To get your coins onto this network so they can be spent, you may have to use something called a bridge. A bridge is simply a set of smart contracts existing on each chain. You deposit funds into a contract on one-chain, and then withdraw an equal-value amount of tokens on the other.</p>
 <p>For example, if you send <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">MATIC</span></code> token on the Ethereum mainnet to the bridge contract, then your Polygon wallet will be credited with the same amount, spendable exactly the same. However, when you send Ether into the side-chain bridge, the protocol will mint an <em>equivalent-value of MATIC Coins</em>. Depositing <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Ether</span></code> into Polygon may mean you receive <code class="docutils literal notranslate"><span class="pre">3,000</span> <span class="pre">MATIC</span></code>, but the USD-value of the two-coins should be equivalent (or at least very close). This is because Ether has no use in the Polygon ecosystem, and MATIC has none in Ethereum. You can still use a tokenized-version of Ether in Polygon, but you can’t pay transaction fees with it. The opposite is true with Matic on Ethereum, you can use MATIC token for things, but fees must be paid in Ether. It is a token that has a dollar value, and can be traded, but until you move it to its native-chain, it doesn’t do much. If you deposit <code class="docutils literal notranslate"><span class="pre">3000</span> <span class="pre">MATIC</span></code> onto the Polygon side of the bridge, you should get back <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Ether</span></code> on Ethereum. If you have <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Ether</span></code> on the Polygon chain, and want to turn it into MATIC, you have to use a decentralized-exchange (like Sushiswap) to do so.</p>
 <p>They are used to keep track of token exchanges between networks. If you want to spend your Matic on Polygon, you first need to acquire Matic. This can be done by either moving your coins over a bridge, to the side-chain, or by having someone else send MATIC to your wallet.</p>
@@ -307,38 +312,38 @@
 <p>This will show you the list of all Ethereum networks pre-loaded by Metamask, and can be easily switched to by you.</p>
 <p><em>You can ignore all of the ones labeled Testnet. These are alternative networks used by developers to help build and test their applications before deploying to the mainnet. They are irrelevant to us.</em></p>
 <p>Click on the option labeled <em>Custom RPC</em>, and you should see a form pop up. This is where we will input all the configuration information needed for metamask to process information. If you already know which network you would like to join, their website should have given you the information needed to fill out this form. If not, i’ve included some below, with some of the most popular networks to help give you an idea.</p>
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 28%" />
-<col style="width: 11%" />
-<col style="width: 16%" />
-<col style="width: 29%" />
+<col width="17%" />
+<col width="28%" />
+<col width="11%" />
+<col width="16%" />
+<col width="29%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>Network Name</strong></p></td>
-<td><p><strong>RPC URL</strong></p></td>
-<td><p><strong>Chain ID</strong></p></td>
-<td><p><strong>Currency Symbol</strong></p></td>
-<td><p><strong>Block Explorer URL</strong></p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Network Name</strong></td>
+<td><strong>RPC URL</strong></td>
+<td><strong>Chain ID</strong></td>
+<td><strong>Currency Symbol</strong></td>
+<td><strong>Block Explorer URL</strong></td>
 </tr>
-<tr class="row-even"><td><p>Optimism</p></td>
-<td><p><a class="reference external" href="https://mainnet.optimism.io/">https://mainnet.optimism.io/</a></p></td>
-<td><p>10</p></td>
-<td><p>ETH</p></td>
-<td><p><a class="reference external" href="https://optimistic.etherscan.io/">https://optimistic.etherscan.io/</a></p></td>
+<tr class="row-even"><td>Optimism</td>
+<td><a class="reference external" href="https://mainnet.optimism.io/">https://mainnet.optimism.io/</a></td>
+<td>10</td>
+<td>ETH</td>
+<td><a class="reference external" href="https://optimistic.etherscan.io/">https://optimistic.etherscan.io/</a></td>
 </tr>
-<tr class="row-odd"><td><p>xDai</p></td>
-<td><p><a class="reference external" href="https://rpc.xdaichain.com/">https://rpc.xdaichain.com/</a></p></td>
-<td><p>0x64</p></td>
-<td><p>xDai</p></td>
-<td><p><a class="reference external" href="https://blockscout.com/xdai/mainnet/">https://blockscout.com/xdai/mainnet/</a></p></td>
+<tr class="row-odd"><td>xDai</td>
+<td><a class="reference external" href="https://rpc.xdaichain.com/">https://rpc.xdaichain.com/</a></td>
+<td>0x64</td>
+<td>xDai</td>
+<td><a class="reference external" href="https://blockscout.com/xdai/mainnet/">https://blockscout.com/xdai/mainnet/</a></td>
 </tr>
-<tr class="row-even"><td><p>Polygon/Matic Mainnet</p></td>
-<td><p><a class="reference external" href="https://rpc-mainnet.maticvigil.com/">https://rpc-mainnet.maticvigil.com/</a></p></td>
-<td><p>137</p></td>
-<td><p>MATIC</p></td>
-<td><p><a class="reference external" href="https://polygonscan.com/">https://polygonscan.com/</a></p></td>
+<tr class="row-even"><td>Polygon/Matic Mainnet</td>
+<td><a class="reference external" href="https://rpc-mainnet.maticvigil.com/">https://rpc-mainnet.maticvigil.com/</a></td>
+<td>137</td>
+<td>MATIC</td>
+<td><a class="reference external" href="https://polygonscan.com/">https://polygonscan.com/</a></td>
 </tr>
 </tbody>
 </table>
@@ -349,10 +354,11 @@
 </div>
 <div class="section" id="bridges">
 <h3>Bridges<a class="headerlink" href="#bridges" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt>Now that we’re on layer-2, we need to add some coins we can spend. We have two choices on how to do this:</dt><dd><ol class="arabic simple">
-<li><p>Have someone send layer-2 coins to our address.</p></li>
-<li><p>Move funds from another network via a bridge. This is what we will do now.</p></li>
+<dl class="docutils">
+<dt>Now that we’re on layer-2, we need to add some coins we can spend. We have two choices on how to do this:</dt>
+<dd><ol class="first last arabic simple">
+<li>Have someone send layer-2 coins to our address.</li>
+<li>Move funds from another network via a bridge. This is what we will do now.</li>
 </ol>
 </dd>
 </dl>
@@ -371,10 +377,11 @@
 <div class="section" id="user-experience">
 <h3>User Experience<a class="headerlink" href="#user-experience" title="Permalink to this headline">¶</a></h3>
 <p>If we want cryptocurrency to be adopted by the masses, it needs to be easy to use. Layer-2 is not exactly the easiest idea to comprehend. It is even more difficult to convince a new user to use it. Onboarding new users to Layer-1 blockchains is already quite difficult. People are apprehensive (justifiably) about being in charge of their own security. People don’t understand how addresses, transaction fees, smart contracts, etc. work and how to use them without extensive explanation. Even with the guide of a seasoned-veteran, it can be difficult to explain to new people both why they should use it, and how. The trend towards layer-2 makes this process even more complicated. Everyone knows at least one old-person who doesn’t use online banking and still goes to a bank to deposit a check. Those people are never going to install metamask on their computer and go use uniswap. They’re definitely not going to do all of that, and then go through the steps to add a layer-2 network and onboard themselves. I consider myself a power-user of Ethereum, and even I can often feel confused and lost in all of this. None of this even addresses the fact that people are not going to be happy about an off-boarding process that has a mandatory <em>week-long waiting period</em>. The trend towards layer-2 is great for the crypto-veteran, but not the average citizen.</p>
-<dl class="simple">
-<dt>This issue has 2 paths forward:</dt><dd><ol class="arabic simple">
-<li><p>Design needs to be as easy to use as Venmo and online banking. On-boarding to layer-2 needs to be the default. As of right now you can’t do that. You cannot withdraw from any major-exchange directly to layer-2. The community needs to place a much heavier emphasis on good user-friendly design. New users need to be able to download a wallet that is automatically configured for a layer-2 like optimism, and it needs to be so seamless that you don’t even know that’s the case. It’s going to require that developers from across the industry coordinate to figure out what the standard should be.</p></li>
-<li><p>Give up on layer-2 and focus efforts on Layer-1. This is what has given rise to a variety of alternative platforms like Cardano, Solana, and Algorand. While their tech is up-for-debate, their focus on layer-1 if successful will make it much easier to onboard new users. I don’t know if any of them will succeed in taking down Ethereum [link needed], but they have very valid points about the attractiveness of their platform because of it. Out-of-the-box layer-1 blockchain wallets are significantly easier than a layer-2-focused blockchain like Ethereum. The Ethereum foundation and community does recognize this issue, which is why <a class="reference external" href="https://thecryptoconundrum.net/ethereum_explained/eth2.html?highlight=sharding#id1">sharding</a> is a part of the Eth 2.0 upgrade. Layer-1 will always be easier to use, and a future for Ethereum needs to reckon with this.</p></li>
+<dl class="docutils">
+<dt>This issue has 2 paths forward:</dt>
+<dd><ol class="first last arabic simple">
+<li>Design needs to be as easy to use as Venmo and online banking. On-boarding to layer-2 needs to be the default. As of right now you can’t do that. You cannot withdraw from any major-exchange directly to layer-2. The community needs to place a much heavier emphasis on good user-friendly design. New users need to be able to download a wallet that is automatically configured for a layer-2 like optimism, and it needs to be so seamless that you don’t even know that’s the case. It’s going to require that developers from across the industry coordinate to figure out what the standard should be.</li>
+<li>Give up on layer-2 and focus efforts on Layer-1. This is what has given rise to a variety of alternative platforms like Cardano, Solana, and Algorand. While their tech is up-for-debate, their focus on layer-1 if successful will make it much easier to onboard new users. I don’t know if any of them will succeed in <a class="reference external" href="https://thecryptoconundrum.net/introduction/coin_suggestions.html#eth-killers">taking down Ethereum</a>, but they have very valid points about the attractiveness of their platform because of it. Out-of-the-box layer-1 blockchain wallets are significantly easier than a layer-2-focused blockchain like Ethereum. The Ethereum foundation and community does recognize this issue, which is why <a class="reference external" href="https://thecryptoconundrum.net/ethereum_explained/eth2.html?highlight=sharding#id1">sharding</a> is a part of the Eth 2.0 upgrade. Layer-1 will always be easier to use, and a future for Ethereum needs to reckon with this. This is why people get so excited about blockchain competitors like <a class="reference external" href="https://solana.com">Solana</a> and <a class="reference external" href="https://cardano.org/">Cardano</a>, because they claim to be able to process a very large number of transactions on Layer-1. If they actually deliver on that, only time will tell. However, it shows that they offer something very valuable and highly-desired/needed.</li>
 </ol>
 </dd>
 </dl>

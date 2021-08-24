@@ -13,12 +13,25 @@ Part of the reason why I, and many other crypto-fans, dislike Bitcoin is its sca
 
 Luckily, the Ethereum community has been hard at work on this problem for many years now, and it seems that they have come to a form of consensus on the solution: Layer 2. Using a series of intricate mathematics that even I barely understand, a layer-2 system has the potential to dramatically scale Ethereum hundreds of times over and eliminate the transaction fee problems. It is currently the best proposed-solution to help scale Ethereum, without sacrificing decentralization and security. However, it does come with some problems, and is by no-means a silver bullet.
 
+The following information might get pretty complicated, so I want to clear something up first. *Layer-1* is the blockchain itself. Whenever you hear that, just think blockchain in its current state. *Layer-2* is an application layer that sits *on-top of* layer-1, and reports to it. Layer-2 is an independent technology, taking advantage of existing blockchain-infrastructure.
+
 Block Space
 ------------
 
 If you've read `some of my previous posts about block-size, <https://thecryptoconundrum.net/ethereum_explained/gas.html#block-size>`_, you'd know the problem with scalability is that block space is inherently very limited. Without increasing size, only a certain amount of transactions can fit into each block. This creates a natural bottleneck that forces up transaction fees as people bid to be included in that limited space. This causes the price of a transaction to rise to incredible heights as people continue to outbid each-other for limited space. Eventually the price gets so high people start to back-off transactions because it's not worth it to do so anymore. It's not worth it to send a ``$5`` transaction if it costs ``$10`` to be confirmed.
 
-The natural solution is to find a way to increase the amount of transactions that fit into a specific amount of space, thereby making each transaction data more efficient. This way you can fit more transaction data into a statically-sized block, without having to increase the size. The way this is done is by computing transactions off-chain, and moving it on-chain later. This is known as a Rollup
+The natural solution is to find a way to increase the amount of transactions that fit into a specific amount of space, thereby making each transaction data more efficient. This way you can fit more transaction data into a statically-sized block, without having to increase the size. This dillema of trading decentralization for scalability or security is what is known as the *Scalability Trilemma*. Coined by Vitalik Buterin, it describes the main issue facing blockchains. With our current understanding of cryptocurrency and blockchains, it is not feasible to achieve all three parts: decentralization, security, and scalability. Getting 2 requires sacrificing one. Chains like the Binance Smart Chain chose to sacrifice decentralization for scalability. Bitcoin sacrifices scalability for decentralization and security. In its current form Ethereum is similar to Bitcoin in this respect. It is secure and decentralized, but faces scalability issues. As a result, many have hailed layer-2 as the "holy-grail" of solving the scalability trilemma.
+
+.. image:: images/trilemma.png
+
+*Image Source: Vitalik Buterin, Vitalik.ca*
+
+The way Layer-2 solves the scalability issue is by computing transactions off-chain, and moving it on-chain later. This is known as a Rollup. By computing things elsewhere and only publishing the results, it allows current levels of consumer hardware to still be able to run blockchain-nodes, preserving-decentralization. It also doesn't require any change in layer-1 protocols, which preserves the current security models of the blockchain.
+
+I think Patrick Star can illustrate it well...
+
+.. image:: images/meme.jpg
+  :width: 300
 
 Rollups
 --------
@@ -199,7 +212,7 @@ If we want cryptocurrency to be adopted by the masses, it needs to be easy to us
 
 This issue has 2 paths forward:
   #. Design needs to be as easy to use as Venmo and online banking. On-boarding to layer-2 needs to be the default. As of right now you can't do that. You cannot withdraw from any major-exchange directly to layer-2. The community needs to place a much heavier emphasis on good user-friendly design. New users need to be able to download a wallet that is automatically configured for a layer-2 like optimism, and it needs to be so seamless that you don't even know that's the case. It's going to require that developers from across the industry coordinate to figure out what the standard should be.
-  #. Give up on layer-2 and focus efforts on Layer-1. This is what has given rise to a variety of alternative platforms like Cardano, Solana, and Algorand. While their tech is up-for-debate, their focus on layer-1 if successful will make it much easier to onboard new users. I don't know if any of them will succeed in taking down Ethereum [link needed], but they have very valid points about the attractiveness of their platform because of it. Out-of-the-box layer-1 blockchain wallets are significantly easier than a layer-2-focused blockchain like Ethereum. The Ethereum foundation and community does recognize this issue, which is why `sharding <https://thecryptoconundrum.net/ethereum_explained/eth2.html?highlight=sharding#id1>`_ is a part of the Eth 2.0 upgrade. Layer-1 will always be easier to use, and a future for Ethereum needs to reckon with this.
+  #. Give up on layer-2 and focus efforts on Layer-1. This is what has given rise to a variety of alternative platforms like Cardano, Solana, and Algorand. While their tech is up-for-debate, their focus on layer-1 if successful will make it much easier to onboard new users. I don't know if any of them will succeed in `taking down Ethereum <https://thecryptoconundrum.net/introduction/coin_suggestions.html#eth-killers>`_, but they have very valid points about the attractiveness of their platform because of it. Out-of-the-box layer-1 blockchain wallets are significantly easier than a layer-2-focused blockchain like Ethereum. The Ethereum foundation and community does recognize this issue, which is why `sharding <https://thecryptoconundrum.net/ethereum_explained/eth2.html?highlight=sharding#id1>`_ is a part of the Eth 2.0 upgrade. Layer-1 will always be easier to use, and a future for Ethereum needs to reckon with this. This is why people get so excited about blockchain competitors like `Solana <https://solana.com>`_ and `Cardano <https://cardano.org/>`_, because they claim to be able to process a very large number of transactions on Layer-1. If they actually deliver on that, only time will tell. However, it shows that they offer something very valuable and highly-desired/needed.
 
 Interoperability
 *****************

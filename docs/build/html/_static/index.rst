@@ -230,6 +230,7 @@ Shoutout to Roey Shoshan for coming up with the name
    ethereum_explained/tokens
    ethereum_explained/eth2
    ethereum_explained/eip_1559
+   ethereum_explained/layer2
    ethereum_explained/developers_corner
 
 

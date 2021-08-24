@@ -228,4 +228,10 @@ A lot of the things you might have read may have your head spinning right now. T
 
 Layer-2 technology is still in its infancy, and the technology is being researched heavily as we speak. If reading this makes you feel uneasy about the future of Ethereum, then there's no shame in diversifying your portfolio to include some of its competitors. A diversified portfolio is a health one. If it makes you feel more confident about Ethereum, then that's even better. If you wanna take action, then be a part of the community and spread the word. Partake in public betas and play around with the new tech. Educate and try to on-board people you know. Researching about layer-2 made me feel a little concerned, but also hopeful about where the future of cryptocurrency is headed and the progress it makes every single day. I've personally been messing around with several of these networks, and once you're on them, its a truly fantastic experience compared to layer-1.
 
-*I have NOT been compensated to promote any specific program or service. All opinions expressed are mine and mine alone. I am not responsible for any cryptocurrency lost due to the improper use of any application or program discussed here. Do your own research before using or investing in any service or application.*
+**This article took dozens of hours to research, write, edit, and design. Working on content for this site is a time consuming process and without advertising or data-collection I don't make any money from it. If you benefited from or enjoyed anything you read here please consider donating to help me continue to make educational content. You can send Ether or Ethereum-Tokens to the following address.**
+
+`jhweintraub.eth (0xaB5409b0E5a66AcC9D63f668414539A60a5917C1) <https://etherscan.io/address/0xaB5409b0E5a66AcC9D63f668414539A60a5917C1>`_
+
+**I have NOT been compensated to promote any specific program or service. All opinions expressed are mine and mine alone. I am not a financial advisor nor am I responsible for any cryptocurrency lost due to the improper use of any application or program discussed here. Do your own research before using or investing in any service or application.**
+
+*Special Thanks to DaleJV for providing feedback and helping edid this article.*

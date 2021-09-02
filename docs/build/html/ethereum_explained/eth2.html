@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -29,11 +29,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -205,13 +203,13 @@
 <h2>The Problem &amp; Proposed Solution<a class="headerlink" href="#the-problem-proposed-solution" title="Permalink to this headline">¶</a></h2>
 <p>In its current form, Ethereum suffers from a lot of the <a class="reference external" href="https://thecryptoconundrum.net/introduction/bitcoin_vs_ethereum.html#scalability-issues">same problems as bitcoin</a>. However, this problem is endemic to <a class="reference external" href="https://thecryptoconundrum.net/investment-strategies/staking.html#proof-of-work">Proof of Work</a>, and not Ethereum as a whole. Ethereum 2.0 is first step in a never-ending development process to make the network better.</p>
 <p>Let’s look at the problems:</p>
-<dl class="docutils">
-<dt>Innefficiency</dt>
-<dd>Unfortunately, Elon Musk was correct when he said that cryptocurrency mining is environmentally very damaging. Ethereum is the 2nd largest mined curreny currently, and its operation is incredibly wasteful. Building a cryptocurrency platform capable of powering the world’s computations is going to require a radical restructuring to be more in line with traditional energy consumption. Ethereum 2.0 is expected to cut the network’s power consumption by <code class="docutils literal notranslate"><span class="pre">~99.5%</span></code>.</dd>
-<dt>Scalability</dt>
-<dd>Without making sacrifices on decentralization or security, proof-of-work will never be able to handle the massive growth in transaction volume. In previous articles i’ve explained how block size limitations prevent transactions from occuring quickly without incurring high transaction fees. Using an architectural style known as <a class="reference external" href="https://en.wikipedia.org/wiki/Shard_(database_architecture)">sharding</a>, Eth2 is expected to significantly increase its number of transactions/second without sacrificing decentralization.</dd>
-<dt>Security and Centralization</dt>
-<dd>As cryptocurrencies have grown in population, so has the barrier-to-entry for mining. Today, major parts of mining profits are centralized to a few big players with warehouses of computers in remote parts of the earth. This creates a massive security risk, and prevents new players from entering the game profitably. By switching away from mining, to a different <a class="reference external" href="https://thecryptoconundrum.net/investment-strategies/staking.html#what-is-consensus">consensus algorithm</a>, operating a node and validating blocks becomes more decentralized, with a much lower barrier to entry. This is best for security because it reduces the chances of 51% attacks by increasing decentralization.</dd>
+<dl class="simple">
+<dt>Innefficiency</dt><dd><p>Unfortunately, Elon Musk was correct when he said that cryptocurrency mining is environmentally very damaging. Ethereum is the 2nd largest mined curreny currently, and its operation is incredibly wasteful. Building a cryptocurrency platform capable of powering the world’s computations is going to require a radical restructuring to be more in line with traditional energy consumption. Ethereum 2.0 is expected to cut the network’s power consumption by <code class="docutils literal notranslate"><span class="pre">~99.5%</span></code>.</p>
+</dd>
+<dt>Scalability</dt><dd><p>Without making sacrifices on decentralization or security, proof-of-work will never be able to handle the massive growth in transaction volume. In previous articles i’ve explained how block size limitations prevent transactions from occuring quickly without incurring high transaction fees. Using an architectural style known as <a class="reference external" href="https://en.wikipedia.org/wiki/Shard_(database_architecture)">sharding</a>, Eth2 is expected to significantly increase its number of transactions/second without sacrificing decentralization.</p>
+</dd>
+<dt>Security and Centralization</dt><dd><p>As cryptocurrencies have grown in population, so has the barrier-to-entry for mining. Today, major parts of mining profits are centralized to a few big players with warehouses of computers in remote parts of the earth. This creates a massive security risk, and prevents new players from entering the game profitably. By switching away from mining, to a different <a class="reference external" href="https://thecryptoconundrum.net/investment-strategies/staking.html#what-is-consensus">consensus algorithm</a>, operating a node and validating blocks becomes more decentralized, with a much lower barrier to entry. This is best for security because it reduces the chances of 51% attacks by increasing decentralization.</p>
+</dd>
 </dl>
 <p>To solve all of these problems, Eth2 relies on 2 solutions: Proof of Stake and Sharding</p>
 </div>
@@ -224,13 +222,12 @@
 <p>Anyone can become a validator (the new term to replace miners), provided they stake their ether first. This must be done in multiples of <strong>32 ether</strong>. If you have <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">32</span> <span class="pre">ether</span></code>, you can only stake 32, and keep the rest to do as you please. Each multiple of 32 entitles you to run 1 validator node. If you stake <code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">ether</span></code>, then you can run 2 nodes, and receive <code class="docutils literal notranslate"><span class="pre">~2x</span> <span class="pre">the</span> <span class="pre">reward</span></code>.</p>
 <p>Keep in mind, this does <strong>NOT</strong> mean that if someone with <code class="docutils literal notranslate"><span class="pre">32</span> <span class="pre">ether</span></code> earns <code class="docutils literal notranslate"><span class="pre">6%</span> <span class="pre">interest</span></code>, you will earn <code class="docutils literal notranslate"><span class="pre">~12%</span></code>, only that you will earn <code class="docutils literal notranslate"><span class="pre">6%</span></code> of your <code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">ether</span></code>. Each node is independent of eachother and earns roughly the same amount. You just operate multiple of those nodes and collect the sum total of their rewards.</p>
 <p>If you choose to stake, the ether to stake <strong>WILL BE LOCKED</strong> and unable to be withdrawn until eth2 is finished. When this is is uncertain, but will most likely be within the next <code class="docutils literal notranslate"><span class="pre">~1.5-2</span> <span class="pre">years</span></code>.</p>
-<dl class="docutils">
-<dt>I’m not gonna walk through the technicals of staking, but it is basically a 2 step process. I will give you a top-level explanation of how it works.</dt>
-<dd><ol class="first last arabic simple">
-<li>You derive a new set of encryption keys. These are your validator keys, and are used to prove your identity in relation to your staked coins. They are generated with a 24-word mnemonic phrase. Even if you don’t validate a single block, when the time comes you can withdraw your 32 ether exactly as long as you have these keys</li>
-<li>Send 32-ether or multiples of it to the <a class="reference external" href="https://etherscan.io/address/0x00000000219ab540356cBB839Cbe05303d7705Fa">deposit contract</a>. This is a contract on the main chain that keeps track of the people who have staked their funds and how much.</li>
-<li>Run the validator software on a compatible machine. You have to connect to a full blockchain node which you can either do locally or with <a class="reference external" href="https://infura.io">infura</a>. There are several different softwares built by different teams such as: <a class="reference external" href="https://consensys.net/knowledge-base/ethereum-2/teku/">Teku</a>, <a class="reference external" href="https://github.com/sigp/lighthouse">lighthouse</a>, <a class="reference external" href="https://prysmaticlabs.com/">Prysm</a>, etc.</li>
-<li>Rake in those sweet rewards.</li>
+<dl class="simple">
+<dt>I’m not gonna walk through the technicals of staking, but it is basically a 2 step process. I will give you a top-level explanation of how it works.</dt><dd><ol class="arabic simple">
+<li><p>You derive a new set of encryption keys. These are your validator keys, and are used to prove your identity in relation to your staked coins. They are generated with a 24-word mnemonic phrase. Even if you don’t validate a single block, when the time comes you can withdraw your 32 ether exactly as long as you have these keys</p></li>
+<li><p>Send 32-ether or multiples of it to the <a class="reference external" href="https://etherscan.io/address/0x00000000219ab540356cBB839Cbe05303d7705Fa">deposit contract</a>. This is a contract on the main chain that keeps track of the people who have staked their funds and how much.</p></li>
+<li><p>Run the validator software on a compatible machine. You have to connect to a full blockchain node which you can either do locally or with <a class="reference external" href="https://infura.io">infura</a>. There are several different softwares built by different teams such as: <a class="reference external" href="https://consensys.net/knowledge-base/ethereum-2/teku/">Teku</a>, <a class="reference external" href="https://github.com/sigp/lighthouse">lighthouse</a>, <a class="reference external" href="https://prysmaticlabs.com/">Prysm</a>, etc.</p></li>
+<li><p>Rake in those sweet rewards.</p></li>
 </ol>
 </dd>
 </dl>
@@ -258,7 +255,8 @@ other servers. These servers are constantly communicating to receive information
 <p><em>Image Source: Vitalik Buterin Website, vitalik.ca</em></p>
 <p><strong>“Does Ethereum 2.0 mean the price of Ether is going to go up?”</strong></p>
 <blockquote>
-<div>I don’t know. It’s entirely possible. The last bull run began last year in anticipation of Eth2.0 Beacon Chain launch in December. I myself am very bullish on Ethereum for the foreseeable future, but I won’t make any predictions on price just yet. However, for the long-term health, sustainability, and scalability of the network needed to flourish, this is a very exciting time for all holders and developers.</div></blockquote>
+<div><p>I don’t know. It’s entirely possible. The last bull run began last year in anticipation of Eth2.0 Beacon Chain launch in December. I myself am very bullish on Ethereum for the foreseeable future, but I won’t make any predictions on price just yet. However, for the long-term health, sustainability, and scalability of the network needed to flourish, this is a very exciting time for all holders and developers.</p>
+</div></blockquote>
 <p>If you’re still feeling a bit confused by all this, don’t worry. It’s a complicated subject and it took me a very long time to even understand it at a basic level. Keep working hard and feel free to check out this great video by <a class="reference external" href="https://www.youtube.com/channel/UCh1ob28ceGdqohUnR7vBACA">Finematics</a>.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ctzGr58_jeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 </div>

@@ -23,6 +23,11 @@ I've spent 8 years as a competitive nationally ranked debater, at the HS and col
 
 If you want to know more about me, check out  :download:`My Resume <resume.pdf>`.
 
+.. raw:: html
+
+	<iframe src="https://thecryptoconundrum.net/_downloads/9f41476ba5857aaa35a80587b3a48f3b/resume.pdf" height="600" width="725"></iframe>
+
+
 If you want to support the site send Ether or Ethereum-Tokens to the following
 
 `jhweintraub.eth (0xaB5409b0E5a66AcC9D63f668414539A60a5917C1) <https://etherscan.io/address/0xaB5409b0E5a66AcC9D63f668414539A60a5917C1>`_

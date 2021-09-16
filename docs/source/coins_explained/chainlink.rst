@@ -3,7 +3,7 @@ Chainlink (LINK)
 Introduction
 -------------
 
-The blockchain is an island, lost in the endless sea of the internet. Despite our interconnected world, it has no connection to the rest of the internet. In its base form, it does not have the ability to interact with other servers, API's, or even other blockchains. Then oracles were created. Named after the `Greek women whom imparted essential knowledge <https://departments.kings.edu/womens_history/ancoracles.html#:~:text=The%20oracles%20of%20Greece%20and,the%20answer%20of%20a%20god>`_, they are the link between the blockchain and the rest of the internet. They are an integral part of any smart-contract-based cryptocurrency, unlocking a whole new world of application capabilities and ideas. If smart contract applications are going to help us "decentralize the world", they'll need oracles to do it.
+The blockchain is an island, lost in the endless sea of the internet. Despite our interconnected world, it has no connection to the rest of the internet. In its base form, it cannot interact with other servers, API's, or even other blockchains. Then oracles were created. Named after the `Greek women whom imparted essential knowledge <https://departments.kings.edu/womens_history/ancoracles.html#:~:text=The%20oracles%20of%20Greece%20and,the%20answer%20of%20a%20god>`_, they are the link between the blockchain and the rest of the internet. They are an integral part of any smart-contract-based cryptocurrency, unlocking a whole new world of application capabilities and ideas. If smart contract applications are going to help us "decentralize the world", they'll need oracles to do it.
 
 Among oracles, Chainlink is the undisputed king, with no major competition in sight. The use cases are endless, and many of your favorite applications may already use them without you knowing. Thousands of dApps have already integrated them into their code, with dozens of other non-crypto-based companies signing up to be a part of it. Chainlink services are perhaps the most integral utilities on the Ethereum platform today, and growing to new chains and sectors everyday.
 
@@ -91,16 +91,17 @@ Gaming
 
 3. **Item Trades** - Games like `Counter-Strike Global Offensive <https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/>`_, have a very robust system built around buying-and-selling in-game items. The auctioning and trade of these items is typically monitored and mediated by `Steam <https://store.steampowered.com/>`_, the marketplace the game sells on. Using Chainlink, you could faciliate this same system using off-chain data like appraisals and real-time market data on supply-and-demand. This takes out the need for the intermediary, who can arbitrarily decide to suspend your account, block your trades, and separate you from your items.
 
-4. **Dynamic NFT's** - Randomness functions allow you to mint NFT's with a sense of randomness, making certain ones more rare. This allows all of them to be procedurally-generated, and completely unique. You could create an NFT that is a reflection of a real-world item. Let's say you wanted to make an NFT representing an expensive-painting. The information on the NFT and the NFT itself would change, based on the real-world status of the item.
+4. **Dynamic NFT's** - Randomness functions allow you to mint NFT's with a sense of randomness, making certain ones more rare. This allows all of them to be procedurally-generated, and completely unique. You could create an NFT that is a reflection of a real-world item. Let's say you wanted to make an NFT representing an expensive-painting. The information on the NFT and the NFT itself would change, based on the real-world status of the item. More information `here <https://blog.chain.link/create-dynamic-nfts-using-chainlink-oracles/>`_.
 
 DeFi
 ***********************
 
 1. **Tokenized assets** - Projects like `Synthetix <https://synthetix.io/>`_ create what is known as a *tokenized-asset*, which is a digital representation of a real-world item. In their case, it's a token representing a real-world security (like stocks). Using oracles, their protocol allows these tokens to retain the same value as their real-world counterpart. This is partially done by using off-chain data to acquire its current price at the time of minting, and whenever it is exchange for a different digital-asset. If you wanted to trade a token representing one-share of AAPL, for USDC, chainlink oracles could be used to determine what the accurate exchange rate is.
 
-2. **Price feeds** - This same system of tokenized-assets can also empower the price feeds of other cryptocurrencies. You can use it to accurately price `wrapped-tokens <https://thecryptoconundrum.net/ethereum_explained/tokens.html#wrapped-tokens>`_,. This allows you to accurately evaluate your collateral when borrowing, or determine interest rates when lending.
+2. **Price feeds** - This same system of tokenized-assets can also empower the price feeds of other cryptocurrencies. You can use it to accurately price `wrapped-tokens <https://thecryptoconundrum.net/ethereum_explained/tokens.html#wrapped-tokens>`_,. This allows you to accurately evaluate your collateral when borrowing, or determine interest rates when lending. Chainlink oracles can provide accurate pricing that allow you to use non-ethereum or non-stablecoin tokens as collateral when borrowing.
 
 3. **Audited Proof of Reserves** - In various custodial-systems, where someone else holds your cryptocurrency for you, Chainlink can be used to ensure that your money is safe. Acquiring off-chain data allows people to independently audit that your custodian still remains in control of your cryptocurrency. This can be used to prevent things like `Fractional Reserve Practices <https://www.investopedia.com/terms/f/fractionalreservebanking.asp#:~:text=Fractional%20reserve%20banking%20is%20a,by%20freeing%20capital%20for%20lending.>`_ or other fraudulent activities and scams.
+
 
 Off-chain computation
 ************************
@@ -108,6 +109,8 @@ Off-chain computation
 1. **Encryption and privacy** - Encryption is difficult for computers. While we have built ones capable of doing it very quickly, it still is computationally very difficult on machines. This is especially true on the blockchain. Encrypting and decrypting on the blockchain would be **incredibly expensive**. Prohibitively-so. Using off-chain sources combined with Chainlink, trusted sources can do the encryption/decryption off-chain, and then simply exchange the messages on-chain. This adds an extra layer of security and private to transacting on the blockchain.
 
 2. **Identity Management** - Storing data and doing complicated math and encryption is expensive, making an identity system infeasible. An identity management system can be constructed where although the individual identities are stored off-chain, you would authenticate yourself to the blockchain and it would verify your-information on-chain. This has a lot of benefits for things like *combining blockchain and government*. Imagine linking your cryptocurrency address to your social-security number, and receiving payouts in Ethereum or some other currency.
+
+3. **Cross-Chain Bridges** - The Chainlink *Cross-Chain Interoperability Protocol (CCIP)* creates a standardized system for developers on **any blockchain** to easily send data to other chains. This works by standardizing the code-methods, instead of relying on each developer and chain building their own protocols. 
 
 Tradeoffs
 -----------

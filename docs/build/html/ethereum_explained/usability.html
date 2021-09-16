@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -29,11 +29,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -205,12 +203,11 @@
   <div class="section" id="how-do-i-use-it">
 <h1>How do I use it<a class="headerlink" href="#how-do-i-use-it" title="Permalink to this headline">¶</a></h1>
 <p>The core of Ethereum is the ability to send transactions easily, so here i’ll be walking you through the process of setting up your wallet and sending transactions with the most popular Ethereum Wallets.</p>
-<dl class="docutils">
-<dt>In addition to creating new wallets, which i’m going to skip over due to an easy to follow interface, there are 3 ways you can access a wallet:</dt>
-<dd><ol class="first last arabic simple">
-<li>Mnemonic Phrase (with optional extra password)</li>
-<li>Private Key</li>
-<li>Keystore File</li>
+<dl class="simple">
+<dt>In addition to creating new wallets, which i’m going to skip over due to an easy to follow interface, there are 3 ways you can access a wallet:</dt><dd><ol class="arabic simple">
+<li><p>Mnemonic Phrase (with optional extra password)</p></li>
+<li><p>Private Key</p></li>
+<li><p>Keystore File</p></li>
 </ol>
 </dd>
 </dl>
@@ -223,12 +220,11 @@
 </div>
 <div class="section" id="wallet-creation">
 <h2>Wallet Creation<a class="headerlink" href="#wallet-creation" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>I recommend setting up your wallet with any of the following sources:</dt>
-<dd><ol class="first last arabic simple">
-<li>Metamask - A browser wallet operating as a chrome-extension, or a mobile application.</li>
-<li>MyEtherWallet - A browser wallet operating out of a website.</li>
-<li>MyCrypto App - Desktop Application and Website Wallet.</li>
+<dl class="simple">
+<dt>I recommend setting up your wallet with any of the following sources:</dt><dd><ol class="arabic simple">
+<li><p>Metamask - A browser wallet operating as a chrome-extension, or a mobile application.</p></li>
+<li><p>MyEtherWallet - A browser wallet operating out of a website.</p></li>
+<li><p>MyCrypto App - Desktop Application and Website Wallet.</p></li>
 </ol>
 </dd>
 </dl>
@@ -275,17 +271,15 @@
 <div class="section" id="example-transaction-with-myetherwallet">
 <h2>Example Transaction with MyEtherWallet<a class="headerlink" href="#example-transaction-with-myetherwallet" title="Permalink to this headline">¶</a></h2>
 <p>Once you access your wallet and are dropped into the homepage, we can make a transaction. I’m going to walk you through 2: sending to another user, and interacting with a contract.</p>
-<dl class="docutils">
-<dt>Simple Transaction:</dt>
-<dd><p class="first">Click around on the menu and the sidebar until you find <em>Send Transaction</em> and go to that page. You should see the following</p>
+<dl>
+<dt>Simple Transaction:</dt><dd><p>Click around on the menu and the sidebar until you find <em>Send Transaction</em> and go to that page. You should see the following</p>
 <a class="reference internal image-reference" href="../_images/mew_tx.png"><img alt="../_images/mew_tx.png" src="../_images/mew_tx.png" style="width: 300px;" /></a>
-<p class="last">On this page, you enter the same information you would on metamask: recipient, amount, transaction fee, etc. There is also a dropdown under <em>ETH</em> in case you want to send a token instead of Ether. You can edit the transaction fee, however it is automatically generated to be an average of other recent transactions. All you have to do is then click send.</p>
+<p>On this page, you enter the same information you would on metamask: recipient, amount, transaction fee, etc. There is also a dropdown under <em>ETH</em> in case you want to send a token instead of Ether. You can edit the transaction fee, however it is automatically generated to be an average of other recent transactions. All you have to do is then click send.</p>
 </dd>
-<dt>Contract Interactions:</dt>
-<dd><p class="first">Click around on the sidebar until you find <em>Contract-&gt;Interact with Contract</em>. You will be prompted to input two things: an address, and an ABI. The ABI is essentially a schematic, of all the functions in the contract. Knowing this information will help your wallet correctly solicit the required inputs and form the transaction. If you know the contract address, finding the ABI is very simple. You simply go to <a class="reference external" href="https://etherscan.io">etherscan.io</a>, and input the contract address. Then click on the <em>contract</em> tab and scroll down until you find <em>Contract ABI</em>. It should look something like this:</p>
+<dt>Contract Interactions:</dt><dd><p>Click around on the sidebar until you find <em>Contract-&gt;Interact with Contract</em>. You will be prompted to input two things: an address, and an ABI. The ABI is essentially a schematic, of all the functions in the contract. Knowing this information will help your wallet correctly solicit the required inputs and form the transaction. If you know the contract address, finding the ABI is very simple. You simply go to <a class="reference external" href="https://etherscan.io">etherscan.io</a>, and input the contract address. Then click on the <em>contract</em> tab and scroll down until you find <em>Contract ABI</em>. It should look something like this:</p>
 <a class="reference internal image-reference" href="../_images/contract_abi.png"><img alt="../_images/contract_abi.png" src="../_images/contract_abi.png" style="width: 700px;" /></a>
 <p>Copy this information and then input it back into the MyEtherWallet page. Once MyEtherWallet has this information, you can select a function you would like to execute from the dropdown list. Then all you have to do is fill out the form with the required inputs. The site will form the transaction for you and all you have to do is confirm it.</p>
-<a class="last reference internal image-reference" href="../_images/contract_tx.png"><img alt="../_images/contract_tx.png" src="../_images/contract_tx.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/contract_tx.png"><img alt="../_images/contract_tx.png" src="../_images/contract_tx.png" style="width: 300px;" /></a>
 </dd>
 </dl>
 <p><em>All Images sourced from MyEtherWallet</em></p>

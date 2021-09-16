@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -29,11 +29,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -221,7 +219,8 @@
 <div class="section" id="transaction-fees">
 <h2>Transaction Fees<a class="headerlink" href="#transaction-fees" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>Every transaction contains a transaction “fee”. This is a small amount added to the transaction paid by the sender, and awarded to the person who adds the block to the chain. Think of it like a credit card transaction. The store you are exchanging with pays the credit card company for the ability to take cards. However, with this the customer pays a small fee to process the transaction, in exchange for the ability to use cryptocurrency. This fee is independent of the amount being sent. If you send $5 or $5 million, the fee should be the same. You can increase this fee to incentivize the transaction to be sent faster, or a lower one if you’re willing to wait for confirmations.</div></blockquote>
+<div><p>Every transaction contains a transaction “fee”. This is a small amount added to the transaction paid by the sender, and awarded to the person who adds the block to the chain. Think of it like a credit card transaction. The store you are exchanging with pays the credit card company for the ability to take cards. However, with this the customer pays a small fee to process the transaction, in exchange for the ability to use cryptocurrency. This fee is independent of the amount being sent. If you send $5 or $5 million, the fee should be the same. You can increase this fee to incentivize the transaction to be sent faster, or a lower one if you’re willing to wait for confirmations.</p>
+</div></blockquote>
 <p>I think this video explains it best:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bBC-nXj3Ng4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 <div class="section" id="security">
@@ -232,7 +231,7 @@
 <p>I think Vitalik Buterin (Inventor of Ethereum) said it Best:</p>
 <blockquote>
 <div><p>“I happily played World of Warcaft during 2007-2010, but one day Blizzard removed the damage component from my beloved warlock’s Siphon Life spell. I cried myself to sleep, and on that day I realized what horrors centralized services can bring”.</p>
-<p class="attribution">&mdash;Vitalik Buterin, actual quote.</p>
+<p class="attribution">—Vitalik Buterin, actual quote.</p>
 </div></blockquote>
 <img alt="../_images/decentralization.jpg" src="../_images/decentralization.jpg" />
 </div>
@@ -252,10 +251,12 @@
 <p>The crypto wallet is how you interact with the blockchain and send transactions. Without going into too much detail, your wallet is an encryption key that you use to prove that you are the owner of certain coins. The wallet software will take the key, do a lot of math, and send and verify the transaction for you. It’s similar to how Venmo deals with your money, you don’t need to know how it works, just your info to log into your account.</p>
 <p>When you create a wallet, it will generate the key for you in the form of a “mnemonic phrase”. This is a 12 or 24 grouping of words, that the software uses to generate the keys. Write this down and keep it somewhere safe. With these words, you can use any wallet software and access the funds. However, if you lose it, it’s gone <strong>FOREVER</strong>.</p>
 <blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">witch</span> <span class="pre">collapse</span> <span class="pre">practice</span> <span class="pre">feed</span> <span class="pre">shame</span> <span class="pre">open</span> <span class="pre">despair</span> <span class="pre">creek</span> <span class="pre">road</span> <span class="pre">again</span> <span class="pre">ice</span> <span class="pre">least</span></code></div></blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">witch</span> <span class="pre">collapse</span> <span class="pre">practice</span> <span class="pre">feed</span> <span class="pre">shame</span> <span class="pre">open</span> <span class="pre">despair</span> <span class="pre">creek</span> <span class="pre">road</span> <span class="pre">again</span> <span class="pre">ice</span> <span class="pre">least</span></code></p>
+</div></blockquote>
 <p>The wallet also generates what’s known as your address. It’s the identifier associated with your wallet. Unlike venmo though, where it’s a human readable word, it’s a long string of numbers and letters. The exact format will vary based on the coin you’re using, but it should look something like this.</p>
 <blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">0xaB5409b0E5a66AcC9D63f668414539A60a5917C1</span></code></div></blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">0xaB5409b0E5a66AcC9D63f668414539A60a5917C1</span></code></p>
+</div></blockquote>
 <p>When someone wants to send you money, you just give them that string and they send it there. All wallets also give you the option to generate a QR-Code, for the person to scan. If you want to make a transaction, simply scan the code, select the amount, and you’re off to the races.</p>
 <a class="reference internal image-reference" href="../_images/qrcode.png"><img alt="../_images/qrcode.png" src="../_images/qrcode.png" style="width: 120pt;" /></a>
 <p>Since the blockchain is public and add-only, anyone can view your address’ current balance and the history of all transactions. Just go to a website such as</p>

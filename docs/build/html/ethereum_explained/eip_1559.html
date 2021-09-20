@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -29,9 +29,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -209,26 +211,28 @@
 <p>It was initially proposed by Vitalik in 2018, and despite a very controversial road, deployed in August 2021 to overwhelming community support.</p>
 <p>Before we start, it’s important you understand how gas works. Check out the link <a class="reference external" href="https://thecryptoconundrum.net/ethereum_explained/gas.html#">here</a>. This is because it is a major change to how it operates. I highly recommend you read that before continuing but if you choose not to, I have included a TL;DR below</p>
 <blockquote>
-<div><p>TL;DR - Every time you make an ethereum transaction, that transaction fee is paid in a a unit called <em>gas</em>. You pay a certain amount of ether for each unit of gas. The more complex your transaction, the more gas required. Faster confirmations mean paying more gas. Block size is measured in gas usage, with each block having a max amount that can be included. This limit can normally only be increased/decreased by a community vote. All gas/transaction fees go to the miners who make the blocks and process transactions.</p>
-</div></blockquote>
+<div>TL;DR - Every time you make an ethereum transaction, that transaction fee is paid in a a unit called <em>gas</em>. You pay a certain amount of ether for each unit of gas. The more complex your transaction, the more gas required. Faster confirmations mean paying more gas. Block size is measured in gas usage, with each block having a max amount that can be included. This limit can normally only be increased/decreased by a community vote. All gas/transaction fees go to the miners who make the blocks and process transactions.</div></blockquote>
 </div>
 <div class="section" id="the-problem">
 <h2>The Problem<a class="headerlink" href="#the-problem" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>The Issues:</dt><dd><ol class="arabic simple">
-<li><dl class="simple">
-<dt>Gas prices are unpredictable and fluctuate rapidly.</dt><dd><ol class="arabic simple">
-<li><p>One minute the average cost could be <code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">Gwei</span></code>, and the next <code class="docutils literal notranslate"><span class="pre">40</span> <span class="pre">Gwei</span></code> for a simple transaction. Two transactions, exactly the same, have wildly different cost based on time. This presents many headaches for users who want to be able to have a stable transaction cost when planning their transactions.</p></li>
-<li><p>Wallets currently do not have a way to efficiently and accurately calculate your transaction cost. They do their best, but often result in people paying more than they should.</p></li>
-<li><p>This can also result in people submitting transactions with what they think as a reasonable gas cost, experiencing massive delay,s and the transaction fees spiking immediately following their transaction request. This results in very high delays</p></li>
+<dl class="docutils">
+<dt>The Issues:</dt>
+<dd><ol class="first last arabic simple">
+<li><dl class="first docutils">
+<dt>Gas prices are unpredictable and fluctuate rapidly.</dt>
+<dd><ol class="first last arabic">
+<li>One minute the average cost could be <code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">Gwei</span></code>, and the next <code class="docutils literal notranslate"><span class="pre">40</span> <span class="pre">Gwei</span></code> for a simple transaction. Two transactions, exactly the same, have wildly different cost based on time. This presents many headaches for users who want to be able to have a stable transaction cost when planning their transactions.</li>
+<li>Wallets currently do not have a way to efficiently and accurately calculate your transaction cost. They do their best, but often result in people paying more than they should.</li>
+<li>This can also result in people submitting transactions with what they think as a reasonable gas cost, experiencing massive delay,s and the transaction fees spiking immediately following their transaction request. This results in very high delays</li>
 </ol>
 </dd>
 </dl>
 </li>
-<li><dl class="simple">
-<dt>Inflation vs. Deflation.</dt><dd><ol class="arabic simple">
-<li><p>Many people coming from the Bitcoin world have expressed reasonable concern about inflation. This comes from the rate at which new coins are created. This amount can change at any time with a community vote, and has in the past.</p></li>
-<li><p>Ethereum has no halving mechanism, and no hard-cap, like Bitcoin’s <code class="docutils literal notranslate"><span class="pre">~21</span> <span class="pre">Million</span></code>.</p></li>
+<li><dl class="first docutils">
+<dt>Inflation vs. Deflation.</dt>
+<dd><ol class="first last arabic">
+<li>Many people coming from the Bitcoin world have expressed reasonable concern about inflation. This comes from the rate at which new coins are created. This amount can change at any time with a community vote, and has in the past.</li>
+<li>Ethereum has no halving mechanism, and no hard-cap, like Bitcoin’s <code class="docutils literal notranslate"><span class="pre">~21</span> <span class="pre">Million</span></code>.</li>
 </ol>
 </dd>
 </dl>
@@ -272,11 +276,11 @@
 <div class="section" id="final-thoughts-and-the-future">
 <h2>Final Thoughts and the future<a class="headerlink" href="#final-thoughts-and-the-future" title="Permalink to this headline">¶</a></h2>
 <p>Thanks to community consensus and a large public support campaign the eip was approved. It is expected to go into effect in mid-july.</p>
-<dl class="simple">
-<dt><strong>Will this make gas prices go down?</strong></dt><dd><p>No. This is merely a market mechanism to make prices more predictable going forward. It will not lower the amount of gas you have to spend. It is a market based system to help you make predictions and plan your transactions. At any given time the fee may be high, but this lets you know that at some point it will come back down to an amount you find reasonable.</p>
-</dd>
-<dt><strong>Will this make the price go up?</strong></dt><dd><p>I don’t know. Maybe. Maybe not. The biggest thing is that this is going to make being a user of Ethereum better and a major improvement for the long-term health of the network. At its core that is what will help it grow in value and popularity.</p>
-</dd>
+<dl class="docutils">
+<dt><strong>Will this make gas prices go down?</strong></dt>
+<dd>No. This is merely a market mechanism to make prices more predictable going forward. It will not lower the amount of gas you have to spend. It is a market based system to help you make predictions and plan your transactions. At any given time the fee may be high, but this lets you know that at some point it will come back down to an amount you find reasonable.</dd>
+<dt><strong>Will this make the price go up?</strong></dt>
+<dd>I don’t know. Maybe. Maybe not. The biggest thing is that this is going to make being a user of Ethereum better and a major improvement for the long-term health of the network. At its core that is what will help it grow in value and popularity.</dd>
 </dl>
 <p>I also think that the controversy and long road this proposal took to be implemented is a testament to the resillience and forward thinking nature of the Ethereum community. It shows just how many people are constantly committed to identifying and solving problems facing Ethereum.</p>
 <p>It’s one of the things that originally drew me to Ethereum, and i’m excited to see where it goes from here.</p>

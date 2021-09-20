@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -29,9 +29,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -85,6 +87,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Start Here!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="intro.html#who-am-i">Who am I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html#what-can-i-do-for-you">What can I do for you</a></li>
 <li class="toctree-l1"><a class="reference internal" href="popular_questions.html">Most Popular Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blockchain.html">The Blockchain</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exchanges.html">Exchanges</a></li>
@@ -203,67 +206,68 @@
 <p>Definitions:</p>
 <div class="section" id="technology">
 <h2>Technology<a class="headerlink" href="#technology" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>Scalability</dt><dd><p>How fast can the network grow to handle an increase in traffic. Blocks in the chain have fixed sizes, meaning it can only handle a certain number of transactions. Figuring out how to make this scale to accommodate higher traffic is the single largest issue facing cryptocurrency today, because it prevents it from being widely used. If you fee to use bitcoin is $20 and it takes hours to complete, then it’s pointless to use for everyday purchases.</p>
-</dd>
-<dt>Proof of Work</dt><dd><p>The consensus algorithm behind Bitcoin. To add a block to the blockchain, every miner has to solve a computational puzzle at the same time. Whoever solves it first gets to add the block to the chain, and gets all the rewards that go with it. This results in a lot of wasted energy expended, as miners compete with each-other, and substantially limits the scalability of bitcoin.</p>
-</dd>
-<dt>Proof of Stake</dt><dd><p>The Consensus algorithm behind Ethereum, and a lot of other major coins like Cardano. Is ~95% more efficient than Bitcoin’s Proof of Work, because it eliminates the mathematical puzzle needed to add a block to the chain, and makes it more difficult to be hacked. In Proof of Stake, miners no longer have to solve a mathematical puzzle. Instead, they put up a bond of their cryptocurrency in order for the right to create blocks. They are then rewarded for honestly verifying transactions. If they publish a block with bogus transactions, or get rejected, they lose the right to their bond. This creates a financial incentive to be honest.</p>
-</dd>
-<dt>Ether</dt><dd><p>The core token of the ethereum blockchain. Ethereum is the name of the platform, but Ether is the core coin. Spending it allows you to interact with all of its applications, in addition to being able to be exchanged for goods and services in the real world. The transaction fee you pay with ether is known as “gas”.</p>
-</dd>
-<dt>Smart Contract</dt><dd><p>A program built and existing entirely on the blockchain. It operates with complete autonomy, and can do things any other program can do. You interact with it by spending your Cryptocurrency. It was created for the ethereum blockchain, but exists on several now. It is the core of what makes Ethereum valuable, and empowers all blockchain applications including: governance, Decentralized Finance, tokens, etc.</p>
-</dd>
-<dt>Oracle</dt><dd><p>A program on the blockchain meant to get outside information. Without them, Blockchains are a closed ecosystem. They can’t reach out into the open internet, to get information from API’s like other applications. Oracles are special programs that are meant to solve this by allowing Smart Contracts to get information from outside sources, and enhance their functionality. For example, imagine you had a crop insurance policy on the blockchain. It said that if it snowed more than 3-feet in your city, the insurance contract would reimburse you for the loss. You could pay into this contract by sending Cryptocurrency to the contract every month as a premium. An insurance provider would also pay into it just in case. An Oracle could reach out to your weather sensor service everyday, see how much it snowed, and if it was enough to trigger the insurance contract, automatically release the insurance payout.</p>
-</dd>
-<dt>Scalability Trilemma</dt><dd><p>A term coined by Vitalik Buterin, the inventor of Ethereum. It is used to describe the central problem facing Cryptocurrency today. There are three parts: Decentralization, Security, and Scalability. Getting 2 of them requires sacrificing one. If we didn’t care about decentralization, then we could have infinite scalability and security by just using a regular database. If we cared only about Decentralization and Scalability, then it would mean sacrificing security and opening up the blockchain to potential attacks by malicious actors. In its current form, decentralization and security have taken priority over scalability in places like Ethereum. Other chains, with claims of higher scalability, have chosen to sacrifice decentralization (Solana, Binance Smart Chain, etc). There are many proposed solutions to this currently being worked on.</p>
-</dd>
-<dt>51% Attack</dt><dd><p>The Cybersecurity term for an attack that compromises the integrity of the network. It occurs when a single malicious actor acquires 51% of the total network ability to add blocks. This is because a transaction is considered “confirmed” when 51% of all transaction validating nodes have agreed it is valid. If a rogue actor was able to control 51% of all confirmation power, they could theoretically do anything such as adding fake transactions giving them millions of free coins. All consensus algorithms are built around preventing this, and the best solution is the subject of heavy debate. In bitcoin, this involves having 51% of all mining-power on the network. In proof of stake networks like Ethereum, this requires owning 51% of all total coins being used to verify transactions, and is thus much more difficult.</p>
-</dd>
+<dl class="docutils">
+<dt>Scalability</dt>
+<dd>How fast can the network grow to handle an increase in traffic. Blocks in the chain have fixed sizes, meaning it can only handle a certain number of transactions. Figuring out how to make this scale to accommodate higher traffic is the single largest issue facing cryptocurrency today, because it prevents it from being widely used. If you fee to use bitcoin is $20 and it takes hours to complete, then it’s pointless to use for everyday purchases.</dd>
+<dt>Proof of Work</dt>
+<dd>The consensus algorithm behind Bitcoin. To add a block to the blockchain, every miner has to solve a computational puzzle at the same time. Whoever solves it first gets to add the block to the chain, and gets all the rewards that go with it. This results in a lot of wasted energy expended, as miners compete with each-other, and substantially limits the scalability of bitcoin.</dd>
+<dt>Proof of Stake</dt>
+<dd>The Consensus algorithm behind Ethereum, and a lot of other major coins like Cardano. Is ~95% more efficient than Bitcoin’s Proof of Work, because it eliminates the mathematical puzzle needed to add a block to the chain, and makes it more difficult to be hacked. In Proof of Stake, miners no longer have to solve a mathematical puzzle. Instead, they put up a bond of their cryptocurrency in order for the right to create blocks. They are then rewarded for honestly verifying transactions. If they publish a block with bogus transactions, or get rejected, they lose the right to their bond. This creates a financial incentive to be honest.</dd>
+<dt>Ether</dt>
+<dd>The core token of the ethereum blockchain. Ethereum is the name of the platform, but Ether is the core coin. Spending it allows you to interact with all of its applications, in addition to being able to be exchanged for goods and services in the real world. The transaction fee you pay with ether is known as “gas”.</dd>
+<dt>Smart Contract</dt>
+<dd>A program built and existing entirely on the blockchain. It operates with complete autonomy, and can do things any other program can do. You interact with it by spending your Cryptocurrency. It was created for the ethereum blockchain, but exists on several now. It is the core of what makes Ethereum valuable, and empowers all blockchain applications including: governance, Decentralized Finance, tokens, etc.</dd>
+<dt>Oracle</dt>
+<dd>A program on the blockchain meant to get outside information. Without them, Blockchains are a closed ecosystem. They can’t reach out into the open internet, to get information from API’s like other applications. Oracles are special programs that are meant to solve this by allowing Smart Contracts to get information from outside sources, and enhance their functionality. For example, imagine you had a crop insurance policy on the blockchain. It said that if it snowed more than 3-feet in your city, the insurance contract would reimburse you for the loss. You could pay into this contract by sending Cryptocurrency to the contract every month as a premium. An insurance provider would also pay into it just in case. An Oracle could reach out to your weather sensor service everyday, see how much it snowed, and if it was enough to trigger the insurance contract, automatically release the insurance payout.</dd>
+<dt>Scalability Trilemma</dt>
+<dd>A term coined by Vitalik Buterin, the inventor of Ethereum. It is used to describe the central problem facing Cryptocurrency today. There are three parts: Decentralization, Security, and Scalability. Getting 2 of them requires sacrificing one. If we didn’t care about decentralization, then we could have infinite scalability and security by just using a regular database. If we cared only about Decentralization and Scalability, then it would mean sacrificing security and opening up the blockchain to potential attacks by malicious actors. In its current form, decentralization and security have taken priority over scalability in places like Ethereum. Other chains, with claims of higher scalability, have chosen to sacrifice decentralization (Solana, Binance Smart Chain, etc). There are many proposed solutions to this currently being worked on.</dd>
+<dt>51% Attack</dt>
+<dd>The Cybersecurity term for an attack that compromises the integrity of the network. It occurs when a single malicious actor acquires 51% of the total network ability to add blocks. This is because a transaction is considered “confirmed” when 51% of all transaction validating nodes have agreed it is valid. If a rogue actor was able to control 51% of all confirmation power, they could theoretically do anything such as adding fake transactions giving them millions of free coins. All consensus algorithms are built around preventing this, and the best solution is the subject of heavy debate. In bitcoin, this involves having 51% of all mining-power on the network. In proof of stake networks like Ethereum, this requires owning 51% of all total coins being used to verify transactions, and is thus much more difficult.</dd>
 </dl>
 </div>
 <div class="section" id="application">
 <h2>Application<a class="headerlink" href="#application" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>Decentralized Autonomous Organization (DAO)</dt><dd><p>A special type of organization built on the blockchain. It allows a community of people to vote on various things related to the project, without having to delegate authority to a single trusted actor. It is the decentralization of decision-making authority.</p>
-</dd>
-<dt>Governance Token</dt><dd><p>A token that allows you to vote in a DAO. The more you hold, the more voting power you have. It is a token just like all others, with its own dollar value and transfer properties, except its value is derived from the value in voting for something. Governance tokens for Decentralized Lending protocols like Compound, allow you to vote for things such as what interest rates charged and earned should be.</p>
-</dd>
-<dt>DeFi (Decentralized Finance)</dt><dd><p>The core of ethereum and many smart contracts. It decentralizes many of the core aspects of finance that traditional institutions use to attract you to them. Decentralized Lenders allow you to loan out your cryptocurrency to others in exchange for interest. You can take out loans in various currencies, anonymously and at low interest rates. You can swap coins and tokens in a fast, anonymous, and decentralized way. You can tokenize real world assets such as commodities and stocks, and trade them on decentralized exchanges. There is Decentralized Insurance, Decentralized Gambling, Commodities Exchanges, etc. The use cases are endless and growing every day. At the time of writing, this there is currently <cite>~$18 Billion</cite> in the DeFi ecosystem and growing.</p>
-</dd>
+<dl class="docutils">
+<dt>Decentralized Autonomous Organization (DAO)</dt>
+<dd>A special type of organization built on the blockchain. It allows a community of people to vote on various things related to the project, without having to delegate authority to a single trusted actor. It is the decentralization of decision-making authority.</dd>
+<dt>Governance Token</dt>
+<dd>A token that allows you to vote in a DAO. The more you hold, the more voting power you have. It is a token just like all others, with its own dollar value and transfer properties, except its value is derived from the value in voting for something. Governance tokens for Decentralized Lending protocols like Compound, allow you to vote for things such as what interest rates charged and earned should be.</dd>
+<dt>DeFi (Decentralized Finance)</dt>
+<dd>The core of ethereum and many smart contracts. It decentralizes many of the core aspects of finance that traditional institutions use to attract you to them. Decentralized Lenders allow you to loan out your cryptocurrency to others in exchange for interest. You can take out loans in various currencies, anonymously and at low interest rates. You can swap coins and tokens in a fast, anonymous, and decentralized way. You can tokenize real world assets such as commodities and stocks, and trade them on decentralized exchanges. There is Decentralized Insurance, Decentralized Gambling, Commodities Exchanges, etc. The use cases are endless and growing every day. At the time of writing, this there is currently <cite>~$18 Billion</cite> in the DeFi ecosystem and growing.</dd>
 </dl>
 </div>
 <div class="section" id="tokenomics">
 <h2>Tokenomics<a class="headerlink" href="#tokenomics" title="Permalink to this headline">¶</a></h2>
-<dl>
-<dt>Tokenomics</dt><dd><p>The word used to refer to all questions of the token’s value and growth. It includes market cap, supply, price, growth rate, etc.</p>
-</dd>
-<dt>Circulating Supply &amp; Total Supply</dt><dd><p>The amount of coins/tokens currently in supply, and the total available supply. Tokens typically have hard caps coded in. However, coins can have an unlimited supply. Bitcoin, for example, has a hard cap of 21 million, and is currently circulating at around 15 million with 900 new ones created per day. Ethereum on the other hand, has no set limit and a fixed schedule for creating new coins. Keeping track of the supply is crucial in determining the risk of inflation and where it could be headed.</p>
-</dd>
-<dt>Market Cap</dt><dd><p>Same as with Stocks, it is the Value of all the tokens in circulation
+<dl class="docutils">
+<dt>Tokenomics</dt>
+<dd>The word used to refer to all questions of the token’s value and growth. It includes market cap, supply, price, growth rate, etc.</dd>
+<dt>Circulating Supply &amp; Total Supply</dt>
+<dd>The amount of coins/tokens currently in supply, and the total available supply. Tokens typically have hard caps coded in. However, coins can have an unlimited supply. Bitcoin, for example, has a hard cap of 21 million, and is currently circulating at around 15 million with 900 new ones created per day. Ethereum on the other hand, has no set limit and a fixed schedule for creating new coins. Keeping track of the supply is crucial in determining the risk of inflation and where it could be headed.</dd>
+<dt>Market Cap</dt>
+<dd><p class="first">Same as with Stocks, it is the Value of all the tokens in circulation
 <code class="docutils literal notranslate"><span class="pre">Market</span> <span class="pre">Cap</span> <span class="pre">=</span> <span class="pre">Circulating</span> <span class="pre">Supply</span> <span class="pre">*</span> <span class="pre">Price</span> <span class="pre">per</span> <span class="pre">Token</span></code></p>
 <p>There is also something known as a fully-diluted market cap. This is the value of the market cap if all tokens were in circulation</p>
-<p><code class="docutils literal notranslate"><span class="pre">Fully-Diluted</span> <span class="pre">Market</span> <span class="pre">Cap</span> <span class="pre">=</span> <span class="pre">Total</span> <span class="pre">Supply</span> <span class="pre">*</span> <span class="pre">Price</span> <span class="pre">per</span> <span class="pre">Token</span></code></p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">Fully-Diluted</span> <span class="pre">Market</span> <span class="pre">Cap</span> <span class="pre">=</span> <span class="pre">Total</span> <span class="pre">Supply</span> <span class="pre">*</span> <span class="pre">Price</span> <span class="pre">per</span> <span class="pre">Token</span></code></p>
 </dd>
 </dl>
 </div>
 <div class="section" id="investing-terminology">
 <h2>Investing Terminology<a class="headerlink" href="#investing-terminology" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>Dollar-Cost-Averaging (DCA)</dt><dd><p>An investment strategy that takes advantage of long-term growth and fluctuations in the market. It involves buying at set intervals to overwhelm losses and gains. If you buy $100 every month, the gains from buying low will overwhelm the losses from buying high. <strong>Time in the Market &gt; Timing the Market.</strong></p>
-</dd>
-<dt>Initial Coin Offering (ICO)</dt><dd><p>The first time a coin/token is being sold. Done to raise capital by the company, it can be purchased a variety of ways based on the project. Much like an IPO, these are much riskier but can mean significantly higher returns.</p>
-</dd>
-<dt>Stablecoin</dt><dd><p>Another core use case of DeFi. It’s a token whose value is pegged to the value of a real world asset, and therefore doesn’t fluctuate as wildly. There are many different ones currently doing a very good job of being pegged to the US-Dollar without fluctuations. You may have heard of a few such as: Dai, Tether, US-Dollar-Coin (USDC), etc.</p>
-</dd>
-<dt>Altcoin</dt><dd><p>Any coin that is not Bitcoin or Ethereum</p>
-</dd>
-<dt>Memecoin</dt><dd><p>Any coin whose sole purpose is to be a joke (Dogecoin, Safemoon, Elongate, etc). It has no actual future or use case beyond being a joke. <strong>DO NOT BUY THESE</strong>. People promoting them will use words like “deflationary”, “locked liquidity”, and “100x in value”, but at the end of the day their price changes are almost random and they have no future. If you buy these you will most likely end up losing money.</p>
-</dd>
-<dt>FUD</dt><dd><p>Fear, Uncertainty, and Doubt. This goes away when you are confident in your investment decisions, that comes from knowing the ins and outs of your investment choices.</p>
-</dd>
-<dt>FOMO</dt><dd><p>Fear of Missing Out. It is the most powerful motivator in getting people to invest more money than they should, in projects they know nothing about, and that are obvious scams or pointless meme coins.</p>
-</dd>
+<dl class="docutils">
+<dt>Dollar-Cost-Averaging (DCA)</dt>
+<dd>An investment strategy that takes advantage of long-term growth and fluctuations in the market. It involves buying at set intervals to overwhelm losses and gains. If you buy $100 every month, the gains from buying low will overwhelm the losses from buying high. <strong>Time in the Market &gt; Timing the Market.</strong></dd>
+<dt>Initial Coin Offering (ICO)</dt>
+<dd>The first time a coin/token is being sold. Done to raise capital by the company, it can be purchased a variety of ways based on the project. Much like an IPO, these are much riskier but can mean significantly higher returns.</dd>
+<dt>Stablecoin</dt>
+<dd>Another core use case of DeFi. It’s a token whose value is pegged to the value of a real world asset, and therefore doesn’t fluctuate as wildly. There are many different ones currently doing a very good job of being pegged to the US-Dollar without fluctuations. You may have heard of a few such as: Dai, Tether, US-Dollar-Coin (USDC), etc.</dd>
+<dt>Altcoin</dt>
+<dd>Any coin that is not Bitcoin or Ethereum</dd>
+<dt>Memecoin</dt>
+<dd>Any coin whose sole purpose is to be a joke (Dogecoin, Safemoon, Elongate, etc). It has no actual future or use case beyond being a joke. <strong>DO NOT BUY THESE</strong>. People promoting them will use words like “deflationary”, “locked liquidity”, and “100x in value”, but at the end of the day their price changes are almost random and they have no future. If you buy these you will most likely end up losing money.</dd>
+<dt>FUD</dt>
+<dd>Fear, Uncertainty, and Doubt. This goes away when you are confident in your investment decisions, that comes from knowing the ins and outs of your investment choices.</dd>
+<dt>FOMO</dt>
+<dd>Fear of Missing Out. It is the most powerful motivator in getting people to invest more money than they should, in projects they know nothing about, and that are obvious scams or pointless meme coins.</dd>
 </dl>
 </div>
 </div>

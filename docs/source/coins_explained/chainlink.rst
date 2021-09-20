@@ -130,4 +130,10 @@ Conclusion
 
 I'm not going to make price predictions anymore, because I don't think it matters. It should be obvious by now that I think this is a token worth buying, and encourage you to do so as well. Chainlink is revolutionizing the blockchain. It is arguably the single-most important coin you have never heard of. The state of Ethereum would not be where it is today without chainlink. With what they contribute to the Dapp-ecosystem, the sky is the limit. What new applications of it we will see in the coming years are anyone's guess, but this technology will be at the forefront of what helps drive the world towards mass-adoption of cryptocurrency. The number of apps utilizing its libraries and services, and companies signing up to provide data is growing by the day, and a critical inflection point is upon us. I've had the opportunity to play around with many of the apps that Chainlink is helping empower, and its truly a marvel what the community has built and how far the Dapp ecosystem has come in a few short years.
 
+.. raw:: html
+
+  <div class="nomics-ticker-widget" data-name="ChainLink" data-base="LINK" data-quote="USD"></div><script src="https://widget.nomics.com/embed.js"></script>
+
+
+
 **I have NOT been compensated to promote any specific program or service. All opinions expressed are mine and mine alone. I am not a financial advisor nor am I responsible for any cryptocurrency lost due to the improper use of any application or program discussed here. Do your own research before using or investing in any service or application.**

@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -29,9 +29,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -85,6 +87,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">Start Here!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#who-am-i">Who am I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#what-can-i-do-for-you">What can I do for you</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/popular_questions.html">Most Popular Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/blockchain.html">The Blockchain</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/exchanges.html">Exchanges</a></li>
@@ -215,11 +218,12 @@
 <p>As of June 25th there was over <strong>~$4.5 Billion</strong> in locked liquidity in <a class="reference external" href="https://v2.info.uniswap.org/#/">Uniswap V2</a>. It is essential to the Ethereum ecosystem, so handing control of it over to a single entity presents a huge risk. While it has a team of core-devs, actively working on proposals and improvements, all major changes come from the community. This delegation of power ensures its stability and minimizes risk of rug-pulls.</p>
 <p>In April 2021, Wyoming became the first state to <a class="reference external" href="https://www.coindesk.com/wyoming-dao-llc-law-passed">legally recognize DAO’s as legal businesses (LLC’s)</a>, so clearly it’s got a lot of potential, and is here to stay.</p>
 <p><em>Image Source: Blockchain Education Platform</em></p>
-<dl class="simple">
-<dt>A governance system has three parts:</dt><dd><ol class="arabic simple">
-<li><p>The underlying protocol</p></li>
-<li><p>The governance contract.</p></li>
-<li><p>The governance token</p></li>
+<dl class="docutils">
+<dt>A governance system has three parts:</dt>
+<dd><ol class="first last arabic simple">
+<li>The underlying protocol</li>
+<li>The governance contract.</li>
+<li>The governance token</li>
 </ol>
 </dd>
 </dl>
@@ -229,19 +233,16 @@
 <div class="section" id="the-protocol">
 <h2>The Protocol<a class="headerlink" href="#the-protocol" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>This is simply whatever the application you are using is. It could be <a class="reference external" href="https://v2.info.uniswap.org/#/">Uniswap</a>, <a class="reference external" href="https://compound.finance">Compound</a>, <a class="reference external" href="https://1inch.io/">1Inch</a>, <a class="reference external" href="http://tornado.cash/">Tornado-Cash</a>, etc. Anything at all. In fact, any contract can be configured to work with a governance system. Any function that changes something about the contract can be configured to work this way. It works by using a <em>function modifier</em>. This basically means that contract itself is configured so that it’s functions can only be invoked by a pre-determined address. Many applications use this to determine ownership, where only a person with a specific address can invoke the function. However, in this case the owner is a different contract, the governance contract.</p>
-</div></blockquote>
+<div>This is simply whatever the application you are using is. It could be <a class="reference external" href="https://v2.info.uniswap.org/#/">Uniswap</a>, <a class="reference external" href="https://compound.finance">Compound</a>, <a class="reference external" href="https://1inch.io/">1Inch</a>, <a class="reference external" href="http://tornado.cash/">Tornado-Cash</a>, etc. Anything at all. In fact, any contract can be configured to work with a governance system. Any function that changes something about the contract can be configured to work this way. It works by using a <em>function modifier</em>. This basically means that contract itself is configured so that it’s functions can only be invoked by a pre-determined address. Many applications use this to determine ownership, where only a person with a specific address can invoke the function. However, in this case the owner is a different contract, the governance contract.</div></blockquote>
 </div>
 <div class="section" id="governance-contracts">
 <h2>Governance Contracts<a class="headerlink" href="#governance-contracts" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>This is a smart contract, or a series of contracts, with specific rights to invoke functions on the protocol contracts. However, because it is a contract itself, it first has to meet certain criteria and function calls in order to do so. Every contract has three parts:</p>
-</div></blockquote>
+<div>This is a smart contract, or a series of contracts, with specific rights to invoke functions on the protocol contracts. However, because it is a contract itself, it first has to meet certain criteria and function calls in order to do so. Every contract has three parts:</div></blockquote>
 <div class="section" id="the-proposal">
 <h3>The Proposal<a class="headerlink" href="#the-proposal" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>This is a function that anyone can call. You submit a request to call certain functions within the relevant contract. This proposal contains all the detailed information necessary for the contract to invoke another. You have to input which contracts you want to call, which functions, the required inputs for those functions, a description of your proposal, and important voting information.</p>
-</div></blockquote>
+<div>This is a function that anyone can call. You submit a request to call certain functions within the relevant contract. This proposal contains all the detailed information necessary for the contract to invoke another. You have to input which contracts you want to call, which functions, the required inputs for those functions, a description of your proposal, and important voting information.</div></blockquote>
 </div>
 <div class="section" id="the-voting">
 <h3>The Voting<a class="headerlink" href="#the-voting" title="Permalink to this headline">¶</a></h3>
@@ -254,8 +255,7 @@
 <div class="section" id="the-execution">
 <h3>The Execution<a class="headerlink" href="#the-execution" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>This is when the contract calls described in your proposal get executed, if the vote passed. It takes each part of the proposal and executes them exactly how you specified it. Imagine it like this. You have a built a protocol called MyAwesomeDapp that lends out Ethereum to people at a fixed interest rate. This interest rate is a variable set in the contract, but can be changed by calling the function <code class="docutils literal notranslate"><span class="pre">change_interest_rate(int</span> <span class="pre">new_interest_rate)</span></code>. This takes an input parameter of whatever you want the new interest rate to be. You also have a governance contract that is at address <code class="docutils literal notranslate"><span class="pre">0x5a</span></code>. When you create your protocol contract, you say that the owner is the address <code class="docutils literal notranslate"><span class="pre">0x5a</span></code>, I.E the governance contract, and that its functions can only be invoked by it. Someone submits a proposal to increase the interest rate to <code class="docutils literal notranslate"><span class="pre">5%</span></code> from <code class="docutils literal notranslate"><span class="pre">4%</span></code>. That proposal includes the parameters <em>call change_interest_rate() with value 5% on the specified protocol contract</em>. If the proposal passes, then those function calls will be executed. It also does things like logging and archiving of all proposals and executions.</p>
-</div></blockquote>
+<div>This is when the contract calls described in your proposal get executed, if the vote passed. It takes each part of the proposal and executes them exactly how you specified it. Imagine it like this. You have a built a protocol called MyAwesomeDapp that lends out Ethereum to people at a fixed interest rate. This interest rate is a variable set in the contract, but can be changed by calling the function <code class="docutils literal notranslate"><span class="pre">change_interest_rate(int</span> <span class="pre">new_interest_rate)</span></code>. This takes an input parameter of whatever you want the new interest rate to be. You also have a governance contract that is at address <code class="docutils literal notranslate"><span class="pre">0x5a</span></code>. When you create your protocol contract, you say that the owner is the address <code class="docutils literal notranslate"><span class="pre">0x5a</span></code>, I.E the governance contract, and that its functions can only be invoked by it. Someone submits a proposal to increase the interest rate to <code class="docutils literal notranslate"><span class="pre">5%</span></code> from <code class="docutils literal notranslate"><span class="pre">4%</span></code>. That proposal includes the parameters <em>call change_interest_rate() with value 5% on the specified protocol contract</em>. If the proposal passes, then those function calls will be executed. It also does things like logging and archiving of all proposals and executions.</div></blockquote>
 </div>
 </div>
 <div class="section" id="governance-tokens">
@@ -269,11 +269,12 @@
 </div>
 <div class="section" id="why-you-should-use-it">
 <h2>Why you should use it<a class="headerlink" href="#why-you-should-use-it" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>Why should you use a DAO:</dt><dd><ol class="arabic simple">
-<li><p>Trust - Giving up your authority to the community is a good way to gain the trust of the cryptocurrency community. With transparency and delegation, people will be more likely to use your app because they know that it can be trusted, and that you have faith in it. It is also a great way to show that you are optimistic about the long term viability of the project and its ability to stand on its own</p></li>
-<li><p>Funding - Selling off tokens for governance can be a good way to raise capital in an ICO. Many projects do this instead of airdrops.</p></li>
-<li><p>New perspectives and ideas - Sometimes the power of the group can be greater than the individual. Give people the power to find and change things on their own and they may surprise you. It also helps to eliminate overhead and costs. Banks have huge departments of people who’s only job is to figure out things like interest rates and costs. By offloading this responsibility to the community, people will do this job for you to make the optimal amount of money and productivity. Security is always a risk, but that risk never goes away. When people have skin in the game, they are more incentivized to do the right thing and help it rather than attack it. Dai is incredibly stable because of arbitragers and the devoted members of the MakerDAO.</p></li>
+<dl class="docutils">
+<dt>Why should you use a DAO:</dt>
+<dd><ol class="first last arabic simple">
+<li>Trust - Giving up your authority to the community is a good way to gain the trust of the cryptocurrency community. With transparency and delegation, people will be more likely to use your app because they know that it can be trusted, and that you have faith in it. It is also a great way to show that you are optimistic about the long term viability of the project and its ability to stand on its own</li>
+<li>Funding - Selling off tokens for governance can be a good way to raise capital in an ICO. Many projects do this instead of airdrops.</li>
+<li>New perspectives and ideas - Sometimes the power of the group can be greater than the individual. Give people the power to find and change things on their own and they may surprise you. It also helps to eliminate overhead and costs. Banks have huge departments of people who’s only job is to figure out things like interest rates and costs. By offloading this responsibility to the community, people will do this job for you to make the optimal amount of money and productivity. Security is always a risk, but that risk never goes away. When people have skin in the game, they are more incentivized to do the right thing and help it rather than attack it. Dai is incredibly stable because of arbitragers and the devoted members of the MakerDAO.</li>
 </ol>
 </dd>
 </dl>
@@ -281,21 +282,21 @@
 <div class="section" id="use-cases">
 <h2>Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">¶</a></h2>
 <p>There are hundreds, even thousands of possible use cases for DAO governance. Here’s some of my favorite examples</p>
-<dl class="simple">
-<dt>Grants</dt><dd><p>The Gitcoin DAO is an organization responsible for funding new and upcoming projects that are important to the ethereum ecosystem. People submit proposals for funding to build their application and DAO voting is used to determine to whom the funds should go to.</p>
-</dd>
-<dt>Venture Capital:</dt><dd><p>Same logic as grants but for venture capital investment funds. Let people pool money and vote on how it should be invested.</p>
-</dd>
-<dt>Charity:</dt><dd><p>The same logic as grants, but with charity. Anyone can donate and make a proposal to how the funds should be spent. Full transparency and democratization.</p>
-</dd>
-<dt>Investment Trading:</dt><dd><p>Create a decentralized hedge fund that constantly trades coins on-chain based on member votes. Or you could vote to appoint someone as the trader on behalf of the group, and kick them out if they don’t perform.</p>
-</dd>
-<dt>DeFi and other Dapps:</dt><dd><p>DAO’s like Maker, Compound, Aave, etc. use their DAO to dictate changes to the protocol like collateralization rates, interest rates, new lending pairs, etc.</p>
-</dd>
-<dt>Businesses and Freelancers:</dt><dd><p>Allow people to pool their funds together to pay for goods and services without having to trust someone as a custodian.</p>
-</dd>
-<dt>Voting and Authorization:</dt><dd><p>The distributed voting system allows for the democratization of really anything: Elections, board-approval, polling, etc. Obviously this technology is new and it will be a long time before it’s used for any serious real-world systems, but it holds a lot of potential in what it can be used for.</p>
-</dd>
+<dl class="docutils">
+<dt>Grants</dt>
+<dd>The Gitcoin DAO is an organization responsible for funding new and upcoming projects that are important to the ethereum ecosystem. People submit proposals for funding to build their application and DAO voting is used to determine to whom the funds should go to.</dd>
+<dt>Venture Capital:</dt>
+<dd>Same logic as grants but for venture capital investment funds. Let people pool money and vote on how it should be invested.</dd>
+<dt>Charity:</dt>
+<dd>The same logic as grants, but with charity. Anyone can donate and make a proposal to how the funds should be spent. Full transparency and democratization.</dd>
+<dt>Investment Trading:</dt>
+<dd>Create a decentralized hedge fund that constantly trades coins on-chain based on member votes. Or you could vote to appoint someone as the trader on behalf of the group, and kick them out if they don’t perform.</dd>
+<dt>DeFi and other Dapps:</dt>
+<dd>DAO’s like Maker, Compound, Aave, etc. use their DAO to dictate changes to the protocol like collateralization rates, interest rates, new lending pairs, etc.</dd>
+<dt>Businesses and Freelancers:</dt>
+<dd>Allow people to pool their funds together to pay for goods and services without having to trust someone as a custodian.</dd>
+<dt>Voting and Authorization:</dt>
+<dd>The distributed voting system allows for the democratization of really anything: Elections, board-approval, polling, etc. Obviously this technology is new and it will be a long time before it’s used for any serious real-world systems, but it holds a lot of potential in what it can be used for.</dd>
 </dl>
 </div>
 </div>

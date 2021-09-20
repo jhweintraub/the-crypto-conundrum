@@ -1,12 +1,27 @@
 Start Here!
 ==================================================================
-If you&#39;ve come to this then you&#39;ve probably caught the Crypto fever going on right now, and want to know how you can get in on this sweet action to earn yourself a Lambo. Well look no further, because I&#39;m here to teach you about investing in the world of Cryptocurrency.
+Welcome to my website, and the host of my digital resume. I hope here that you can learn a little bit about who I am, what I can do for you and your business, and the exciting world of Cryptocurrency.
 
 Who am I
 ===========
 
-My name is Josh Weintraub. I'm just a guy studying Computer Science with an obsession for Cryptocurrency
+My name is Josh Weintraub. I'm just a guy studying Computer Science with an obsession for Cryptocurrency.
 
+What can I do for you
+========================
+
+I have worked for years to cultivate a very in-depth understand of the blockchain, cryptocurrency, and digital asset security. This site is my chance to pass on this vital knowledge and give this knowledge back. On this site you'll learn a few things, including:
+
+1. What is cryptocurrency, the blockchain, and other misc. assets like NFT's and tokens.
+2. How you can become an investor, developer, and part of the cryptocurrency community
+3. How to secure those assets, and protect yourself and others from hackers and deviants who want to steal your crypto.
+4. How integrating the blockchain can transform your business' efficiency and security.
+5. The state of the blockchain industry and cryptocurrency economy including investing, regulation, and international governance
+
+If anything you read here catches your attention, I am looking for internships and eager to help your business secure its digital assets. Blockchain integration is the future, but you need to know how it works and how to secure it first.
+
+Want to contact me about opportunities (job, media, or other)?
+Email me at *jhweintraub@gmail.com*
 
 My Background
 ****************************
@@ -31,10 +46,6 @@ If you want to know more about me, check out  :download:`My Resume <resume.pdf>`
 If you want to support the site send Ether or Ethereum-Tokens to the following
 
 `jhweintraub.eth (0xaB5409b0E5a66AcC9D63f668414539A60a5917C1) <https://etherscan.io/address/0xaB5409b0E5a66AcC9D63f668414539A60a5917C1>`_
-
-
-Want to contact me about opportunities (job, media, or other)?
-Email me at *jhweintraub@gmail.com*
 
 If you want to donate another coin to me, shoot me an email and i'll send it you the address.
 

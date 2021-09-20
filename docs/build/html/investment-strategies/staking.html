@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -29,9 +29,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -85,6 +87,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">Start Here!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#who-am-i">Who am I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#what-can-i-do-for-you">What can I do for you</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/popular_questions.html">Most Popular Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/blockchain.html">The Blockchain</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/exchanges.html">Exchanges</a></li>
@@ -212,10 +215,11 @@
 <div class="section" id="proof-of-work">
 <h2>Proof of Work<a class="headerlink" href="#proof-of-work" title="Permalink to this headline">¶</a></h2>
 <p>In Bitcoin, this algorithm is known as <a class="reference external" href="https://en.wikipedia.org/wiki/Proof_of_work">Proof-of-Work</a>. This algorithm allows any person to add a block to the chain, provided they first solve a difficult mathematical puzzle. In its simplest terms, this involves using computers to guess a very large secret number, very quickly. Being the first person to guess this number successfully gets to add the block to the chain. This privilege comes with a substantial monetary reward, paid out in cryptocurrency. The people who do this are known as “miners”. For people in the tech-world, this is done using the <a class="reference external" href="https://en.wikipedia.org/wiki/SHA-2">SHA-256 Hash algorithm</a> for Bitcoin.</p>
-<dl class="simple">
-<dt>The person who adds the block to the chain gets two things:</dt><dd><ol class="arabic simple">
-<li><p>The sum of all the transaction fees of the transactions included in the block.</p></li>
-<li><p>A special transaction, that creates coins out of thin air, and gives free coins to the block-creator. This is known as the “coinbase reward” (sound familiar?)</p></li>
+<dl class="docutils">
+<dt>The person who adds the block to the chain gets two things:</dt>
+<dd><ol class="first last arabic simple">
+<li>The sum of all the transaction fees of the transactions included in the block.</li>
+<li>A special transaction, that creates coins out of thin air, and gives free coins to the block-creator. This is known as the “coinbase reward” (sound familiar?)</li>
 </ol>
 </dd>
 </dl>
@@ -238,11 +242,12 @@
 <p>The network then randomly selects a person from the pool of stakers to propose each block. If your stake is larger, your chance of being selected to produce a given block rises as well. However, unlike a Proof-of-Work system, where only the person who approves the block profits, everyone profits in a proof of stake system.</p>
 <p>Even if you don’t propose a block, by confirming valid blocks and rejecting invalid ones proposed by others, you are rewarded with a small amount of cryptocurrency. You still must put up a “bond” to do this. This amount earned by stakers fluctuates based on the number of stakers in the network and the community-designated reward. This also includes eliminating the block reward, creating a fixed supply of tokens. However, since the people creating the block no longer need to expend large amounts of energy to do so, there is no major loss on profitability. People forging the new blocks also earn the transaction fees associated with each transaction. This preserves the <a class="reference external" href="https://www.bitcoinsuisse.com/research/decrypt/transaction-fees-markets-for-block-space">auction model of transaction fees</a> to incentivize participation in the network, without making it too cumbersome.</p>
 <p>Proof of Stake does NOT change anything about block timing, size, cost, etc. It is only a way to deciding how blocks are created and a consensus is reached.</p>
-<dl class="simple">
-<dt>This system has 3 main advantages:</dt><dd><ol class="arabic simple">
-<li><p>Energy Efficiency - By eliminating the competition aspect, energy is no longer wasted trying to guess the secret number. This makes the system <code class="docutils literal notranslate"><span class="pre">~99%</span></code> more efficient in terms of energy consumption.</p></li>
-<li><p>Security - The biggest risk to a blockchain is a <a class="reference external" href="https://www.investopedia.com/terms/1/51-attack.asp">51% attack</a>. In proof of work, by acquiring enough computing power, this is possible and occurs on smaller networks all the time. However, in a Proof of Stake network, to succesfully pull of a 51% attack, someone would need to hold 51% of all staked coins in the network. This is because they would be able to propose 51% of blocks and have them verified successfully by 51% of nodes. However, This is incredibly incredibly expensive, and creates a financial incentive to be honest. If you owned 51% of all coins, attempting to attack its security would instantly crash the price and devalue your own holdings significantly.</p></li>
-<li><p>It rewards everyone, not just the largest actors. In Proof-of-Work, only people with the largest mining power will profit, as they can produce more blocks than the person mining on their personal PC. In Proof of Stake, anyone can profit by verifying blocks. It can be run with as little as a <a class="reference external" href="https://www.amazon.com/s?k=raspberry+pi+raspberry+pi+3+model+b&amp;hvadid=409975553966&amp;hvdev=c&amp;hvlocphy=9032778&amp;hvnetw=g&amp;hvqmt=b&amp;hvrand=10553800046473860534&amp;hvtargid=kwd-300229776225&amp;hydadcr=18067_11398848&amp;tag=googhydr-20&amp;ref=pd_sl_49xbvsep4m_b">Raspberry Pi</a> and a <a class="reference external" href="https://www.amazon.com/s?k=2+tb+hard+drive&amp;crid=1EHT4BEWHCTOJ&amp;sprefix=2+tb+hd%2Caps%2C-1&amp;ref=nb_sb_ss_ts-doa-p_1_6">1-2TB HD</a>.</p></li>
+<dl class="docutils">
+<dt>This system has 3 main advantages:</dt>
+<dd><ol class="first last arabic simple">
+<li>Energy Efficiency - By eliminating the competition aspect, energy is no longer wasted trying to guess the secret number. This makes the system <code class="docutils literal notranslate"><span class="pre">~99%</span></code> more efficient in terms of energy consumption.</li>
+<li>Security - The biggest risk to a blockchain is a <a class="reference external" href="https://www.investopedia.com/terms/1/51-attack.asp">51% attack</a>. In proof of work, by acquiring enough computing power, this is possible and occurs on smaller networks all the time. However, in a Proof of Stake network, to succesfully pull of a 51% attack, someone would need to hold 51% of all staked coins in the network. This is because they would be able to propose 51% of blocks and have them verified successfully by 51% of nodes. However, This is incredibly incredibly expensive, and creates a financial incentive to be honest. If you owned 51% of all coins, attempting to attack its security would instantly crash the price and devalue your own holdings significantly.</li>
+<li>It rewards everyone, not just the largest actors. In Proof-of-Work, only people with the largest mining power will profit, as they can produce more blocks than the person mining on their personal PC. In Proof of Stake, anyone can profit by verifying blocks. It can be run with as little as a <a class="reference external" href="https://www.amazon.com/s?k=raspberry+pi+raspberry+pi+3+model+b&amp;hvadid=409975553966&amp;hvdev=c&amp;hvlocphy=9032778&amp;hvnetw=g&amp;hvqmt=b&amp;hvrand=10553800046473860534&amp;hvtargid=kwd-300229776225&amp;hydadcr=18067_11398848&amp;tag=googhydr-20&amp;ref=pd_sl_49xbvsep4m_b">Raspberry Pi</a> and a <a class="reference external" href="https://www.amazon.com/s?k=2+tb+hard+drive&amp;crid=1EHT4BEWHCTOJ&amp;sprefix=2+tb+hd%2Caps%2C-1&amp;ref=nb_sb_ss_ts-doa-p_1_6">1-2TB HD</a>.</li>
 </ol>
 </dd>
 </dl>
@@ -256,16 +261,16 @@
 <h2>How do I stake<a class="headerlink" href="#how-do-i-stake" title="Permalink to this headline">¶</a></h2>
 <p>This has several answers, and much like everything, the solution depends on your situation.</p>
 <p>There are several ways to do this with their own pros-and-cons.</p>
-<dl class="simple">
-<dt>Exchanges:</dt><dd><p>This is the simplest. If you’re using an exchange like Kraken or Coinbase, you simply go to their page on the website and click “stake my coins”, and they go through the process for you. They will stake the coins, earn rewards, and issue them to your account. This is the best option for beginners and holders of small amounts. For example, many currencies, such as ethereum, require you stake multiples of 32-ether. This can be financially very difficult for most, and exchange staking can allow you to stake your smaller amounts and earn rewards. These exchanges do take fees though, and very from site to site. In coinbase, it is roughly <code class="docutils literal notranslate"><span class="pre">~25%</span></code> of the rewards. On Kraken it’s <code class="docutils literal notranslate"><span class="pre">~15%</span></code>. You should also be aware that this carries normal exchange risks such as security, and account lockouts. As usual, these risks are not very large but do exist and should factor into your decisions. If you care about decentralization, consider the other options, as too many people staking on exchanges can increase that network risk.</p>
-</dd>
-<dt>Pools:</dt><dd><p>This is a more technical option, typically involving a series of smart contract applications. It involves you supplying your coins to a pool, where it is then used by others to stake on your behalf, and issue you rewards. Like exchanges, it can be advantageous to people willing to earn rewards through staking, but don’t have enough to do it themselves. The program will have its own ways to ensure that the people receiving your coins are trustworthy, typically using their own system of bonds and stakes. This can be a great option for the slightly more tech-savy user, as it incurs lower fees, is more decentralized, and operates entirely on-chain. On Ethereum, the largest is <a class="reference external" href="https://www.rocketpool.net/">Rocketpool</a>. It can be as simple as sending your coins to a smart contract. The protocol then issues you a token known as rETH. This is a token that represents the coins you have staked on rocketpool. It’s a full token that can be exchanged for an equivalent value of regular ETH in the future, traded, used in DeFi, etc.</p>
-</dd>
+<dl class="docutils">
+<dt>Exchanges:</dt>
+<dd>This is the simplest. If you’re using an exchange like Kraken or Coinbase, you simply go to their page on the website and click “stake my coins”, and they go through the process for you. They will stake the coins, earn rewards, and issue them to your account. This is the best option for beginners and holders of small amounts. For example, many currencies, such as ethereum, require you stake multiples of 32-ether. This can be financially very difficult for most, and exchange staking can allow you to stake your smaller amounts and earn rewards. These exchanges do take fees though, and very from site to site. In coinbase, it is roughly <code class="docutils literal notranslate"><span class="pre">~25%</span></code> of the rewards. On Kraken it’s <code class="docutils literal notranslate"><span class="pre">~15%</span></code>. You should also be aware that this carries normal exchange risks such as security, and account lockouts. As usual, these risks are not very large but do exist and should factor into your decisions. If you care about decentralization, consider the other options, as too many people staking on exchanges can increase that network risk.</dd>
+<dt>Pools:</dt>
+<dd>This is a more technical option, typically involving a series of smart contract applications. It involves you supplying your coins to a pool, where it is then used by others to stake on your behalf, and issue you rewards. Like exchanges, it can be advantageous to people willing to earn rewards through staking, but don’t have enough to do it themselves. The program will have its own ways to ensure that the people receiving your coins are trustworthy, typically using their own system of bonds and stakes. This can be a great option for the slightly more tech-savy user, as it incurs lower fees, is more decentralized, and operates entirely on-chain. On Ethereum, the largest is <a class="reference external" href="https://www.rocketpool.net/">Rocketpool</a>. It can be as simple as sending your coins to a smart contract. The protocol then issues you a token known as rETH. This is a token that represents the coins you have staked on rocketpool. It’s a full token that can be exchanged for an equivalent value of regular ETH in the future, traded, used in DeFi, etc.</dd>
 </dl>
 <img alt="../_images/rocketpool.png" src="../_images/rocketpool.png" />
-<dl class="simple">
-<dt>Self-Staking:</dt><dd><p>This is the most technically-difficult and only recommended for advanced users. It involves running a computer with the validating-node software yourself. This can be done on the cloud through services like AWS, or locally on your own machine. This gives the user the highest reward, as they don’t have to pay any fees to anyone. However, there is an upfront cost that must be paid in order to run the machine. If it’s on the cloud, it’s an AWS bill. If it’s building a machine at-home, its the cost of materials, etc. It’s also important to make sure you are capable of maintaining a sufficiently fast and stable internet connection, as well as constant 24-hour power supply. Any outtages will reduce your earnings and miss blocks to validate. It’s important to note that by running it yourself, you won’t earn any more raw coins than anyone else, you simply get to keep more as you don’t have to pay fees to anyone. In terms of actually setting it up, there are many <a class="reference external" href="https://someresat.medium.com/guide-to-staking-on-ethereum-2-0-ubuntu-prysm-56f681646f74">great guides</a> to staking, and is not very difficult. However, due to its complexity only power users and those with technical background are advised to.</p>
-</dd>
+<dl class="docutils">
+<dt>Self-Staking:</dt>
+<dd>This is the most technically-difficult and only recommended for advanced users. It involves running a computer with the validating-node software yourself. This can be done on the cloud through services like AWS, or locally on your own machine. This gives the user the highest reward, as they don’t have to pay any fees to anyone. However, there is an upfront cost that must be paid in order to run the machine. If it’s on the cloud, it’s an AWS bill. If it’s building a machine at-home, its the cost of materials, etc. It’s also important to make sure you are capable of maintaining a sufficiently fast and stable internet connection, as well as constant 24-hour power supply. Any outtages will reduce your earnings and miss blocks to validate. It’s important to note that by running it yourself, you won’t earn any more raw coins than anyone else, you simply get to keep more as you don’t have to pay fees to anyone. In terms of actually setting it up, there are many <a class="reference external" href="https://someresat.medium.com/guide-to-staking-on-ethereum-2-0-ubuntu-prysm-56f681646f74">great guides</a> to staking, and is not very difficult. However, due to its complexity only power users and those with technical background are advised to.</dd>
 </dl>
 <p>Use <a class="reference external" href="https://www.stakingrewards.com/earn/ethereum-2-0">this site</a>, to find out what your staking rewards could be, and the best choice for you</p>
 <p><strong>If you are planning on staking Ethereum, those coins are going to be LOCKED AND ILLIQUID for at least the next 1-2 years until the upgrade to ethereum 2.0 is complete.</strong></p>

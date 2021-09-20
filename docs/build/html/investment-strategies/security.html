@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -29,9 +29,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -85,6 +87,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">Start Here!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#who-am-i">Who am I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#what-can-i-do-for-you">What can I do for you</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/popular_questions.html">Most Popular Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/blockchain.html">The Blockchain</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/exchanges.html">Exchanges</a></li>
@@ -215,19 +218,19 @@
 </div>
 <div class="section" id="wallet-types">
 <h2>Wallet Types<a class="headerlink" href="#wallet-types" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>Cold Wallet</dt><dd><p>Cold storage is an offline wallet used for storing cryptocurrency. With cold storage, the digital wallet is stored on a platform that is not connected to the internet. This protects the wallet from unauthorized access, cyber hacks, and other vulnerabilities an internet-connected system is vulnerable to. It includes things such as Paper Wallets, to store your crypto long-term. This is similar to a long-term bank account. The cold wallet is merely a message for storing cryptocurrency keys. This means that even if you use it, you can still send cryptocurrency from somewhere else at any time. You would have to recover your cold wallet to access it afterwards however.</p>
-</dd>
-<dt>Hot Wallet</dt><dd><p>A hot wallet is a piece of software, connected to the internet, used to send cryptocurrency. A hot wallet includes things like Mobile and Browser wallets, as they are readily available and pre-loaded with your encryption keys. These are recommended for cryptocurrency that you plan on spending, much like keeping cash in your physical wallet.</p>
-</dd>
-<dt>Mobile/Browser Wallet</dt><dd><p>A piece of software on your phone/computer that lets you easily send cryptocurrency and interact with decentralized applications. For Bitcoin this includes applications such as <a class="reference external" href="https://wallet.bitcoin.com/">Bitcoin.com Wallet</a>. For Ethereum this includes <a class="reference external" href="https://metamask.io/">Metamask</a>.</p>
-</dd>
-<dt>Paper Wallet</dt><dd><p>A form of cold wallet, used to store your cryptocurrency long-term. It is a physical entity that contains the instruction information needed to access your crypto in a hot wallet. It may contain your private-key, your mnemonic-seed phrase, etc. Many people write this on a piece of paper and put it somewhere secret. However, there are many products that will allow you to physically imprint it on a piece of metal, to water and fire-proof it.</p>
-</dd>
-<dt>Hardware Wallet</dt><dd><p>A special kind of hot-wallet to store your crypto on a physical, and easily available, device. These are typically supplemental devices to accompany mobile/browser wallets. They store your cryptocurrency keys and are used as 2-factor-authentication devices for your cryptocurrency. Imagine a small flash-drive sized object on your keychain. When you want to send cryptocurrency, you first send a request to the device. This device has encrypted and stored your keys, and will use them to initiate your requested transaction upon confirmation. This adds an extra layer of in-person security much like google-2fa. The most popular include <a class="reference external" href="https://www.ledger.com/">Ledger Nano</a> and <a class="reference external" href="https://trezor.io/">Trezor Hardware Wallet</a>.</p>
-</dd>
-<dt>Multi-signature Wallet</dt><dd><p>This is a special kind of wallet, available on a variety of blockchains in different ways. It’s an address that can be used to send and receive crypto. However, it requires the authorization of multiple other wallets before sending. When you send a cryptocurrency transaction, your wallet creates what’s called a “digital signature”, a cryptographic proof that you are the owner of certain coins. For normal wallets, this one signature is all you need to send a transaction. For multi-signature wallets this requires the input and approval of multiple addresses/wallets before initiating a transaction. This is orders of magnitude more secure because it would require an attacker infiltrating multiple wallets or extorting multiple people to steal the coins.</p>
-</dd>
+<dl class="docutils">
+<dt>Cold Wallet</dt>
+<dd>Cold storage is an offline wallet used for storing cryptocurrency. With cold storage, the digital wallet is stored on a platform that is not connected to the internet. This protects the wallet from unauthorized access, cyber hacks, and other vulnerabilities an internet-connected system is vulnerable to. It includes things such as Paper Wallets, to store your crypto long-term. This is similar to a long-term bank account. The cold wallet is merely a message for storing cryptocurrency keys. This means that even if you use it, you can still send cryptocurrency from somewhere else at any time. You would have to recover your cold wallet to access it afterwards however.</dd>
+<dt>Hot Wallet</dt>
+<dd>A hot wallet is a piece of software, connected to the internet, used to send cryptocurrency. A hot wallet includes things like Mobile and Browser wallets, as they are readily available and pre-loaded with your encryption keys. These are recommended for cryptocurrency that you plan on spending, much like keeping cash in your physical wallet.</dd>
+<dt>Mobile/Browser Wallet</dt>
+<dd>A piece of software on your phone/computer that lets you easily send cryptocurrency and interact with decentralized applications. For Bitcoin this includes applications such as <a class="reference external" href="https://wallet.bitcoin.com/">Bitcoin.com Wallet</a>. For Ethereum this includes <a class="reference external" href="https://metamask.io/">Metamask</a>.</dd>
+<dt>Paper Wallet</dt>
+<dd>A form of cold wallet, used to store your cryptocurrency long-term. It is a physical entity that contains the instruction information needed to access your crypto in a hot wallet. It may contain your private-key, your mnemonic-seed phrase, etc. Many people write this on a piece of paper and put it somewhere secret. However, there are many products that will allow you to physically imprint it on a piece of metal, to water and fire-proof it.</dd>
+<dt>Hardware Wallet</dt>
+<dd>A special kind of hot-wallet to store your crypto on a physical, and easily available, device. These are typically supplemental devices to accompany mobile/browser wallets. They store your cryptocurrency keys and are used as 2-factor-authentication devices for your cryptocurrency. Imagine a small flash-drive sized object on your keychain. When you want to send cryptocurrency, you first send a request to the device. This device has encrypted and stored your keys, and will use them to initiate your requested transaction upon confirmation. This adds an extra layer of in-person security much like google-2fa. The most popular include <a class="reference external" href="https://www.ledger.com/">Ledger Nano</a> and <a class="reference external" href="https://trezor.io/">Trezor Hardware Wallet</a>.</dd>
+<dt>Multi-signature Wallet</dt>
+<dd>This is a special kind of wallet, available on a variety of blockchains in different ways. It’s an address that can be used to send and receive crypto. However, it requires the authorization of multiple other wallets before sending. When you send a cryptocurrency transaction, your wallet creates what’s called a “digital signature”, a cryptographic proof that you are the owner of certain coins. For normal wallets, this one signature is all you need to send a transaction. For multi-signature wallets this requires the input and approval of multiple addresses/wallets before initiating a transaction. This is orders of magnitude more secure because it would require an attacker infiltrating multiple wallets or extorting multiple people to steal the coins.</dd>
 </dl>
 </div>
 <div class="section" id="preventing-extortion">

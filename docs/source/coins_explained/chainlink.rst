@@ -24,7 +24,7 @@ Yes, this is true but it's not about the node, its about the blockchain itself. 
 
 *Why can't the EVM use the internet capabilities of the host device to connect to the internet like my web browser does?*
 
-The reason for that is complicated, and only really matters to developers, so for the time being let's just say it can't, but your line of thinking will be relevant when I explain how oracles actually play into this. You can skip down to the next part of the article here [insert link]
+The reason for that is complicated, and only really matters to developers, so for the time being let's just say it can't, but your line of thinking will be relevant when I explain how oracles actually play into this. You can skip down to the next part of the article `here <https://thecryptoconundrum.net/coins_explained/chainlink.html#how-oracles-work>`_.
 
 
 

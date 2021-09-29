@@ -131,6 +131,7 @@ These can get very elaborate. I recently received one of these tokens where they
 
 Defenses:
 	**1. Do Not Engage** - Just ignore these tokens. **DO NOT** attempt to send them anywhere, approve any dapp to send them, or do anything else with it, as it will probably result in a draining of your funds.
+
 	**2. Hide the tokens in your wallet** - If you wallet, such as Metamask, allows you to not hide certain tokens from display, then do so. Out of sight out of mind.
 
 Dust Attack
@@ -148,6 +149,7 @@ The idea is to send it to a variety of addresses, and wait for people to send th
 
 Defenses:
 	**1. Do not engage** - Just ignore the small amounts of dust. **DO NOT USE IT** in your future transactions or attempt to send it anywhere. As the image above shows, simply not including it as the input one of your transactions is sufficient. Some wallets will allow you to flag these incoming dust transactions as *do not spend*. If available, you should turn that on.
+
 	**2. Change addresses** - If you're worried, then you could consider changing your wallet address. Simply send all of your balance, minus the dust somewhere else.
 
 Scams
@@ -175,8 +177,11 @@ The pump and dump is a financial scam that's been present in the stock and finan
 
 	**2.** The Shilled - The people on social media being bombarded with advertisements for "THE NEXT SHIBA-INU MEMECOIN GUARANTEED 1000x MOON PROFIT". They rely on you FOMO'ing (Fear of Missing out) into the coin to drive up the price. Don't. Ignore it, and stick with your regular strategy for investing with proper DD (Due-Diligence).
 
+.. image:: images/pump_and_dump.png
+
 Defenses:
 	**1. Common sense** - Don't fall for the FOMO. This also falls under the investment rule of `being confident in your decisions <https://thecryptoconundrum.net/investment-strategies/confidence.html>`_.
+
 	**2. Ignore the shill** - If a bot on telegram or discord invites you to their pump and dump-group, just ignore it and report the bot for spam.
 
 The Fake Exchange
@@ -186,6 +191,7 @@ Much like the Double-Return, these rely on your desire to get free stuff. Scamme
 
 Defenses:
 	**1. Common Sense** - Nobody is giving out free Cryptocurrency.
+
 	**2. Keep your guard up** - Don't give out your passwords or sensitive information to anybody.
 
 .. image:: images/exchange_scam.png
@@ -201,7 +207,7 @@ This same scam is `still occuring but on the google-play store via android apps 
 
 Defenses:
 	**1. Be extra vigilant when visiting links related to crypto** - If it's a site you visit frequently, bookmark it. Be sure to pay attention to the site when visiting and look for any changes or oddities in design.
-	
+
 	**2. Copy Links instead of typing them in** - A strategy known as *typo-squatting*, attackers could build a fake clone at *meramask.io* and wait for you to misspell the address, sending you to them and hoping you don't notice it's a fake.
 
 

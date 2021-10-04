@@ -188,10 +188,10 @@ The Crypto-Conundrum, future of finance or the next mortgage Bubble?
    <!-- End code of subscriber list form -->
 
 
-Welcome to The Crypto-Conundrum, my guide to the world of Cryptocurrency. It's here that i've chronicled all of my thoughts on Cryptocurrency and investing in it. For people new to the world of Crypto click on "Start here!" to read through the complete beginner's guide
+Welcome to The Crypto-Conundrum, my guide to the world of Cryptocurrency. It's here that I have chronicled all of my thoughts on Cryptocurrency and investing. For people new to the world of Crypto, click on "Start here!" to read through the complete beginner's guide
 
 
-If you a fan of the site please consider taking `This brief survey <https://forms.gle/xYaQFdG1pkACNz4d9>`_ to help me better understand how to improving the site.
+If you a fan of the site please consider taking `This brief survey <https://forms.gle/xYaQFdG1pkACNz4d9>`_ to help me better understand how to improve.
 
 I have plans on writing more articles on a wide range of topics. They take time to thoroughly research and write, so please be patient.
 

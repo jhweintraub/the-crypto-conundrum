@@ -43,7 +43,7 @@ If you want to support the site send Ether or Ethereum-Tokens to the following
 
 `jhweintraub.eth (0xaB5409b0E5a66AcC9D63f668414539A60a5917C1) <https://etherscan.io/address/0xaB5409b0E5a66AcC9D63f668414539A60a5917C1>`_
 
-If you want to donate another coin to me, shoot me an email and i'll send it you the address.
+If you want to donate another coin to me, shoot me an email and I'll send it you the address.
 
 .. image:: images/bossassbitch.jpeg
 		:width: 120pt

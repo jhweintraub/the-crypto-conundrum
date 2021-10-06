@@ -86,7 +86,6 @@
               <p class="caption"><span class="caption-text">Introduction:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">Start Here!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#who-am-i">Who am I</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#what-can-i-do-for-you">What can I do for you</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/popular_questions.html">Most Popular Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/blockchain.html">The Blockchain</a></li>
@@ -108,7 +107,10 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Ethereum 2.0</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#the-problem-proposed-solution">The Problem &amp; Proposed Solution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#proof-of-stake">Proof of Stake</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Sharding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Sharding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rollup-centric-roadmap-for-sharding">Rollup-Centric Roadmap for Sharding</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#the-future-post-2-0">The Future Post-2.0</a></li>
 </ul>
 </li>
@@ -121,7 +123,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/rules.html">General Strategy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/exit_strategies.html">Define your exit strategy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/due-dilligence.html">Doing your Due-Dilligence</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/security.html">Securing your investment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/security.html">Protecting your Cryptocurrency</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/confidence.html">Be Confident</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/staking.html">Mining and Staking</a></li>
 </ul>
@@ -241,16 +243,40 @@
 <div class="section" id="id1">
 <h2>Sharding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>While Proof of Stake is meant to solve a lot of problems for Ethereum, it does not help with scalability. This is where sharding comes into play.</p>
-<p>Sharding is a common practice in database design and computer science. It involves splitting the information horizontally into “shards” to reduce congestion and distribute the computational load. Imagine a database. Instead of one server holding millions of records, it would distribute fractions of the storage requirements to
-other servers. These servers are constantly communicating to receive information when necesarry. In a blockchain context, it involves splitting the blockchain into 64 smaller chains, known as shards. Each node will only have to process and store information on their shard, instead of the entire chain. All of these shards are coordinated by the beacon chain (hence the name).</p>
+<p>Sharding is a common practice in database design and computer science. It involves splitting the information horizontally into “shards” to reduce congestion and distribute the computational load. Imagine a database. Instead of one server holding millions of records, it would distribute fractions of the storage requirements to other servers.</p>
+<p>These servers are constantly communicating to receive information when necesarry. In a blockchain context, it involves splitting the blockchain into 64 smaller chains, known as shards. Each node will only have to process and store information on their shard, instead of the entire chain. All of these shards are coordinated by the beacon chain (hence the name).</p>
 <img alt="../_images/sharding.jpg" src="../_images/sharding.jpg" />
 <p><em>Original diagram by Hsiao-wei Wang, design by Quantstamp</em></p>
 <p>This allows greater throughput as nodes only have to validate and store transactions on their individual shard. This means that transactions can also occur much faster without sacrificing centralization or security. Distributing the storage and load therefore prevents the nodes from having to store incredibly large amounts of chain data as time goes on, preventing decentralization and making it easy for anyone to run a node regardless of hardware.</p>
 <p>When sharding goes live, the original ethereum chain and all its data will be converted into one of the 64 shards.</p>
 <p>However, some schematics as well also have the shards only for storing data, and not executing contracts. This is also a valid way of distributing load, because it means that the on-chain data will be able to grow faster without worrying about centralization risk. If the chain grows <code class="docutils literal notranslate"><span class="pre">~2x</span></code> as large everyday, but each we split the data storage responsibility upon 2 different shards, the ability for a node to process without overburdening the storage capacity roughly comes out about even.</p>
-<p>The original version of this design included making several of these chains entirely executable, like the main ethereum chain. This would mean that say you have 5 shards operating in parallel, fully executing transactions and communicating with eachother, meaning a huge jump in speed. This is because many computationally-strenuous contracts can be processed on a shard without bogging down the others.</p>
+<p>The original version of this design included making several of these chains entirely executable, like the main ethereum chain. This would mean that say you have 5 shards operating in parallel, fully executing transactions and communicating with each other, meaning a huge jump in speed. This is because many computationally-strenuous contracts can be processed on a shard without bogging down the others.</p>
 <p>Once again, as a holder of Ether, you will <strong>NOT</strong> have to do anything to prepare for this update. If you are running a node or a developer, consult the documentation for your node software for instruction.</p>
 <p>The exact schematics of how these shards will operate in terms of execution vs. simple data storage is constantly evolving alongside other technologies and updates. Sharding is currently planned as “phase 2” of eth2, but it is entirely possible that with other scalability solutions, it will become unnecesarry.</p>
+<div class="section" id="rollup-centric-roadmap-for-sharding">
+<h3>Rollup-Centric Roadmap for Sharding<a class="headerlink" href="#rollup-centric-roadmap-for-sharding" title="Permalink to this headline">¶</a></h3>
+<p>The original road map for introducing sharding was focused on layer-1 scalability. This means that changes to the blockchain, to increase transactions-per-second, were focused on the main-layer of Ethereum (how to increase transactions per block per second). It was previously thought that layer-1 solutions alone could bring sufficient to enough scalability to Ethereum. Recent spikes in transaction fees and congestion, alongside new long-term projections, have thrown that into question. It is no longer believed that layer-1 alone is sufficient to scale Ethereum to hundreds of thousands of transactions-per-second (TPS).</p>
+<p>It was the decision of the community therefore, that the long-term road-map for improving Ethereum needs to work alongside <a class="reference external" href="https://thecryptoconundrum.net/ethereum_explained/layer2.html">layer-2 solutions (rollups)</a>. This has led to a phrase coined by Vitalik for the future upgrades for Ethereum</p>
+<p><em>A Rollup-centric ethereum roadmap</em></p>
+<p>This phrase means that future updates for Ethereum are intentioned to work <em>with</em> L2 rollups, to enhance their effectiveness. This is opposed to ignoring, or fighting against them. The way that sharding and future updates are designed are meant to make rollups even faster and cheaper, for the good of the community. This is where shards come into play, as an example.</p>
+<p>The short-term immediate vision for sharding is to be <em>data-shards</em>, not execution shards. This means that a variety of shards will only hold data, posted on-chain by rollups. Other shards will hold execution information, blocks, account balances, etc. Try to follow me here, cause it gets a little complicated.</p>
+<p>A rollup is just a block of raw data, stored on-chain, with transaction info. In a world without rollups, there is still a block-size limit. Only so much data can be put into a block before it runs out of space. Once rollups get larger, from more transaction volume, we end up back at square one. Rollups go back to fighting for block space and transaction fees go up. The solution, is to minimize the amount of data posted directly on chain, by moving it somewhere else.</p>
+<p>Instead of posting the rollup itself to the chain, you could put it on a data-shard. The data shard then only needs to pass the identifying information to the execution shard, so that it can be recovered, and verified. The execution shard then, only needs to store the reference to the rollup, not the rollup itself. If you’re a developer, it works like a pointer.</p>
+<p>Imagine a rollup containing 1000 transactions takes up about <code class="docutils literal notranslate"><span class="pre">55</span> <span class="pre">kilobytes</span></code> (I just made that number up i don’t know how much it actually is). You could store that on shard-45, which gets reported to the execution-shards. This shard gets a much smaller reference that says “the info you are looking for, that is verified to be legitimate, is on shard-45 and has the following identifier”. This reference information is obviously much smaller, containing something like only <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">kb</span></code> of data. That makes the same amount of data <code class="docutils literal notranslate"><span class="pre">11x</span></code> more efficient in transactions-per-second.</p>
+<p>If you move all data to rollups, then every block becomes orders of magnitude more efficient, because the max amount of data that can be included, is.</p>
+<p><strong>But why do we need rollups? Why can’t we just use layer-1 if 64-shards means 64x more transactions?</strong></p>
+<dl class="docutils">
+<dt>We need rollups for a couple of reasons:</dt>
+<dd><ol class="first last arabic simple">
+<li>They are always going to be more efficient than using layer-1. Because you fit more transactions into the same space as 1 normal-L1-transaction, the transaction fee will always be lower. It’s simple math. A sole focus on layer-1 just doesn’t provide the same benefits as integration with layer-2.</li>
+<li>Rollups are, at least in the short-term, the best solution for high transaction costs. They are already offloading billions of dollars in transaction-costs to L2 right now. Sharding is going to be a multi-year process that may change over time. A focus on supercharging them right now will make it significantly easier to adapt going forward.</li>
+<li>Delegation of problem-solving. By offloading various responsibilities to rollup-teams, the Ethereum foundation and community can spend more time focusing on solving a variety of other necesarry problems, like security, post-quantum encryption, etc. This is a good long-term strategy to help Ethereum move faster into the future. It is also best for decentralization because it means no single entity is responsible for making Ethereum better, or ruining it.</li>
+<li>Sharding is hard. Shards cannot talk to each-other, and parallel execution is very difficult. It’s easy to say “well just add more shards every time you want to increase TPS”. However, with every extra shard processing transactions, the organization between them gets tougher. All the shards need to agree on the current-state of the network. How shards interact and process in parallel is a mathematically, conceptually, and computationally, difficult undertaking. While it is hoped that someday all shards may be executable, focusing on roll-ups now will be the best way to reduce network-congestion.</li>
+</ol>
+</dd>
+</dl>
+<p>The exact specifics of sharding are changing very rapidly with new research. It’s possible that my explanations may be slightly wrong, or that things have changed since I wrote this. Feel free to consult <a class="reference external" href="https://ethresear.ch">ethresear.ch</a> for more cutting-edge info about what’s happening with ethereum 2.0.</p>
+</div>
 </div>
 <div class="section" id="the-future-post-2-0">
 <h2>The Future Post-2.0<a class="headerlink" href="#the-future-post-2-0" title="Permalink to this headline">¶</a></h2>

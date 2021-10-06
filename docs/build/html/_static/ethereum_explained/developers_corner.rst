@@ -103,11 +103,11 @@ More detailed information can be found `here <https://medium.com/mycrypto/unders
 Accounts
 ----------
 
-Unlike Bitcoin, Ethereum supports the idea of an account, with a balance.
+Unlike Bitcoin, Ethereum supports the idea of an account, with a balance. This is how the EVM is able to calculate the current world state, based on the value of all valid-addresses.
 
 **"Wait, if Bitcoin doesn't actually have a balance, how come I can go to a website and it tell me how much Bitcoin I have?"**
 
-This is a good question. The answer is that Bitcoin doesn't actually have the concept of an account balance. When you go to a website, that site specifically has indexed the blockchain on their own and created a local copy that they then serve to you. It looks through your transaction history and calculates how much Bitcoin you have, instead of looking at the chain directly for every query. This would be very slow. Your balance is the sum of all of your previously income transaction values. Each transaction has a BTC value. Imagine you wanted to send 5 BTC. Your wallet takes several transactions from your history, and bundles them together until the sum of their values is `>=5 BTC`. It then takes that amount, and sends it, and returns the extra unsused Bitcoin to you.
+This is a good question. The answer is that Bitcoin doesn't actually have the concept of an account balance. When you go to a website, that site specifically has indexed the blockchain on their own and created a local copy that they then serve to you. It looks through your transaction history and calculates how much Bitcoin you have, instead of looking at the chain directly for every query. This would be very slow. Your balance is the sum of all of your previously income transaction values. Each transaction has a BTC value. Imagine you wanted to send 5 BTC. Your wallet takes several transactions from your history, and bundles them together until the sum of their values is `>= 5 BTC`. It then takes that amount, and sends it, and returns the extra unsused Bitcoin to you.
 
 Look at this example transaction
 
@@ -115,15 +115,27 @@ Look at this example transaction
 
 *Image Source: Blockchain.com*
 
-You can see that the input is multiple transactions until the amount is high enough to send it out to other places. This also means that amount you pay in transaction depends on how many inputs and outputs you need. If you look below you'll see that transaction fee is measured in sat/Byte. The Bytes is the number of transactions together, and the sat is the amount of BTC you are willing to pay for each of those bytes (sat = satoshi = 1e-18 BTC).
+You can see that the input is multiple transactions until the amount is high enough to send it out to other places. This also means that amount you pay in transaction depends on how many inputs and outputs you need. If you look below you'll see that transaction fee is measured in sat/Byte. The Bytes is the number of transactions together, and the sat is the amount of BTC you are willing to pay for each of those bytes (sat = satoshi = 1e-18 BTC). Obviously this is a bad way of doing things because if you transact in smaller amounts, when you want to make a larger transaction those fees can add up. It's also just incredibly redundant, and prohibits layer-2 scaling solutions such as rollups and sidechains. This is why the only substantial Bitcoin proposed-scaling-solution is the Lightning Network, a side-channel implementation with its own set of problems. This is a system known as *UTXO, Unspent Transaction Output*. It means that for every input for a transaction, it must from the specified output of another transaction. This is also how `Cardano <https://cardano.org>`_ works.
 
 
-Obviously this is a bad way of doing things because if you transact in smaller amounts, when you want to make a larger transaction those fees can add up. It's also just incredibly redundant, and prohibits layer-2 scaling solutions such as rollups and sidechains. This is why the only substantial Bitcoin proposed-scaling-solution is the Lightning Network, a side-channel implementation with its own set of problems.
+Ethereum, and a number of other blockchains, use a different system of account databases. In Ethereum, in order for contracts to be able to support the ability to transfer values, it must re-imagine this. I.E you must be able to query the amount of Ether in any address in existence and have a native balance value for each address in existence. This means that when you make a transaction, it is much simpler for the network to send coins around, and simplifies many API's and operations.
 
+Every node on Ethereum accomplishes this by maintaining a database of all currently utilized Ethereum addresses, and their balances. Remember that all Ethereum addresses are just the SHA-3 of a corresponding public-key. This means that all 2^256 addresses technically exist. When a new address becomes active, by receiving some token/coin, it gets stored in the accounts database. This database is a simple key-value store, where an address has a corresponding value, it's current balance of Ether.
 
-On Ethereum, in order for contracts to be able to support the ability to transfer values, it must re-imagine this. I.E you must be able to query the amount of Ether in any address in existence and have a native balance value for each address in existence. This means that when you make a transaction, it is much simpler for the network to send coins around, and simplifies many API's and operations.
+There are two-kinds of accounts: Externally-Owned-Accounts (EOA), and contract accounts. An EOA is any address/account used by a person normally. It is every account that is not a contract. Contracts are kept separate because in addition to the balance, their code needs to be stored as well.
 
-How is this done? Through a State Machine, which you may remember from sophomore year CS Class.
+.. image:: images/account_diagram.png
+
+As you can see, the nonce and balance are the same in both. The Nonce is the incrementing integer representing the number of transactions sent from this address. It's changing value is necesarry to ensure that each digital-signature is unique, and to prevent double spending. Both types also have a balance that must be kept track of.
+
+Contracts however, have two values the EOA does not. The first is the storage hash. This is the hash of all of the variables the contract maintains. For example, a contract may contain a data structure such as a list of arrays, and a variety of integers. This is kept in storage, and the hash updated when the values change. The code hash is the hash of the contract-code itself, and does not change once-created. Because EOA's do not have code or objects to maintain, they don't need to hold these values. When you make a transaction to the `zero address <https://etherscan.io/address/0x0000000000000000000000000000000000000000>`_, you're telling the network to initiate a special transaction to update the accounts-database with this new account.
+
+This is also what people mean when they express concern about "the ethereum state growing". It means the accounts database is growing ever larger, as well as the history of the blockchain. This is also what people mean when they talk about `stateless ethereum <https://ethresear.ch/t/complete-revamp-of-the-stateless-ethereum-roadmap/8592>`_. It means to have a new type of node that stores the world-state, but not the entire accounts database needed to compute it. Stateless Ethereum may be discussed in future articles.
+
+This system does have some drawbacks however. Unlike UTXO, when reading and writing to the accounts database for each transaction, the ordering of transactions within a block matters. This is because the ordering in which contracts interact with the accounts database matters. Otherwise, you end up with concurrency issues. The EVM doesn't do parallel computation very well as a result, but it does do finality and conflict-resolution. This is what leads to something known as *MEV (Miner-Extractable-Value)*. It is when miners will essentially *collude* with users to order transactions within a block, in a way that is financially beneficial to themselves. I demonstrated this when talking about `Uniswap Front-Running Attacks <https://thecryptoconundrum.net/dapps/uniswap.html#slippage-sandwich-attacks-and-front-running>`_.
+
+When a transaction is processes, the node will update this database, and report the changes to all the other nodes in the network. However, making sure that all nodes have the exact same copy of the database is a difficult task. It accomplishes this by using a *state-machine*.
+
 
 Blockchain as a State Machine
 ------------------------------
@@ -143,7 +155,7 @@ Think of it like this
 
 In a real-world sense, iamgine the following: ``APPLY({ Alice: $50, Bob: $50 },"send $20 from Alice to Bob") = { Alice: $30, Bob: $70 }``. It took the current state of all balances, processed a transaction, and returned the new state.
 
-In actuality, how the current state is determined is mathematically very tedious and involves `Merkle-Patricia Trees <https://eth.wiki/en/fundamentals/patricia-tree>`_. Since this is not a CS Lecture, (and I barely understand it myself) i'm not going to walk through how those work, but I can try if there seems to be demand for it.
+How this state is calculated is included below.
 
 This is important because we then can understand how smart contracts fit into this model. The use of a state machine allow the network to store the current state or values of a contract at any given time. Given as these contracts can have lots of variables to track, this is essential. It also allows us to create many layer-2 scaling operations off-chain. This I will explain later.
 
@@ -152,7 +164,7 @@ Ethereum Virtual Machine
 
 To calculate the state, we first need to implement a valid transaction. We can do this through `The Ethereum Virtual Machine <https://ethereum.org/en/developers/docs/evm/>`_. Think of it like Java. When you write a program to do something, the Java code compiles down to bytecode, which is run through the Java virtual machine. This virtual machine runs on top of your normal Kernel, to make it OS-Agnostic and converts it further to machine code executable by your kernel. The Ethereum Virtual Machine works the same way.
 
-Every time you execute a transaction, the inputs and steps are converted into EVM-Bytecode. The machine takes the current state and performs the transaction and generates a new network-state. When you initially create a new contract, the contract gets converted to bytecode, and stored on the chain with its address. When you make a transaction the proper bytecode is queried and excuted. This also explains why contracts are immutable.
+Every time you execute a transaction, the inputs and steps are converted into EVM-Bytecode. The machine takes the current state and performs the transaction and generates a new global-state. When you initially create a new contract, the contract gets converted to bytecode, and stored on the chain with its address. When you make a transaction the proper bytecode is queried and excuted. This also explains why contracts are immutable.
 
 The contract address is based on the creator's address and nonce at the moment of compilation, then hashed. Imagine the following function that gets called everytime a contract is created:
 
@@ -180,12 +192,54 @@ The following information is provided by `Ethereum Website <https://ethereum.org
 
 *Image Source: Ethereum Foundation, ethereum.org*
 
+Because the EVM is really just a stack-machine using a series of opcodes. Gas cost is determined by which opcodes you use. Each one has a specific cost. Simple ones like *ADD*, to add values together, only use 3-gas. More difficult ones like *BALANCE*, to retrieve an account-balance from the accounts database, use 400-gas. This is why optimization is so important. If you can reduce the number of unnecessary operations in your code, you can save users a lot of gas.
+
+Remember earlier when I said the accounts database stores the smart-contract code. Well what it's really storing is the EVM-Bytecode, and calling that on transaction request. When you use a tool like `Remix IDE <https://remix.ethereum.org/>`_, you're using a solidity-compiler to generate the bytecode, which is stored.
+
+There is also a special opcode known as *SELFDESTRUCT*. While contract-code can't be updated, it can be deleted from the network. By calling self-destruct, the contract bytecode and address is deleted from the account database, and the remaining contract balance is sent to the specified address. As a reward for cleaning up the database, the EVM will refund a variable amount of gas to you. This is determined by a formula and current conditions.
+
+ `Full opcode gas cost heres <https://github.com/crytic/evm-opcodes#table>`_.
+
+ It is important to remember, that when a contract is published, it is only publishing the EVM-Compatible-Bytecode, not the source code to the chain. The source code can be published on an explorer such as `Etherscan <https://etherscan.io>`_ where it can then be checked against the bytecode for accuracy. If you are deploying a contract, this is important so that people know what they are interacting with and how to do so properly.
+
+
+Trees
+*******
+
+I'm sorry, but I need to send you back to sophomore-year data structures class to explain this next part. Don't worry i'll do my very best to keep it simple. The EVM calculates the new global state at the end of each transaction, after all the values and variables are done being changed. The world state is the state-root of a modified merkle-patricia tree. I'll walk you through exactly what that means.
+
+Merkle Trees
+~~~~~~~~~~~~~~~
+
+Take a binary tree. Normally, you start with the root and work you way down to the leaf-nodes. A merkle tree works the opposite way. You start with the leaf-nodes and work you way recursively up to the root. A merkle-tree is used to verify the integrity of information in transit. Think about it like combining a checksum with a tree.
+
+.. image:: images/merkle_tree.png
+
+*Image Source: Wikipedia*
+
+Let's say you have a file. Split the file into a series of leaf-nodes, each the same size. Let's say 256-bits, and order them sequentially. Then take the hash of each leaf-node. That becomes the immediate single-parent. Then take the immediate sibling, block N+1, and concatenate it to block N. Then hash that and it becomes the parent of block N and N+1. Repeat this on the next-2 siblings until you have created an entire generation of parents, and continue the process recursively, until you get to the root. The hash at the root of the tree is the *merkle-root*.
+
+The point of this data structure is to verify the integrity of files in transit, even if you only have part of the file. This is how torrents work to verify your download. By downloading different parts of the file from different sources, you can verify the integrity of the file at the end as long as you know the order they go in. If you only have half of a file, the same logic applies. You only need the left-side-root of the tree to verify the data-blocks you've already received. This allows you to receive different parts of the file at the same time and ensure that they can individually be verified without needing the rest of the file.
+
+The World state of Ethereum is the Merkle-Root of a modified-patricia-tree.
+
+Patricia Tree
+~~~~~~~~~~~~~~
+
+A patricia tree (AKA a Radix-Tree) is a type of tree, where each successive generation is used to generate a complete piece of information.
+
+.. image:: images/patricia_tree.png
+
+Starting from the root, each child-node appends a new piece of information until you terminate in the leaf-node. The Ethereum patricia-tree uses this concept but with addresses. Take the following diagram. It seems daunting at first, but is more simple than it seems.
+
+.. image:: images/merkle_patricia_tree.png
+
+In this tree, the leaf-node is a completed address, with its balance, the key-value pair. At each generation in the tree, another nibble (2 characters) get added to the address until completed. The extension nodes are to add nibbles to the address, and the branch nodes then to connect them all to eachother. Using this model, you can construct a tree for every possible address and its value. This is the accounts-tree. Once this tree is constructed, start taking a merkle-root. The merkle-root of this tree, working recursively up the tree, is the state root of the tree.
+
+More information on how this works can be found in the `Ethereum Yellow-Paper <https://ethereum.github.io/yellowpaper/paper.pdf>`_.
+
 Bytecode, Sourcecode, and ABI
 -------------------------------
-
-EVM bytecode represented as a string of hex codes. Each byte represents one opcode (ADD, MUL, XOR, ETC.) and each opcode has a gas cost. Each ``ADD`` opcode is 3 gas, ``MOD`` is 5, ``KECCAK256`` is 30, and so on. This is how gas cost is calculated, and why efficiency and optimization is so important.  `Full opcode gas cost heres <https://github.com/crytic/evm-opcodes#table>`_.
-
-It is important to remember, that when a contract is published, it is only publishing the EVM-Compatible-Bytecode, not the source code to the chain. The source code can be published on an explorer such as `Etherscan <https://etherscan.io>`_ where it can then be checked against the bytecode for accuracy. If you are deploying a contract, this is important so that people know what they are interacting with and how to do so properly.
 
 When you compile a contract, the compiler will generate an *Contract ABI (Application Binary Interface)* This is the standard way for you to properly create transactions by defining the functions and inputs required. If looks similar to JSON. If you publish a contract, you should also publish the ABI alongside it, on a block explorer or somewhere people can find it. Wallet applications will use this information to guide you through the process, compile, and properly encrypt and sign the transaction. Without it, people will have to decompile your bytecode and attempt to figure out how it works. This runs the risk of them sending faulty transactions. Transparency is your friend. Nobody can or will use a contract with faulty source code and no ABI.
 

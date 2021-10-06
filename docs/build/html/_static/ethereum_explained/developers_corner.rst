@@ -15,15 +15,15 @@ You start by generating a private-key pair using your favorite encryption librar
 
 An Ethereum private key can be generated using the `BIP39 Standard Mnemonic Library <https://silentcicero.gitbooks.io/pro-tips-for-ethereum-wallet-management/content/ethereum-wallet-basics/using-seed-phrases-to-create-ethereum-accounts.html>`_.
 
-All transactions requre the use of the `Elliptic Curve Digital Signature Algorithm (ECDSA) <https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm>`_ from the private key associated with the address.
+All transactions requir the use of the `Elliptic Curve Digital Signature Algorithm (ECDSA) <https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm>`_ from the private key associated with the address.
 
-When using your private key to sign a message, you must also include a special value: a `nonce <https://medium.com/swlh/ethereum-series-understanding-nonce-3858194b39bf>`_. This is a scalar value equal to the number of transactions sent from this address or, in the case of accounts with associated code, the number of contract-creations made by this account. Every time you send a transaction this value increases, and is necesarry to ensure signatures are unique for each transaction to prevent double-spending.
+When using your private key to sign a message, you must also include a special value: a `nonce <https://medium.com/swlh/ethereum-series-understanding-nonce-3858194b39bf>`_. This is a scalar value equal to the number of transactions sent from this address or, in the case of accounts with associated code, the number of contract-creations made by this account. Every time you send a transaction this value increases, and is necessary to ensure signatures are unique for each transaction to prevent double-spending.
 
 
 Smart Contract Code
 ---------------------
 
-In Ethereum, a smart contract is writen in a custom programming language, known as **Solidity** (although there are others such as **Vyper**). By spending ethereum as a transaction fee, you can cause the contract to execute in a pre-determined way. `Solidity is turing-complete <https://hackernoon.com/turing-completeness-and-the-ethereum-blockchain-c5a93b865c1a#:~:text=Solidity%2C%20the%20Turing%20complete%20language,deployed%20once%20on%20the%20blockchain.&text=A%20hacker%20can%20run%20any,to%20create%20an%20unauthorized%20effect.>`_, statically typed, supports inheritance, libraries, and complex user-defined types among other features.
+In Ethereum, a smart contract is written in a custom programming language, known as **Solidity** (although there are others such as **Vyper**). By spending ethereum as a transaction fee, you can cause the contract to execute in a pre-determined way. `Solidity is turing-complete <https://hackernoon.com/turing-completeness-and-the-ethereum-blockchain-c5a93b865c1a#:~:text=Solidity%2C%20the%20Turing%20complete%20language,deployed%20once%20on%20the%20blockchain.&text=A%20hacker%20can%20run%20any,to%20create%20an%20unauthorized%20effect.>`_, statically typed, supports inheritance, libraries, and complex user-defined types among other features.
 
 Take the following code snippet of an example smart contract:
 
@@ -60,14 +60,14 @@ Because the contract has a valid address, when deployed it can also do things su
     		}
 	}
 
-This code contains a method that allows you to store and send ether from one person to another. If you see the word *payable* means that if you call this method, you can send ether alongside the input value of a recipient, and the contract will do with it what you specify. If you don't specify to send it somewhere, then it will hold the amount in its account balance for the contract. This is useful because it allows you to specify what to do if someone sends ether to the contract address, alongside relevant nput data. For applications like DeFi, or that involve sending money around, it is a very powerful tool for trustless funds exchanges.
+This code contains a method that allows you to store and send ether from one person to another. If you see the word *payable* means that if you call this method, you can send ether alongside the input value of a recipient, and the contract will do with it what you specify. If you don't specify to send it somewhere, then it will hold the amount in its account balance for the contract. This is useful because it allows you to specify what to do if someone sends ether to the contract address, alongside relevant input data. For applications like DeFi, or that involve sending money around, it is a very powerful tool for trust less funds exchanges.
 
 Imagine what you could do when you take this concept and make it more complex.
 
 
 **Contracts are immutable.** *This means that once a contract is deployed, it CANNOT BE MODIFIED. Certain variables can have values be changed, but code logic cannot. If you deployed and then realized that the contract had a bug, your only choice is to deploy a new contract that fixes this.*
 
-**These next 3 sections are going to be more tech-heavy so if you don't have a CS or tech background, feel free to skip to the next article, as you don't need to understand it to be able to use Ethereum. Otherwise, i'm still going to try and keep it simple.**
+**These next 3 sections are going to be more tech-heavy so if you don't have a CS or tech background, feel free to skip to the next article, as you don't need to understand it to be able to use Ethereum. Otherwise, I'm still going to try and keep it simple.**
 
 Logs
 ------
@@ -127,7 +127,7 @@ There are two-kinds of accounts: Externally-Owned-Accounts (EOA), and contract a
 
 .. image:: images/account_diagram.png
 
-As you can see, the nonce and balance are the same in both. The Nonce is the incrementing integer representing the number of transactions sent from this address. It's changing value is necesarry to ensure that each digital-signature is unique, and to prevent double spending. Both types also have a balance that must be kept track of.
+As you can see, the nonce and balance are the same in both. The Nonce is the incrementing integer representing the number of transactions sent from this address. It's changing value is necessary to ensure that each digital-signature is unique, and to prevent double spending. Both types also have a balance that must be kept track of.
 
 Contracts however, have two values the EOA does not. The first is the storage hash. This is the hash of all of the variables the contract maintains. For example, a contract may contain a data structure such as a list of arrays, and a variety of integers. This is kept in storage, and the hash updated when the values change. The code hash is the hash of the contract-code itself, and does not change once-created. Because EOA's do not have code or objects to maintain, they don't need to hold these values. When you make a transaction to the `zero address <https://etherscan.io/address/0x0000000000000000000000000000000000000000>`_, you're telling the network to initiate a special transaction to update the accounts-database with this new account.
 
@@ -154,7 +154,7 @@ Think of it like this
 
 ``APPLY(S,TX) -> S' or ERROR`` where S = The current State and TX = The transaction value.
 
-In a real-world sense, iamgine the following: ``APPLY({ Alice: $50, Bob: $50 },"send $20 from Alice to Bob") = { Alice: $30, Bob: $70 }``. It took the current state of all balances, processed a transaction, and returned the new state.
+In a real-world sense, imagine the following: ``APPLY({ Alice: $50, Bob: $50 },"send $20 from Alice to Bob") = { Alice: $30, Bob: $70 }``. It took the current state of all balances, processed a transaction, and returned the new state.
 
 How this state is calculated is included below.
 
@@ -163,11 +163,11 @@ This is important because we then can understand how smart contracts fit into th
 Ethereum Virtual Machine
 --------------------------
 
-To calculate the state, we first need to implement a valid transaction. We can do this through `The Ethereum Virtual Machine <https://ethereum.org/en/developers/docs/evm/>`_. Think of it like Java. When you write a program to do something, the Java code compiles down to bytecode, which is run through the Java virtual machine. This virtual machine runs on top of your normal Kernel, to make it OS-Agnostic and converts it further to machine code executable by your kernel. The Ethereum Virtual Machine works the same way.
+To calculate the state, we first need to implement a valid transaction. We can do this through `The Ethereum Virtual Machine <https://ethereum.org/en/developers/docs/evm/>`_. Think of it like Java. When you write a program to do something, the Java code compiles down to byte-code, which is run through the Java virtual machine. This virtual machine runs on top of your normal Kernel, to make it OS-Agnostic and converts it further to machine code executable by your kernel. The Ethereum Virtual Machine works the same way.
 
-Every time you execute a transaction, the inputs and steps are converted into EVM-Bytecode. The machine takes the current state and performs the transaction and generates a new global-state. When you initially create a new contract, the contract gets converted to bytecode, and stored on the chain with its address. When you make a transaction the proper bytecode is queried and excuted. This also explains why contracts are immutable.
+Every time you execute a transaction, the inputs and steps are converted into EVM-Bytecode. The machine takes the current state and performs the transaction and generates a new global-state. When you initially create a new contract, the contract gets converted to bytecode, and stored on the chain with its address. When you make a transaction the proper bytecode is queried and executed. This also explains why contracts are immutable.
 
-The contract address is based on the creator's address and nonce at the moment of compilation, then hashed. Imagine the following function that gets called everytime a contract is created:
+The contract address is based on the creator's address and nonce at the moment of compilation, then hashed. Imagine the following function that gets called every time a contract is created:
 
 .. code-block:: python
 
@@ -207,7 +207,7 @@ There is also a special opcode known as *SELFDESTRUCT*. While contract-code can'
 Trees
 *******
 
-I'm sorry, but I need to send you back to sophomore-year data structures class to explain this next part. Don't worry i'll do my very best to keep it simple. The EVM calculates the new global state at the end of each transaction, after all the values and variables are done being changed. The world state is the state-root of a modified merkle-patricia tree. I'll walk you through exactly what that means.
+I'm sorry, but I need to send you back to sophomore-year data structures class to explain this next part. Don't worry I'll do my very best to keep it simple. The EVM calculates the new global state at the end of each transaction, after all the values and variables are done being changed. The world state is the state-root of a modified merkle-patricia tree. I'll walk you through exactly what that means.
 
 Merkle Trees
 ~~~~~~~~~~~~~~~

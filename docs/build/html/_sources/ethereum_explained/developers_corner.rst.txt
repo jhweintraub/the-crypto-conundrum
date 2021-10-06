@@ -1,7 +1,8 @@
 Developers Corner
 ==================
 
-If you're here you have a familiarity with code, data structured, computing theory, etc. I'll break down the intricate technical details of how this all works.
+Ethereum is the world's decentralized-computer. It is the most intricate blending of computer-science, governance, sociology, and economics. However, it's scale brings with it huge amounts of complexity. Understanding how it works requires a detailed understanding of data-structures, cryptography, theoretical-computation, and much more. But, when you break things down into their individual parts, it's not too difficult. Keep reading, and you will discover exactly what makes this machine tick, and how you can get the most out of interacting with it.
+
 
 Cryptography
 --------------

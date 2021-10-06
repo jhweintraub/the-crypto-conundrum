@@ -253,6 +253,19 @@ An example, compressed for space. It includes all of the decompiled function inf
 More info on ABI's can be found `in the documentation <https://docs.soliditylang.org/en/v0.5.3/abi-spec.html#:~:text=The%20Contract%20Application%20Binary%20Interface,as%20described%20in%20this%20specification.>`_
 
 
+Client-Types
+---------------
+
+There are 4 different types of Clients that can be run on Ethereum:
+
+1. **"Full" Sync** - Gets the block headers, the block bodies, and validates every element from genesis block. Contains everything.
+
+2. **Fast Sync** - Gets the block headers, the block bodies, and processes no transactions until current block - 64(*). Then it gets a snapshot state and goes like a full synchronization moving forward. It lets you get up to current status very quickly if you don't care about history.
+
+3. **Light Sync** - Gets only the current state. To verify elements, it needs to ask to full (archive) nodes for the corresponding tree leaves to regenerate the entire world-state from the merkle-patricia-tree.
+
+4. **Warp Sync** - Built for the `OpenEthereum Client <https://github.com/openethereum/openethereum>`_, it involves sending snapshots over the network to get the full state at a given block extremely quickly. Then, in the background, it fills in the blocks between the genesis and the snapshot block. It lets you immediately jump to a certain point and then fill in the history behind it which may be less important at that-very-moment. More info can be found `on the OpenEthereum Website <https://openethereum.github.io/Warp-Sync>`_.
+
 Transaction lifecycle
 ----------------------
 
@@ -280,3 +293,64 @@ What happens when you want to send a transaction. There are several steps:
 	#. Nodes propagate the new block and state information through its peers. If the block is accepted, they will add it to their chain. If not, they ignore it.
 	#. Propagation continues until the entire network has the updated blocks.
 	#. Process repeats indefinitely.
+
+Ethereum Development and Governance
+-------------------------------------
+
+If you're going to build the world's largest decentralized computer, you also need a way to change things about it. However, how do you do this without creating another centralization bottleneck. Ethereum therefore has created a distributed development process. There is not one entity responsible for development, but many. The `Ethereum Foundation <https://ethereum.org/en/foundation/>`_ is the non-profit entity for doing 2 things, coordinating updates to the platform, and building 1 type of client.
+
+An ethereum client is simply a program resposible for receiving blocks, creating new ones, and maintaining the network. There are many different versions, built in different languages. For example, there are currently clients built in languages such as Go, Rust, C#, Java, etc. Each one is maintained by a different company. Geth, built in Go, is maintained by the Ethereum foundation, and was the first client-type. The C# client is maintained by Nethermind, a for-profit-company based in England. 
+
+The purpose behind this was to make it so that one developer didn't maintain exclusive control over the protocol, creating centralization risk. By diversifying clients, the security risk goes down because the risk of a chain-breaking bug is localized to a single client-type. It also prevents a company from holding the community hostage over the demands of their clients.
+
+However, this system only works in a world where all of these clients and companies are on the same page. This is where the Ethereum foundation comes into play. The foundation is the entity for *coordinating development* between the different client maintainers. They are responsible for maintaining the list of things a client needs to be able to do, so that all clients could follow it. Let's say you wanted to be cool and build a client in `brainfuck <https://en.wikipedia.org/wiki/Brainfuck>`_, besides being a masochist, you would be able to do so. This is because the Ethereum foundation keeps a detailed `specification of requirements for each client <https://github.com/ethereum/execution-specs>`_. If you follow it, and implement it in your language-of-choice, then your client will be able to interact with all others without any problems. If you don't then you won't be able to interact properly, and if you're building a `staking client <https://thecryptoconundrum.net/ethereum_explained/eth2.html#proof-of-stake>`_ you may even be responsible for users being slashed, and lose their stake.
+
++--------------+----------+-----------------------+---------------+
+| Client       | Language | Operating System      | Sync Strategy |
++--------------+----------+-----------------------+---------------+
+| Geth         | Go       | Linux, Windows, macOS | Fast, Full    |
++--------------+----------+-----------------------+---------------+
+| Nethermind   | C# .NET  | Linux, Windows, macOS | Fast, Full    |
++--------------+----------+-----------------------+---------------+
+| Besu         | Java     | Linux, Windows, macOS | Fast, Full    |
++--------------+----------+-----------------------+---------------+
+| Erigon       | Go       | Linux, Windows, macOS | Fast, Full    |
++--------------+----------+-----------------------+---------------+
+| OpenEthereum | Rust     | Linux, Windows, macOS | Warp, Full    |
++--------------+----------+-----------------------+---------------+
+
+
+EIP'S
+******
+
+EIP, short for *Ethereum-Improvement-Proposal* is the method by which new ideas are implemented into Ethereum. Let's say you had an idea for how to make Ethereum better. How would you get it implemented? Well first you need to write down exactly what it is. You specify things like category, motivation, specifications, pros and cons, etc. The exact details of what this looks like can be found `here, EIP-1 <https://eips.ethereum.org/EIPS/eip-1>`_. 
+
+Once you've written your EIP, you simply submit it to the community and start to build support. It is **your responsibility** to build support for your proposal. Once it gains enough traction it goes to the *Ethereum Core Developers*
+
+Ethereum Core Developers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Ethereum core developers is the group of people most involved in the development of Ethereum. There is no formal delegation or election process, it is simply a group of people the community has designated as important. They are people from the foundation, heads of or engineers from companies most involved with the platform's development. They are the people most responsible for coming to a consensus on EIP's that should be improved. Every 2-weeks they all meet on a zoom-call (open to the public) to talk about updates.
+
+They talk about proposals and debate the merits and come to a rough consensus on whether they should be included. If agreed, they go back to their companies, and community and work on individually implementing the EIP into their software. They are given the title of core dev because they are important in making sure things get implemented. For example, the chief engineer at the Ethereum Foundation, and Geth is a core dev, because they will be instrumental in the client's implementation of new EIP's. Vitalik, being the head of the foundation, is essential as well. It is not a formal title, that can be given or taken away. 
+
+They are not elected, nor hold any more power than anyone else. Before you think they are some shadowy cabal responsible for arbitrarily deciding things, they arne't. Their status and importance comes from the ability to shepard implementation of approved EIP's. They are also very public and reputable individuals, who have attained the status through their altruistic contribution history to the community. It can be taken away if you stop contributing to the community. They don't have any extra power than you and I, they are simply just developers who represent different teams and segments of the community to come to a rough consensus, without the need to complex voting-systems. 
+
+`This article by Hudson James <https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/>`_ does a good job explaining it as well.
+
+Forks
+******
+
+Congratulations, your EIP was approved and now needs to be formally implemented into the protocol. How does that happen. With a fork. Since the blockchain is immutable, the only way to change the rules is to keep moving forwards. When an update occurs, so does a fork in the chain. 
+
+There are two types of forks, Hard and Soft: 
+	1. **Soft Fork** - A soft-fork means backwards-compatability. Only previously-valid blocks are made invalid. This means that old, un-updated, clients and versions can still interpret new updates without change. For example, a gas cost change. If you wanted to increase the gas cost of an *ADD* operation from 3 -> 4 gas, then that would be introduced in a soft-fork. This means older clients can still interpret new blocks without upgrade. It is used for upgrades that don't require a change in consensus rules. 
+	2. **Hard Fork** - A hard fork is for a change in the consensus mechanism. When occured, much like the proverbial road-less-travelled, the chain goes in two-different directions. One with the old rules and one with the new rules. You can choose to keep mining or validating blocks on whichever chain you like, with identical histories up until that point. However, once the two chains diverge, they will never reunite. This means picking the chain with the most people on it is the best-option. Take Bitcoin and Bitcoin Cash. The two split because of an increase in block-size. Because the two chains have different consensus rules, they are no longer-compatible. Every node must upgrade to the new consensus rules in order to properly validate blocks. EIP-1559 was a hard-fork because it required a change in consensus on the creation/burning of new coins, as well as block size. Most major changes to blockchains utilize the hard-fork.
+
+.. image:: images/soft_fork.webp
+
+.. image:: images/hard_fork.png
+
+*Image Source: Investopedia*
+
+

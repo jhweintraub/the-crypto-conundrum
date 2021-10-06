@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -29,11 +29,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -86,7 +84,6 @@
               <p class="caption"><span class="caption-text">Introduction:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">Start Here!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#who-am-i">Who am I</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html#what-can-i-do-for-you">What can I do for you</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/popular_questions.html">Most Popular Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/blockchain.html">The Blockchain</a></li>
@@ -122,7 +119,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/rules.html">General Strategy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/exit_strategies.html">Define your exit strategy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/due-dilligence.html">Doing your Due-Dilligence</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/security.html">Securing your investment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/security.html">Protecting your Cryptocurrency</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/confidence.html">Be Confident</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../investment-strategies/staking.html">Mining and Staking</a></li>
 </ul>
@@ -208,28 +205,28 @@
 <h2>How is it measured<a class="headerlink" href="#how-is-it-measured" title="Permalink to this headline">¶</a></h2>
 <p>Gas is a unit that measures how much computation must be done to perform your transaction. The more things you do, the more gas you have to pay.</p>
 <p>It is a measurement totally separate from Ether. This means that whether the price of Ether goes up or down, the amount of gas used will be <strong>the same</strong>. Some example transactions and their gas cost</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="73%" />
-<col width="27%" />
+<col style="width: 73%" />
+<col style="width: 27%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Transaction</th>
-<th class="head">Gas Cost</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Transaction</p></th>
+<th class="head"><p>Gas Cost</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>Ether Transfer</td>
-<td>21,000</td>
+<tbody>
+<tr class="row-even"><td><p>Ether Transfer</p></td>
+<td><p>21,000</p></td>
 </tr>
-<tr class="row-odd"><td>Token Transfer</td>
-<td>46,109</td>
+<tr class="row-odd"><td><p>Token Transfer</p></td>
+<td><p>46,109</p></td>
 </tr>
-<tr class="row-even"><td>Uniswap Transaction</td>
-<td>158,403</td>
+<tr class="row-even"><td><p>Uniswap Transaction</p></td>
+<td><p>158,403</p></td>
 </tr>
-<tr class="row-odd"><td>Multi-Sig Wallet Creation</td>
-<td>393,047</td>
+<tr class="row-odd"><td><p>Multi-Sig Wallet Creation</p></td>
+<td><p>393,047</p></td>
 </tr>
 </tbody>
 </table>
@@ -246,9 +243,9 @@
 <div class="section" id="gas-limits">
 <h2>Gas Limits<a class="headerlink" href="#gas-limits" title="Permalink to this headline">¶</a></h2>
 <p>For some operations, like simple transactions, we know the gas cost (21,000). However, for many contracts, we have to make an estimate. If we don’t provide enough gas to complete the transaction, then it will fail and the cost will <strong>NOT</strong> be returned to us. To prevent this from occuring, we have to include a special parameter called the <em>gas limit</em>.</p>
-<dl class="docutils">
-<dt>Gas Limit:</dt>
-<dd>The <strong>maximum</strong> amount of gas that you are willing to pay for a transaction. Not all of the supplied gas will be used by the transaction, but this is the most you are willing to pay.</dd>
+<dl class="simple">
+<dt>Gas Limit:</dt><dd><p>The <strong>maximum</strong> amount of gas that you are willing to pay for a transaction. Not all of the supplied gas will be used by the transaction, but this is the most you are willing to pay.</p>
+</dd>
 </dl>
 <p>Let’s assume we have a contract transaction that we estimate will consume <code class="docutils literal notranslate"><span class="pre">100,000</span> <span class="pre">gas</span></code>. This is an estimate, and given that its cost is high, we don’t want the transaction to fail by not supplying enough gas. Therefore, we should supply <code class="docutils literal notranslate"><span class="pre">125,000</span> <span class="pre">gas</span></code>. The total transaction fee is calculated based on the <em>gas limit</em>. However, any gas that is not consumed, is refunded to you. So if you only use <code class="docutils literal notranslate"><span class="pre">100,000/125,000</span></code> you are refunded the extra <code class="docutils literal notranslate"><span class="pre">25,000</span> <span class="pre">gas</span> <span class="pre">*</span> <span class="pre">gas</span> <span class="pre">price</span></code>.</p>
 <p>Don’t try and save gas by lowering your limit. It won’t change the amount of resources needed to process your transaction. Your transaction will just run out of gas and you’ll have to resubmit it, costing you more in gas fees.</p>
@@ -256,12 +253,11 @@
 </div>
 <div class="section" id="why-do-we-need-gas">
 <h2>Why do we need gas<a class="headerlink" href="#why-do-we-need-gas" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>Gas serves three very important functions:</dt>
-<dd><ol class="first last arabic simple">
-<li>It decouples the amount of computation from the price of ether. The amount of computation stays exactly the same whether ether is worth <code class="docutils literal notranslate"><span class="pre">$200</span></code> or <code class="docutils literal notranslate"><span class="pre">$20,000</span></code>. The value that changes is the <em>gas price</em>. This makes transaction fees a function of supply and demand. If people simply agreed to only make transactions with low gas prices, then transaction fees would stay low.</li>
-<li>It prevents network blocking. By using gas limit, a transaction will stop when the amount of gas runs out. This prevents a transaction from getting stuck and theoretically running forever, bringing the network to a standstill. Since there is a pre-determined amount of computation, the program must come to an end, at some point. This is what’s known in computer science as <a class="reference external" href="https://en.wikipedia.org/wiki/Halting_problem">the halting problem</a>.</li>
-<li>It prevents network spamming. If there were no fees associated with sending a transaction, people could spam the network by flooding it with transactions to prevent legitimate users from getting through. Think of it like a DDoS. This is a problem that coins like <a class="reference external" href="https://nano.org/">Nano</a> are attempting to solve.</li>
+<dl class="simple">
+<dt>Gas serves three very important functions:</dt><dd><ol class="arabic simple">
+<li><p>It decouples the amount of computation from the price of ether. The amount of computation stays exactly the same whether ether is worth <code class="docutils literal notranslate"><span class="pre">$200</span></code> or <code class="docutils literal notranslate"><span class="pre">$20,000</span></code>. The value that changes is the <em>gas price</em>. This makes transaction fees a function of supply and demand. If people simply agreed to only make transactions with low gas prices, then transaction fees would stay low.</p></li>
+<li><p>It prevents network blocking. By using gas limit, a transaction will stop when the amount of gas runs out. This prevents a transaction from getting stuck and theoretically running forever, bringing the network to a standstill. Since there is a pre-determined amount of computation, the program must come to an end, at some point. This is what’s known in computer science as <a class="reference external" href="https://en.wikipedia.org/wiki/Halting_problem">the halting problem</a>.</p></li>
+<li><p>It prevents network spamming. If there were no fees associated with sending a transaction, people could spam the network by flooding it with transactions to prevent legitimate users from getting through. Think of it like a DDoS. This is a problem that coins like <a class="reference external" href="https://nano.org/">Nano</a> are attempting to solve.</p></li>
 </ol>
 </dd>
 </dl>
@@ -271,9 +267,9 @@
 <p>Unlike Bitcoin, whose block size is measured in Bytes, the block size of an Ethereum block is measured in Gas. Each block has its own gas limit to how many transactions can be included, determined by amount of gas consumed.</p>
 <p>The block gas limit at block 0 was set at <code class="docutils literal notranslate"><span class="pre">5,000</span></code>; any miner who mines a new block can alter the gas limit by up to about <code class="docutils literal notranslate"><span class="pre">0.1%</span></code> in either direction from the parent block gas limit. The gas limit as of April 2021 currently hovers around <code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">Million</span></code>.</p>
 <p>This means that the sum of the <em>gas limits</em>, used by all transactions in the block, can be no more than <code class="docutils literal notranslate"><span class="pre">~15</span> <span class="pre">Million</span></code>.</p>
-<dl class="docutils">
-<dt>If a miner were theoretically to fill a block with only simple Eth transfers, then they could theoretically include 714 transactions in a block.</dt>
-<dd><code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">Million</span> <span class="pre">/</span> <span class="pre">21,000</span> <span class="pre">=</span> <span class="pre">~714</span></code></dd>
+<dl class="simple">
+<dt>If a miner were theoretically to fill a block with only simple Eth transfers, then they could theoretically include 714 transactions in a block.</dt><dd><p><code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">Million</span> <span class="pre">/</span> <span class="pre">21,000</span> <span class="pre">=</span> <span class="pre">~714</span></code></p>
+</dd>
 </dl>
 <p>In actuality, this is not the case, as miners will include many transactions involving contracts, as they consume much more gas and therefore have higher transaction costs.</p>
 <p><strong>“If contracts consume way more gas than transfers, then why don’t miners just only include those transactions and ignore regular transfers?”</strong></p>

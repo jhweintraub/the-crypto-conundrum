@@ -15,7 +15,8 @@ You start by generating a private-key pair using your favorite encryption librar
 
 An Ethereum private key can be generated using the `BIP39 Standard Mnemonic Library <https://silentcicero.gitbooks.io/pro-tips-for-ethereum-wallet-management/content/ethereum-wallet-basics/using-seed-phrases-to-create-ethereum-accounts.html>`_.
 
-All transactions requir the use of the `Elliptic Curve Digital Signature Algorithm (ECDSA) <https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm>`_ from the private key associated with the address.
+All transactions require the use of the `Elliptic Curve Digital Signature Algorithm (ECDSA) <https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm>`_ from the private key associated with the address. You sign your transaction with your private-key, and it is verified by the nodes to confirm its authenticity before processing.
+
 
 When using your private key to sign a message, you must also include a special value: a `nonce <https://medium.com/swlh/ethereum-series-understanding-nonce-3858194b39bf>`_. This is a scalar value equal to the number of transactions sent from this address or, in the case of accounts with associated code, the number of contract-creations made by this account. Every time you send a transaction this value increases, and is necessary to ensure signatures are unique for each transaction to prevent double-spending.
 
@@ -299,7 +300,7 @@ Ethereum Development and Governance
 
 If you're going to build the world's largest decentralized computer, you also need a way to change things about it. However, how do you do this without creating another centralization bottleneck. Ethereum therefore has created a distributed development process. There is not one entity responsible for development, but many. The `Ethereum Foundation <https://ethereum.org/en/foundation/>`_ is the non-profit entity for doing 2 things, coordinating updates to the platform, and building 1 type of client.
 
-An ethereum client is simply a program resposible for receiving blocks, creating new ones, and maintaining the network. There are many different versions, built in different languages. For example, there are currently clients built in languages such as Go, Rust, C#, Java, etc. Each one is maintained by a different company. Geth, built in Go, is maintained by the Ethereum foundation, and was the first client-type. The C# client is maintained by Nethermind, a for-profit-company based in England. 
+An ethereum client is simply a program resposible for receiving blocks, creating new ones, and maintaining the network. There are many different versions, built in different languages. For example, there are currently clients built in languages such as Go, Rust, C#, Java, etc. Each one is maintained by a different company. Geth, built in Go, is maintained by the Ethereum foundation, and was the first client-type. The C# client is maintained by Nethermind, a for-profit-company based in England.
 
 The purpose behind this was to make it so that one developer didn't maintain exclusive control over the protocol, creating centralization risk. By diversifying clients, the security risk goes down because the risk of a chain-breaking bug is localized to a single client-type. It also prevents a company from holding the community hostage over the demands of their clients.
 
@@ -323,7 +324,7 @@ However, this system only works in a world where all of these clients and compan
 EIP'S
 ******
 
-EIP, short for *Ethereum-Improvement-Proposal* is the method by which new ideas are implemented into Ethereum. Let's say you had an idea for how to make Ethereum better. How would you get it implemented? Well first you need to write down exactly what it is. You specify things like category, motivation, specifications, pros and cons, etc. The exact details of what this looks like can be found `here, EIP-1 <https://eips.ethereum.org/EIPS/eip-1>`_. 
+EIP, short for *Ethereum-Improvement-Proposal* is the method by which new ideas are implemented into Ethereum. Let's say you had an idea for how to make Ethereum better. How would you get it implemented? Well first you need to write down exactly what it is. You specify things like category, motivation, specifications, pros and cons, etc. The exact details of what this looks like can be found `here, EIP-1 <https://eips.ethereum.org/EIPS/eip-1>`_.
 
 Once you've written your EIP, you simply submit it to the community and start to build support. It is **your responsibility** to build support for your proposal. Once it gains enough traction it goes to the *Ethereum Core Developers*
 
@@ -332,19 +333,19 @@ Ethereum Core Developers
 
 The Ethereum core developers is the group of people most involved in the development of Ethereum. There is no formal delegation or election process, it is simply a group of people the community has designated as important. They are people from the foundation, heads of or engineers from companies most involved with the platform's development. They are the people most responsible for coming to a consensus on EIP's that should be improved. Every 2-weeks they all meet on a zoom-call (open to the public) to talk about updates.
 
-They talk about proposals and debate the merits and come to a rough consensus on whether they should be included. If agreed, they go back to their companies, and community and work on individually implementing the EIP into their software. They are given the title of core dev because they are important in making sure things get implemented. For example, the chief engineer at the Ethereum Foundation, and Geth is a core dev, because they will be instrumental in the client's implementation of new EIP's. Vitalik, being the head of the foundation, is essential as well. It is not a formal title, that can be given or taken away. 
+They talk about proposals and debate the merits and come to a rough consensus on whether they should be included. If agreed, they go back to their companies, and community and work on individually implementing the EIP into their software. They are given the title of core dev because they are important in making sure things get implemented. For example, the chief engineer at the Ethereum Foundation, and Geth is a core dev, because they will be instrumental in the client's implementation of new EIP's. Vitalik, being the head of the foundation, is essential as well. It is not a formal title, that can be given or taken away.
 
-They are not elected, nor hold any more power than anyone else. Before you think they are some shadowy cabal responsible for arbitrarily deciding things, they arne't. Their status and importance comes from the ability to shepard implementation of approved EIP's. They are also very public and reputable individuals, who have attained the status through their altruistic contribution history to the community. It can be taken away if you stop contributing to the community. They don't have any extra power than you and I, they are simply just developers who represent different teams and segments of the community to come to a rough consensus, without the need to complex voting-systems. 
+They are not elected, nor hold any more power than anyone else. Before you think they are some shadowy cabal responsible for arbitrarily deciding things, they arne't. Their status and importance comes from the ability to shepard implementation of approved EIP's. They are also very public and reputable individuals, who have attained the status through their altruistic contribution history to the community. It can be taken away if you stop contributing to the community. They don't have any extra power than you and I, they are simply just developers who represent different teams and segments of the community to come to a rough consensus, without the need to complex voting-systems.
 
 `This article by Hudson James <https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/>`_ does a good job explaining it as well.
 
 Forks
 ******
 
-Congratulations, your EIP was approved and now needs to be formally implemented into the protocol. How does that happen. With a fork. Since the blockchain is immutable, the only way to change the rules is to keep moving forwards. When an update occurs, so does a fork in the chain. 
+Congratulations, your EIP was approved and now needs to be formally implemented into the protocol. How does that happen. With a fork. Since the blockchain is immutable, the only way to change the rules is to keep moving forwards. When an update occurs, so does a fork in the chain.
 
-There are two types of forks, Hard and Soft: 
-	1. **Soft Fork** - A soft-fork means backwards-compatability. Only previously-valid blocks are made invalid. This means that old, un-updated, clients and versions can still interpret new updates without change. For example, a gas cost change. If you wanted to increase the gas cost of an *ADD* operation from 3 -> 4 gas, then that would be introduced in a soft-fork. This means older clients can still interpret new blocks without upgrade. It is used for upgrades that don't require a change in consensus rules. 
+There are two types of forks, Hard and Soft:
+	1. **Soft Fork** - A soft-fork means backwards-compatability. Only previously-valid blocks are made invalid. This means that old, un-updated, clients and versions can still interpret new updates without change. For example, a gas cost change. If you wanted to increase the gas cost of an *ADD* operation from 3 -> 4 gas, then that would be introduced in a soft-fork. This means older clients can still interpret new blocks without upgrade. It is used for upgrades that don't require a change in consensus rules.
 	2. **Hard Fork** - A hard fork is for a change in the consensus mechanism. When occured, much like the proverbial road-less-travelled, the chain goes in two-different directions. One with the old rules and one with the new rules. You can choose to keep mining or validating blocks on whichever chain you like, with identical histories up until that point. However, once the two chains diverge, they will never reunite. This means picking the chain with the most people on it is the best-option. Take Bitcoin and Bitcoin Cash. The two split because of an increase in block-size. Because the two chains have different consensus rules, they are no longer-compatible. Every node must upgrade to the new consensus rules in order to properly validate blocks. EIP-1559 was a hard-fork because it required a change in consensus on the creation/burning of new coins, as well as block size. Most major changes to blockchains utilize the hard-fork.
 
 .. image:: images/soft_fork.webp
@@ -352,5 +353,3 @@ There are two types of forks, Hard and Soft:
 .. image:: images/hard_fork.png
 
 *Image Source: Investopedia*
-
-

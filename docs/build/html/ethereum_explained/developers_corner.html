@@ -345,6 +345,8 @@
 <p><em>Image Source: Ethereum Foundation, ethereum.org</em></p>
 <p>Because the EVM is really just a stack-machine using a series of opcodes. Gas cost is determined by which opcodes you use. Each one has a specific cost. Simple ones like <em>ADD</em>, to add values together, only use 3-gas. More difficult ones like <em>BALANCE</em>, to retrieve an account-balance from the accounts database, use 400-gas. This is why optimization is so important. If you can reduce the number of unnecessary operations in your code, you can save users a lot of gas.</p>
 <p>Remember earlier when I said the accounts database stores the smart-contract code. Well what it’s really storing is the EVM-Bytecode, and calling that on transaction request. When you use a tool like <a class="reference external" href="https://remix.ethereum.org/">Remix IDE</a>, you’re using a solidity-compiler to generate the bytecode, which is stored.</p>
+<img alt="../_images/bytecode.png" src="../_images/bytecode.png" />
+<p><em>Image Source: Luit Hollander, medium.com/mycrypto</em></p>
 <p>There is also a special opcode known as <em>SELFDESTRUCT</em>. While contract-code can’t be updated, it can be deleted from the network. By calling self-destruct, the contract bytecode and address is deleted from the account database, and the remaining contract balance is sent to the specified address. As a reward for cleaning up the database, the EVM will refund a variable amount of gas to you. This is determined by a formula and current conditions.</p>
 <blockquote>
 <div><p><a class="reference external" href="https://github.com/crytic/evm-opcodes#table">Full opcode gas cost heres</a>.</p>

@@ -198,6 +198,10 @@ Because the EVM is really just a stack-machine using a series of opcodes. Gas co
 
 Remember earlier when I said the accounts database stores the smart-contract code. Well what it's really storing is the EVM-Bytecode, and calling that on transaction request. When you use a tool like `Remix IDE <https://remix.ethereum.org/>`_, you're using a solidity-compiler to generate the bytecode, which is stored.
 
+.. image:: images/bytecode.png
+
+*Image Source: Luit Hollander, medium.com/mycrypto*
+
 There is also a special opcode known as *SELFDESTRUCT*. While contract-code can't be updated, it can be deleted from the network. By calling self-destruct, the contract bytecode and address is deleted from the account database, and the remaining contract balance is sent to the specified address. As a reward for cleaning up the database, the EVM will refund a variable amount of gas to you. This is determined by a formula and current conditions.
 
  `Full opcode gas cost heres <https://github.com/crytic/evm-opcodes#table>`_.

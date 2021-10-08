@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -29,9 +29,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -245,19 +247,19 @@
 <p>The first step to securing your coins is to decide how you want to store it. This is a crucial step, and so picking correctly is very important. Luckily, it’s not too hard. There are several different kinds of wallet-types you can use.</p>
 <div class="section" id="wallet-types">
 <h3>Wallet Types<a class="headerlink" href="#wallet-types" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt>Cold Wallet</dt><dd><p>Cold storage is an offline wallet used for storing cryptocurrency. With cold storage, the digital wallet is stored on a platform that is not connected to the internet. This protects the wallet from unauthorized access, cyber hacks, and other vulnerabilities an internet-connected system is vulnerable to. It includes things such as Paper Wallets, to store your crypto long-term. This is similar to a long-term bank account. The cold wallet is merely a message for storing cryptocurrency keys. This means that even if you use it, you can still send cryptocurrency from somewhere else at any time. You would have to recover your cold wallet to access it afterwards however.</p>
-</dd>
-<dt>Hot Wallet</dt><dd><p>A hot wallet is a piece of software, connected to the internet, used to send cryptocurrency. A hot wallet includes things like Mobile and Browser wallets, as they are readily available and pre-loaded with your encryption keys. These are recommended for cryptocurrency that you plan on spending, much like keeping cash in your physical wallet.</p>
-</dd>
-<dt>Mobile/Browser Wallet</dt><dd><p>A piece of software on your phone/computer that lets you easily send cryptocurrency and interact with decentralized applications. For Bitcoin this includes applications such as <a class="reference external" href="https://wallet.bitcoin.com/">Bitcoin.com Wallet</a>. For Ethereum this includes <a class="reference external" href="https://metamask.io/">Metamask</a>.</p>
-</dd>
-<dt>Paper Wallet</dt><dd><p>A form of cold wallet, used to store your cryptocurrency long-term. It is a physical entity that contains the instruction information needed to access your crypto in a hot wallet. It may contain your private-key, your mnemonic-seed phrase, etc. Many people write this on a piece of paper and put it somewhere secret. However, there are many products that will allow you to physically imprint it on a piece of metal, to water and fire-proof it.</p>
-</dd>
-<dt>Hardware Wallet</dt><dd><p>A special kind of hot-wallet to store your crypto on a physical, and easily available, device. These are typically supplemental devices to accompany mobile/browser wallets. They store your cryptocurrency keys and are used as 2-factor-authentication devices for your cryptocurrency. Imagine a small flash-drive sized object on your keychain. When you want to send cryptocurrency, you first send a request to the device. This device has encrypted and stored your keys, and will use them to initiate your requested transaction upon confirmation. This adds an extra layer of in-person security much like google-2fa. The most popular include <a class="reference external" href="https://www.ledger.com/">Ledger Nano</a> and <a class="reference external" href="https://trezor.io/">Trezor Hardware Wallet</a>.</p>
-</dd>
-<dt>Multi-signature Wallet</dt><dd><p>This is a special kind of wallet, available on a variety of blockchains in different ways. It’s an address that can be used to send and receive crypto. However, it requires the authorization of multiple other wallets before sending. When you send a cryptocurrency transaction, your wallet creates what’s called a “digital signature”, a cryptographic proof that you are the owner of certain coins. For normal wallets, this one signature is all you need to send a transaction. For multi-signature wallets this requires the input and approval of multiple addresses/wallets before initiating a transaction. This is orders of magnitude more secure because it would require an attacker infiltrating multiple wallets or extorting multiple people to steal the coins.</p>
-</dd>
+<dl class="docutils">
+<dt>Cold Wallet</dt>
+<dd>Cold storage is an offline wallet used for storing cryptocurrency. With cold storage, the digital wallet is stored on a platform that is not connected to the internet. This protects the wallet from unauthorized access, cyber hacks, and other vulnerabilities an internet-connected system is vulnerable to. It includes things such as Paper Wallets, to store your crypto long-term. This is similar to a long-term bank account. The cold wallet is merely a message for storing cryptocurrency keys. This means that even if you use it, you can still send cryptocurrency from somewhere else at any time. You would have to recover your cold wallet to access it afterwards however.</dd>
+<dt>Hot Wallet</dt>
+<dd>A hot wallet is a piece of software, connected to the internet, used to send cryptocurrency. A hot wallet includes things like Mobile and Browser wallets, as they are readily available and pre-loaded with your encryption keys. These are recommended for cryptocurrency that you plan on spending, much like keeping cash in your physical wallet.</dd>
+<dt>Mobile/Browser Wallet</dt>
+<dd>A piece of software on your phone/computer that lets you easily send cryptocurrency and interact with decentralized applications. For Bitcoin this includes applications such as <a class="reference external" href="https://wallet.bitcoin.com/">Bitcoin.com Wallet</a>. For Ethereum this includes <a class="reference external" href="https://metamask.io/">Metamask</a>.</dd>
+<dt>Paper Wallet</dt>
+<dd>A form of cold wallet, used to store your cryptocurrency long-term. It is a physical entity that contains the instruction information needed to access your crypto in a hot wallet. It may contain your private-key, your mnemonic-seed phrase, etc. Many people write this on a piece of paper and put it somewhere secret. However, there are many products that will allow you to physically imprint it on a piece of metal, to water and fire-proof it.</dd>
+<dt>Hardware Wallet</dt>
+<dd>A special kind of hot-wallet to store your crypto on a physical, and easily available, device. These are typically supplemental devices to accompany mobile/browser wallets. They store your cryptocurrency keys and are used as 2-factor-authentication devices for your cryptocurrency. Imagine a small flash-drive sized object on your keychain. When you want to send cryptocurrency, you first send a request to the device. This device has encrypted and stored your keys, and will use them to initiate your requested transaction upon confirmation. This adds an extra layer of in-person security much like google-2fa. The most popular include <a class="reference external" href="https://www.ledger.com/">Ledger Nano</a> and <a class="reference external" href="https://trezor.io/">Trezor Hardware Wallet</a>.</dd>
+<dt>Multi-signature Wallet</dt>
+<dd>This is a special kind of wallet, available on a variety of blockchains in different ways. It’s an address that can be used to send and receive crypto. However, it requires the authorization of multiple other wallets before sending. When you send a cryptocurrency transaction, your wallet creates what’s called a “digital signature”, a cryptographic proof that you are the owner of certain coins. For normal wallets, this one signature is all you need to send a transaction. For multi-signature wallets this requires the input and approval of multiple addresses/wallets before initiating a transaction. This is orders of magnitude more secure because it would require an attacker infiltrating multiple wallets or extorting multiple people to steal the coins.</dd>
 </dl>
 </div>
 </div>
@@ -271,19 +273,21 @@
 <img alt="../_images/wrench_attack.png" src="../_images/wrench_attack.png" />
 <p>Image Source: <a class="reference external" href="https://xkcd.com/538/">XKCD</a></p>
 <p>We call this the <em>$5 wrench attack</em>. It is morbid, but also a very-real threat, and also the most painful. Luckily, it’s easy to prevent, with some humility and subtlety.</p>
-<dl>
-<dt>Defenses:</dt><dd><p><strong>1. DO NOT TELL ANYONE HOW MUCH YOU HAVE</strong> - Do not tell your friends, people online, anyone you don’t trust incredibly well how much you have. Money changes people, and you do not know what could happen. If you want, you can tell your friends you own crypto, but don’t tell them how much, or what your wallet address is. It will be <strong>HARD</strong> to not want to gloat. You will want people to know that you were right, and hit it big. You must resist. You don’t know what people are capable of, or who this information will get back to.</p>
+<dl class="docutils">
+<dt>Defenses:</dt>
+<dd><p class="first"><strong>1. DO NOT TELL ANYONE HOW MUCH YOU HAVE</strong> - Do not tell your friends, people online, anyone you don’t trust incredibly well how much you have. Money changes people, and you do not know what could happen. If you want, you can tell your friends you own crypto, but don’t tell them how much, or what your wallet address is. It will be <strong>HARD</strong> to not want to gloat. You will want people to know that you were right, and hit it big. You must resist. You don’t know what people are capable of, or who this information will get back to.</p>
 <p><strong>2. Fund Distribution</strong> - Splitting your funds into multiple different wallets. Your mnemonic seed-phrase can be used to generate a large number of different addresses, all recoverable from the same key. It is a good idea to split your funds into multiple different addresses that can be recovered easily. This way, if you are wrench-attacked, you will only have to give up a small amount of your Crypto, to your attackers.</p>
-<p><strong>3. Multi-Signature Wallets</strong> - By distributing the keys to multiple places/people you trust, you can remove your unilateral-ability to give up the funds. This would make it harder for someone to steal all the keys. Just be very careful with who you trust, and the ways they store it. Many large corporations and Non-Profit-Foundations use multi-sig wallets controlled by high ranking executives.</p>
+<p class="last"><strong>3. Multi-Signature Wallets</strong> - By distributing the keys to multiple places/people you trust, you can remove your unilateral-ability to give up the funds. This would make it harder for someone to steal all the keys. Just be very careful with who you trust, and the ways they store it. Many large corporations and Non-Profit-Foundations use multi-sig wallets controlled by high ranking executives.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="ransomware">
 <h4>Ransomware<a class="headerlink" href="#ransomware" title="Permalink to this headline">¶</a></h4>
 <p>A topic large in the news recently, ransomware is a very pervasive and <em>likely</em> threat. Attackers will demand payment in cryptocurrency, and you don’t want to have to tap into your resvers in order to pay it. Avoiding ransomware is a topic that large corporations and experts have spent decades trying to educate people on. I’m not going to go into too much depth because it is outside the scope of this guide. There are a few good defense though.</p>
-<dl>
-<dt>Defenses:</dt><dd><p><strong>1. Offline Backups</strong> - Keep your seed phrases offline, or on an airgapped computer. An airgapped computer means one not, and typically never, connected to the internet.</p>
-<p><strong>2. Vigilance</strong> - Be aware of the sites you go to, the things you download, etc. to prevent malware. Be sure to keep your antivirus software up to date.</p>
+<dl class="docutils">
+<dt>Defenses:</dt>
+<dd><p class="first"><strong>1. Offline Backups</strong> - Keep your seed phrases offline, or on an airgapped computer. An airgapped computer means one not, and typically never, connected to the internet.</p>
+<p class="last"><strong>2. Vigilance</strong> - Be aware of the sites you go to, the things you download, etc. to prevent malware. Be sure to keep your antivirus software up to date.</p>
 </dd>
 </dl>
 </div>
@@ -292,22 +296,25 @@
 <h3>Software Attacks<a class="headerlink" href="#software-attacks" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="malware">
 <h4>Malware<a class="headerlink" href="#malware" title="Permalink to this headline">¶</a></h4>
-<dl>
-<dt>Defenses:</dt><dd><p><strong>1. Antivirus</strong> - Use antivirus and keep it up to date to protect your computer.</p>
-<p><strong>2. Encrypt your seed-phrase</strong> - If an attacker gets malware onto your computer, and is able to look through your files, one of the first things they will look for is cryptocurrency keys. Your software wallet will typically give you the option, at creation-time, to generate a file with your keys. Some applications, like MyEtherWallet, will let you use an additional password, in addition to your seed-phrase, to keep it secure. Or perhaps you are just going to keep it in a text file on your desktop. If you keep the keys on your computer, they should be encrypted in some way, with some password, to prevent attackers from stealing them.</p>
+<dl class="docutils">
+<dt>Defenses:</dt>
+<dd><p class="first"><strong>1. Antivirus</strong> - Use antivirus and keep it up to date to protect your computer.</p>
+<p class="last"><strong>2. Encrypt your seed-phrase</strong> - If an attacker gets malware onto your computer, and is able to look through your files, one of the first things they will look for is cryptocurrency keys. Your software wallet will typically give you the option, at creation-time, to generate a file with your keys. Some applications, like MyEtherWallet, will let you use an additional password, in addition to your seed-phrase, to keep it secure. Or perhaps you are just going to keep it in a text file on your desktop. If you keep the keys on your computer, they should be encrypted in some way, with some password, to prevent attackers from stealing them.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="hot-wallet-drive-by-attacks">
 <h4>Hot-Wallet Drive-By-attacks<a class="headerlink" href="#hot-wallet-drive-by-attacks" title="Permalink to this headline">¶</a></h4>
 <p>This is a broad topic as well, with no clear definition of what this entails. The best definition is that it is an attack that will take advantage of the browser or software-wallet to steal your funds.</p>
-<dl>
-<dt>Examples Include:</dt><dd><p><strong>1. Clipboard Hijacking</strong> - Websites and extensions like Metamask have access to your clipboard, where you copy things. An attacker’s malicious website could alter your clipboard when you are attempting to copy an address to send crypto. If you wanted to send Ether to <em>vitalik.eth</em>, they could change it to <em>vitalic.eth</em>, a domain they own. By preying on your lack of attention to detail, they could redirect the intended funds to themselves.</p>
-<p><strong>2. Steal the key from the wallet itself</strong> - Some websites will attempt to view your private-key and seed-phrase from Metamask. Pay close attention to the permissions these sites are asking for, and deny them if the site is sketchy.</p>
+<dl class="docutils">
+<dt>Examples Include:</dt>
+<dd><p class="first"><strong>1. Clipboard Hijacking</strong> - Websites and extensions like Metamask have access to your clipboard, where you copy things. An attacker’s malicious website could alter your clipboard when you are attempting to copy an address to send crypto. If you wanted to send Ether to <em>vitalik.eth</em>, they could change it to <em>vitalic.eth</em>, a domain they own. By preying on your lack of attention to detail, they could redirect the intended funds to themselves.</p>
+<p class="last"><strong>2. Steal the key from the wallet itself</strong> - Some websites will attempt to view your private-key and seed-phrase from Metamask. Pay close attention to the permissions these sites are asking for, and deny them if the site is sketchy.</p>
 </dd>
-<dt>Defenses:</dt><dd><p><strong>1. Disabling metamask access by default</strong> - For security reasons, it is suggested you alter metamask settings slightly. In your browser you should change the setting under “This can read and change site data” from <em>On All Sites</em> to <em>When you click the extension</em>. Metamask by default has this setting, which allows any website to access its features. Given that metamask can do things like view and alter things you copy, there lies the potential for drive-by attacks on malicious websites. By changing it to only have access when you click, this gives only selected sites access to metamask, when you click. This means you can choose to enable metamask only on trusted sites. This is best both for privacy and security.</p>
+<dt>Defenses:</dt>
+<dd><p class="first"><strong>1. Disabling metamask access by default</strong> - For security reasons, it is suggested you alter metamask settings slightly. In your browser you should change the setting under “This can read and change site data” from <em>On All Sites</em> to <em>When you click the extension</em>. Metamask by default has this setting, which allows any website to access its features. Given that metamask can do things like view and alter things you copy, there lies the potential for drive-by attacks on malicious websites. By changing it to only have access when you click, this gives only selected sites access to metamask, when you click. This means you can choose to enable metamask only on trusted sites. This is best both for privacy and security.</p>
 <p><strong>2. Keep your wallet-software up to date</strong> - Enable and update security-patches whenever possible.</p>
-<p><strong>3. Don’t visit random and unknown websites</strong> - Always be sure you used the correct web address when visiting.</p>
+<p class="last"><strong>3. Don’t visit random and unknown websites</strong> - Always be sure you used the correct web address when visiting.</p>
 </dd>
 </dl>
 <img alt="../_images/metamask_settings.png" src="../_images/metamask_settings.png" />
@@ -318,20 +325,22 @@
 <div class="section" id="fake-token">
 <h4>Fake Token<a class="headerlink" href="#fake-token" title="Permalink to this headline">¶</a></h4>
 <p>Anyone can create a token. It’s just a smart contract. But, they can modify it to do whatever they want and don’t have to disclose the source code. This has lead to a series of fake token attacks on unsuspecting users. If you use Dapps you might already have been targeted.</p>
-<dl class="simple">
-<dt>It works like This:</dt><dd><ol class="arabic simple">
-<li><p>The attacker creates a token with a weird name. Something you haven’t heard of. They might include a link or info on the Etherscan page to get you to look it up, and fake legitimacy.</p></li>
-<li><p>They send it to you and lots of other people, typically automated list generated.</p></li>
-<li><p>It shows up in your wallet, and they wait for you to do something with it. Hopefully that you’ll try to exchange it for something else on Uniswap, or send it somewhere else.</p></li>
-<li><p>Contract code activates a secret provision that transfers all of your wallet funds to themselves.</p></li>
+<dl class="docutils">
+<dt>It works like This:</dt>
+<dd><ol class="first last arabic simple">
+<li>The attacker creates a token with a weird name. Something you haven’t heard of. They might include a link or info on the Etherscan page to get you to look it up, and fake legitimacy.</li>
+<li>They send it to you and lots of other people, typically automated list generated.</li>
+<li>It shows up in your wallet, and they wait for you to do something with it. Hopefully that you’ll try to exchange it for something else on Uniswap, or send it somewhere else.</li>
+<li>Contract code activates a secret provision that transfers all of your wallet funds to themselves.</li>
 </ol>
 </dd>
 </dl>
 <p>While the actual executable-code for a smart-contract is stored on the blockchain, the source code is not. The attackers take advantage of this to hide their malicious code from you,and hope you don’t notice. The attackers will insert a hidden trap in their obscured-code. When you think you are transferring the tokens out of your wallet, you are actually activating the lines of code that send your entire wallet balance to them.</p>
 <p>These can get very elaborate. I recently received one of these tokens where they had copied the entirety of a web page for another reputable token, but changed the name slightly, hoping nobody would notice. Air-dropped tokens are a thing, but are for reputable projects typically, and have a paper trail you can follow to ensure its legitimacy.</p>
-<dl>
-<dt>Defenses:</dt><dd><p><strong>1. Do Not Engage</strong> - Just ignore these tokens. <strong>DO NOT</strong> attempt to send them anywhere, approve any dapp to send them, or do anything else with it, as it will probably result in a draining of your funds.</p>
-<p><strong>2. Hide the tokens in your wallet</strong> - If you wallet, such as Metamask, allows you to not hide certain tokens from display, then do so. Out of sight out of mind.</p>
+<dl class="docutils">
+<dt>Defenses:</dt>
+<dd><p class="first"><strong>1. Do Not Engage</strong> - Just ignore these tokens. <strong>DO NOT</strong> attempt to send them anywhere, approve any dapp to send them, or do anything else with it, as it will probably result in a draining of your funds.</p>
+<p class="last"><strong>2. Hide the tokens in your wallet</strong> - If you wallet, such as Metamask, allows you to not hide certain tokens from display, then do so. Out of sight out of mind.</p>
 </dd>
 </dl>
 </div>
@@ -342,9 +351,10 @@
 <img alt="../_images/btc_tx1.png" src="../_images/btc_tx1.png" />
 <p>Dust is simply an incredibly small amount of cryptocurrency, sometimes in the amount of 1 satoshi (1 sat = 0.00000001 BTC). Dust is often left over in many account as a result of normal use. It comes from difficulty in properly estimating transaction fees, so that when sending out amounts you are left holding fractions of cents worth of coins. However, because this amount is so imperceptibly small, attackers can use it to their advantage. Attackers will send this dust to hundreds of thousands of addresses. Receiving anywhere from a couple of sats to a few hundred sats means that you are the victim of a dusting attack.</p>
 <p>The idea is to send it to a variety of addresses, and wait for people to send the dust to other places, and connecting the dots. If the dust from multiple addresses is combined together into one larger address, then it makes sense the owner is the same person. Doing this on a larger scale, with a variety of information sources paints a picture. This allows the attackers to create a <em>web of information</em>, in order to deduce the identity of the owner. Once they have your identity, and your wallet address, it opens you up to a variety of other attacks such as <a class="reference external" href="https://www.knowbe4.com/spear-phishing/#:~:text=Spear%20phishing%20is%20an%20email,attempting%20to%20steal%20confidential%20information.">spearphishing</a>, <a class="reference external" href="https://www.cisa.gov/stopransomware#:~:text=Ransomware%20is%20a%20form%20of,ransom%20in%20exchange%20for%20decryption.">ransomware</a> and <a class="reference external" href="https://thecryptoconundrum.net/investment-strategies/security.html#preventing-extortion">wrench attacks</a>.</p>
-<dl>
-<dt>Defenses:</dt><dd><p><strong>1. Do not engage</strong> - Just ignore the small amounts of dust. <strong>DO NOT USE IT</strong> in your future transactions or attempt to send it anywhere. As the image above shows, simply not including it as the input one of your transactions is sufficient. Some wallets will allow you to flag these incoming dust transactions as <em>do not spend</em>. If available, you should turn that on.</p>
-<p><strong>2. Change addresses</strong> - If you’re worried, then you could consider changing your wallet address. Simply send all of your balance, minus the dust somewhere else.</p>
+<dl class="docutils">
+<dt>Defenses:</dt>
+<dd><p class="first"><strong>1. Do not engage</strong> - Just ignore the small amounts of dust. <strong>DO NOT USE IT</strong> in your future transactions or attempt to send it anywhere. As the image above shows, simply not including it as the input one of your transactions is sufficient. Some wallets will allow you to flag these incoming dust transactions as <em>do not spend</em>. If available, you should turn that on.</p>
+<p class="last"><strong>2. Change addresses</strong> - If you’re worried, then you could consider changing your wallet address. Simply send all of your balance, minus the dust somewhere else.</p>
 </dd>
 </dl>
 </div>
@@ -361,24 +371,27 @@
 </div>
 <div class="section" id="pump-and-dump">
 <h4>Pump and Dump<a class="headerlink" href="#pump-and-dump" title="Permalink to this headline">¶</a></h4>
-<dl>
-<dt>The pump and dump is a financial scam that’s been present in the stock and financial world for decades. The most common way today takes two forms:</dt><dd><p><strong>1.</strong> The Shillers - Admins in chatrooms like Telegram or Discord will tell the name of a low-priced coin to their “members”, often for a fee (or for free). They tell everyone to start buying the coin at whatever price they can, so the price goes through the roof, and to advertise it on social media. They make it sound like everyone will get in on the profits. In reality, these same admins already filled their bag with as much of it as possible, before telling their “cronies”, only to leave them holding the bag when they sell at sky-high prices, and you to sell at a loss when the price crashes back to nothing.</p>
-<p><strong>2.</strong> The Shilled - The people on social media being bombarded with advertisements for “THE NEXT SHIBA-INU MEMECOIN GUARANTEED 1000x MOON PROFIT”. They rely on you FOMO’ing (Fear of Missing out) into the coin to drive up the price. Don’t. Ignore it, and stick with your regular strategy for investing with proper DD (Due-Diligence).</p>
+<dl class="docutils">
+<dt>The pump and dump is a financial scam that’s been present in the stock and financial world for decades. The most common way today takes two forms:</dt>
+<dd><p class="first"><strong>1.</strong> The Shillers - Admins in chatrooms like Telegram or Discord will tell the name of a low-priced coin to their “members”, often for a fee (or for free). They tell everyone to start buying the coin at whatever price they can, so the price goes through the roof, and to advertise it on social media. They make it sound like everyone will get in on the profits. In reality, these same admins already filled their bag with as much of it as possible, before telling their “cronies”, only to leave them holding the bag when they sell at sky-high prices, and you to sell at a loss when the price crashes back to nothing.</p>
+<p class="last"><strong>2.</strong> The Shilled - The people on social media being bombarded with advertisements for “THE NEXT SHIBA-INU MEMECOIN GUARANTEED 1000x MOON PROFIT”. They rely on you FOMO’ing (Fear of Missing out) into the coin to drive up the price. Don’t. Ignore it, and stick with your regular strategy for investing with proper DD (Due-Diligence).</p>
 </dd>
 </dl>
 <img alt="../_images/pump_and_dump.png" src="../_images/pump_and_dump.png" />
-<dl>
-<dt>Defenses:</dt><dd><p><strong>1. Common sense</strong> - Don’t fall for the FOMO. This also falls under the investment rule of <a class="reference external" href="https://thecryptoconundrum.net/investment-strategies/confidence.html">being confident in your decisions</a>.</p>
-<p><strong>2. Ignore the shill</strong> - If a bot on telegram or discord invites you to their pump and dump-group, just ignore it and report the bot for spam.</p>
+<dl class="docutils">
+<dt>Defenses:</dt>
+<dd><p class="first"><strong>1. Common sense</strong> - Don’t fall for the FOMO. This also falls under the investment rule of <a class="reference external" href="https://thecryptoconundrum.net/investment-strategies/confidence.html">being confident in your decisions</a>.</p>
+<p class="last"><strong>2. Ignore the shill</strong> - If a bot on telegram or discord invites you to their pump and dump-group, just ignore it and report the bot for spam.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="the-fake-exchange">
 <h4>The Fake Exchange<a class="headerlink" href="#the-fake-exchange" title="Permalink to this headline">¶</a></h4>
 <p>Much like the Double-Return, these rely on your desire to get free stuff. Scammers will create an intricate <em>fake cryptocurrency-exchange”</em>. They’ll send you a message on some platform telling you that you can get <em>“free 0.5 BTC when you sign up and make your first deposit”</em>. This is obviously false. Their plan relies on you signing up, so that they can harvest your credentials, hoping you use the same username/password on other major exchanges. They also require you to do things like first depositing the same amount you want to withdraw to ensure your legitimacy. If you do that, they will just harvest your crypto, and you will be out of luck.</p>
-<dl>
-<dt>Defenses:</dt><dd><p><strong>1. Common Sense</strong> - Nobody is giving out free Cryptocurrency.</p>
-<p><strong>2. Keep your guard up</strong> - Don’t give out your passwords or sensitive information to anybody.</p>
+<dl class="docutils">
+<dt>Defenses:</dt>
+<dd><p class="first"><strong>1. Common Sense</strong> - Nobody is giving out free Cryptocurrency.</p>
+<p class="last"><strong>2. Keep your guard up</strong> - Don’t give out your passwords or sensitive information to anybody.</p>
 </dd>
 </dl>
 <img alt="../_images/exchange_scam.png" src="../_images/exchange_scam.png" />
@@ -388,19 +401,21 @@
 <p>When interacting with cryptocurrency sites, always be sure to check the domain name and address closely. There exist a myriad of fake sites and applications to deceive you out of your crypto. A very successful one from earlier this year, involved a fake version of <a class="reference external" href="https://metamask.io">metamask wallet</a>.</p>
 <p>Scammers bought a Google-Ad for <a class="reference external" href="https://www.bleepingcomputer.com/news/security/metamask-phishing-steals-cryptocurrency-wallets-via-google-ads/">a fake version of metamask</a>, hoping people would misinterpret it for the real one. They then recreated the interface, and waited for people to import their wallet via seed-phrase. The app would then send the credentials to the scammers, who would transfer your crypto back to themselves.</p>
 <p>This same scam is <a class="reference external" href="https://thenextweb.com/news/scam-alert-fake-metamask-app-google-play-stealing-users-ethers">still occuring but on the google-play store via android apps</a>.</p>
-<dl>
-<dt>Defenses:</dt><dd><p><strong>1. Be extra vigilant when visiting links related to crypto</strong> - If it’s a site you visit frequently, bookmark it. Be sure to pay attention to the site when visiting and look for any changes or oddities in design.</p>
-<p><strong>2. Copy Links instead of typing them in</strong> - A strategy known as <em>typo-squatting</em>, attackers could build a fake clone at <em>meramask.io</em> and wait for you to misspell the address, sending you to them and hoping you don’t notice it’s a fake.</p>
+<dl class="docutils">
+<dt>Defenses:</dt>
+<dd><p class="first"><strong>1. Be extra vigilant when visiting links related to crypto</strong> - If it’s a site you visit frequently, bookmark it. Be sure to pay attention to the site when visiting and look for any changes or oddities in design.</p>
+<p class="last"><strong>2. Copy Links instead of typing them in</strong> - A strategy known as <em>typo-squatting</em>, attackers could build a fake clone at <em>meramask.io</em> and wait for you to misspell the address, sending you to them and hoping you don’t notice it’s a fake.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="fake-customer-support">
 <h4>Fake Customer Support<a class="headerlink" href="#fake-customer-support" title="Permalink to this headline">¶</a></h4>
 <p>Fake support scams are all over twitter and other social media. You post a question hoping someone will help you, and a scammer pretending to be exchange or tech support offers to help. The catch, that they will ask for your seed-phrase. <em>If you give them your seed-phrase, they will be able to send all of your crypto, to themselves, without you</em>. As it says on every actual-exchange-website, “tech support will <strong>NEVER</strong> ask for your seed phrase”.</p>
-<dl>
-<dt>Defenses:</dt><dd><p><strong>1. NEVER GIVE YOUR SEED PHRASE TO ANYONE</strong> - It will allow them to send crypto from your wallet on your behalf, to anyone. Actual tech support <strong>WILL NEVER ASK FOR IT</strong>. Applications and exchanges <strong>DO NOT NEED IT to properly diagnose and resolve your issue</strong>.</p>
+<dl class="docutils">
+<dt>Defenses:</dt>
+<dd><p class="first"><strong>1. NEVER GIVE YOUR SEED PHRASE TO ANYONE</strong> - It will allow them to send crypto from your wallet on your behalf, to anyone. Actual tech support <strong>WILL NEVER ASK FOR IT</strong>. Applications and exchanges <strong>DO NOT NEED IT to properly diagnose and resolve your issue</strong>.</p>
 <p><strong>2. Tech support will not contact you</strong> - This is especially true on social media. Be sure only to go through official channels on the exchange website or other legitimate support-channels for the application you need help with.</p>
-<p><strong>3. Hot vs. Cold Wallets</strong> - Breaking up your crypto will ensure that scammers can’t access it all at once even if your seed-phrases/keys are compromised.</p>
+<p class="last"><strong>3. Hot vs. Cold Wallets</strong> - Breaking up your crypto will ensure that scammers can’t access it all at once even if your seed-phrases/keys are compromised.</p>
 </dd>
 </dl>
 </div>

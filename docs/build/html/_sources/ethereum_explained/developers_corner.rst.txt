@@ -58,6 +58,7 @@ Because the contract has a valid address, when deployed it can also do things su
 
 		function send_ether(address payable recipient) payable {
         		balance += msg.value; /*msg.value is the transaction value*/
+						recipient.transfer(balance) /*send the balance to the recipient*/
     		}
 	}
 
@@ -100,7 +101,30 @@ We can see the value of all the inputs. This is a high-level topic but because w
 
 The address listed is address of the contract that emitted the log. This is necesarry because a contract may invoke a function on another contract, known as an *internal transaction*. This is still considered part of the main initial transaction for block purposes and is useful to keep track of transaction history.
 
-More detailed information can be found `here <https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378>`_./
+More detailed information can be found `here <https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378>`_.
+
+
+Blockchain as a State Machine
+------------------------------
+
+State Machines, if you've ever read this book, you're probably breaking out into a cold-sweat right now
+
+.. image:: images/sipser.png
+	:width: 180pt
+
+*Image Source: Michael Siper, Introduction to the theory of computation, 3rd edition*
+
+Don't worry, I'm going to keep it simple. The entire Ethereum network, at any given moment, can be represented as a state. Every time a transaction occurs, the state changes. Therefore we can represent the network as a state machine. The following examples are in the `Ethereum Whitepaper <https://ethereum.org/en/whitepaper/>`_.
+
+Think of it like this
+
+``APPLY(S,TX) -> S' or ERROR`` where S = The current State and TX = The transaction value.
+
+In a real-world sense, imagine the following: ``APPLY({ Alice: $50, Bob: $50 },"send $20 from Alice to Bob") = { Alice: $30, Bob: $70 }``. It took the current state of all balances, processed a transaction, and returned the new state.
+
+How this state is calculated is detailed below.
+
+This is important because we then can understand how smart contracts fit into this model. The use of a state machine allow the network to store the current state or values of a contract at any given time. Given as these contracts can have lots of variables to track, this is essential. It also allows us to create many layer-2 scaling operations off-chain. This I will explain later.
 
 Accounts
 ----------
@@ -136,35 +160,11 @@ This is also what people mean when they express concern about "the ethereum stat
 
 This system does have some drawbacks however. Unlike UTXO, when reading and writing to the accounts database for each transaction, the ordering of transactions within a block matters. This is because the ordering in which contracts interact with the accounts database matters. Otherwise, you end up with concurrency issues. The EVM doesn't do parallel computation very well as a result, but it does do finality and conflict-resolution. This is what leads to something known as *MEV (Miner-Extractable-Value)*. It is when miners will essentially *collude* with users to order transactions within a block, in a way that is financially beneficial to themselves. I demonstrated this when talking about `Uniswap Front-Running Attacks <https://thecryptoconundrum.net/dapps/uniswap.html#slippage-sandwich-attacks-and-front-running>`_.
 
-When a transaction is processes, the node will update this database, and report the changes to all the other nodes in the network. However, making sure that all nodes have the exact same copy of the database is a difficult task. It accomplishes this by using a *state-machine*.
-
-
-Blockchain as a State Machine
-------------------------------
-
-State Machines, if you've ever read this book, you're probably breaking out into a cold-sweat right now
-
-.. image:: images/sipser.png
-	:width: 180pt
-
-*Image Source: Michael Siper, Introduction to the theory of computation, 3rd edition*
-
-Don't worry, I'm going to keep it simple. The entire Ethereum network, at any given moment, can be represented as a state. Every time a transaction occurs, the state changes. Therefore we can represent the network as a state machine. The following examples are in the `Ethereum Whitepaper <https://ethereum.org/en/whitepaper/>`_.
-
-Think of it like this
-
-``APPLY(S,TX) -> S' or ERROR`` where S = The current State and TX = The transaction value.
-
-In a real-world sense, imagine the following: ``APPLY({ Alice: $50, Bob: $50 },"send $20 from Alice to Bob") = { Alice: $30, Bob: $70 }``. It took the current state of all balances, processed a transaction, and returned the new state.
-
-How this state is calculated is included below.
-
-This is important because we then can understand how smart contracts fit into this model. The use of a state machine allow the network to store the current state or values of a contract at any given time. Given as these contracts can have lots of variables to track, this is essential. It also allows us to create many layer-2 scaling operations off-chain. This I will explain later.
 
 Ethereum Virtual Machine
 --------------------------
 
-To calculate the state, we first need to implement a valid transaction. We can do this through `The Ethereum Virtual Machine <https://ethereum.org/en/developers/docs/evm/>`_. Think of it like Java. When you write a program to do something, the Java code compiles down to byte-code, which is run through the Java virtual machine. This virtual machine runs on top of your normal Kernel, to make it OS-Agnostic and converts it further to machine code executable by your kernel. The Ethereum Virtual Machine works the same way.
+To calculate the state, we first need to execute a valid transaction. We can do this through `The Ethereum Virtual Machine <https://ethereum.org/en/developers/docs/evm/>`_. Think of it like Java. When you write a program to do something, the Java code compiles down to byte-code, which is run through the Java virtual machine. This virtual machine runs on top of your normal Kernel, to make it OS-Agnostic and converts it further to machine code executable by your kernel. The Ethereum Virtual Machine works the same way.
 
 Every time you execute a transaction, the inputs and steps are converted into EVM-Bytecode. The machine takes the current state and performs the transaction and generates a new global-state. When you initially create a new contract, the contract gets converted to bytecode, and stored on the chain with its address. When you make a transaction the proper bytecode is queried and executed. This also explains why contracts are immutable.
 

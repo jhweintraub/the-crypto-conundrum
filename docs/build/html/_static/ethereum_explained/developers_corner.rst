@@ -58,7 +58,7 @@ Because the contract has a valid address, when deployed it can also do things su
 
 		function send_ether(address payable recipient) payable {
         		balance += msg.value; /*msg.value is the transaction value*/
-						recipient.transfer(balance) /*send the balance to the recipient*/
+			recipient.transfer(balance) /*send the balance to the recipient*/
     		}
 	}
 
@@ -68,8 +68,6 @@ Imagine what you could do when you take this concept and make it more complex.
 
 
 **Contracts are immutable.** *This means that once a contract is deployed, it CANNOT BE MODIFIED. Certain variables can have values be changed, but code logic cannot. If you deployed and then realized that the contract had a bug, your only choice is to deploy a new contract that fixes this.*
-
-**These next 3 sections are going to be more tech-heavy so if you don't have a CS or tech background, feel free to skip to the next article, as you don't need to understand it to be able to use Ethereum. Otherwise, I'm still going to try and keep it simple.**
 
 Logs
 ------
@@ -99,9 +97,11 @@ We first declare an event and its parameters. In this case it's *transfer* and i
 
 We can see the value of all the inputs. This is a high-level topic but because we used the keyword *indexed* on the two addresses, the EVM has classified them as topics. This is so that the EVM can more easily classify and reference them later. If we were to not use the *indexed* keyword, they would be below in the *data* category, alongside *value*
 
-The address listed is address of the contract that emitted the log. This is necesarry because a contract may invoke a function on another contract, known as an *internal transaction*. This is still considered part of the main initial transaction for block purposes and is useful to keep track of transaction history.
+The address listed is address of the contract that emitted the log. This is necessary because a contract may invoke a function on another contract, known as an *internal transaction*. This is still considered part of the main initial transaction for block purposes and is useful to keep track of transaction history.
 
 More detailed information can be found `here <https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378>`_.
+
+**These next 3 sections are going to be more tech-heavy so if you don't have a CS or tech background, feel free to skip to the next article, as you don't need to understand it to be able to use Ethereum. Otherwise, I'm still going to try and keep it simple.**
 
 
 Blockchain as a State Machine
@@ -133,7 +133,7 @@ Unlike Bitcoin, Ethereum supports the idea of an account, with a balance. This i
 
 **"Wait, if Bitcoin doesn't actually have a balance, how come I can go to a website and it tell me how much Bitcoin I have?"**
 
-This is a good question. The answer is that Bitcoin doesn't actually have the concept of an account balance. When you go to a website, that site specifically has indexed the blockchain on their own and created a local copy that they then serve to you. It looks through your transaction history and calculates how much Bitcoin you have, instead of looking at the chain directly for every query. This would be very slow. Your balance is the sum of all of your previously income transaction values. Each transaction has a BTC value. Imagine you wanted to send 5 BTC. Your wallet takes several transactions from your history, and bundles them together until the sum of their values is `>= 5 BTC`. It then takes that amount, and sends it, and returns the extra unsused Bitcoin to you.
+This is a good question. The answer is that Bitcoin doesn't actually have the concept of an account balance. When you go to a website, that site specifically has indexed the blockchain on their own and created a local copy that they then serve to you. It looks through your transaction history and calculates how much Bitcoin you have, instead of looking at the chain directly for every query. This would be very slow. Your balance is the sum of all of your previously income transaction values. Each transaction has a BTC value. Imagine you wanted to send 5 BTC. Your wallet takes several transactions from your history, and bundles them together until the sum of their values is `>= 5 BTC`. It then takes that amount, and sends it, and returns the extra unused Bitcoin to you.
 
 Look at this example transaction
 

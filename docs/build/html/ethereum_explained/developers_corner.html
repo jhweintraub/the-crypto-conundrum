@@ -259,7 +259,7 @@
 
         <span class="n">function</span> <span class="nf">send_ether</span><span class="o">(</span><span class="n">address</span> <span class="n">payable</span> <span class="n">recipient</span><span class="o">)</span> <span class="n">payable</span> <span class="o">{</span>
                 <span class="n">balance</span> <span class="o">+=</span> <span class="n">msg</span><span class="o">.</span><span class="na">value</span><span class="o">;</span> <span class="cm">/*msg.value is the transaction value*/</span>
-                                        <span class="n">recipient</span><span class="o">.</span><span class="na">transfer</span><span class="o">(</span><span class="n">balance</span><span class="o">)</span> <span class="cm">/*send the balance to the recipient*/</span>
+                <span class="n">recipient</span><span class="o">.</span><span class="na">transfer</span><span class="o">(</span><span class="n">balance</span><span class="o">)</span> <span class="cm">/*send the balance to the recipient*/</span>
         <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
@@ -267,7 +267,6 @@
 <p>This code contains a method that allows you to store and send ether from one person to another. If you see the word <em>payable</em> means that if you call this method, you can send ether alongside the input value of a recipient, and the contract will do with it what you specify. If you don’t specify to send it somewhere, then it will hold the amount in its account balance for the contract. This is useful because it allows you to specify what to do if someone sends ether to the contract address, alongside relevant input data. For applications like DeFi, or that involve sending money around, it is a very powerful tool for trust less funds exchanges.</p>
 <p>Imagine what you could do when you take this concept and make it more complex.</p>
 <p><strong>Contracts are immutable.</strong> <em>This means that once a contract is deployed, it CANNOT BE MODIFIED. Certain variables can have values be changed, but code logic cannot. If you deployed and then realized that the contract had a bug, your only choice is to deploy a new contract that fixes this.</em></p>
-<p><strong>These next 3 sections are going to be more tech-heavy so if you don’t have a CS or tech background, feel free to skip to the next article, as you don’t need to understand it to be able to use Ethereum. Otherwise, I’m still going to try and keep it simple.</strong></p>
 </div>
 <div class="section" id="logs">
 <h2>Logs<a class="headerlink" href="#logs" title="Permalink to this headline">¶</a></h2>
@@ -290,8 +289,9 @@
 <img alt="../_images/events.png" src="../_images/events.png" />
 <p><em>Image Source: Etherscan.io</em></p>
 <p>We can see the value of all the inputs. This is a high-level topic but because we used the keyword <em>indexed</em> on the two addresses, the EVM has classified them as topics. This is so that the EVM can more easily classify and reference them later. If we were to not use the <em>indexed</em> keyword, they would be below in the <em>data</em> category, alongside <em>value</em></p>
-<p>The address listed is address of the contract that emitted the log. This is necesarry because a contract may invoke a function on another contract, known as an <em>internal transaction</em>. This is still considered part of the main initial transaction for block purposes and is useful to keep track of transaction history.</p>
+<p>The address listed is address of the contract that emitted the log. This is necessary because a contract may invoke a function on another contract, known as an <em>internal transaction</em>. This is still considered part of the main initial transaction for block purposes and is useful to keep track of transaction history.</p>
 <p>More detailed information can be found <a class="reference external" href="https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378">here</a>.</p>
+<p><strong>These next 3 sections are going to be more tech-heavy so if you don’t have a CS or tech background, feel free to skip to the next article, as you don’t need to understand it to be able to use Ethereum. Otherwise, I’m still going to try and keep it simple.</strong></p>
 </div>
 <div class="section" id="blockchain-as-a-state-machine">
 <h2>Blockchain as a State Machine<a class="headerlink" href="#blockchain-as-a-state-machine" title="Permalink to this headline">¶</a></h2>
@@ -309,7 +309,7 @@
 <h2>Accounts<a class="headerlink" href="#accounts" title="Permalink to this headline">¶</a></h2>
 <p>Unlike Bitcoin, Ethereum supports the idea of an account, with a balance. This is how the EVM is able to calculate the current world state, based on the value of all valid-addresses.</p>
 <p><strong>“Wait, if Bitcoin doesn’t actually have a balance, how come I can go to a website and it tell me how much Bitcoin I have?”</strong></p>
-<p>This is a good question. The answer is that Bitcoin doesn’t actually have the concept of an account balance. When you go to a website, that site specifically has indexed the blockchain on their own and created a local copy that they then serve to you. It looks through your transaction history and calculates how much Bitcoin you have, instead of looking at the chain directly for every query. This would be very slow. Your balance is the sum of all of your previously income transaction values. Each transaction has a BTC value. Imagine you wanted to send 5 BTC. Your wallet takes several transactions from your history, and bundles them together until the sum of their values is <cite>&gt;= 5 BTC</cite>. It then takes that amount, and sends it, and returns the extra unsused Bitcoin to you.</p>
+<p>This is a good question. The answer is that Bitcoin doesn’t actually have the concept of an account balance. When you go to a website, that site specifically has indexed the blockchain on their own and created a local copy that they then serve to you. It looks through your transaction history and calculates how much Bitcoin you have, instead of looking at the chain directly for every query. This would be very slow. Your balance is the sum of all of your previously income transaction values. Each transaction has a BTC value. Imagine you wanted to send 5 BTC. Your wallet takes several transactions from your history, and bundles them together until the sum of their values is <cite>&gt;= 5 BTC</cite>. It then takes that amount, and sends it, and returns the extra unused Bitcoin to you.</p>
 <p>Look at this example transaction</p>
 <img alt="../_images/btc_tx.png" src="../_images/btc_tx.png" />
 <p><em>Image Source: Blockchain.com</em></p>

@@ -15,13 +15,15 @@ The most popular places to buy include (in no particular order):
 	6. Uphold
 	7. KuCoin
 
-For first timers I recommend **Coinbase**.
+For first timers I recommend `Coinbase.com <https://coinbase.com>`_.
+
+It's very simple. All you need to do is sign up on their website, give them a debit/credit cad (or bank account) and hit *buy X dollars worth of cryptocurrency*.
 
 It's at this point that I am required by law to inform you that the United States Securities and Exchange Commission (SEC), considers Cryptocurrencies a security. You **WILL** be required to provide KYC information such as: social security number, Photo-ID, and address. You will also be required to pay any capital gains taxes on profits made from investing.
 
 **"Now hold on, I thought you said Crypto was anonymous?"**
 
-It is. However, exchanges are not, because the exchange are businesses operating in the US and bound by SEC regulations. If you take the crypto off an exchange, any transactions with it normally will be anonymous. Be aware, different exchanges have different coins. 
+It is. However, exchanges are not, because the exchange are businesses operating in the US and bound by SEC regulations. If you take the crypto off an exchange, any transactions with it normally will be anonymous. Be aware, different exchanges have different coins.
 
 For example, Kraken has several coins not available on Coinbase. Binance has some not available on Kraken. Some coins can only be obtained by using Decentralized Applications. Finding the right exchange is a process based on what you want to buy and the transaction fees. As part of their business model, each exchange will take a slight fee for the purchase or sale of all coins. This is usually around ~0.25% - 1%, depending on exchange and the size of your purchase. See website for details.
 
@@ -29,11 +31,11 @@ Robinhood
 ----------
 "**My friend said he just bought it on Robinhood. Can't I just do that?"**
 
-This is an important distinction. Robinhood is **NOT** a cryptocurrency exchange, and you don't really own any cryptocurrency when you buy with them. Buying, selling, and holding on Robinhood is **NOT** recommended. 
+This is an important distinction. Robinhood is **NOT** a cryptocurrency exchange, and you don't really own any cryptocurrency when you buy with them. Buying, selling, and holding on Robinhood is **NOT** recommended.
 
-The key phrase here is "**not your keys, not your crypto**". When you "buy" on robinhood, they're just issuing you a statement that says you bought a certain amount of cryptocurrency, and they hold it for you. You CANNOT send it to anyone.  All you can do is sell it back to Robinhood. In this sense you don't really own cryptocurrency, because you can't do anything with it. The reason this is different from say Coinbase, is that Coinbase and many other exchanges will provide proof of their reserves, and let you send it off the exchange. 
+The key phrase here is "**not your keys, not your crypto**". When you "buy" on robinhood, they're just issuing you a statement that says you bought a certain amount of cryptocurrency, and they hold it for you. You CANNOT send it to anyone.  All you can do is sell it back to Robinhood. In this sense you don't really own cryptocurrency, because you can't do anything with it. The reason this is different from say Coinbase, is that Coinbase and many other exchanges will provide proof of their reserves, and let you send it off the exchange.
 
-Traditional Exchanges like Coinbase are custodial as well, meaning they hold it for you. However, If you buy bitcoin on Coinbase you can send it off of Coinbase to a different address that you own, and do with it what you want. When Robinhood owns all of it, and you can't do anything with it, it opens the door to fraud, where they can lock you out of your own funds. This is what happened with Dogecoin and Gamestop, where the price was incredibly high, causing Robinhood to arbitrarily suspended anybody's ability to buy or sell it. At that point you're out of luck. 
+Traditional Exchanges like Coinbase are custodial as well, meaning they hold it for you. However, If you buy bitcoin on Coinbase you can send it off of Coinbase to a different address that you own, and do with it what you want. When Robinhood owns all of it, and you can't do anything with it, it opens the door to fraud, where they can lock you out of your own funds. This is what happened with Dogecoin and Gamestop, where the price was incredibly high, causing Robinhood to arbitrarily suspended anybody's ability to buy or sell it. At that point you're out of luck.
 
 This risk is endemic to any exchange, but the chances that Coinbase or Kraken or anyone arbitrarily locks you out from trading are incredibly small.
 

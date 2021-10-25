@@ -204,12 +204,17 @@ Planned article series include:
 
 Shoutout to Roey Shoshan for coming up with the name
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Who am I?:
+
+   introduction/intro
+
 
 .. toctree::
    :maxdepth: 1
    :caption: Introduction:
 
-   introduction/intro
    introduction/popular_questions
    introduction/blockchain
    introduction/exchanges
@@ -251,6 +256,7 @@ Shoutout to Roey Shoshan for coming up with the name
 
     dapps/uniswap
     dapps/daos
+    .. dapps/defi
 
 .. toctree::
     :maxdepth: 1

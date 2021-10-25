@@ -1,10 +1,10 @@
-Start Here!
+My Resume
 ==================================================================
 Welcome to my website, and the host of my digital resume. I hope here that you can learn a little bit about who I am, what I can do for you and your business, and the exciting world of Cryptocurrency.
 
 
 What can I do for you
-========================
+***********************
 
 I have worked for years to cultivate an in-depth understand of the blockchain, cryptocurrency, and digital asset security. This site is my chance to pass on this vital knowledge to the public. On this site you'll learn a few things, including:
 

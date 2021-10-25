@@ -1,5 +1,5 @@
-Most Popular Questions
-=======================
+What is Cryptocurrency?
+=========================
 
 **The conversation I have a lot:**
 
@@ -51,7 +51,7 @@ Ok so if I buy this is the price going to go up?
 
 So then why should I buy it?
 *****************************
-   
+
    Because it&#39;s an interesting piece of technology, with potential to radically change the world and our understanding of finance. It could go up 1000x, it could go to $0, or it could stay where it is. Read through the rest of this document, and you may start to see that this technology isn&#39;t going anywhere though.
 
 
@@ -59,4 +59,3 @@ Ok I&#39;m in so what do I do?
 ************************************
 
    Hold your horses,. Don&#39;t just invest in things you don&#39;t understand because you&#39;re eager and full of FOMO (fear of missing out). That&#39;s how you end up losing it all. Let&#39;s talk about the underlying technology first.
-

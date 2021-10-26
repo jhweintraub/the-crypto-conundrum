@@ -75,6 +75,8 @@ Permission-less
 
 You are in control of your money. When you put your money in the bank, you relinquish control for security. But this trade-off is a false-choice. The bank, at any time, for any arbitrary reason, can lock you out. They can deny you your money and hold onto it until you prove to them you deserve it back. It is no longer your money. DeFi is freedom. It gives you back the chance to be in control of your money. You can keep it safe, without having to give up control to someone else. Only you have power over it. Only DeFi lets you do what you want, whenever you want, and wherever your heart desires. Nobody is watching, controlling, or censoring.
 
+You are in control of your money, without the oversight of big-brother. Nobody can surveil you. When we use Venmo, Cashapp, Banks, etc. we don't know what information they're collecting. We don't know what they're doing with that information, or what the government is surveilling. DeFi is a departure from a world of invasive technology. It is a return to privacy, where your finances are nobody's business. We accept invasions of our privacy and the loss of autonomy to banks in return for tiny interest-rates and the promise of security. There shouldn't have to be a forced trade-off between the two.
+
 Banks and financial institutions are slow. It takes 1-3 days to send money from Venmo to my bank account. It takes days to send money between-banks, for sometimes high-fees, and with their approval. DeFi applications never close, work across all borders, and for little to no-fees like you deserve.
 
 

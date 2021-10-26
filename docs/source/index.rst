@@ -256,7 +256,7 @@ Shoutout to Roey Shoshan for coming up with the name
 
     dapps/uniswap
     dapps/daos
-    .. dapps/defi
+    dapps/defi
 
 .. toctree::
     :maxdepth: 1

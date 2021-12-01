@@ -40,7 +40,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="General Strategy" href="../investment-strategies/rules.html" />
+    <link rel="next" title="Misinformation and Misconceptions" href="misconceptions.html" />
     <link rel="prev" title="Rollups and Sidechains" href="layer2.html" /> 
 </head>
 
@@ -136,6 +136,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="misconceptions.html">Misinformation and Misconceptions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Investment Rules:</span></p>
 <ul>
@@ -292,6 +293,7 @@
 <img alt="../_images/events.png" src="../_images/events.png" />
 <p><em>Image Source: Etherscan.io</em></p>
 <p>We can see the value of all the inputs. This is a high-level topic but because we used the keyword <em>indexed</em> on the two addresses, the EVM has classified them as topics. This is so that the EVM can more easily classify and reference them later. If we were to not use the <em>indexed</em> keyword, they would be below in the <em>data</em> category, alongside <em>value</em></p>
+<<<<<<< HEAD
 <p>The address listed is address of the contract that emitted the log. This is necessary because a contract may invoke a function on another contract, known as an <em>internal transaction</em>. This is still considered part of the main initial transaction for block purposes and is useful to keep track of transaction history.</p>
 <p>More detailed information can be found <a class="reference external" href="https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378">here</a>.</p>
 <p><strong>These next 3 sections are going to be more tech-heavy so if you don’t have a CS or tech background, feel free to skip to the next article, as you don’t need to understand it to be able to use Ethereum. Otherwise, I’m still going to try and keep it simple.</strong></p>
@@ -307,6 +309,10 @@
 <p>In a real-world sense, imagine the following: <code class="docutils literal notranslate"><span class="pre">APPLY({</span> <span class="pre">Alice:</span> <span class="pre">$50,</span> <span class="pre">Bob:</span> <span class="pre">$50</span> <span class="pre">},&quot;send</span> <span class="pre">$20</span> <span class="pre">from</span> <span class="pre">Alice</span> <span class="pre">to</span> <span class="pre">Bob&quot;)</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">Alice:</span> <span class="pre">$30,</span> <span class="pre">Bob:</span> <span class="pre">$70</span> <span class="pre">}</span></code>. It took the current state of all balances, processed a transaction, and returned the new state.</p>
 <p>How this state is calculated is detailed below.</p>
 <p>This is important because we then can understand how smart contracts fit into this model. The use of a state machine allow the network to store the current state or values of a contract at any given time. Given as these contracts can have lots of variables to track, this is essential. It also allows us to create many layer-2 scaling operations off-chain. This I will explain later.</p>
+=======
+<p>The address listed is address of the contract that emitted the log. This is necesarry because a contract may invoke a function on another contract, known as an <em>internal transaction</em>. This is still considered part of the main initial transaction for block purposes and is useful to keep track of transaction history.</p>
+<p>More detailed information can be found <a class="reference external" href="https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378">here</a>.</p>
+>>>>>>> 90a58fbb26c1fce47c05bb498d25c49832d84f75
 </div>
 <div class="section" id="accounts">
 <h2>Accounts<a class="headerlink" href="#accounts" title="Permalink to this headline">¶</a></h2>
@@ -535,7 +541,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../investment-strategies/rules.html" class="btn btn-neutral float-right" title="General Strategy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="misconceptions.html" class="btn btn-neutral float-right" title="Misinformation and Misconceptions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="layer2.html" class="btn btn-neutral float-left" title="Rollups and Sidechains" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

@@ -100,7 +100,7 @@ We can see the value of all the inputs. This is a high-level topic but because w
 
 The address listed is address of the contract that emitted the log. This is necesarry because a contract may invoke a function on another contract, known as an *internal transaction*. This is still considered part of the main initial transaction for block purposes and is useful to keep track of transaction history.
 
-More detailed information can be found `here <https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378>`_./
+More detailed information can be found `here <https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378>`_.
 
 Accounts
 ----------

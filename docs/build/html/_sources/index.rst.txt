@@ -238,8 +238,6 @@ Shoutout to Roey Shoshan for coming up with the name
    ethereum_explained/layer2
    ethereum_explained/misconceptions
    ethereum_explained/developers_corner
-   ethereum_explained/misconceptions
-
 
 
 .. toctree::

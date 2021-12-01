@@ -81,7 +81,19 @@ You don't need to wait. You can use Layer-2 right now (November 2021) and do alm
 
 .. image:: images/eth_fud_images/l2_fees.png
 
-This also doesn't take into account other factors like development and usability, which I will discuss more on later.
+*Hold on $4.24 is still way too high to use, especially when Solana is fractions of a cent.*
+
+Yes $4 is a lot, and it should be lower. But it will go lower over time.
+  **1. This tech is new -** Optimistism and Arbitrum *didn't even exist* 1-year ago. The speed is temporarily throttled by developers to ensure it has time to be adequately tested and optimized, so that when it does launch, it's got no problems. When the throttle is removed, it will cost only a few pennies. To expect a fully-working and game-changing product out of the box on Version-1 is too much.
+
+  **2. Fees are high because there's still a lot of activity on layer-1** Rollups currently compete for block space with layer-1 transactions. If everyone were to move today to Layer-2, then Ethereum would be able to achieve roughly *~3,000 TPS*, making it the fastest chain out there. As centralized-exchanges start to integrate layer-2 withdrawals, and people migrate liquidity, fees will come down further.
+
+  **3. Data Sharding is still a work in progress -** When data sharding becomes fully-formed in the next 2-3 years, rollups will be supercharged to a level that can handle practically infinite scalability. It is estimated that rollups + data shards can handle **AT LEAST** *100,000 TPS*, and some even speculating as many as `14 Million TPS <https://polynya.medium.com/conjecture-how-far-can-rollups-data-shards-scale-in-2030-14-million-tps-933b87ca622e>`_.
+
+
+This also doesn't take into account other factors like development and usability, which I will discuss more on later. If you're interested in learning more about rollups, I highly suggest either `this article I already put out <https://thecryptoconundrum.net/ethereum_explained/layer2.html>`_, or for a more technical breakdown `this article by Vitalik Buterin on the subject <https://vitalik.ca/general/2021/01/05/rollup.html>`_.
+
+
 
 
 Ethereum is Centralized
@@ -256,4 +268,6 @@ Some researchers have even gone so far as to claim Ethereum is capable of hittin
 Conclusion
 --------------
 
-2021 has been a banner year for Ethereum, but it's also attracted a lot of scrutiny. Some of this is legitimate, but a lot is unfounded. It faces a series of fast growing competitors, but whether or not any of them succeed in their mission is anyone's best guess. When reading about Ethereum online, it can be tempting to fall for the fear, and be tempted to jump-ship. But before you do, ask yourself if that fear is unfounded. How much of it is people trying to shill for their own coins, hyped up by venture-capital firms, or just straight lies. Do your own objective research. Ethereum has been around for an incredibly short time when you look at the history of technology. Yet, it has the best long-term road-map for improvement, the most dedicated community, and a continued dedication to the principles that it was founded on. At the end of the day, that's what really matters. Follow the tech, and you will find the way.
+2021 has been a banner year for Ethereum, but it's also attracted a lot of scrutiny. Some of this is legitimate, but a lot is unfounded. It faces a series of fast growing competitors, but whether or not any of them succeed in their mission is anyone's best guess. When reading about Ethereum online, it can be tempting to fall for the fear, and be tempted to jump-ship. But before you do, ask yourself if that fear is unfounded. How much of it is people trying to shill for their own coins, hyped up by venture-capital firms, or just straight lies. Do your own objective research.
+
+I know it's difficult, but patience is key. The bull run over the last year (2021) has led many people to expect things to happen immediately, for ridiculous price spikes, etc., but that's just not the reality of how things work. When you're dealing with an economy worth `a half a trillion dollars <https://coinmarketcap.com/currencies/ethereum/>`_ development needs to be focused on ensuring security and robustness, or it puts everything on the chain at risk. I look back at where things are now, vs. where they were in 2019, and while fees are higher, the ecosystem is undoubtedly in a better place than it was back then. Even in the last year, there's been `dozens of proposals and improvements <https://github.com/ethereum/EIPs/tree/master/EIPS>`_ to Ethereum that have flown under the radar, but continue to contribute to the long-term success of the network. Ethereum has been around for an incredibly short time when you look at the history of technology. Yet, it has the best long-term road-map for improvement, the most dedicated community, and a continued dedication to the principles that it was founded on. At the end of the day, that's what really matters. Follow the tech, and you will find the way.

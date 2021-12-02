@@ -1,4 +1,4 @@
-Misinformation and Misconceptions
+Common Criticism and Misconceptions
 ====================================
 
 As Ethereum has grown in popularity, so has the amount of misinformation and misconceptions about it online. If you've spent any time on the crypto parts of social media, you might have been inundated with nonsensical information attempting to undermine confidence in Ethereum or cryptocurrency as a whole. That's why I decided it was important to write this article, to correct the record on things, make clearer how various aspects of it work, and help move the community forward.

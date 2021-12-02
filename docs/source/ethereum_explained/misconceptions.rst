@@ -132,6 +132,8 @@ This is an idiotic argument. The All-core devs do not have any power over the ne
 
 We saw this exact situation happen with the `DAO-Hack <https://www.gemini.com/cryptopedia/the-dao-hack-makerdao>`_. In 2016 a massive hack occurred, that resulted in a `community vote on whether or not to reverse the transaction <https://futurism.com/the-dao-heist-undone-97-of-eth-holders-vote-for-the-hard-fork>`_, and split the chain. A large group of miners said that they didn't support the reversal, and as a result a chain known as *Ether-Classic* resulted, while the main chain had the hack reversed. Anyone who didn't agree with the decision could mine on Ether-Classic, while everyone who did stayed on the main-chain. It was up to the individual to decide what they wanted to do.
 
+Technically anything that happens on Ethereum can be reversed, **BUT ONLY IF PEOPLE AGREE TO IT**. No singular entity can reverse things. The only reason that one-time occurrence happened was because the community deemed it too important and problematic not too, and in a decentralized-way, agreed to take steps to reverse it. The goal of Cryptocurrency isn't a strict-set of rules that can never be changed. **It's to create a system where change can occur without relying on a central-entity to will it into existence.** In fact, there have been tons of other instances of hacks `bigger than the DAO <https://www.cnn.com/2021/08/11/tech/crypto-hack/index.html>`_ that didn't get rolled back because the community decided not to. Do some research on how things actually went down before you blindly accept all the fear and misinformation about these things.
+
 
 Vitalik and the Foundation
 *****************************
@@ -208,7 +210,12 @@ Memecoins and NFT's
 
 NFT's Actually
 ***************
-I'll be honest with you here. Most NFT's are stupid. They are. Paying 100 Ether for an 8-bit pixel-punk is, at least in my mind, a waste of money. I right-click-saved this image because even I think it's ridiculous. But art was never the best-use for this technology. Ethereum was always meant to be a decentralized-computer, whose only limitation was what the community was able to come up with. Obviously not everything that gets made will be a world-changing idea, and to say that just because a lot of stupid things come out of it means its worthless is to miss the point. I wrote a longer explanation `of NFT's <https://thecryptoconundrum.net/introduction/picking_coins.html#nft-s>`_ about all the things you could do with NFT's besides stupid artwork.
+I'll be honest with you here. Most NFT's are stupid. They are. Paying 100 Ether for an 8-bit pixel-punk is, at least in my mind, a waste of money. I right-click-saved this image because even I think it's ridiculous.
+
+.. image:: images/eth_fud_images/bored_ape.jpg
+  :width: 300
+
+But art was never the best-use for this technology. Ethereum was always meant to be a decentralized-computer, whose only limitation was what the community was able to come up with. Obviously not everything that gets made will be a world-changing idea, and to say that just because a lot of stupid things come out of it means its worthless is to miss the point. I wrote a longer explanation `of NFT's <https://thecryptoconundrum.net/introduction/picking_coins.html#nft-s>`_ about all the things you could do with NFT's besides stupid artwork.
 
 To say that because the main use for Ethereum right now is stupid 8-bit artwork that can be right-cliked means that the whole platform is stupid is absurd. That's like saying "The adult-film industry is putting a lot of money into VR pornography, so VR is stupid and we shouldn't use it."
 
@@ -227,7 +234,7 @@ There's a somewhat valid argument to be made here. You would be right in saying 
 
 Cryptocurrency has only been around for a little over a decade, and Ethereum for less than that. The focus of the community over that time has been primarily towards building a usable-network. But, now that popularity is skyrocketing, the focus on usability is increasing as well. Part of the issue right now is the difficulty in setting up a wallet, buying from an exchange, sending it off, etc.  As more businesses and services start to integrate however, it will be easy to onboard new people. I don't know exactly what that will look like 5-10 years from now, but it will certainly be easier.
 
-I think the technology is getting better. Applications like `Brave Browser <https://brave.com/> and `Metamask <https://metamask.io/>`_ are on-boarding thousands everyday, and their services, at least in my opinion, are quite easy to use. I even did a `whole article <https://thecryptoconundrum.net/ethereum_explained/usability.html>`_ on how easy it is to use Metamask, with things like token-swaps built right in to the app.
+I think the technology is getting better. Applications like `Brave Browser <https://brave.com/>`_ and `Metamask <https://metamask.io/>`_ are on-boarding thousands everyday, and their services, at least in my opinion, are quite easy to use. I even did a `whole article <https://thecryptoconundrum.net/ethereum_explained/usability.html>`_ on how easy it is to use Metamask, with things like token-swaps built right in to the app.
 
 *Rollups are hard to use. You can't expect people to make layer-2 wallets, onboard, move between rollups, etc. Using a layer-1 blockchain is key.*
 
@@ -263,7 +270,7 @@ At it's price of ``$61k/BTC``, it's market cap was roughly ``~$1.2T``. For a cry
 
 Ethereum, on the other hand, has absurd growth potential. At ``$4300/ETH`` it's market cap is only ``$500B``. This does not even account for the total value in Stablecoins, DeFi, Tokenized-assets, etc. It is only Ethereum. If the price were to more than double, to ``$10k/Eth``, it's market cap would be roughly *equal* to Bitcoin's. When you think about the potential Ethereum has when factoring in all of it's smart-contracts, games, DeFi, etc, a market-cap of that caliber might be an undervaluation. It's not unrealistic to think that within 5-10 years, with a more mature ecosystem, obscenely low-fees, and a more secure layer-1 chain, it's market cap could reach ``$2T`` or ``$3T``, bringing Ether's value to heights like ``$20k`` or ``$30k``. The sky is the limit.
 
-Some researchers have even gone so far as to claim Ethereum is capable of hitting `$100,000/Eth within a few years <https://squish.substack.com/p/ethereum-the-triple-halving>`_
+Some researchers have even gone so far as to claim Ethereum is capable of hitting `$150,000/Eth within a few years <https://squish.substack.com/p/ethereum-the-triple-halving>`_
 
 Conclusion
 --------------

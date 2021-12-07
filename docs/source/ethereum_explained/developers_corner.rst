@@ -124,11 +124,10 @@ In a real-world sense, imagine the following: ``APPLY({ Alice: $50, Bob: $50 },"
 
 How this state is calculated is detailed below.
 
-<<<<<<< HEAD
+
 This is important because we then can understand how smart contracts fit into this model. The use of a state machine allow the network to store the current state or values of a contract at any given time. Given as these contracts can have lots of variables to track, this is essential. It also allows us to create many layer-2 scaling operations off-chain. This I will explain later.
-=======
+
 More detailed information can be found `here <https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378>`_.
->>>>>>> 90a58fbb26c1fce47c05bb498d25c49832d84f75
 
 Accounts
 ----------

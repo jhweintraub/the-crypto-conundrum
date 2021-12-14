@@ -62,7 +62,7 @@ ENS - DNS on Ethereum
 The Ethereum-Name-Service, ENS, is simply this DNS system, but decentralized, and stored on the blockchain. The difference is that instead of linking website-names to IP-addresses, it links wallet-addresses to usernames. This is what I meant when I compared it to Venmo. My public-address is 
 `0xaB5409b0E5a66AcC9D63f668414539A60a5917C1 <https://etherscan.io/address/0xaB5409b0E5a66AcC9D63f668414539A60a5917C1>`_. If you wanted to send me money, you would need that information. I could text it to you, or more likely would give you a QR-Code to scan. With ENS, all I would need to tell you is **jhweintraub.eth**. Your wallet will automatically convert that domain into its corresponding address, so that you can be sure you're sending cryptocurrency to the right place. It happens almost-instantly, in your wallet, without you having to do anything.
 
-The ENS-system is simply a series of smart-contracts, keeping this information so that your wallet can utilize it.
+The ENS-system is simply a series of smart-contracts, keeping this information so that your wallet can utilize it. The mapping of a name -> address is stored over a variety of different contracts. They are known as resolvers, and each address has at least one-resolver. This is shown to you when you register the domain. It is not important if you only wish to use your domain for receiving cryptocurrency.
 
 I'll show you how easy it is. Simply open up an ENS-enabled wallet, such as metamask, and click "send". Then simply type in the domain-name you want to send it to, and watch it pop up.
 

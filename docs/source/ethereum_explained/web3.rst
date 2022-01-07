@@ -1,7 +1,7 @@
 Web3
 ======
 
-The 2021 Collin's Dictionary `word of the year is NFT <https://www.cnn.com/style/article/nft-word-of-the-year-collins-scli-intl-gbr/index.html>`_. NFT's have exploded in popularity, which in turn has kickstarted discussion on a larger collection of technology known as **Web3**. Billions of dollars have flown into the space, and caught the attention of everyfrom from Lawmakers, to Tech-executives, to professional-atheletes. But what exactly is Web3? Some have heralded Web3 as the future of the internet. Others have decried it as a series of Ponzi-schemes and frauds. Only the future will tell what the future of the internet holds, but for now it's worth discussing exactly what it is, and why it could potentially change the way we use the internet. 
+The 2021 Collin's Dictionary `word of the year is NFT <https://www.cnn.com/style/article/nft-word-of-the-year-collins-scli-intl-gbr/index.html>`_. NFT's have exploded in popularity, which in turn has kickstarted discussion on a larger collection of technology known as **Web3**. Billions of dollars have flown into the space, and caught the attention of everyone from lawmakers, to tech-executives, to professional-atheletes. But what exactly is Web3? Some have heralded Web3 as the future of the internet. Others have decried it as a series of Ponzi-schemes and frauds. Only the future will tell what the future of the internet holds, but for now it's worth discussing exactly what it is, and why it could potentially change the way we use the internet. 
 
 History of the Internet
 ------------------------

@@ -237,6 +237,7 @@ Shoutout to Roey Shoshan for coming up with the name
    ethereum_explained/eip_1559
    ethereum_explained/layer2
    ethereum_explained/misconceptions
+   ethereum_explained/web3
    ethereum_explained/developers_corner
 
 

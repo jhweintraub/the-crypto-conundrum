@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -29,11 +29,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -110,6 +109,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/eip_1559.html">EIP-1559</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/layer2.html">Rollups and Sidechains</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/misconceptions.html">Common Criticism and Misconceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/web3.html">Web3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/developers_corner.html">Developers Corner</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Investment Rules:</span></p>
@@ -135,6 +135,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="daos.html">Decentralized Governance and DAO’s</a></li>
 <li class="toctree-l1"><a class="reference internal" href="defi.html">DeFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ens.html">Ethereum Name Service</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Altcoins, Explained:</span></p>
 <ul>
@@ -218,7 +219,8 @@
 <p>However, these centralized exchanges have to run all the time, constantly checking for bids from both sides. This can be very slow, and in the world of smart contracts, <strong>incredibly expensive</strong>. Uniswap, and all AMM’s, avoid this by using an automated strategy for calculating price. It is done algorithmically after every trade, constantly adjusting itself to your benefit. It does this through a collection known as a <em>liquidity pool</em>.</p>
 <p><strong>Why would you use this?</strong></p>
 <blockquote>
-<div>Let’s say you wanted to trade your Ether for Chainlink, for whatever reason. You might not want to go through an exchange. This can be because of high exchange fees, lack of trust, desire for anonymity, or that exchanges will make you sell your ether first, incurring a taxable profit event. With Uniswap, one transaction can allow you to directly trade one asset for another, without first having to sell on the open market.</div></blockquote>
+<div><p>Let’s say you wanted to trade your Ether for Chainlink, for whatever reason. You might not want to go through an exchange. This can be because of high exchange fees, lack of trust, desire for anonymity, or that exchanges will make you sell your ether first, incurring a taxable profit event. With Uniswap, one transaction can allow you to directly trade one asset for another, without first having to sell on the open market.</p>
+</div></blockquote>
 </div>
 <div class="section" id="how-does-it-work">
 <h2>How does it work?<a class="headerlink" href="#how-does-it-work" title="Permalink to this headline">¶</a></h2>
@@ -230,18 +232,18 @@
 <p><em>Image Source: Uniswap Web Interface</em></p>
 <p>This is the web interface for Uniswap. It’s very simple. You simply select the asset you want to trade, the one you want to receive, and the amount you want to put in. It then calculates the amount you get in return, and other necessary data behind the scenes. All you have to do is click send, after connecting your browser-wallet.</p>
 <p><strong>Why does it have the price of Ether listed 3 times? And why is the amount I get in return the lowest?</strong></p>
-<dl class="docutils">
-<dt>This is the result of two things:</dt>
-<dd><ol class="first last arabic simple">
-<li>The price of Ether <code class="docutils literal notranslate"><span class="pre">~$2,416.68</span></code> is the current market value, as retrieved by some external website. This tells you want the actual exchange-market-value is.</li>
-<li>The value it returns to you is an estimate, at your time of transaction. It is defined by the liquidity pool. This number fluctuates every second, as people add and remove from the liquidity pool. It will make more sense later how this number is calculated, when I explain it in depth. The more assets in the pool, and the more people trading, the closer this number gets to its true value.</li>
-<li>You have to pay a transaction fee to the liquidity providers. Based on the coins you are trading. This is factored into the amount of tokens you receive in exchange.</li>
+<dl class="simple">
+<dt>This is the result of two things:</dt><dd><ol class="arabic simple">
+<li><p>The price of Ether <code class="docutils literal notranslate"><span class="pre">~$2,416.68</span></code> is the current market value, as retrieved by some external website. This tells you want the actual exchange-market-value is.</p></li>
+<li><p>The value it returns to you is an estimate, at your time of transaction. It is defined by the liquidity pool. This number fluctuates every second, as people add and remove from the liquidity pool. It will make more sense later how this number is calculated, when I explain it in depth. The more assets in the pool, and the more people trading, the closer this number gets to its true value.</p></li>
+<li><p>You have to pay a transaction fee to the liquidity providers. Based on the coins you are trading. This is factored into the amount of tokens you receive in exchange.</p></li>
 </ol>
 </dd>
 </dl>
 <p>It’s also important to remember, that without an external source of data, it is truly a mathematical marvel how accurate this system is. If coinbase quotes you a a price of <code class="docutils literal notranslate"><span class="pre">~$2,416/Eth</span></code> and Uniswap gives you <code class="docutils literal notranslate"><span class="pre">~$2,412/Eth</span></code> then it’s only a <code class="docutils literal notranslate"><span class="pre">0.16%</span></code> difference in true value.</p>
 <blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">(4</span> <span class="pre">/</span> <span class="pre">2416)</span> <span class="pre">*</span> <span class="pre">100</span> <span class="pre">=</span> <span class="pre">0.16%</span></code></div></blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(4</span> <span class="pre">/</span> <span class="pre">2416)</span> <span class="pre">*</span> <span class="pre">100</span> <span class="pre">=</span> <span class="pre">0.16%</span></code></p>
+</div></blockquote>
 </div>
 <div class="section" id="providing-liquidity">
 <h2>Providing Liquidity<a class="headerlink" href="#providing-liquidity" title="Permalink to this headline">¶</a></h2>
@@ -295,16 +297,15 @@
 <p>Slippage is simply when the amount you expect to receive is different from the amount you really receive. If you initiate a transaction on Uniswap, expecting to receive <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">Eth</span></code>, and when the transaction finishes you only receive <code class="docutils literal notranslate"><span class="pre">99</span> <span class="pre">Eth</span></code>, your slippage rate is <code class="docutils literal notranslate"><span class="pre">1%</span></code>. This is obviously bad for you, because you get less than you want. This is because of the rapidly fluctuating price of various assets. There are two ways this occurs:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><dl class="first docutils">
-<dt>Sometimes, when your trade was very large, you can move the point on the liquidity curve. If you’re trading <code class="docutils literal notranslate"><span class="pre">$10k</span></code> worth of assets in a pool with only <code class="docutils literal notranslate"><span class="pre">$100k</span></code> in provided liquidity, then your trade has the potential to dramatically move the point on the price curve. This would result in a devaluation of your own assets. This is also known as the <em>price impact</em>.</dt>
-<dd><ol class="first last loweralpha">
-<li>Luckily this can be solved by breaking your large transactions into smaller transactions. This gives arbitragers time to leverage the price change, and keep your transaction from causing too much havoc.</li>
-<li>This is also solved by simply having larger pools. The more assets there are in a pool, the more difficult it is for one trade to change the price.</li>
+<li><dl class="simple">
+<dt>Sometimes, when your trade was very large, you can move the point on the liquidity curve. If you’re trading <code class="docutils literal notranslate"><span class="pre">$10k</span></code> worth of assets in a pool with only <code class="docutils literal notranslate"><span class="pre">$100k</span></code> in provided liquidity, then your trade has the potential to dramatically move the point on the price curve. This would result in a devaluation of your own assets. This is also known as the <em>price impact</em>.</dt><dd><ol class="loweralpha simple">
+<li><p>Luckily this can be solved by breaking your large transactions into smaller transactions. This gives arbitragers time to leverage the price change, and keep your transaction from causing too much havoc.</p></li>
+<li><p>This is also solved by simply having larger pools. The more assets there are in a pool, the more difficult it is for one trade to change the price.</p></li>
 </ol>
 </dd>
 </dl>
 </li>
-<li>Your asset just depreciated on the open market while waiting for the transaction to be processed. You might end up with the same amount of output tokens, but if you wanted to sell it on Coinbase, the lower price just means less profit.</li>
+<li><p>Your asset just depreciated on the open market while waiting for the transaction to be processed. You might end up with the same amount of output tokens, but if you wanted to sell it on Coinbase, the lower price just means less profit.</p></li>
 </ol>
 </div></blockquote>
 <p>Sometimes however, you can be victim of a <em>sandwich attack</em>. This is when someone else essentially steals your trade, to make their own profit at your expense. When you submit a trade, before it is processed and put into a block, it sits in what’s known as the <em>mempool</em>. There are bots that look at all waiting transactions, and basically copy your large ones and execute them before you. They then wait until your transaction is also processed, and submits a third transaction immediately after, selling the assets you just bought for profit. It’s a <em>sandwich attack</em> because it sandwiches your own transaction between two others.</p>
@@ -312,9 +313,9 @@
 <p>Let’s take an imaginary liquidity pool with <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">Ether</span> <span class="pre">and</span> <span class="pre">100</span> <span class="pre">Dai</span></code>. This makes the exchange rate <code class="docutils literal notranslate"><span class="pre">10/1</span> <span class="pre">for</span> <span class="pre">Ether-&gt;Dai</span></code> so <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Eth</span> <span class="pre">=</span> <span class="pre">10</span> <span class="pre">Dai</span></code>, or <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Dai</span> <span class="pre">=</span> <span class="pre">.1</span> <span class="pre">Eth</span></code>. In this situation with the equation <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">*</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">k</span></code> you get <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">*</span> <span class="pre">10</span> <span class="pre">=</span> <span class="pre">1,000</span></code>.</p>
 <p>Now let’s imagine I was about to make a trade of <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">Ether</span></code> for what I think is about to be <code class="docutils literal notranslate"><span class="pre">~33.33</span> <span class="pre">Dai</span></code>. This fits the rules because afterwards <code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">Eth</span> <span class="pre">*</span> <span class="pre">66.67</span> <span class="pre">Dai</span> <span class="pre">=</span> <span class="pre">1,000</span></code> and <code class="docutils literal notranslate"><span class="pre">100-66.67</span> <span class="pre">=</span> <span class="pre">33.33</span></code>. For the sake of this example, don’t worry about the bogus exchange deal that results from tons of slippage. You expect that trade to get you <code class="docutils literal notranslate"><span class="pre">6.66</span> <span class="pre">Dai/Eth</span></code>.</p>
 <p>Someone with a mempool bot may see this high impact trade you’re about to make, and decide to sandwich you. They take the exact same trade and execute it before you in the block, at your expected exchange rate. Remember, when this trade executes the bool re-balances and your next transaction would therefore be at a different rate than what you’re expecting. After this transaction, the pool contains <code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">Eth</span> <span class="pre">&amp;</span> <span class="pre">66.67</span> <span class="pre">Dai</span></code>.</p>
-<dl class="docutils">
-<dt>When your transaction goes to be executed, you then get the following exchange:</dt>
-<dd><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">Ether</span> <span class="pre">-&gt;</span> <span class="pre">16.67</span> <span class="pre">Dai</span></code> or <code class="docutils literal notranslate"><span class="pre">3.334</span> <span class="pre">Dai/Eth</span></code>. This is because after your transaction occurs the pool would contain <code class="docutils literal notranslate"><span class="pre">20</span> <span class="pre">Eth</span> <span class="pre">&amp;</span> <span class="pre">50</span> <span class="pre">Dai</span></code> because <code class="docutils literal notranslate"><span class="pre">20</span> <span class="pre">*</span> <span class="pre">50</span> <span class="pre">=</span> <span class="pre">1,000</span></code>. Therefore you’ve seen basically <code class="docutils literal notranslate"><span class="pre">~50%</span> <span class="pre">slippage</span></code>, a <code class="docutils literal notranslate"><span class="pre">50%</span></code> change in your expected value, and your real value.</dd>
+<dl class="simple">
+<dt>When your transaction goes to be executed, you then get the following exchange:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">Ether</span> <span class="pre">-&gt;</span> <span class="pre">16.67</span> <span class="pre">Dai</span></code> or <code class="docutils literal notranslate"><span class="pre">3.334</span> <span class="pre">Dai/Eth</span></code>. This is because after your transaction occurs the pool would contain <code class="docutils literal notranslate"><span class="pre">20</span> <span class="pre">Eth</span> <span class="pre">&amp;</span> <span class="pre">50</span> <span class="pre">Dai</span></code> because <code class="docutils literal notranslate"><span class="pre">20</span> <span class="pre">*</span> <span class="pre">50</span> <span class="pre">=</span> <span class="pre">1,000</span></code>. Therefore you’ve seen basically <code class="docutils literal notranslate"><span class="pre">~50%</span> <span class="pre">slippage</span></code>, a <code class="docutils literal notranslate"><span class="pre">50%</span></code> change in your expected value, and your real value.</p>
+</dd>
 </dl>
 <p>Now, with both transaction executed, this pool is lopsided to Eth, with the price pushed down. The current exchange rate now looks like <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Dai</span> <span class="pre">=</span> <span class="pre">0.4</span> <span class="pre">Eth</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Eth</span> <span class="pre">=</span> <span class="pre">2.5</span> <span class="pre">Dai</span></code>. This has created an arbitrage opportunity for anyone holding Dai to bring the price back to equilibrium. The attacker who sandwiches you then sells their bought Dai back to the pool for Eth. They get the following exchange.</p>
 <p><code class="docutils literal notranslate"><span class="pre">33.33</span> <span class="pre">Dai</span> <span class="pre">-&gt;</span> <span class="pre">8</span> <span class="pre">Eth</span></code>. This is because the pool after the sale contains <code class="docutils literal notranslate"><span class="pre">83.33</span> <span class="pre">Dai</span> <span class="pre">*</span> <span class="pre">12</span> <span class="pre">Eth</span></code>. Remember that the constant product must be <code class="docutils literal notranslate"><span class="pre">1000</span></code>, so with a little bit of algebra we know that <code class="docutils literal notranslate"><span class="pre">1000/83.33</span> <span class="pre">=</span> <span class="pre">12</span></code> and <code class="docutils literal notranslate"><span class="pre">20-12</span> <span class="pre">=</span> <span class="pre">8</span></code>, so the attacker now has <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">Eth</span></code>. They got an exchange rate of <code class="docutils literal notranslate"><span class="pre">4.16</span> <span class="pre">Eth/Dai</span></code>. Now the attacker has <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">Eth</span></code>, instead of the <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">Eth</span></code> he started with, for a <strong>60% Profit</strong>.</p>

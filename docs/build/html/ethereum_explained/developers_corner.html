@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
@@ -29,11 +29,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -41,7 +39,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="General Strategy" href="../investment-strategies/rules.html" />
-    <link rel="prev" title="Common Criticism and Misconceptions" href="misconceptions.html" /> 
+    <link rel="prev" title="Web3" href="web3.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -110,6 +108,7 @@
 <li class="toctree-l1"><a class="reference internal" href="eip_1559.html">EIP-1559</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layer2.html">Rollups and Sidechains</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misconceptions.html">Common Criticism and Misconceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web3.html">Web3</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Developers Corner</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#cryptography">Cryptography</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#smart-contract-code">Smart Contract Code</a></li>
@@ -152,6 +151,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../dapps/uniswap.html">Uniswap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dapps/daos.html">Decentralized Governance and DAO’s</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dapps/defi.html">DeFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/ens.html">Ethereum Name Service</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Altcoins, Explained:</span></p>
 <ul>
@@ -240,32 +240,32 @@
 <p>In Ethereum, a smart contract is written in a custom programming language, known as <strong>Solidity</strong> (although there are others such as <strong>Vyper</strong>). By spending ethereum as a transaction fee, you can cause the contract to execute in a pre-determined way. <a class="reference external" href="https://hackernoon.com/turing-completeness-and-the-ethereum-blockchain-c5a93b865c1a#:~:text=Solidity%2C%20the%20Turing%20complete%20language,deployed%20once%20on%20the%20blockchain.&amp;text=A%20hacker%20can%20run%20any,to%20create%20an%20unauthorized%20effect.">Solidity is turing-complete</a>, statically typed, supports inheritance, libraries, and complex user-defined types among other features.</p>
 <p>Take the following code snippet of an example smart contract:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*version number*/</span>
-<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="o">;</span>
+<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span>
 
 <span class="cm">/*contract name*/</span>
-<span class="n">contract</span> <span class="n">example_contract</span> <span class="o">{</span>
+<span class="n">contract</span> <span class="n">example_contract</span> <span class="p">{</span>
 
         <span class="cm">/*function name with parameters and return values*/</span>
-        <span class="n">function</span> <span class="nf">add</span><span class="o">(</span><span class="n">uint256</span> <span class="n">a</span><span class="o">,</span> <span class="n">uint256</span> <span class="n">b</span><span class="o">)</span> <span class="n">returns</span> <span class="o">(</span><span class="n">uint256</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
+        <span class="n">function</span> <span class="nf">add</span><span class="p">(</span><span class="n">uint256</span> <span class="n">a</span><span class="p">,</span> <span class="n">uint256</span> <span class="n">b</span><span class="p">)</span> <span class="n">returns</span> <span class="p">(</span><span class="n">uint256</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
 
-        <span class="o">}</span>
-<span class="o">}</span>
+        <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>This is a smart-contract written in <em>Solidity</em>. It’s name is <em>example_contract</em> It contains a single function, called <em>add</em>. This is a function that takes an input of two-numbers and adds them together, returning their sum. When you deploy this contract, it is given its own address, much like your wallet. If you wanted execute this contract, you would initiate a transaction with the contract’s address, and execution information. This information includes the name of the function you are calling, the input values, cryptographic signatures, etc.</p>
 <p>Because the contract has a valid address, when deployed it can also do things such as hold balances like a normal wallet. This allows you to do things such as send Ether and various tokens to it to hold, and distribute. However, nobody owns the private key to this address. If you wanted to withdraw from the contract, you would have to write in various functions to allow you to do so. Take this example code.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="o">;</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span>
 
-<span class="n">contract</span> <span class="n">example_contract2</span> <span class="o">{</span>
+<span class="n">contract</span> <span class="n">example_contract2</span> <span class="p">{</span>
 
-        <span class="n">uint256</span> <span class="n">balance</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="n">uint256</span> <span class="n">balance</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-        <span class="n">function</span> <span class="nf">send_ether</span><span class="o">(</span><span class="n">address</span> <span class="n">payable</span> <span class="n">recipient</span><span class="o">)</span> <span class="n">payable</span> <span class="o">{</span>
-                <span class="n">balance</span> <span class="o">+=</span> <span class="n">msg</span><span class="o">.</span><span class="na">value</span><span class="o">;</span> <span class="cm">/*msg.value is the transaction value*/</span>
-                <span class="n">recipient</span><span class="o">.</span><span class="na">transfer</span><span class="o">(</span><span class="n">balance</span><span class="o">)</span> <span class="cm">/*send the balance to the recipient*/</span>
-        <span class="o">}</span>
-<span class="o">}</span>
+        <span class="n">function</span> <span class="nf">send_ether</span><span class="p">(</span><span class="n">address</span> <span class="n">payable</span> <span class="n">recipient</span><span class="p">)</span> <span class="n">payable</span> <span class="p">{</span>
+                <span class="n">balance</span> <span class="o">+=</span> <span class="n">msg</span><span class="p">.</span><span class="na">value</span><span class="p">;</span> <span class="cm">/*msg.value is the transaction value*/</span>
+                <span class="n">recipient</span><span class="p">.</span><span class="na">transfer</span><span class="p">(</span><span class="n">balance</span><span class="p">)</span> <span class="cm">/*send the balance to the recipient*/</span>
+        <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>This code contains a method that allows you to store and send ether from one person to another. If you see the word <em>payable</em> means that if you call this method, you can send ether alongside the input value of a recipient, and the contract will do with it what you specify. If you don’t specify to send it somewhere, then it will hold the amount in its account balance for the contract. This is useful because it allows you to specify what to do if someone sends ether to the contract address, alongside relevant input data. For applications like DeFi, or that involve sending money around, it is a very powerful tool for trust less funds exchanges.</p>
@@ -275,18 +275,18 @@
 <div class="section" id="logs">
 <h2>Logs<a class="headerlink" href="#logs" title="Permalink to this headline">¶</a></h2>
 <p>You also have the option to publish the metadata about a transaction, that you define. These logs are known as <em>events</em>. Take the following code.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="o">;</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span>
 
 <span class="c1">//Declare an Event</span>
-<span class="n">event</span> <span class="nf">transfer</span><span class="o">(</span><span class="n">address</span> <span class="n">indexed</span> <span class="n">_from</span><span class="o">,</span> <span class="n">address</span> <span class="n">indexed</span> <span class="n">_to</span><span class="o">,</span> <span class="n">uint</span> <span class="n">_value</span><span class="o">);</span>
+<span class="n">event</span> <span class="nf">transfer</span><span class="p">(</span><span class="n">address</span> <span class="n">indexed</span> <span class="n">_from</span><span class="p">,</span> <span class="n">address</span> <span class="n">indexed</span> <span class="n">_to</span><span class="p">,</span> <span class="n">uint</span> <span class="n">_value</span><span class="p">);</span>
 
 
-<span class="n">contract</span> <span class="n">example_contract2</span> <span class="o">{</span>
+<span class="n">contract</span> <span class="n">example_contract2</span> <span class="p">{</span>
 
-        <span class="n">function</span> <span class="nf">send_ether</span><span class="o">(</span><span class="n">address</span> <span class="n">payable</span> <span class="n">recipient</span><span class="o">)</span> <span class="n">payable</span> <span class="o">{</span>
-                <span class="n">emit</span> <span class="nf">transfer</span><span class="o">(</span><span class="n">msg</span><span class="o">.</span><span class="na">sender</span><span class="o">,</span> <span class="n">recipient</span><span class="o">,</span> <span class="n">msg</span><span class="o">.</span><span class="na">value</span><span class="o">);</span>
-        <span class="o">}</span>
-<span class="o">}</span>
+        <span class="n">function</span> <span class="nf">send_ether</span><span class="p">(</span><span class="n">address</span> <span class="n">payable</span> <span class="n">recipient</span><span class="p">)</span> <span class="n">payable</span> <span class="p">{</span>
+                <span class="n">emit</span> <span class="nf">transfer</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="na">sender</span><span class="p">,</span> <span class="n">recipient</span><span class="p">,</span> <span class="n">msg</span><span class="p">.</span><span class="na">value</span><span class="p">);</span>
+        <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>We first declare an event and its parameters. In this case it’s <em>transfer</em> and it requires a sender, a recipient, and a value. When the function <em>send</em> is executed, it will publish this metadata to the chain alongside the rest of the transaction, as JSON data. This is done with the keyword <em>emit</em>. We can view this on a <a class="reference external" href="https://etherscan.io/tx/0x265d64a8d0e7f86cae84d29bc9b86dc796b0eaae9e84a99d0b1e82b17609b622#eventlog">block explorer</a> beautified to look like this</p>
@@ -393,49 +393,44 @@
 <h2>Client-Types<a class="headerlink" href="#client-types" title="Permalink to this headline">¶</a></h2>
 <p>There are 4 different types of Clients that can be run on Ethereum:</p>
 <ol class="arabic simple">
-<li><strong>“Full” Sync</strong> - Gets the block headers, the block bodies, and validates every element from genesis block. Contains everything.</li>
-<li><strong>Fast Sync</strong> - Gets the block headers, the block bodies, and processes no transactions until current block - 64(*). Then it gets a snapshot state and goes like a full synchronization moving forward. It lets you get up to current status very quickly if you don’t care about history.</li>
-<li><strong>Light Sync</strong> - Gets only the current state. To verify elements, it needs to ask to full (archive) nodes for the corresponding tree leaves to regenerate the entire world-state from the merkle-patricia-tree.</li>
-<li><strong>Warp Sync</strong> - Built for the <a class="reference external" href="https://github.com/openethereum/openethereum">OpenEthereum Client</a>, it involves sending snapshots over the network to get the full state at a given block extremely quickly. Then, in the background, it fills in the blocks between the genesis and the snapshot block. It lets you immediately jump to a certain point and then fill in the history behind it which may be less important at that-very-moment. More info can be found <a class="reference external" href="https://openethereum.github.io/Warp-Sync">on the OpenEthereum Website</a>.</li>
+<li><p><strong>“Full” Sync</strong> - Gets the block headers, the block bodies, and validates every element from genesis block. Contains everything.</p></li>
+<li><p><strong>Fast Sync</strong> - Gets the block headers, the block bodies, and processes no transactions until current block - 64(*). Then it gets a snapshot state and goes like a full synchronization moving forward. It lets you get up to current status very quickly if you don’t care about history.</p></li>
+<li><p><strong>Light Sync</strong> - Gets only the current state. To verify elements, it needs to ask to full (archive) nodes for the corresponding tree leaves to regenerate the entire world-state from the merkle-patricia-tree.</p></li>
+<li><p><strong>Warp Sync</strong> - Built for the <a class="reference external" href="https://github.com/openethereum/openethereum">OpenEthereum Client</a>, it involves sending snapshots over the network to get the full state at a given block extremely quickly. Then, in the background, it fills in the blocks between the genesis and the snapshot block. It lets you immediately jump to a certain point and then fill in the history behind it which may be less important at that-very-moment. More info can be found <a class="reference external" href="https://openethereum.github.io/Warp-Sync">on the OpenEthereum Website</a>.</p></li>
 </ol>
 </div>
 <div class="section" id="transaction-lifecycle">
 <h2>Transaction lifecycle<a class="headerlink" href="#transaction-lifecycle" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>What happens when you want to send a transaction. There are several steps:</dt>
-<dd><ol class="first last arabic simple">
-<li><dl class="first docutils">
-<dt>Constructing the raw transaction. This is in the form of a signed raw transaction hex. Your wallet constructs the raw transaction data, and signs it with your private key. This contains several fields:</dt>
-<dd><ol class="first last arabic">
-<li>The Nonce, in hex. The unsigned integer that represents your transaction count, to prevent double-spends. It is incremented every time you make a transaction, to prevent replay transactions.</li>
-<li>Gas Price, in hex.</li>
-<li>Gas Limit, in hex.</li>
-<li>the recipient, the “to” field.</li>
-<li>the transaction value, in ether, also in hex.</li>
-<li><dl class="first docutils">
-<dt>Extra transaction data. Only necesarry for a smart contract interaction. Calculated automatically by your wallet. If you want to do it yourself though, it’s very easy:</dt>
-<dd><ol class="first last arabic">
-<li><dl class="first docutils">
-<dt>Take the sha3 of the function signature from the contract ABI, without the parameter names.</dt>
-<dd><ul class="first last">
-<li>If the function signature is <code class="docutils literal notranslate"><span class="pre">mint(address</span> <span class="pre">to)</span></code>, then you should only use <code class="docutils literal notranslate"><span class="pre">mint(address)</span></code>. This is because the EVM doesn’t care about the parameters, it just needs to be able to identify the function.</li>
-<li><code class="docutils literal notranslate"><span class="pre">web3.utils.sha3(&quot;mint(address)&quot;)</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">0x7f9c8b4781db704d0917ecead0efa9e769fadacf34db8e74afcc18c0c8f35497</span></code></li>
+<dl class="simple">
+<dt>What happens when you want to send a transaction. There are several steps:</dt><dd><ol class="arabic simple">
+<li><dl class="simple">
+<dt>Constructing the raw transaction. This is in the form of a signed raw transaction hex. Your wallet constructs the raw transaction data, and signs it with your private key. This contains several fields:</dt><dd><ol class="arabic simple">
+<li><p>The Nonce, in hex. The unsigned integer that represents your transaction count, to prevent double-spends. It is incremented every time you make a transaction, to prevent replay transactions.</p></li>
+<li><p>Gas Price, in hex.</p></li>
+<li><p>Gas Limit, in hex.</p></li>
+<li><p>the recipient, the “to” field.</p></li>
+<li><p>the transaction value, in ether, also in hex.</p></li>
+<li><dl class="simple">
+<dt>Extra transaction data. Only necesarry for a smart contract interaction. Calculated automatically by your wallet. If you want to do it yourself though, it’s very easy:</dt><dd><ol class="arabic simple">
+<li><dl class="simple">
+<dt>Take the sha3 of the function signature from the contract ABI, without the parameter names.</dt><dd><ul class="simple">
+<li><p>If the function signature is <code class="docutils literal notranslate"><span class="pre">mint(address</span> <span class="pre">to)</span></code>, then you should only use <code class="docutils literal notranslate"><span class="pre">mint(address)</span></code>. This is because the EVM doesn’t care about the parameters, it just needs to be able to identify the function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">web3.utils.sha3(&quot;mint(address)&quot;)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0x7f9c8b4781db704d0917ecead0efa9e769fadacf34db8e74afcc18c0c8f35497</span></code></p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li>Take the first <em>4</em> bytes of the hash -&gt; <code class="docutils literal notranslate"><span class="pre">0x7f9c8b47</span></code></li>
-<li><dl class="first docutils">
-<dt>Take the input parameters, and convert to bytes32, a 32-byte hex string. If the value of the string is less than 32-bytes, pad it on the left. If it is an address, or already in hex form, just do the padding, no extra conversion required.</dt>
-<dd><ul class="first last">
-<li><code class="docutils literal notranslate"><span class="pre">0xaB5409b0E5a66AcC9D63f668414539A60a5917C1</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">000000000000000000000000aB5409b0E5a66AcC9D63f668414539A60a5917C</span></code></li>
+<li><p>Take the first <em>4</em> bytes of the hash -&gt; <code class="docutils literal notranslate"><span class="pre">0x7f9c8b47</span></code></p></li>
+<li><dl class="simple">
+<dt>Take the input parameters, and convert to bytes32, a 32-byte hex string. If the value of the string is less than 32-bytes, pad it on the left. If it is an address, or already in hex form, just do the padding, no extra conversion required.</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0xaB5409b0E5a66AcC9D63f668414539A60a5917C1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">000000000000000000000000aB5409b0E5a66AcC9D63f668414539A60a5917C</span></code></p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li>Repeat for each input parameter, and append to the function signature.</li>
+<li><p>Repeat for each input parameter, and append to the function signature.</p></li>
 </ol>
 </dd>
 </dl>
@@ -444,13 +439,13 @@
 </dd>
 </dl>
 </li>
-<li>Sign the transaction with your private key.</li>
-<li>Submit your transaction request by sending it to a local node. This means that the transaction construction and signing can be done offline. This is often to protect the secrecy of the security key and prevent transaction tampering. You can do this using <a class="reference external" href="https://etherscan.io/pushTx">Etherscan’s nodes</a> by submitting the raw transaction data.</li>
-<li>The node will propagate the unconfirmed transaction to its peers, if they choose they will add it to their mempool. Some may reject it if they feel the gas is too low or if the transaction is invalid. This is because the mempool has a finite size.</li>
-<li>The transaction sits in the mempool until a miner chooses to include it in a block. They include it in the block and execute the transactions and mine it until completion.</li>
-<li>Nodes propagate the new block and state information through its peers. If the block is accepted, they will add it to their chain. If not, they ignore it.</li>
-<li>Propagation continues until the entire network has the updated blocks.</li>
-<li>Process repeats indefinitely.</li>
+<li><p>Sign the transaction with your private key.</p></li>
+<li><p>Submit your transaction request by sending it to a local node. This means that the transaction construction and signing can be done offline. This is often to protect the secrecy of the security key and prevent transaction tampering. You can do this using <a class="reference external" href="https://etherscan.io/pushTx">Etherscan’s nodes</a> by submitting the raw transaction data.</p></li>
+<li><p>The node will propagate the unconfirmed transaction to its peers, if they choose they will add it to their mempool. Some may reject it if they feel the gas is too low or if the transaction is invalid. This is because the mempool has a finite size.</p></li>
+<li><p>The transaction sits in the mempool until a miner chooses to include it in a block. They include it in the block and execute the transactions and mine it until completion.</p></li>
+<li><p>Nodes propagate the new block and state information through its peers. If the block is accepted, they will add it to their chain. If not, they ignore it.</p></li>
+<li><p>Propagation continues until the entire network has the updated blocks.</p></li>
+<li><p>Process repeats indefinitely.</p></li>
 </ol>
 </dd>
 </dl>
@@ -461,43 +456,43 @@
 <p>An ethereum client is simply a program resposible for receiving blocks, creating new ones, and maintaining the network. There are many different versions, built in different languages. For example, there are currently clients built in languages such as Go, Rust, C#, Java, etc. Each one is maintained by a different company. Geth, built in Go, is maintained by the Ethereum foundation, and was the first client-type. The C# client is maintained by Nethermind, a for-profit-company based in England.</p>
 <p>The purpose behind this was to make it so that one developer didn’t maintain exclusive control over the protocol, creating centralization risk. By diversifying clients, the security risk goes down because the risk of a chain-breaking bug is localized to a single client-type. It also prevents a company from holding the community hostage over the demands of their clients.</p>
 <p>However, this system only works in a world where all of these clients and companies are on the same page. This is where the Ethereum foundation comes into play. The foundation is the entity for <em>coordinating development</em> between the different client maintainers. They are responsible for maintaining the list of things a client needs to be able to do, so that all clients could follow it. Let’s say you wanted to be cool and build a client in <a class="reference external" href="https://en.wikipedia.org/wiki/Brainfuck">brainfuck</a>, besides being a masochist, you would be able to do so. This is because the Ethereum foundation keeps a detailed <a class="reference external" href="https://github.com/ethereum/execution-specs">specification of requirements for each client</a>. If you follow it, and implement it in your language-of-choice, then your client will be able to interact with all others without any problems. If you don’t then you won’t be able to interact properly, and if you’re building a <a class="reference external" href="https://thecryptoconundrum.net/ethereum_explained/eth2.html#proof-of-stake">staking client</a> you may even be responsible for users being slashed, and lose their stake.</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="23%" />
-<col width="16%" />
-<col width="37%" />
-<col width="24%" />
+<col style="width: 23%" />
+<col style="width: 16%" />
+<col style="width: 37%" />
+<col style="width: 24%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>Client</td>
-<td>Language</td>
-<td>Operating System</td>
-<td>Sync Strategy</td>
+<tbody>
+<tr class="row-odd"><td><p>Client</p></td>
+<td><p>Language</p></td>
+<td><p>Operating System</p></td>
+<td><p>Sync Strategy</p></td>
 </tr>
-<tr class="row-even"><td>Geth</td>
-<td>Go</td>
-<td>Linux, Windows, macOS</td>
-<td>Fast, Full</td>
+<tr class="row-even"><td><p>Geth</p></td>
+<td><p>Go</p></td>
+<td><p>Linux, Windows, macOS</p></td>
+<td><p>Fast, Full</p></td>
 </tr>
-<tr class="row-odd"><td>Nethermind</td>
-<td>C# .NET</td>
-<td>Linux, Windows, macOS</td>
-<td>Fast, Full</td>
+<tr class="row-odd"><td><p>Nethermind</p></td>
+<td><p>C# .NET</p></td>
+<td><p>Linux, Windows, macOS</p></td>
+<td><p>Fast, Full</p></td>
 </tr>
-<tr class="row-even"><td>Besu</td>
-<td>Java</td>
-<td>Linux, Windows, macOS</td>
-<td>Fast, Full</td>
+<tr class="row-even"><td><p>Besu</p></td>
+<td><p>Java</p></td>
+<td><p>Linux, Windows, macOS</p></td>
+<td><p>Fast, Full</p></td>
 </tr>
-<tr class="row-odd"><td>Erigon</td>
-<td>Go</td>
-<td>Linux, Windows, macOS</td>
-<td>Fast, Full</td>
+<tr class="row-odd"><td><p>Erigon</p></td>
+<td><p>Go</p></td>
+<td><p>Linux, Windows, macOS</p></td>
+<td><p>Fast, Full</p></td>
 </tr>
-<tr class="row-even"><td>OpenEthereum</td>
-<td>Rust</td>
-<td>Linux, Windows, macOS</td>
-<td>Warp, Full</td>
+<tr class="row-even"><td><p>OpenEthereum</p></td>
+<td><p>Rust</p></td>
+<td><p>Linux, Windows, macOS</p></td>
+<td><p>Warp, Full</p></td>
 </tr>
 </tbody>
 </table>
@@ -516,11 +511,10 @@
 <div class="section" id="forks">
 <h3>Forks<a class="headerlink" href="#forks" title="Permalink to this headline">¶</a></h3>
 <p>Congratulations, your EIP was approved and now needs to be formally implemented into the protocol. How does that happen. With a fork. Since the blockchain is immutable, the only way to change the rules is to keep moving forwards. When an update occurs, so does a fork in the chain.</p>
-<dl class="docutils">
-<dt>There are two types of forks, Hard and Soft:</dt>
-<dd><ol class="first last arabic simple">
-<li><strong>Soft Fork</strong> - A soft-fork means backwards-compatability. Only previously-valid blocks are made invalid. This means that old, un-updated, clients and versions can still interpret new updates without change. For example, a gas cost change. If you wanted to increase the gas cost of an <em>ADD</em> operation from 3 -&gt; 4 gas, then that would be introduced in a soft-fork. This means older clients can still interpret new blocks without upgrade. It is used for upgrades that don’t require a change in consensus rules.</li>
-<li><strong>Hard Fork</strong> - A hard fork is for a change in the consensus mechanism. When occured, much like the proverbial road-less-travelled, the chain goes in two-different directions. One with the old rules and one with the new rules. You can choose to keep mining or validating blocks on whichever chain you like, with identical histories up until that point. However, once the two chains diverge, they will never reunite. This means picking the chain with the most people on it is the best-option. Take Bitcoin and Bitcoin Cash. The two split because of an increase in block-size. Because the two chains have different consensus rules, they are no longer-compatible. Every node must upgrade to the new consensus rules in order to properly validate blocks. EIP-1559 was a hard-fork because it required a change in consensus on the creation/burning of new coins, as well as block size. Most major changes to blockchains utilize the hard-fork.</li>
+<dl class="simple">
+<dt>There are two types of forks, Hard and Soft:</dt><dd><ol class="arabic simple">
+<li><p><strong>Soft Fork</strong> - A soft-fork means backwards-compatability. Only previously-valid blocks are made invalid. This means that old, un-updated, clients and versions can still interpret new updates without change. For example, a gas cost change. If you wanted to increase the gas cost of an <em>ADD</em> operation from 3 -&gt; 4 gas, then that would be introduced in a soft-fork. This means older clients can still interpret new blocks without upgrade. It is used for upgrades that don’t require a change in consensus rules.</p></li>
+<li><p><strong>Hard Fork</strong> - A hard fork is for a change in the consensus mechanism. When occured, much like the proverbial road-less-travelled, the chain goes in two-different directions. One with the old rules and one with the new rules. You can choose to keep mining or validating blocks on whichever chain you like, with identical histories up until that point. However, once the two chains diverge, they will never reunite. This means picking the chain with the most people on it is the best-option. Take Bitcoin and Bitcoin Cash. The two split because of an increase in block-size. Because the two chains have different consensus rules, they are no longer-compatible. Every node must upgrade to the new consensus rules in order to properly validate blocks. EIP-1559 was a hard-fork because it required a change in consensus on the creation/burning of new coins, as well as block size. Most major changes to blockchains utilize the hard-fork.</p></li>
 </ol>
 </dd>
 </dl>
@@ -538,7 +532,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="../investment-strategies/rules.html" class="btn btn-neutral float-right" title="General Strategy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="misconceptions.html" class="btn btn-neutral float-left" title="Common Criticism and Misconceptions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="web3.html" class="btn btn-neutral float-left" title="Web3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

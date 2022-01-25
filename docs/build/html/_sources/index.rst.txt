@@ -260,6 +260,7 @@ Shoutout to Roey Shoshan for coming up with the name
     dapps/daos
     dapps/defi
     dapps/ens
+    dapps/nfts
 
 .. toctree::
     :maxdepth: 1

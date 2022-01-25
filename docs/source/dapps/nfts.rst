@@ -25,7 +25,7 @@ On the other hand, you have non-fungible-items. These are items that are unique,
 
 An NFT therefore means a blockchain-based token, with a unique-identifier. One contract can contain many non-fungible-tokens, each with their own *unique-identifier*. It could be a number, a letter, a string of characters, etc. as long as no-two have the same one. This is what creates non-fungibility.
 
-The point of this, is to assign ownership of something, typically information. The NFT can be used to denote who owns what. Exactly "what" that is, is determined by the person creating the NFT, and identifiable with the NFT itself. Two people can have different NFT's, that are tracked by the same-contract, but reference different pieces of data. This is where it gets confusing.
+The point of this, is to assign ownership of something, typically information. The NFT can be used to denote who owns what. Exactly "what" that is, is determined by the person creating the NFT, and identifiable with the NFT itself. Two people can have different NFT's, that are tracked by the same-contract, but reference different pieces of data.
 
 Data References
 ******************

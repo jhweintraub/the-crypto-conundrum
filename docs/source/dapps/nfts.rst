@@ -1,7 +1,7 @@
 NFTs
 ==========
 
-Let's get it right out of the way, **99% of NFT's are stupid**. They are ugly, serve little to no actual value and are just plain ugly. People are taking them way too seriously, and unfortunately there's even more misinformation and nonsense being spewed about them to delegitimize the entire-space. I right clicked this image just to get it out of the way
+Let's get it right out of the way, **99% of NFT's are stupid**. They are stupid, serve little to no actual value and are just plain ugly. People are taking them way too seriously, and unfortunately there's even more misinformation and nonsense being spewed about them to delegitimize the entire-space. I right clicked this image just to get it out of the way
 
 .. image:: images/nfts/bored_ape_1.jpeg
 
@@ -136,7 +136,7 @@ You may have heard about these through the discussion on the "meta-verse". I'm n
 
 First things first, just because something is Web3/NFT's, does not make it part of the metaverse. Just because it is the metaverse, that doesn't make it Web3/NFT's. They are two separate technologies that people are trying to incorporate together.
 
-There are two cases for using NFT's in the video game space.
+There are three cases for using NFT's in the video game space.
 
   1. Trading-Card Games - If you've ever played a card-game, like Pokemon or Magic the Gathering, this is the  most-common use-case. It means representing the cards as an NFT, and having to link your wallet to access it. By linking your wallet to the game, you can buy play the game with them. Cards can be bought or sold anonymously and directly, instead of having to go through the developer-marketplace, if they exist at all. Most importantly, once a card or item is created, it can't be changed. Your item cannot be improved, removed, or altered arbitrarily. This is done in games like `Gods Unchained <https://godsunchained.com/>`_, `Axie Infinity <https://axieinfinity.com/>`_, etc.
 
@@ -277,11 +277,11 @@ Stupidity
 
 *"Fine, so the technology is useful, and has a lot of benefits, and should be allowed. But it doesn't change the fact that people are spending huge amounts of cash on absolute nonsense. You can't tell me that's reasonable"*
 
-I don't have the appetite for the risks involved in investing in NFTs, which is why I don't do it. What people find desirable and want to spend money on isn't my business. As long as there's been economics, there's been people buying and selling things that aren't worth it. People bought pet rocks, supreme-labeled bricks, beanie-babies, and baseball cards. This is just the next iteration of collecting for a new-generation. A lot of people are gonna lose money, but that's their fault for making a risky investment.
+I don't have the appetite for the risks involved in investing in NFTs, which is why I don't do it. What people find desirable and want to spend money on isn't my business. As long as there's been economics, there's been people buying and selling things that aren't worth it. Don't overthink this. People can, and will, buy anything. People bought beanie-babies, pet-rocks, `Supreme Bricks <https://www.theguardian.com/technology/2016/sep/30/red-clay-brick-selling-for-up-to-1000-on-ebay>`_, Baseball Cards, etc. all with the expectation they would increase in value. This is just the next iteration of collecting for a new-generation. A lot of people are gonna lose money, but that's their fault for making a risky investment.
 
 It's no secret i'm not a fan of all of the art NFT's. I think they detract from the real practical uses of the technology, and I don't invest in them. But someday the market will deflate, and we can get back to focusing on the real uses of the technology that matter.
 
-Don't overthink this. People can, and will, buy anything. People bought beanie-babies, pet-rocks, `Supreme Bricks <https://www.theguardian.com/technology/2016/sep/30/red-clay-brick-selling-for-up-to-1000-on-ebay>`_, Baseball Cards, etc. all with the expectation they would increase in value.
+
 
 The adult-industry for decades has been at the `forefront of technological innovations <https://www.businessinsider.com/the-producer-of-middle-men-talks-to-us-about-how-pornographers-invented-e-commerce-2010-8>`_. To write off the entire world of cryptocurrency because of NFT's is to say that back then digital e-commerce was pointless because it was being used for pornography. We still don't know what some of the applications will be. When the internet was built, nobody could have imagined search-engine-optimization, cloud-based-streaming, payment-processing in e-commerce, etc. Only time will tell what practical uses of this technology holds.
 

@@ -1,7 +1,7 @@
 NFTs
 ==========
 
-Let's get it right out of the way, **99% of NFT's are stupid**. They are stupid, serve little to no actual value and are just plain ugly. People are taking them way too seriously, and unfortunately there's even more misinformation and nonsense being spewed about them to delegitimize the entire-space. I right clicked this image just to get it out of the way
+Let's get it right out of the way, **99% of NFT's are stupid**. They serve little to no actual value and are just plain ugly. People are taking them way too seriously, and unfortunately there's even more misinformation and nonsense being spewed about them to delegitimize the entire-space. I right clicked this image just to get it out of the way
 
 .. image:: images/nfts/bored_ape_1.jpeg
 

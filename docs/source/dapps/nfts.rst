@@ -108,6 +108,10 @@ Another example. The Bored Ape Yacht Club is stupid. BUT, it does have one benef
   :width: 300px
 
 
+*"But if it's just a link, what's to stop me from making my own contract with all of the stolen links?"*
+
+Nothing. There's nothing stopping you from duplicating the contract, and giving yourself all the NFT's. The issue is getting other people to care. The system only works because enough people believe it does. The NFT's have value because a large enough mass of people believe in a singular-contract being a legitimate source of ownership. If you copied all of the bored-apes, it wouldn't be worth anything because you wouldn't be able to convince people that that is the original source of the NFT's. If you can convince enough people that it is, then you could make money off of owning everything, but that is very difficult.
+
 Usage
 --------
 

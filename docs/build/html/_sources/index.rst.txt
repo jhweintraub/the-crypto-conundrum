@@ -146,7 +146,7 @@ The Crypto-Conundrum, future of finance or the next mortgage Bubble?
    <div style="padding: 0px 0;">
    <div class="sib-form-block-1" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;">
    <div class="sib-text-form-block">
-      <p style="max-width:60%;">Subscribe to our newsletter and stay updated on new articles relases.&nbsp;</p>
+      <p style="max-width:60%;">Subscribe to our newsletter and stay updated on new articles.&nbsp;</p>
    </div>
    </div>
    </div>
@@ -237,6 +237,7 @@ Shoutout to Roey Shoshan for coming up with the name
    ethereum_explained/eip_1559
    ethereum_explained/layer2
    ethereum_explained/misconceptions
+   ethereum_explained/merge
    ethereum_explained/web3
    ethereum_explained/developers_corner
 

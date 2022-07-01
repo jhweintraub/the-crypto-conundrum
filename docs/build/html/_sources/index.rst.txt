@@ -267,6 +267,7 @@ Shoutout to Roey Shoshan for coming up with the name
     :maxdepth: 1
     :caption: Altcoins, Explained:
 
+    coins_explained/stablecoins
     coins_explained/monero
     coins_explained/polkadot
     coins_explained/chainlink

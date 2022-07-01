@@ -54,9 +54,13 @@ This is the story of the US' Great Depression, known as `a bank-run <https://www
         :width: 500 px
 
 As a result, the cryptocurrency community has come up with 4 designs for stablecoins:
+
 1. Over-collateralization
+   
 2. Full-Collateralization
+   
 3. Partial-Collateralization
+   
 4. No-Collateralization
 
 When you hear collateral, think *"backing"*, how much of some other asset is backing this stablecoin, such that you can redeem your stablecoin for it. Some coins it might be 1-to-1, others might be nothing. 

@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ethereum Name Service &mdash; The Crypto-Conundrum v1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Stablecoins" href="../coins_explained/stablecoins.html" />
+    <link rel="prev" title="DeFi" href="defi.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> The Crypto-Conundrum
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Who am I?:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">My Resume</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/popular_questions.html">What is Cryptocurrency?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/blockchain.html">The Blockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/exchanges.html">Exchanges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/origins.html">Coin Origins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/important_terms.html">Important Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/bitcoin_vs_ethereum.html">Bitcoin Vs. Ethereum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/picking_coins.html">Picking the Right Coins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/coin_suggestions.html">Coin Suggestions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Ethereum, Explained:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/what_is_it.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/what_is_it.html#what-is-ethereum">What is Ethereum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/how_it_works.html">How Ethereum Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/usability.html">How do I use it</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/gas.html">Transaction Fees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/tokens.html">Tokens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/eth2.html">Ethereum 2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/eip_1559.html">EIP-1559</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/layer2.html">Rollups and Sidechains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/misconceptions.html">Common Criticism and Misconceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/merge.html">The Merge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/web3.html">Web3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/developers_corner.html">Developers Corner</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Investment Rules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/rules.html">General Strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/exit_strategies.html">Define your exit strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/due-dilligence.html">Doing your Due-Dilligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/security.html">Protecting your Cryptocurrency</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/confidence.html">Be Confident</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/staking.html">Mining and Staking</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Decentralized Applications:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="uniswap.html">Uniswap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="daos.html">Decentralized Governance and DAO’s</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nfts.html">NFTs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="defi.html">DeFi</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ethereum Name Service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dns">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dns-issues">DNS Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#digital-autonomy">Digital-Autonomy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ens-dns-on-ethereum">ENS - DNS on Ethereum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ens-token-and-dao">ENS Token and DAO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#registering-a-domain">Registering a Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Altcoins, Explained:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/stablecoins.html">Stablecoins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/monero.html">Monero (XMR)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/polkadot.html">Polkadot (DOT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/chainlink.html">Chainlink (LINK)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">The Crypto-Conundrum</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Ethereum Name Service</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ethereum-name-service">
+<h1>Ethereum Name Service<a class="headerlink" href="#ethereum-name-service" title="Permalink to this headline">¶</a></h1>
+<p><em>Article Sponsored by</em> <a class="reference external" href="https://www.cyberpatch.news/">Cyberpatch.news</a>. <em>Your weekly newletter on the state of the Cybersecurity industry and much more!</em></p>
+<p>Facebook made news recently when it was discovered that they <a class="reference external" href="https://arstechnica.com/tech-policy/2021/12/woman-lost-metaverse-instagram-handle-days-after-facebook-name-change/">unilaterally revoked the “&#64;metaverse” handle from an instagram user</a>. This user was an artist, who had held that username for almost a decade. Because Facebook didn’t like that someone else had it, they decided to just take it. There was no negotiations, no dispute process, no compensation, and nothing the person could do. This is precisely the issue that Cryptocurrency aims to solve, and why we need services like the Ethereum-Name-Service. It is the reclamation of ownership by the individual, in a way that cannot be revoked or tampered without your consent, true digital-autonomy.</p>
+<p>Unlike Venmo or Paypal, where you have a username, Cryptocurrency uses an address. You probably know what yours is, it’s a long string of numbers and letters that look like jiberish. When you want to send cryptocurrency to people you need that long garbled-mess.</p>
+<p><a class="reference external" href="https://etherscan.io/address/0xaB5409b0E5a66AcC9D63f668414539A60a5917C1">0xaB5409b0E5a66AcC9D63f668414539A60a5917C1</a>.</p>
+<p>If you mix up a single letter, the transaction goes to someone else, likely forever unretrievable. We could use a QR-Code, but that still deals with the problem of the address being properly-input.</p>
+<p>If we want cryptocurrency to become a more widely-accepted and easy payment-mechanism, we can’t be content with a system people don’t understand. Interfaces need to change, become easier, and our decentralized-applications need to be integrated with this as well. Fortunately, there is a solution. <a class="reference external" href="https://ens.domains">The Ethereum Name Service (ENS)</a> brings usernames to Ethereum.</p>
+<img alt="../_images/ens_banner.png" src="../_images/ens_banner.png" />
+<div class="section" id="dns">
+<h2>DNS<a class="headerlink" href="#dns" title="Permalink to this headline">¶</a></h2>
+<p>To understand ENS, we need to go back a little bit to an invention you’ve probably never heard of, but has undoubtedly affected your life: Internet Domain-Names. You’ve probably heard of these, they’re the thing you buy when you’ve got a great idea for a startup and wanna register a website and wanna name it something cool like <em>ExplodingPenguins.com</em>. What you probably don’t know, is how this seemingly-innocuous system underlies the entirety of global-internet communications, and without it, the internet in its current form would not exist.</p>
+<p>Unfortunately, now things are going to get a bit technical, but I promise it will make sense. When you visit facebook.com, there is no such thing as “facebook.com”. Computers are not capable of saying “this server is facebook.com”. Instead, every computer in the world has something called an <em>IP-Address</em>. This is simply an identifier, interpretable by your computer, that identifies where the information you want is stored, and how to acquire it.</p>
+<p>The IP-Address for facebook’s main server is <a class="reference external" href="http://31.13.65.36">31.13.65.36</a>. When you connect to facebook, your computer opens up a connection to that IP-address, and requests the information you want, such as your home-feed. In the early days of the internet, when there weren’t many sites, it was feasible to connect to websites like this. However, as the internet grew, it became unreasonable to expect people to interact that way. Thus, DNS was born.</p>
+<p>DNS, Domain-Name-System, is simply a link connecting a human-readable string to an IP-address. It is how your computer is able to determine that when you say you want to go to “facebook.com”, to connect to 31.13.65.36. Even on website-links, this system works under-the-hood. If your website needs to get data from an API, the underlying libraries will make a DNS-call to find out what the IP-address is and get the information. Given the interconnectivity of websites in the Internet-era, it is safe to say that without DNS, there is no internet.</p>
+<img alt="../_images/dns.png" src="../_images/dns.png" />
+<p>I’m not going to recap the entire history of DNS and it’s use, because that subject could cover an entire semester-long graduate-level computer-science course. However, there are a few things about this system you do need to know, to understand why decentralization matters.</p>
+<p>First, the DNS-system is a strange mess of centralized/distributed/decentralized servers. Since each domain-name has a corresponding IP-address, the two-values need to be stored together. This leads to a lot of interesting ways to do so, the most common being a DNS-Server. This is simply a very powerful server whose only responsibility is to store DNS-records. When you want to do something, your computer makes a request to this DNS-server, known as a “resolver”, saying “what is the IP-address for facebook.com”. It is constantly updating, adding, and removing records as things change all-over the internet. However, sometimes the server you interact with deoesn’t know the answer. Since no server can store <em>every</em> IP-address and host-name, sometimes it might redirect you to someone else who does. For example, this website is hosted on Github Servers [link needed]. However, I registered this domain using <a class="reference external" href="https://godaddy.com">GoDaddy</a>. When someone wants to come see it, GoDaddy redirects them to Github’s DNS-Servers, that they use for their-sites, and then to this page.</p>
+<img alt="../_images/dns_chain.png" src="../_images/dns_chain.png" />
+</div>
+<div class="section" id="dns-issues">
+<h2>DNS Issues<a class="headerlink" href="#dns-issues" title="Permalink to this headline">¶</a></h2>
+<p>This is where tech-companies come in to play. Maintaining DNS-servers costs money, which is why sites charge you to register it, to pay their costs. Amazon owns a <strong>LOT</strong> of different services, and a lot of servers.As a result, Amazon is in the DNS-business as well. You host your site on their servers, and their DNS-system will handle the traffic-direction. Same with Google, Microsoft, Facebook, etc. This <em>can</em> have a lot of benefits, such as speed and cost. However, it also presents big risks associated with giving amazon that much power. It gives them the power to arbitrarily decide who gets what domains, to shut down and censor, and tons more. It might not be a big-deal, as you could migrate to another DNS-server, or even set one up yourself [link needed]. However, as i’ve highlighted before [link needed], centralization risks are real, and in the world of cryptocurrency should be avoided. You don’t really own the name. Amazon owns the name, and rents it to you, for a fee.</p>
+<p>The DNS system has centralization-bottlenecks. Since this system relies on various-servers for storing only specific-DNS records, your computer might get put on a bit of a wild-goose-chase. You can think of this like a heirarchy, operating from the top-down. When a DNS-resolver doesn’t currently have a DNS-record, it might send you to the top of the heirarchy, working you way down through servers recursively until you find what you are looking for. Each step-up in the heirarchy is more important, because it is responsible for the activities of each server below it. If it were to fail, then every server underneath it would be innaccessible as well.</p>
+<img alt="../_images/dns_heirarchy.png" src="../_images/dns_heirarchy.png" />
+<p>The top of this chain-of-servers is known as the <em>Root-Server</em>. Trillions of requests flow through it everyday. If it were to fail, then virtually every part of the internet would be unable to function. It doesn’t matter how distributed or decentralized everything else is, if things must still flow through this single-point of failure. Now, due to the severe risk that poses, it’s maitenance is handled by an independent non-governmental-entity known as <a class="reference external" href="https://www.icann.org/">ICANN</a>. Would anybody attempt to hack this central Root-Server, most-likely not, because it’s too important to fail. But if it can be improved, then that would be better.</p>
+<div class="section" id="digital-autonomy">
+<h3>Digital-Autonomy<a class="headerlink" href="#digital-autonomy" title="Permalink to this headline">¶</a></h3>
+<p>Privacy is not always protected by DNS either. When you register, privacy is slightly preserved by default. Unless you specify in the record that you want it public knowledge that you are the owner, the only thing people see would be something like <em>“Record Owner: Amazon US-Server-1”</em>. However, there’s nothing stopping Amazon from giving up your information to people who ask, like governments. You have to pay them as well, giving up some of your financial information and involving other third parties like banks and credit-card companies. The DNS-providers are certainly collecting analytic data on you as well.</p>
+<p>It’s an easy and ubiquitous argument, “This company isn’t going to censor me or take anything away from me that’s mine, I don’t need cryptocurrency”. If anything the recent scandal with facebook and metaverse shows precisely that. The risk isn’t always political censorship, but that maybe you own a twitter-handle that someone else wants and you got lucky claiming it before they did. Perhaps you wanted to start a website called “JeffBezosKillsPuppies.com”, and they decide to shut you down and take the domain. You might have agreed to that in the terms and conditions, but it shouldn’t be there in the first place. I think Parks and Rec said it best</p>
+<img alt="../_images/pandr.png" src="../_images/pandr.png" />
+<p>Much like physical-objects, only objects in the Crypto-world are your actual property. It cannot be taken without your consent. You are put back in control of your own property in the digital world to do with it what you see fit. Odds are most people might never be the victim of something like this, but its a risk that we take when we accept the services of these centralized-entities, and one that we should strive towards eliminating whenever possible. This is the true endgame of cryptocurrency, to reclaim your autonomy on the internet.</p>
+</div>
+</div>
+<div class="section" id="ens-dns-on-ethereum">
+<h2>ENS - DNS on Ethereum<a class="headerlink" href="#ens-dns-on-ethereum" title="Permalink to this headline">¶</a></h2>
+<p>The Ethereum-Name-Service, ENS, is simply this DNS system, but decentralized, and stored on the blockchain. The difference is that instead of linking website-names to IP-addresses, it links wallet-addresses to usernames. This is what I meant when I compared it to Venmo. My public-address is
+<a class="reference external" href="https://etherscan.io/address/0xaB5409b0E5a66AcC9D63f668414539A60a5917C1">0xaB5409b0E5a66AcC9D63f668414539A60a5917C1</a>. If you wanted to send me money, you would need that information. I could text it to you, or more likely would give you a QR-Code to scan. With ENS, all I would need to tell you is <strong>jhweintraub.eth</strong>. Your wallet will automatically convert that domain into its corresponding address, so that you can be sure you’re sending cryptocurrency to the right place. It happens almost-instantly, in your wallet, without you having to do anything.</p>
+<p>The ENS-system is simply a series of smart-contracts, keeping this information so that your wallet can utilize it. The mapping of a name -&gt; address is stored over a variety of different contracts. They are known as resolvers, and each address has at least one-resolver. This is shown to you when you register the domain. It is not important if you only wish to use your domain for receiving cryptocurrency.</p>
+<p>I’ll show you how easy it is. Simply open up an ENS-enabled wallet, such as metamask, and click “send”. Then simply type in the domain-name you want to send it to, and watch it pop up.</p>
+<img alt="../_images/vitalik_1.png" src="../_images/vitalik_1.png" />
+<p>Then simply confirm the transaction and watch it send, with no difficulty.</p>
+<img alt="../_images/vitalik_2.png" src="../_images/vitalik_2.png" />
+<p>If you’re a developer, there’s a publicly <a class="reference external" href="https://docs.ens.domains/">available documentation</a> as well for how to use the smart contracts. If you wanted to build a DeFi protocol with hard-coded values, you could instead use an ENS-Domain and let the contracts resolve it for you.</p>
+<p>The system does even-more. Because ENS is just a system for resolving domain-names to information, there’s tons of other things you can store on there. You could store a BTC or Dogecoin Address, a URL of your actual-website, your github page, or any other data you want.</p>
+<img alt="../_images/ens_misc.png" src="../_images/ens_misc.png" />
+<p>This is where things get even more useful. If you’re using an ENS-enabled browser, like <a class="reference external" href="https://brave.com">Brave</a>, then you can use ENS as your regular DNS. If you set an ENS record for URL, then brave will automatically redirect you to the appropriate URL. One singular domain name can be used for your website, ethereum-wallet, Bitcoin-wallet, github profile, reddit, etc.</p>
+<p>Each domain-name is an NFT. Yes, a non-fungible-token, much like the art you’ve heard about on TV, this means it’s fully tradeable on the open-market. However, unlike nonsense-art, this is one of the practical uses for NFT’s. It is unique, and non-reproduceable, meaning that only one NFT for a domain can exist at a time, and it belongs to you. You can have several of these at a time. Much like people who squatted on web-domains in the early-2000s, people are doing it here as well. I don’t know if that’s something you should do, or if the price of any particular domain will rise, but it’s something that’s happening.</p>
+<p>You do have to pay to register a domain, around <code class="docutils literal notranslate"><span class="pre">$5/year</span></code>. However, this is incredibly cheap by comparison. This .net domain costs me around <code class="docutils literal notranslate"><span class="pre">$15/year</span></code> on GoDaddy. Despite not having server-hosting-fees, this slight cost is needed to prevent-spamming. If there were no fee to maintain an ENS-domain, there would be nothing to stop squatters from trying to claim and squat on every-single domain possible, holding it hostage from well-meaning end-users like you and I. Financial payments makes it harder for this to be done on a larger-scale. The fee is minimal, and putting up <em>$25 (plus transaction fees)</em> to hold it for 5+ years is very reasonable.</p>
+<p>It’s entirely private too. Since all payments are made in Ether, there’s nothing to tie-back you to the domain. Obviously if you register your unique real-world name like joe_bethersonton.eth, it might be a dead giveaway. But if you register something like <em>samoyed_fan57.eth</em>, there’s no record anywhere linking back your identity, but still giving you the ability to identify yourself to people you want.</p>
+<p>You also have the option to set a reverse-record, or primary ENS name. It’s the opposite of the system. Where a regular-record links a domain-name to an address, the reverse-record links an address to a name. If you set ENS records to contain addresses of other cryptocurrencies this is useful. The reverse record designates one of your ENS names to represent your Ethereum account and act as your cross-platform web3 username and profile.</p>
+</div>
+<div class="section" id="ens-token-and-dao">
+<h2>ENS Token and DAO<a class="headerlink" href="#ens-token-and-dao" title="Permalink to this headline">¶</a></h2>
+<p>This is probably where you probably heard about ENS for the first time, the airdrop. Recently the developers of ENS decided that the protocol should be handed over to the community, through a DAO [insert link]. The DAO would be responsible for maintaining the system, and updating it. However, in order for there to be a DAO, there must first be a token. Using a process called an <em>“airdrop”</em>, the developers were able to mint, and fairly distribute this new governance token to the masses. Using a complicated formula, and series of criteria, anyone who had registered an ENS-domain prior to November 1st, 2021 was able to claim <a class="reference external" href="https://claims.ens.domains/dashboard">free $ENS tokens</a>. This ensures that people who contributed to its growth had a stake in how it is run. All funds acquired through domain-payments are dispersed at the DAO’s discretion, typically to fund the further-development of ENS or other important <a class="reference external" href="https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c">Ethereum-public-goods</a>.</p>
+<p>Since most people aren’t able to constantly read forums and vote on things, they also included a delegation mechanism. If you want, you can delegate your voting power to someone else, to vote on your behalf. There are <a class="reference external" href="https://discuss.ens.domains/t/ens-dao-delegate-applications/815">hundreds of different users and DAO’s</a> with diverse backgrounds and opinions you can vote for, or anyone else in the Ethereum ecosystem you wish.</p>
+<div class="nomics-ticker-widget" data-name="Ethereum Name Service" data-base="ENS" data-quote="USD"></div><script src="https://widget.nomics.com/embed.js"></script></div>
+<div class="section" id="registering-a-domain">
+<h2>Registering a Domain<a class="headerlink" href="#registering-a-domain" title="Permalink to this headline">¶</a></h2>
+<p>Registering a domain is very easy. It must be done in Ether, but otherwise works just like any other domain. Simply visit <a class="reference external" href="https://ens.domains">the website ens.domains</a>, and connect your favorite Ethereum-wallet. Then it’s simply searching for the name, and then execute the listed steps to complete the registration transaction.</p>
+<p><em>*Fees may vary based on current gas cost and network congestion</em></p>
+<img alt="../_images/ens_home.png" src="../_images/ens_home.png" />
+<img alt="../_images/ens_name.png" src="../_images/ens_name.png" />
+<p>Simply confirm your transaction, wait for it to execute, and then start using your new ENS-domain on <a class="reference external" href="https://ens.domains/#home-ecosystem">any ENS-enabled wallet.</a></p>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>The invention of DNS, and its refinement over the decades is one of the things that helped enable the widespread growth of the internet. It has undoubtedly affected your life more than the iPhone or the apps you use on it. ENS marks the next phase of evolution both of DNS and cryptocurrency. It is a core protocol that will continue to help guide Ethereum, and all of cryptocurrency into the future, to help fold in new users. Its utility is endless, its community committed to its mission of decentralization and fairness, its tech strong and secure, and available to all. What kinds of development and applications it enables, and how it progresses only time will tell, but it remains another shining example of the future of Web3 is capable of.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../coins_explained/stablecoins.html" class="btn btn-neutral float-right" title="Stablecoins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="defi.html" class="btn btn-neutral float-left" title="DeFi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Josh Weintraub
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-196042419-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

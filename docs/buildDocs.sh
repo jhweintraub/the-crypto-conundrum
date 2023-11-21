@@ -72,7 +72,7 @@ For more information on how this documentation is built using Sphinx, Read the D
 EOF
 
 # Keeps custom url
-echo "thecryptoconundrum.net" >> CNAME
+echo "0xtraub.com" >> CNAME
  
 # copy the resulting html pages built from sphinx above to our new git repo
 git add .

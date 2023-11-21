@@ -200,7 +200,7 @@
 <section id="arbitrage">
 <h2>Arbitrage<a class="headerlink" href="#arbitrage" title="Permalink to this headline"></a></h2>
 <p>A good part of what keeps the exchange rate close to reality, is a financial maneuver called <em>arbitrage</em>. Basically, the existence of multiple decentralized-exchanges allows people to take advantage of price discrepancies and profitability. Let’s imagine this using two stablecoins for simplicity. Let’s imagine on uniswap for a brief period the exchange rate of <code class="docutils literal notranslate"><span class="pre">USDC-&gt;Dai</span></code> is <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">USDC</span> <span class="pre">=</span> <span class="pre">0.99</span> <span class="pre">DAI</span></code>. On Sushiswap, the rate may still be <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Dai</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">USDC</span></code>. People will notice this, and exchange their USDC for Dai. They then take it over to Sushiswap (or another Dex), and convert it back to USDC for a profit of <code class="docutils literal notranslate"><span class="pre">$0.01</span> <span class="pre">/</span> <span class="pre">USDC</span></code>. This is because they bought Dai at <code class="docutils literal notranslate"><span class="pre">$0.99</span></code> on Uniswap and sold it for <code class="docutils literal notranslate"><span class="pre">$1</span></code> somewhere else.</p>
-<img alt="../_images/arbitrage.png" src="../_images/arbitrage.png" />
+<img alt="../_images/arbitrage1.png" src="../_images/arbitrage1.png" />
 <p>This pushes the point on the curve slightly to the left, back towards equilibrium. This is because they are decreasing the supply of Dai, and increasing the supply of USDC. This pushes price back towards equilibrium. The same happens when price is too high above a normal range. When the price of Dai goes <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">$1</span></code>, arbitragers will buy Dai from somewhere cheaper, and start selling it on Uniswap, increasing supply and pushing price down.</p>
 <p><strong>If they’re only making 1 cent on each USDC how do they make a profit?</strong></p>
 <p>Good question, by having enough to trade with you can in fact be very profitable. <code class="docutils literal notranslate"><span class="pre">$.01</span></code> doesn’t seem like a lot, but if you’re trading <code class="docutils literal notranslate"><span class="pre">1k</span> <span class="pre">Dai</span></code> on each arbitrage opportunity that can really add up. However, you are limited by gas costs. These maneuvers can be great profit opportunities, but at present are complicated and involve spending a lot of Eth on gas. If you can afford it my hat’s off to you. These are done with bots, not humans who constantly monitor prices for opportunities like such.</p>
@@ -259,7 +259,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Josh Weintraub.</p>
+    <p>&#169; Copyright 2023, Josh Weintraub.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

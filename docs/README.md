@@ -15,3 +15,8 @@ Part 4: Important Terms
 Part 5: Picking the right Coins
 
 Part 6: My Favorite Coins 
+
+<!---
+your comment goes here
+and here
+-->

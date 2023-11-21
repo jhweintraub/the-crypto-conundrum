@@ -110,6 +110,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Altcoins, Explained:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/stablecoins.html">Stablecoins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../coins_explained/monero.html">Monero (XMR)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../coins_explained/polkadot.html">Polkadot (DOT)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../coins_explained/chainlink.html">Chainlink (LINK)</a></li>
@@ -154,33 +155,33 @@
 <h2>Smart Contract Code<a class="headerlink" href="#smart-contract-code" title="Permalink to this headline"></a></h2>
 <p>In Ethereum, a smart contract is written in a custom programming language, known as <strong>Solidity</strong> (although there are others such as <strong>Vyper</strong>). By spending ethereum as a transaction fee, you can cause the contract to execute in a pre-determined way. <a class="reference external" href="https://hackernoon.com/turing-completeness-and-the-ethereum-blockchain-c5a93b865c1a#:~:text=Solidity%2C%20the%20Turing%20complete%20language,deployed%20once%20on%20the%20blockchain.&amp;text=A%20hacker%20can%20run%20any,to%20create%20an%20unauthorized%20effect.">Solidity is turing-complete</a>, statically typed, supports inheritance, libraries, and complex user-defined types among other features.</p>
 <p>Take the following code snippet of an example smart contract:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*version number*/</span>
-<span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*version number*/</span><span class="w"></span>
+<span class="n">pragma</span><span class="w"> </span><span class="n">solidity</span><span class="w"> </span><span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span><span class="w"></span>
 
-<span class="cm">/*contract name*/</span>
-<span class="n">contract</span> <span class="n">example_contract</span> <span class="p">{</span>
+<span class="cm">/*contract name*/</span><span class="w"></span>
+<span class="n">contract</span><span class="w"> </span><span class="n">example_contract</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-        <span class="cm">/*function name with parameters and return values*/</span>
-        <span class="n">function</span> <span class="nf">add</span><span class="p">(</span><span class="n">uint256</span> <span class="n">a</span><span class="p">,</span> <span class="n">uint256</span> <span class="n">b</span><span class="p">)</span> <span class="n">returns</span> <span class="p">(</span><span class="n">uint256</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="w">        </span><span class="cm">/*function name with parameters and return values*/</span><span class="w"></span>
+<span class="w">        </span><span class="n">function</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">uint256</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">uint256</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="p">(</span><span class="n">uint256</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
 
-        <span class="p">}</span>
-<span class="p">}</span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This is a smart-contract written in <em>Solidity</em>. It’s name is <em>example_contract</em> It contains a single function, called <em>add</em>. This is a function that takes an input of two-numbers and adds them together, returning their sum. When you deploy this contract, it is given its own address, much like your wallet. If you wanted execute this contract, you would initiate a transaction with the contract’s address, and execution information. This information includes the name of the function you are calling, the input values, cryptographic signatures, etc.</p>
 <p>Because the contract has a valid address, when deployed it can also do things such as hold balances like a normal wallet. This allows you to do things such as send Ether and various tokens to it to hold, and distribute. However, nobody owns the private key to this address. If you wanted to withdraw from the contract, you would have to write in various functions to allow you to do so. Take this example code.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span><span class="w"> </span><span class="n">solidity</span><span class="w"> </span><span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span><span class="w"></span>
 
-<span class="n">contract</span> <span class="n">example_contract2</span> <span class="p">{</span>
+<span class="n">contract</span><span class="w"> </span><span class="n">example_contract2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-        <span class="n">uint256</span> <span class="n">balance</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">uint256</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 
-        <span class="n">function</span> <span class="nf">send_ether</span><span class="p">(</span><span class="n">address</span> <span class="n">payable</span> <span class="n">recipient</span><span class="p">)</span> <span class="n">payable</span> <span class="p">{</span>
-                <span class="n">balance</span> <span class="o">+=</span> <span class="n">msg</span><span class="p">.</span><span class="na">value</span><span class="p">;</span> <span class="cm">/*msg.value is the transaction value*/</span>
-                <span class="n">recipient</span><span class="p">.</span><span class="na">transfer</span><span class="p">(</span><span class="n">balance</span><span class="p">)</span> <span class="cm">/*send the balance to the recipient*/</span>
-        <span class="p">}</span>
-<span class="p">}</span>
+<span class="w">        </span><span class="n">function</span><span class="w"> </span><span class="nf">send_ether</span><span class="p">(</span><span class="n">address</span><span class="w"> </span><span class="n">payable</span><span class="w"> </span><span class="n">recipient</span><span class="p">)</span><span class="w"> </span><span class="n">payable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">balance</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="na">value</span><span class="p">;</span><span class="w"> </span><span class="cm">/*msg.value is the transaction value*/</span><span class="w"></span>
+<span class="w">                </span><span class="n">recipient</span><span class="p">.</span><span class="na">transfer</span><span class="p">(</span><span class="n">balance</span><span class="p">)</span><span class="w"> </span><span class="cm">/*send the balance to the recipient*/</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This code contains a method that allows you to store and send ether from one person to another. If you see the word <em>payable</em> means that if you call this method, you can send ether alongside the input value of a recipient, and the contract will do with it what you specify. If you don’t specify to send it somewhere, then it will hold the amount in its account balance for the contract. This is useful because it allows you to specify what to do if someone sends ether to the contract address, alongside relevant input data. For applications like DeFi, or that involve sending money around, it is a very powerful tool for trust less funds exchanges.</p>
@@ -190,18 +191,18 @@
 <section id="logs">
 <h2>Logs<a class="headerlink" href="#logs" title="Permalink to this headline"></a></h2>
 <p>You also have the option to publish the metadata about a transaction, that you define. These logs are known as <em>events</em>. Take the following code.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span><span class="w"> </span><span class="n">solidity</span><span class="w"> </span><span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span><span class="w"></span>
 
-<span class="c1">//Declare an Event</span>
-<span class="n">event</span> <span class="nf">transfer</span><span class="p">(</span><span class="n">address</span> <span class="n">indexed</span> <span class="n">_from</span><span class="p">,</span> <span class="n">address</span> <span class="n">indexed</span> <span class="n">_to</span><span class="p">,</span> <span class="n">uint</span> <span class="n">_value</span><span class="p">);</span>
+<span class="c1">//Declare an Event</span><span class="w"></span>
+<span class="n">event</span><span class="w"> </span><span class="nf">transfer</span><span class="p">(</span><span class="n">address</span><span class="w"> </span><span class="n">indexed</span><span class="w"> </span><span class="n">_from</span><span class="p">,</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="n">indexed</span><span class="w"> </span><span class="n">_to</span><span class="p">,</span><span class="w"> </span><span class="n">uint</span><span class="w"> </span><span class="n">_value</span><span class="p">);</span><span class="w"></span>
 
 
-<span class="n">contract</span> <span class="n">example_contract2</span> <span class="p">{</span>
+<span class="n">contract</span><span class="w"> </span><span class="n">example_contract2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-        <span class="n">function</span> <span class="nf">send_ether</span><span class="p">(</span><span class="n">address</span> <span class="n">payable</span> <span class="n">recipient</span><span class="p">)</span> <span class="n">payable</span> <span class="p">{</span>
-                <span class="n">emit</span> <span class="nf">transfer</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="na">sender</span><span class="p">,</span> <span class="n">recipient</span><span class="p">,</span> <span class="n">msg</span><span class="p">.</span><span class="na">value</span><span class="p">);</span>
-        <span class="p">}</span>
-<span class="p">}</span>
+<span class="w">        </span><span class="n">function</span><span class="w"> </span><span class="nf">send_ether</span><span class="p">(</span><span class="n">address</span><span class="w"> </span><span class="n">payable</span><span class="w"> </span><span class="n">recipient</span><span class="p">)</span><span class="w"> </span><span class="n">payable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">emit</span><span class="w"> </span><span class="nf">transfer</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="na">sender</span><span class="p">,</span><span class="w"> </span><span class="n">recipient</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="na">value</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>We first declare an event and its parameters. In this case it’s <em>transfer</em> and it requires a sender, a recipient, and a value. When the function <em>send</em> is executed, it will publish this metadata to the chain alongside the rest of the transaction, as JSON data. This is done with the keyword <em>emit</em>. We can view this on a <a class="reference external" href="https://etherscan.io/tx/0x265d64a8d0e7f86cae84d29bc9b86dc796b0eaae9e84a99d0b1e82b17609b622#eventlog">block explorer</a> beautified to look like this</p>

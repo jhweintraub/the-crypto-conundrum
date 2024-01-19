@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developers Corner &mdash; The Crypto-Conundrum v1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="General Strategy" href="../investment-strategies/rules.html" />
+    <link rel="prev" title="Web3" href="web3.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> The Crypto-Conundrum
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Who am I?:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">My Resume</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/popular_questions.html">What is Cryptocurrency?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/blockchain.html">The Blockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/exchanges.html">Exchanges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/origins.html">Coin Origins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/important_terms.html">Important Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/bitcoin_vs_ethereum.html">Bitcoin Vs. Ethereum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/picking_coins.html">Picking the Right Coins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/coin_suggestions.html">Coin Suggestions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ethereum, Explained:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="what_is_it.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_is_it.html#what-is-ethereum">What is Ethereum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_it_works.html">How Ethereum Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usability.html">How do I use it</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gas.html">Transaction Fees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tokens.html">Tokens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eth2.html">Ethereum 2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eip_1559.html">EIP-1559</a></li>
+<li class="toctree-l1"><a class="reference internal" href="layer2.html">Rollups and Sidechains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="misconceptions.html">Common Criticism and Misconceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="merge.html">The Merge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web3.html">Web3</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developers Corner</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cryptography">Cryptography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#smart-contract-code">Smart Contract Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logs">Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#blockchain-as-a-state-machine">Blockchain as a State Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#accounts">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ethereum-virtual-machine">Ethereum Virtual Machine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#trees">Trees</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#merkle-trees">Merkle Trees</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#patricia-tree">Patricia Tree</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#bytecode-sourcecode-and-abi">Bytecode, Sourcecode, and ABI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client-types">Client-Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transaction-lifecycle">Transaction lifecycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ethereum-development-and-governance">Ethereum Development and Governance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eip-s">EIP’S</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ethereum-core-developers">Ethereum Core Developers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#forks">Forks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Investment Rules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/rules.html">General Strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/exit_strategies.html">Define your exit strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/due-dilligence.html">Doing your Due-Dilligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/security.html">Protecting your Cryptocurrency</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/confidence.html">Be Confident</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/staking.html">Mining and Staking</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Decentralized Applications:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/uniswap.html">Uniswap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/daos.html">Decentralized Governance and DAO’s</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/nfts.html">NFTs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/defi.html">DeFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/ens.html">Ethereum Name Service</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Altcoins, Explained:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/stablecoins.html">Stablecoins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/monero.html">Monero (XMR)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/polkadot.html">Polkadot (DOT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/chainlink.html">Chainlink (LINK)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">The Crypto-Conundrum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Developers Corner</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="developers-corner">
+<h1>Developers Corner<a class="headerlink" href="#developers-corner" title="Permalink to this headline"></a></h1>
+<p>Ethereum is the world’s decentralized-computer. It is the most intricate blending of computer-science, governance, sociology, and economics. However, it’s scale brings with it huge amounts of complexity. Understanding how it works requires a detailed understanding of data-structures, cryptography, theoretical-computation, and much more. But, when you break things down into their individual parts, it’s not too difficult. Keep reading, and you will discover exactly what makes this machine tick, and how you can get the most out of interacting with it.</p>
+<section id="cryptography">
+<h2>Cryptography<a class="headerlink" href="#cryptography" title="Permalink to this headline"></a></h2>
+<p>Like all cryptocurrencies, Ethereum relies on <a class="reference external" href="https://en.wikipedia.org/wiki/Public-key_cryptography">Public-Key-Cryptography</a>, and <a class="reference external" href="https://en.wikipedia.org/wiki/Digital_signature">Digital Signatures</a>.</p>
+<p>Ethereum relies on <a class="reference external" href="https://en.wikipedia.org/wiki/Elliptic-curve_cryptography">Elliptic-Curve Cryptography</a>, specifically the <a class="reference external" href="https://en.bitcoin.it/wiki/Secp256k1">Secp256k1 Curve Library</a>. It shares this characteristic with Bitcoin, allowing many of the same library functions to be used.</p>
+<p>You start by generating a private-key pair using your favorite encryption library, keeping your private key secret. Your address is the <a class="reference external" href="https://en.wikipedia.org/wiki/SHA-3">Keccak-256 (SHA-3) Hash</a> of your public key.</p>
+<p>An Ethereum private key can be generated using the <a class="reference external" href="https://silentcicero.gitbooks.io/pro-tips-for-ethereum-wallet-management/content/ethereum-wallet-basics/using-seed-phrases-to-create-ethereum-accounts.html">BIP39 Standard Mnemonic Library</a>.</p>
+<p>All transactions require the use of the <a class="reference external" href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">Elliptic Curve Digital Signature Algorithm (ECDSA)</a> from the private key associated with the address. You sign your transaction with your private-key, and it is verified by the nodes to confirm its authenticity before processing.</p>
+<p>When using your private key to sign a message, you must also include a special value: a <a class="reference external" href="https://medium.com/swlh/ethereum-series-understanding-nonce-3858194b39bf">nonce</a>. This is a scalar value equal to the number of transactions sent from this address or, in the case of accounts with associated code, the number of contract-creations made by this account. Every time you send a transaction this value increases, and is necessary to ensure signatures are unique for each transaction to prevent double-spending.</p>
+</section>
+<section id="smart-contract-code">
+<h2>Smart Contract Code<a class="headerlink" href="#smart-contract-code" title="Permalink to this headline"></a></h2>
+<p>In Ethereum, a smart contract is written in a custom programming language, known as <strong>Solidity</strong> (although there are others such as <strong>Vyper</strong>). By spending ethereum as a transaction fee, you can cause the contract to execute in a pre-determined way. <a class="reference external" href="https://hackernoon.com/turing-completeness-and-the-ethereum-blockchain-c5a93b865c1a#:~:text=Solidity%2C%20the%20Turing%20complete%20language,deployed%20once%20on%20the%20blockchain.&amp;text=A%20hacker%20can%20run%20any,to%20create%20an%20unauthorized%20effect.">Solidity is turing-complete</a>, statically typed, supports inheritance, libraries, and complex user-defined types among other features.</p>
+<p>Take the following code snippet of an example smart contract:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*version number*/</span><span class="w"></span>
+<span class="n">pragma</span><span class="w"> </span><span class="n">solidity</span><span class="w"> </span><span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span><span class="w"></span>
+
+<span class="cm">/*contract name*/</span><span class="w"></span>
+<span class="n">contract</span><span class="w"> </span><span class="n">example_contract</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">        </span><span class="cm">/*function name with parameters and return values*/</span><span class="w"></span>
+<span class="w">        </span><span class="n">function</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">uint256</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">uint256</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="p">(</span><span class="n">uint256</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>This is a smart-contract written in <em>Solidity</em>. It’s name is <em>example_contract</em> It contains a single function, called <em>add</em>. This is a function that takes an input of two-numbers and adds them together, returning their sum. When you deploy this contract, it is given its own address, much like your wallet. If you wanted execute this contract, you would initiate a transaction with the contract’s address, and execution information. This information includes the name of the function you are calling, the input values, cryptographic signatures, etc.</p>
+<p>Because the contract has a valid address, when deployed it can also do things such as hold balances like a normal wallet. This allows you to do things such as send Ether and various tokens to it to hold, and distribute. However, nobody owns the private key to this address. If you wanted to withdraw from the contract, you would have to write in various functions to allow you to do so. Take this example code.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span><span class="w"> </span><span class="n">solidity</span><span class="w"> </span><span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">contract</span><span class="w"> </span><span class="n">example_contract2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">uint256</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">function</span><span class="w"> </span><span class="nf">send_ether</span><span class="p">(</span><span class="n">address</span><span class="w"> </span><span class="n">payable</span><span class="w"> </span><span class="n">recipient</span><span class="p">)</span><span class="w"> </span><span class="n">payable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">balance</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="na">value</span><span class="p">;</span><span class="w"> </span><span class="cm">/*msg.value is the transaction value*/</span><span class="w"></span>
+<span class="w">                </span><span class="n">recipient</span><span class="p">.</span><span class="na">transfer</span><span class="p">(</span><span class="n">balance</span><span class="p">)</span><span class="w"> </span><span class="cm">/*send the balance to the recipient*/</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>This code contains a method that allows you to store and send ether from one person to another. If you see the word <em>payable</em> means that if you call this method, you can send ether alongside the input value of a recipient, and the contract will do with it what you specify. If you don’t specify to send it somewhere, then it will hold the amount in its account balance for the contract. This is useful because it allows you to specify what to do if someone sends ether to the contract address, alongside relevant input data. For applications like DeFi, or that involve sending money around, it is a very powerful tool for trust less funds exchanges.</p>
+<p>Imagine what you could do when you take this concept and make it more complex.</p>
+<p><strong>Contracts are immutable.</strong> <em>This means that once a contract is deployed, it CANNOT BE MODIFIED. Certain variables can have values be changed, but code logic cannot. If you deployed and then realized that the contract had a bug, your only choice is to deploy a new contract that fixes this.</em></p>
+</section>
+<section id="logs">
+<h2>Logs<a class="headerlink" href="#logs" title="Permalink to this headline"></a></h2>
+<p>You also have the option to publish the metadata about a transaction, that you define. These logs are known as <em>events</em>. Take the following code.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pragma</span><span class="w"> </span><span class="n">solidity</span><span class="w"> </span><span class="o">^</span><span class="mf">0.8.0</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">//Declare an Event</span><span class="w"></span>
+<span class="n">event</span><span class="w"> </span><span class="nf">transfer</span><span class="p">(</span><span class="n">address</span><span class="w"> </span><span class="n">indexed</span><span class="w"> </span><span class="n">_from</span><span class="p">,</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="n">indexed</span><span class="w"> </span><span class="n">_to</span><span class="p">,</span><span class="w"> </span><span class="n">uint</span><span class="w"> </span><span class="n">_value</span><span class="p">);</span><span class="w"></span>
+
+
+<span class="n">contract</span><span class="w"> </span><span class="n">example_contract2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">function</span><span class="w"> </span><span class="nf">send_ether</span><span class="p">(</span><span class="n">address</span><span class="w"> </span><span class="n">payable</span><span class="w"> </span><span class="n">recipient</span><span class="p">)</span><span class="w"> </span><span class="n">payable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">emit</span><span class="w"> </span><span class="nf">transfer</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="na">sender</span><span class="p">,</span><span class="w"> </span><span class="n">recipient</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="na">value</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>We first declare an event and its parameters. In this case it’s <em>transfer</em> and it requires a sender, a recipient, and a value. When the function <em>send</em> is executed, it will publish this metadata to the chain alongside the rest of the transaction, as JSON data. This is done with the keyword <em>emit</em>. We can view this on a <a class="reference external" href="https://etherscan.io/tx/0x265d64a8d0e7f86cae84d29bc9b86dc796b0eaae9e84a99d0b1e82b17609b622#eventlog">block explorer</a> beautified to look like this</p>
+<img alt="../_images/events.png" src="../_images/events.png" />
+<p><em>Image Source: Etherscan.io</em></p>
+<p>We can see the value of all the inputs. This is a high-level topic but because we used the keyword <em>indexed</em> on the two addresses, the EVM has classified them as topics. This is so that the EVM can more easily classify and reference them later. If we were to not use the <em>indexed</em> keyword, they would be below in the <em>data</em> category, alongside <em>value</em></p>
+<p>The address listed is address of the contract that emitted the log. This is necessary because a contract may invoke a function on another contract, known as an <em>internal transaction</em>. This is still considered part of the main initial transaction for block purposes and is useful to keep track of transaction history.</p>
+<p>More detailed information can be found <a class="reference external" href="https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378">here</a>.</p>
+<p><strong>These next 3 sections are going to be more tech-heavy so if you don’t have a CS or tech background, feel free to skip to the next article, as you don’t need to understand it to be able to use Ethereum. Otherwise, I’m still going to try and keep it simple.</strong></p>
+</section>
+<section id="blockchain-as-a-state-machine">
+<h2>Blockchain as a State Machine<a class="headerlink" href="#blockchain-as-a-state-machine" title="Permalink to this headline"></a></h2>
+<p>State Machines, if you’ve ever read this book, you’re probably breaking out into a cold-sweat right now</p>
+<a class="reference internal image-reference" href="../_images/sipser.png"><img alt="../_images/sipser.png" src="../_images/sipser.png" style="width: 180pt;" /></a>
+<p><em>Image Source: Michael Siper, Introduction to the theory of computation, 3rd edition</em></p>
+<p>Don’t worry, I’m going to keep it simple. The entire Ethereum network, at any given moment, can be represented as a state. Every time a transaction occurs, the state changes. Therefore we can represent the network as a state machine. The following examples are in the <a class="reference external" href="https://ethereum.org/en/whitepaper/">Ethereum Whitepaper</a>.</p>
+<p>Think of it like this</p>
+<p><code class="docutils literal notranslate"><span class="pre">APPLY(S,TX)</span> <span class="pre">-&gt;</span> <span class="pre">S'</span> <span class="pre">or</span> <span class="pre">ERROR</span></code> where S = The current State and TX = The transaction value.</p>
+<p>In a real-world sense, imagine the following: <code class="docutils literal notranslate"><span class="pre">APPLY({</span> <span class="pre">Alice:</span> <span class="pre">$50,</span> <span class="pre">Bob:</span> <span class="pre">$50</span> <span class="pre">},&quot;send</span> <span class="pre">$20</span> <span class="pre">from</span> <span class="pre">Alice</span> <span class="pre">to</span> <span class="pre">Bob&quot;)</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">Alice:</span> <span class="pre">$30,</span> <span class="pre">Bob:</span> <span class="pre">$70</span> <span class="pre">}</span></code>. It took the current state of all balances, processed a transaction, and returned the new state.</p>
+<p>How this state is calculated is detailed below.</p>
+<p>This is important because we then can understand how smart contracts fit into this model. The use of a state machine allow the network to store the current state or values of a contract at any given time. Given as these contracts can have lots of variables to track, this is essential. It also allows us to create many layer-2 scaling operations off-chain. This I will explain later.</p>
+<p>More detailed information can be found <a class="reference external" href="https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378">here</a>.</p>
+</section>
+<section id="accounts">
+<h2>Accounts<a class="headerlink" href="#accounts" title="Permalink to this headline"></a></h2>
+<p>Unlike Bitcoin, Ethereum supports the idea of an account, with a balance. This is how the EVM is able to calculate the current world state, based on the value of all valid-addresses.</p>
+<p><strong>“Wait, if Bitcoin doesn’t actually have a balance, how come I can go to a website and it tell me how much Bitcoin I have?”</strong></p>
+<p>This is a good question. The answer is that Bitcoin doesn’t actually have the concept of an account balance. When you go to a website, that site specifically has indexed the blockchain on their own and created a local copy that they then serve to you. It looks through your transaction history and calculates how much Bitcoin you have, instead of looking at the chain directly for every query. This would be very slow. Your balance is the sum of all of your previously income transaction values. Each transaction has a BTC value. Imagine you wanted to send 5 BTC. Your wallet takes several transactions from your history, and bundles them together until the sum of their values is <cite>&gt;= 5 BTC</cite>. It then takes that amount, and sends it, and returns the extra unused Bitcoin to you.</p>
+<p>Look at this example transaction</p>
+<img alt="../_images/btc_tx.png" src="../_images/btc_tx.png" />
+<p><em>Image Source: Blockchain.com</em></p>
+<p>You can see that the input is multiple transactions until the amount is high enough to send it out to other places. This also means that amount you pay in transaction depends on how many inputs and outputs you need. If you look below you’ll see that transaction fee is measured in sat/Byte. The bytes is the sum of all of the data (measured in bytes) both input and output of a transaction. The more inputs and outputs, the larger the size of the transaction, and therefore cost. Sat is the amount of BTC you are willing to pay for each of those bytes (sat = satoshi = 1e-18 BTC). Obviously this is a bad way of doing things because if you transact in smaller amounts, when you want to make a larger transaction those fees can add up. It’s also just incredibly redundant, and prohibits layer-2 scaling solutions such as rollups and sidechains. This is why the only substantial Bitcoin proposed-scaling-solution is the Lightning Network, a side-channel implementation with its own set of problems. This is a system known as <em>UTXO, Unspent Transaction Output</em>. It means that for every input for a transaction, it must from the specified output of another transaction. This is also how <a class="reference external" href="https://cardano.org">Cardano</a> works.</p>
+<p>Ethereum, and a number of other blockchains, use a different system of account databases. In Ethereum, in order for contracts to be able to support the ability to transfer values, it must re-imagine this. I.E you must be able to query the amount of Ether in any address in existence and have a native balance value for each address in existence. This means that when you make a transaction, it is much simpler for the network to send coins around, and simplifies many API’s and operations.</p>
+<p>Every node on Ethereum accomplishes this by maintaining a database of all currently utilized Ethereum addresses, and their balances. Remember that all Ethereum addresses are just the SHA-3 of a corresponding public-key. This means that all 2^256 addresses technically exist. When a new address becomes active, by receiving some token/coin, it gets stored in the accounts database. This database is a simple key-value store, where an address has a corresponding value, it’s current balance of Ether.</p>
+<p>There are two-kinds of accounts: Externally-Owned-Accounts (EOA), and contract accounts. An EOA is any address/account used by a person normally. It is every account that is not a contract. Contracts are kept separate because in addition to the balance, their code needs to be stored as well.</p>
+<img alt="../_images/account_diagram.png" src="../_images/account_diagram.png" />
+<p>As you can see, the nonce and balance are the same in both. The Nonce is the incrementing integer representing the number of transactions sent from this address. It’s changing value is necessary to ensure that each digital-signature is unique, and to prevent double spending. Both types also have a balance that must be kept track of.</p>
+<p>Contracts however, have two values the EOA does not. The first is the storage hash. This is the hash of all of the variables the contract maintains. For example, a contract may contain a data structure such as a list of arrays, and a variety of integers. This is kept in storage, and the hash updated when the values change. The code hash is the hash of the contract-code itself, and does not change once-created. Because EOA’s do not have code or objects to maintain, they don’t need to hold these values. When you make a transaction to the <a class="reference external" href="https://etherscan.io/address/0x0000000000000000000000000000000000000000">zero address</a>, you’re telling the network to initiate a special transaction to update the accounts-database with this new account.</p>
+<p>This is also what people mean when they express concern about “the ethereum state growing”. It means the accounts database is growing ever larger, as well as the history of the blockchain. This is also what people mean when they talk about <a class="reference external" href="https://ethresear.ch/t/complete-revamp-of-the-stateless-ethereum-roadmap/8592">stateless ethereum</a>. It means to have a new type of node that stores the world-state, but not the entire accounts database needed to compute it. Stateless Ethereum may be discussed in future articles.</p>
+<p>This system does have some drawbacks however. Unlike UTXO, when reading and writing to the accounts database for each transaction, the ordering of transactions within a block matters. This is because the ordering in which contracts interact with the accounts database matters. Otherwise, you end up with concurrency issues. The EVM doesn’t do parallel computation very well as a result, but it does do finality and conflict-resolution. This is what leads to something known as <em>MEV (Miner-Extractable-Value)</em>. It is when miners will essentially <em>collude</em> with users to order transactions within a block, in a way that is financially beneficial to themselves. I demonstrated this when talking about <a class="reference external" href="https://thecryptoconundrum.net/dapps/uniswap.html#slippage-sandwich-attacks-and-front-running">Uniswap Front-Running Attacks</a>.</p>
+</section>
+<section id="ethereum-virtual-machine">
+<h2>Ethereum Virtual Machine<a class="headerlink" href="#ethereum-virtual-machine" title="Permalink to this headline"></a></h2>
+<p>To calculate the state, we first need to execute a valid transaction. We can do this through <a class="reference external" href="https://ethereum.org/en/developers/docs/evm/">The Ethereum Virtual Machine</a>. Think of it like Java. When you write a program to do something, the Java code compiles down to byte-code, which is run through the Java virtual machine. This virtual machine runs on top of your normal Kernel, to make it OS-Agnostic and converts it further to machine code executable by your kernel. The Ethereum Virtual Machine works the same way.</p>
+<p>Every time you execute a transaction, the inputs and steps are converted into EVM-Bytecode. The machine takes the current state and performs the transaction and generates a new global-state. When you initially create a new contract, the contract gets converted to bytecode, and stored on the chain with its address. When you make a transaction the proper bytecode is queried and executed. This also explains why contracts are immutable.</p>
+<p>The contract address is based on the creator’s address and nonce at the moment of compilation, then hashed. Imagine the following function that gets called every time a contract is created:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mk_contract_address</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">nonce</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">sha3</span><span class="p">(</span><span class="n">rlp</span><span class="o">.</span><span class="n">encode</span><span class="p">([</span><span class="n">normalize_address</span><span class="p">(</span><span class="n">sender</span><span class="p">),</span> <span class="n">nonce</span><span class="p">]))[</span><span class="mi">12</span><span class="p">:]</span>
+</pre></div>
+</div>
+<p>You cannot modify a contract, once deploy, because that would require recompiling the contract-bytecode, which is a special transaction. Given that the nonce for an address is incremented with every transaction, you would not be able to recompile the contract-bytecode and deploy it to the same address because the transaction would have a different nonce, and therefore a different address.</p>
+<p>The following information is provided by <a class="reference external" href="https://ethereum.org/en/developers/docs/evm/">Ethereum Website</a>:</p>
+<blockquote>
+<div><p>“The EVM executes as a stack machine with a depth of 1024 items. Each item is a 256-bit word, which was chosen for the ease of use with 256-bit cryptography (such as Keccak-256 hashes or secp256k1 signatures).”</p>
+<p>“During execution, the EVM maintains a transient memory (as a word-addressed byte array), which does not persist between transactions.”</p>
+<p>“Contracts, however, do contain a Merkle Patricia storage trie (as a word-addressable word array), associated with the account in question and part of the global state.”</p>
+<p>“Compiled smart contract bytecode executes as a number of EVM opcodes, which perform standard stack operations like XOR, AND, ADD, SUB, etc. The EVM also implements a number of blockchain-specific stack operations, such as ADDRESS, BALANCE, KECCAK256, BLOCKHASH, etc.”</p>
+<p>“All Ethereum clients include an EVM implementation”</p>
+</div></blockquote>
+<img alt="../_images/evm.png" src="../_images/evm.png" />
+<p><em>Image Source: Ethereum Foundation, ethereum.org</em></p>
+<p>Because the EVM is really just a stack-machine using a series of opcodes. Gas cost is determined by which opcodes you use. Each one has a specific cost. Simple ones like <em>ADD</em>, to add values together, only use 3-gas. More difficult ones like <em>BALANCE</em>, to retrieve an account-balance from the accounts database, use 400-gas. This is why optimization is so important. If you can reduce the number of unnecessary operations in your code, you can save users a lot of gas.</p>
+<p>Remember earlier when I said the accounts database stores the smart-contract code. Well what it’s really storing is the EVM-Bytecode, and calling that on transaction request. When you use a tool like <a class="reference external" href="https://remix.ethereum.org/">Remix IDE</a>, you’re using a solidity-compiler to generate the bytecode, which is stored.</p>
+<img alt="../_images/bytecode.png" src="../_images/bytecode.png" />
+<p><em>Image Source: Luit Hollander, medium.com/mycrypto</em></p>
+<p>There is also a special opcode known as <em>SELFDESTRUCT</em>. While contract-code can’t be updated, it can be deleted from the network. By calling self-destruct, the contract bytecode and address is deleted from the account database, and the remaining contract balance is sent to the specified address. As a reward for cleaning up the database, the EVM will refund a variable amount of gas to you. This is determined by a formula and current conditions.</p>
+<blockquote>
+<div><p><a class="reference external" href="https://github.com/crytic/evm-opcodes#table">Full opcode gas cost heres</a>.</p>
+<p>It is important to remember, that when a contract is published, it is only publishing the EVM-Compatible-Bytecode, not the source code to the chain. The source code can be published on an explorer such as <a class="reference external" href="https://etherscan.io">Etherscan</a> where it can then be checked against the bytecode for accuracy. If you are deploying a contract, this is important so that people know what they are interacting with and how to do so properly.</p>
+</div></blockquote>
+<section id="trees">
+<h3>Trees<a class="headerlink" href="#trees" title="Permalink to this headline"></a></h3>
+<p>I’m sorry, but I need to send you back to sophomore-year data structures class to explain this next part. Don’t worry I’ll do my very best to keep it simple. The EVM calculates the new global state at the end of each transaction, after all the values and variables are done being changed. The world state is the state-root of a modified merkle-patricia tree. I’ll walk you through exactly what that means.</p>
+<section id="merkle-trees">
+<h4>Merkle Trees<a class="headerlink" href="#merkle-trees" title="Permalink to this headline"></a></h4>
+<p>Take a binary tree. Normally, you start with the root and work you way down to the leaf-nodes. A merkle tree works the opposite way. You start with the leaf-nodes and work you way recursively up to the root. A merkle-tree is used to verify the integrity of information in transit. Think about it like combining a checksum with a tree.</p>
+<img alt="../_images/merkle_tree.png" src="../_images/merkle_tree.png" />
+<p><em>Image Source: Wikipedia</em></p>
+<p>Let’s say you have a file. Split the file into a series of leaf-nodes, each the same size. Let’s say 256-bits, and order them sequentially. Then take the hash of each leaf-node. That becomes the immediate single-parent. Then take the immediate sibling, block N+1, and concatenate it to block N. Then hash that and it becomes the parent of block N and N+1. Repeat this on the next-2 siblings until you have created an entire generation of parents, and continue the process recursively, until you get to the root. The hash at the root of the tree is the <em>merkle-root</em>.</p>
+<p>The point of this data structure is to verify the integrity of files in transit, even if you only have part of the file. This is how torrents work to verify your download. By downloading different parts of the file from different sources, you can verify the integrity of the file at the end as long as you know the order they go in. If you only have half of a file, the same logic applies. You only need the left-side-root of the tree to verify the data-blocks you’ve already received. This allows you to receive different parts of the file at the same time and ensure that they can individually be verified without needing the rest of the file.</p>
+<p>The World state of Ethereum is the Merkle-Root of a modified-patricia-tree.</p>
+</section>
+<section id="patricia-tree">
+<h4>Patricia Tree<a class="headerlink" href="#patricia-tree" title="Permalink to this headline"></a></h4>
+<p>A patricia tree (AKA a Radix-Tree) is a type of tree, where each successive generation is used to generate a complete piece of information.</p>
+<img alt="../_images/patricia_tree.png" src="../_images/patricia_tree.png" />
+<p>Starting from the root, each child-node appends a new piece of information until you terminate in the leaf-node. The Ethereum patricia-tree uses this concept but with addresses. Take the following diagram. It seems daunting at first, but is more simple than it seems.</p>
+<img alt="../_images/merkle_patricia_tree.png" src="../_images/merkle_patricia_tree.png" />
+<p>In this tree, the leaf-node is a completed address, with its balance, the key-value pair. At each generation in the tree, another nibble (2 characters) get added to the address until completed. The extension nodes are to add nibbles to the address, and the branch nodes then to connect them all to eachother. Using this model, you can construct a tree for every possible address and its value. This is the accounts-tree. Once this tree is constructed, start taking a merkle-root. The merkle-root of this tree, working recursively up the tree, is the state root of the tree.</p>
+<p>More information on how this works can be found in the <a class="reference external" href="https://ethereum.github.io/yellowpaper/paper.pdf">Ethereum Yellow-Paper</a>.</p>
+</section>
+</section>
+</section>
+<section id="bytecode-sourcecode-and-abi">
+<h2>Bytecode, Sourcecode, and ABI<a class="headerlink" href="#bytecode-sourcecode-and-abi" title="Permalink to this headline"></a></h2>
+<p>When you compile a contract, the compiler will generate an <em>Contract ABI (Application Binary Interface)</em> This is the standard way for you to properly create transactions by defining the functions and inputs required. If looks similar to JSON. If you publish a contract, you should also publish the ABI alongside it, on a block explorer or somewhere people can find it. Wallet applications will use this information to guide you through the process, compile, and properly encrypt and sign the transaction. Without it, people will have to decompile your bytecode and attempt to figure out how it works. This runs the risk of them sending faulty transactions. Transparency is your friend. Nobody can or will use a contract with faulty source code and no ABI.</p>
+<p>An example, compressed for space. It includes all of the decompiled function information your wallet needs to create an EVM-Compatible Transaction:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span><span class="nt">&quot;constant&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&quot;inputs&quot;</span><span class="p">:[],</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="nt">&quot;outputs&quot;</span><span class="p">:[{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;string&quot;</span><span class="p">}],</span><span class="nt">&quot;payable&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="nt">&quot;stateMutability&quot;</span><span class="p">:</span><span class="s2">&quot;view&quot;</span><span class="p">,</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;function&quot;</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>More info on ABI’s can be found <a class="reference external" href="https://docs.soliditylang.org/en/v0.5.3/abi-spec.html#:~:text=The%20Contract%20Application%20Binary%20Interface,as%20described%20in%20this%20specification.">in the documentation</a></p>
+</section>
+<section id="client-types">
+<h2>Client-Types<a class="headerlink" href="#client-types" title="Permalink to this headline"></a></h2>
+<p>There are 4 different types of Clients that can be run on Ethereum:</p>
+<ol class="arabic simple">
+<li><p><strong>“Full” Sync</strong> - Gets the block headers, the block bodies, and validates every element from genesis block. Contains everything.</p></li>
+<li><p><strong>Fast Sync</strong> - Gets the block headers, the block bodies, and processes no transactions until current block - 64(*). Then it gets a snapshot state and goes like a full synchronization moving forward. It lets you get up to current status very quickly if you don’t care about history.</p></li>
+<li><p><strong>Light Sync</strong> - Gets only the current state. To verify elements, it needs to ask to full (archive) nodes for the corresponding tree leaves to regenerate the entire world-state from the merkle-patricia-tree.</p></li>
+<li><p><strong>Warp Sync</strong> - Built for the <a class="reference external" href="https://github.com/openethereum/openethereum">OpenEthereum Client</a>, it involves sending snapshots over the network to get the full state at a given block extremely quickly. Then, in the background, it fills in the blocks between the genesis and the snapshot block. It lets you immediately jump to a certain point and then fill in the history behind it which may be less important at that-very-moment. More info can be found <a class="reference external" href="https://openethereum.github.io/Warp-Sync">on the OpenEthereum Website</a>.</p></li>
+</ol>
+</section>
+<section id="transaction-lifecycle">
+<h2>Transaction lifecycle<a class="headerlink" href="#transaction-lifecycle" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>What happens when you want to send a transaction. There are several steps:</dt><dd><ol class="arabic simple">
+<li><dl class="simple">
+<dt>Constructing the raw transaction. This is in the form of a signed raw transaction hex. Your wallet constructs the raw transaction data, and signs it with your private key. This contains several fields:</dt><dd><ol class="arabic simple">
+<li><p>The Nonce, in hex. The unsigned integer that represents your transaction count, to prevent double-spends. It is incremented every time you make a transaction, to prevent replay transactions.</p></li>
+<li><p>Gas Price, in hex.</p></li>
+<li><p>Gas Limit, in hex.</p></li>
+<li><p>the recipient, the “to” field.</p></li>
+<li><p>the transaction value, in ether, also in hex.</p></li>
+<li><dl class="simple">
+<dt>Extra transaction data. Only necesarry for a smart contract interaction. Calculated automatically by your wallet. If you want to do it yourself though, it’s very easy:</dt><dd><ol class="arabic simple">
+<li><dl class="simple">
+<dt>Take the sha3 of the function signature from the contract ABI, without the parameter names.</dt><dd><ul class="simple">
+<li><p>If the function signature is <code class="docutils literal notranslate"><span class="pre">mint(address</span> <span class="pre">to)</span></code>, then you should only use <code class="docutils literal notranslate"><span class="pre">mint(address)</span></code>. This is because the EVM doesn’t care about the parameters, it just needs to be able to identify the function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">web3.utils.sha3(&quot;mint(address)&quot;)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0x7f9c8b4781db704d0917ecead0efa9e769fadacf34db8e74afcc18c0c8f35497</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Take the first <em>4</em> bytes of the hash -&gt; <code class="docutils literal notranslate"><span class="pre">0x7f9c8b47</span></code></p></li>
+<li><dl class="simple">
+<dt>Take the input parameters, and convert to bytes32, a 32-byte hex string. If the value of the string is less than 32-bytes, pad it on the left. If it is an address, or already in hex form, just do the padding, no extra conversion required.</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0xaB5409b0E5a66AcC9D63f668414539A60a5917C1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">000000000000000000000000aB5409b0E5a66AcC9D63f668414539A60a5917C</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Repeat for each input parameter, and append to the function signature.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Sign the transaction with your private key.</p></li>
+<li><p>Submit your transaction request by sending it to a local node. This means that the transaction construction and signing can be done offline. This is often to protect the secrecy of the security key and prevent transaction tampering. You can do this using <a class="reference external" href="https://etherscan.io/pushTx">Etherscan’s nodes</a> by submitting the raw transaction data.</p></li>
+<li><p>The node will propagate the unconfirmed transaction to its peers, if they choose they will add it to their mempool. Some may reject it if they feel the gas is too low or if the transaction is invalid. This is because the mempool has a finite size.</p></li>
+<li><p>The transaction sits in the mempool until a miner chooses to include it in a block. They include it in the block and execute the transactions and mine it until completion.</p></li>
+<li><p>Nodes propagate the new block and state information through its peers. If the block is accepted, they will add it to their chain. If not, they ignore it.</p></li>
+<li><p>Propagation continues until the entire network has the updated blocks.</p></li>
+<li><p>Process repeats indefinitely.</p></li>
+</ol>
+</dd>
+</dl>
+</section>
+<section id="ethereum-development-and-governance">
+<h2>Ethereum Development and Governance<a class="headerlink" href="#ethereum-development-and-governance" title="Permalink to this headline"></a></h2>
+<p>If you’re going to build the world’s largest decentralized computer, you also need a way to change things about it. However, how do you do this without creating another centralization bottleneck. Ethereum therefore has created a distributed development process. There is not one entity responsible for development, but many. The <a class="reference external" href="https://ethereum.org/en/foundation/">Ethereum Foundation</a> is the non-profit entity for doing 2 things, coordinating updates to the platform, and building 1 type of client.</p>
+<p>An ethereum client is simply a program resposible for receiving blocks, creating new ones, and maintaining the network. There are many different versions, built in different languages. For example, there are currently clients built in languages such as Go, Rust, C#, Java, etc. Each one is maintained by a different company. Geth, built in Go, is maintained by the Ethereum foundation, and was the first client-type. The C# client is maintained by Nethermind, a for-profit-company based in England.</p>
+<p>The purpose behind this was to make it so that one developer didn’t maintain exclusive control over the protocol, creating centralization risk. By diversifying clients, the security risk goes down because the risk of a chain-breaking bug is localized to a single client-type. It also prevents a company from holding the community hostage over the demands of their clients.</p>
+<p>However, this system only works in a world where all of these clients and companies are on the same page. This is where the Ethereum foundation comes into play. The foundation is the entity for <em>coordinating development</em> between the different client maintainers. They are responsible for maintaining the list of things a client needs to be able to do, so that all clients could follow it. Let’s say you wanted to be cool and build a client in <a class="reference external" href="https://en.wikipedia.org/wiki/Brainfuck">brainfuck</a>, besides being a masochist, you would be able to do so. This is because the Ethereum foundation keeps a detailed <a class="reference external" href="https://github.com/ethereum/execution-specs">specification of requirements for each client</a>. If you follow it, and implement it in your language-of-choice, then your client will be able to interact with all others without any problems. If you don’t then you won’t be able to interact properly, and if you’re building a <a class="reference external" href="https://thecryptoconundrum.net/ethereum_explained/eth2.html#proof-of-stake">staking client</a> you may even be responsible for users being slashed, and lose their stake.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 16%" />
+<col style="width: 37%" />
+<col style="width: 24%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Client</p></td>
+<td><p>Language</p></td>
+<td><p>Operating System</p></td>
+<td><p>Sync Strategy</p></td>
+</tr>
+<tr class="row-even"><td><p>Geth</p></td>
+<td><p>Go</p></td>
+<td><p>Linux, Windows, macOS</p></td>
+<td><p>Fast, Full</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nethermind</p></td>
+<td><p>C# .NET</p></td>
+<td><p>Linux, Windows, macOS</p></td>
+<td><p>Fast, Full</p></td>
+</tr>
+<tr class="row-even"><td><p>Besu</p></td>
+<td><p>Java</p></td>
+<td><p>Linux, Windows, macOS</p></td>
+<td><p>Fast, Full</p></td>
+</tr>
+<tr class="row-odd"><td><p>Erigon</p></td>
+<td><p>Go</p></td>
+<td><p>Linux, Windows, macOS</p></td>
+<td><p>Fast, Full</p></td>
+</tr>
+<tr class="row-even"><td><p>OpenEthereum</p></td>
+<td><p>Rust</p></td>
+<td><p>Linux, Windows, macOS</p></td>
+<td><p>Warp, Full</p></td>
+</tr>
+</tbody>
+</table>
+<section id="eip-s">
+<h3>EIP’S<a class="headerlink" href="#eip-s" title="Permalink to this headline"></a></h3>
+<p>EIP, short for <em>Ethereum-Improvement-Proposal</em> is the method by which new ideas are implemented into Ethereum. Let’s say you had an idea for how to make Ethereum better. How would you get it implemented? Well first you need to write down exactly what it is. You specify things like category, motivation, specifications, pros and cons, etc. The exact details of what this looks like can be found <a class="reference external" href="https://eips.ethereum.org/EIPS/eip-1">here, EIP-1</a>.</p>
+<p>Once you’ve written your EIP, you simply submit it to the community and start to build support. It is <strong>your responsibility</strong> to build support for your proposal. Once it gains enough traction it goes to the <em>Ethereum Core Developers</em></p>
+<section id="ethereum-core-developers">
+<h4>Ethereum Core Developers<a class="headerlink" href="#ethereum-core-developers" title="Permalink to this headline"></a></h4>
+<p>The Ethereum core developers is the group of people most involved in the development of Ethereum. There is no formal delegation or election process, it is simply a group of people the community has designated as important. They are people from the foundation, heads of or engineers from companies most involved with the platform’s development. They are the people most responsible for coming to a consensus on EIP’s that should be improved. Every 2-weeks they all meet on a zoom-call (open to the public) to talk about updates.</p>
+<p>They talk about proposals and debate the merits and come to a rough consensus on whether they should be included. If agreed, they go back to their companies, and community and work on individually implementing the EIP into their software. They are given the title of core dev because they are important in making sure things get implemented. For example, the chief engineer at the Ethereum Foundation, and Geth is a core dev, because they will be instrumental in the client’s implementation of new EIP’s. Vitalik, being the head of the foundation, is essential as well. It is not a formal title, that can be given or taken away.</p>
+<p>They are not elected, nor hold any more power than anyone else. Before you think they are some shadowy cabal responsible for arbitrarily deciding things, they arne’t. Their status and importance comes from the ability to shepard implementation of approved EIP’s. They are also very public and reputable individuals, who have attained the status through their altruistic contribution history to the community. It can be taken away if you stop contributing to the community. They don’t have any extra power than you and I, they are simply just developers who represent different teams and segments of the community to come to a rough consensus, without the need to complex voting-systems.</p>
+<p><a class="reference external" href="https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/">This article by Hudson James</a> does a good job explaining it as well.</p>
+</section>
+</section>
+<section id="forks">
+<h3>Forks<a class="headerlink" href="#forks" title="Permalink to this headline"></a></h3>
+<p>Congratulations, your EIP was approved and now needs to be formally implemented into the protocol. How does that happen. With a fork. Since the blockchain is immutable, the only way to change the rules is to keep moving forwards. When an update occurs, so does a fork in the chain.</p>
+<dl class="simple">
+<dt>There are two types of forks, Hard and Soft:</dt><dd><ol class="arabic simple">
+<li><p><strong>Soft Fork</strong> - A soft-fork means backwards-compatability. Only previously-valid blocks are made invalid. This means that old, un-updated, clients and versions can still interpret new updates without change. For example, a gas cost change. If you wanted to increase the gas cost of an <em>ADD</em> operation from 3 -&gt; 4 gas, then that would be introduced in a soft-fork. This means older clients can still interpret new blocks without upgrade. It is used for upgrades that don’t require a change in consensus rules.</p></li>
+<li><p><strong>Hard Fork</strong> - A hard fork is for a change in the consensus mechanism. When occured, much like the proverbial road-less-travelled, the chain goes in two-different directions. One with the old rules and one with the new rules. You can choose to keep mining or validating blocks on whichever chain you like, with identical histories up until that point. However, once the two chains diverge, they will never reunite. This means picking the chain with the most people on it is the best-option. Take Bitcoin and Bitcoin Cash. The two split because of an increase in block-size. Because the two chains have different consensus rules, they are no longer-compatible. Every node must upgrade to the new consensus rules in order to properly validate blocks. EIP-1559 was a hard-fork because it required a change in consensus on the creation/burning of new coins, as well as block size. Most major changes to blockchains utilize the hard-fork.</p></li>
+</ol>
+</dd>
+</dl>
+<img alt="../_images/soft_fork.webp" src="../_images/soft_fork.webp" />
+<img alt="../_images/hard_fork.png" src="../_images/hard_fork.png" />
+<p><em>Image Source: Investopedia</em></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="web3.html" class="btn btn-neutral float-left" title="Web3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../investment-strategies/rules.html" class="btn btn-neutral float-right" title="General Strategy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Josh Weintraub.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196042419-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-196042419-1', {
+          'anonymize_ip': true,
+      });
+    </script> 
+
+</body>
+</html>

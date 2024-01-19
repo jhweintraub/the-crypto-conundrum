@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EIP-1559 &mdash; The Crypto-Conundrum v1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Rollups and Sidechains" href="layer2.html" />
+    <link rel="prev" title="Ethereum 2.0" href="eth2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> The Crypto-Conundrum
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Who am I?:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">My Resume</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/popular_questions.html">What is Cryptocurrency?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/blockchain.html">The Blockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/exchanges.html">Exchanges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/origins.html">Coin Origins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/important_terms.html">Important Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/bitcoin_vs_ethereum.html">Bitcoin Vs. Ethereum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/picking_coins.html">Picking the Right Coins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/coin_suggestions.html">Coin Suggestions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ethereum, Explained:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="what_is_it.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_is_it.html#what-is-ethereum">What is Ethereum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_it_works.html">How Ethereum Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usability.html">How do I use it</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gas.html">Transaction Fees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tokens.html">Tokens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eth2.html">Ethereum 2.0</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">EIP-1559</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-it">What is it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-problem">The Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fee-structures">Fee Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#issuance">Issuance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#controversy">Controversy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-thoughts-and-the-future">Final Thoughts and the future</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="layer2.html">Rollups and Sidechains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="misconceptions.html">Common Criticism and Misconceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="merge.html">The Merge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web3.html">Web3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers_corner.html">Developers Corner</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Investment Rules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/rules.html">General Strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/exit_strategies.html">Define your exit strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/due-dilligence.html">Doing your Due-Dilligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/security.html">Protecting your Cryptocurrency</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/confidence.html">Be Confident</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/staking.html">Mining and Staking</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Decentralized Applications:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/uniswap.html">Uniswap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/daos.html">Decentralized Governance and DAO’s</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/nfts.html">NFTs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/defi.html">DeFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dapps/ens.html">Ethereum Name Service</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Altcoins, Explained:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/stablecoins.html">Stablecoins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/monero.html">Monero (XMR)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/polkadot.html">Polkadot (DOT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/chainlink.html">Chainlink (LINK)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">The Crypto-Conundrum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>EIP-1559</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="eip-1559">
+<h1>EIP-1559<a class="headerlink" href="#eip-1559" title="Permalink to this headline"></a></h1>
+<section id="what-is-it">
+<h2>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this headline"></a></h2>
+<p>Ethereum’s gas fees are out of control. They are unpredictable and make it very difficult to know how much to pay to launch your transaction. Luckily, the community has been hard at work to come up with a solution.</p>
+<p>EIP-1559 stands for Ethereum-Improvement-Proposal-1559. It is a proposal intended to massively overhaul the fee-structure of transactions as well as the issuance schedule of new coins.</p>
+<p>The number is arbitrary and used to delineate it from proposals. Anyone in the world can submit an <a class="reference external" href="https://eips.ethereum.org/EIPS/eip-1">Ethereum Improvement Proposal</a>, a feature or update to Ethereum they think the community should implement. If enough of the community agrees on it, then it gets implemented into tech specifications, core development code, etc.</p>
+<p>It was initially proposed by Vitalik in 2018, and despite a very controversial road, deployed in August 2021 to overwhelming community support.</p>
+<p>Before we start, it’s important you understand how gas works. Check out the link <a class="reference external" href="https://thecryptoconundrum.net/ethereum_explained/gas.html#">here</a>. This is because it is a major change to how it operates. I highly recommend you read that before continuing but if you choose not to, I have included a TL;DR below</p>
+<blockquote>
+<div><p>TL;DR - Every time you make an ethereum transaction, that transaction fee is paid in a a unit called <em>gas</em>. You pay a certain amount of ether for each unit of gas. The more complex your transaction, the more gas required. Faster confirmations mean paying more gas. Block size is measured in gas usage, with each block having a max amount that can be included. This limit can normally only be increased/decreased by a community vote. All gas/transaction fees go to the miners who make the blocks and process transactions.</p>
+</div></blockquote>
+</section>
+<section id="the-problem">
+<h2>The Problem<a class="headerlink" href="#the-problem" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>The Issues:</dt><dd><ol class="arabic simple">
+<li><dl class="simple">
+<dt>Gas prices are unpredictable and fluctuate rapidly.</dt><dd><ol class="arabic simple">
+<li><p>One minute the average cost could be <code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">Gwei</span></code>, and the next <code class="docutils literal notranslate"><span class="pre">40</span> <span class="pre">Gwei</span></code> for a simple transaction. Two transactions, exactly the same, have wildly different cost based on time. This presents many headaches for users who want to be able to have a stable transaction cost when planning their transactions.</p></li>
+<li><p>Wallets currently do not have a way to efficiently and accurately calculate your transaction cost. They do their best, but often result in people paying more than they should.</p></li>
+<li><p>This can also result in people submitting transactions with what they think as a reasonable gas cost, experiencing massive delay,s and the transaction fees spiking immediately following their transaction request. This results in very high delays</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Inflation vs. Deflation.</dt><dd><ol class="arabic simple">
+<li><p>Many people coming from the Bitcoin world have expressed reasonable concern about inflation. This comes from the rate at which new coins are created. This amount can change at any time with a community vote, and has in the past.</p></li>
+<li><p>Ethereum has no halving mechanism, and no hard-cap, like Bitcoin’s <code class="docutils literal notranslate"><span class="pre">~21</span> <span class="pre">Million</span></code>.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+<p>EIP-1559 was not necesarrily intended to solve the latter, but in a way, it does. Let’s look at what it does. Fair warning, this gets complicated so i’m going to do my very best to explain it.</p>
+<p>Using a supply-demand structure, eip-1559 attempts to create a transaction-fee <em>equilibrium</em> users can come to expect.</p>
+</section>
+<section id="fee-structures">
+<h2>Fee Structures<a class="headerlink" href="#fee-structures" title="Permalink to this headline"></a></h2>
+<p>If you recall, the current gas limit is <code class="docutils literal notranslate"><span class="pre">~15M</span> <span class="pre">gas</span></code> per block. For each transaction per in the block, there is no gas floor, only people trying to outbid eachother for space. This means there is no reasonable expectation of how little you can pay and still be included in a block. The solution to this is to introduce a new block parameter, <em>The Base Fee</em>. This is a value included in the block alongside hashes, gas limits, timestamps, etc.</p>
+<p>The <em>Base Fee</em> is a new value, representing the minimal amount a transaction can pay in fees. For example, if a block’s <em>Base Fee</em> is <code class="docutils literal notranslate"><span class="pre">50</span> <span class="pre">Gwei/gas</span></code>, then no transaction can be included with less than that amount. You can have more, but no less. Anything extra you pay above the base fee is known as a <em>Miner Tip</em>. This goes directly to the miner.</p>
+<p>Alongside the base fee, eip-1559 also changes gas limit itself. For each successive block, a miner can increase the gas limit <code class="docutils literal notranslate"><span class="pre">±</span> <span class="pre">12.5%</span></code> per block, up to a limit of <code class="docutils literal notranslate"><span class="pre">30M</span> <span class="pre">gas</span></code> at its peak (2x the current limit). However, miner’s can’t exclusively choose to just keep block size large. The block size either increases or decreases based on the network congestion. Each time the block size goes up, so does the base fee.</p>
+<p>When the number of transactions waiting to be confirmed is high, the successive blocks will increase size, and the base fee. This allows more transactions, but at a higher cost. The idea of this is to at some point make the fee high enough to dissuade some users from making a trade at that very moment. When this occurs, the network congestion will fall.</p>
+<p>When this congestion falls, so does the base fee and the block size. This continues until the size and fee reach a natural <em>equilibrium</em>. The same thing occurs in the opposite direction. When congestion is low, the block size and base fee will decrease to encourage more transactions. This is until activity picks up slightly, and equilibrium is reached oncemore.</p>
+<img alt="../_images/1559_ex.png" src="../_images/1559_ex.png" />
+<p><em>Image Source: Finematics Youtube</em></p>
+<p>You can set a base fee manually, lower than the current block base fee. If this happens then your transaction will sit in the waiting-pool (mempool) until a block with an equal or lower base fee.</p>
+<p>In case you’re worried about block size changes causing more centralization, <a class="reference external" href="https://notes.ethereum.org/&#64;vbuterin/eip_1559_spikes">don’t be</a>.</p>
+<p>It is also important to know that although the max size is <code class="docutils literal notranslate"><span class="pre">30M</span> <span class="pre">gas</span></code>, the target size is still <code class="docutils literal notranslate"><span class="pre">15M</span> <span class="pre">gas</span></code>. This means that ideally each block only contains roughly that amount and is half-empty. This is to ensure that the blockchain continues to grow at a very constant rate, but is able to respond positively to changes in demand.</p>
+</section>
+<section id="issuance">
+<h2>Issuance<a class="headerlink" href="#issuance" title="Permalink to this headline"></a></h2>
+<p>For <strong>every</strong> block, the base-fee is <strong>burned</strong>. It is taken out of circulation and  destroyed. This means that for every transaction, <strong>only</strong> the <em>miner tip</em> will go to them directly. This is so that you can still choose to pay extra for a faster confirmation if you wish. For each block they produce, the miners <strong>ONLY</strong> get these tips, and the block reward, which won’t change unless decided by the community.</p>
+<p>For reference, ether’s issuance rate is currently at about <code class="docutils literal notranslate"><span class="pre">~4.5%</span> <span class="pre">/</span> <span class="pre">year</span></code>. It is predicted that after this is implemented, it could stablize at <code class="docutils literal notranslate"><span class="pre">~0.5-1%</span> <span class="pre">/</span> <span class="pre">year</span></code>.</p>
+<p>However, over time, with periods of high network congestion, the amount of ether burned from the base fee can be <strong>HIGHER</strong> than the block reward. Creating a <strong>NEGATIVE token issuance</strong> per block. There is more taken out of existence than entering.</p>
+<p>This makes Ether <strong>deflationary</strong>. Delfation, being where the value increases, as a function of decreased supply. As a token holder, this is very good for you. As ether supply starts to come down, your holdings become more valuable. If you’re submitting a transaction, then this doesn’t effect you anyways cause that eth is already being taken out of your account, in the form of transaction fees. Keep in mind however, that this only occurs at periods of high network traffic. So while high amounts of ether may be burned, it also coincides with higher transaction fees.</p>
+<p>For reference, take a look at this chart. If eip-1559 were implemented years ago what the issuance rate would look like. Negative issuance is when the line goes below 0.</p>
+<img alt="../_images/1559_issuance.png" src="../_images/1559_issuance.png" />
+<img alt="../_images/eth_burnt.jpg" src="../_images/eth_burnt.jpg" />
+</section>
+<section id="controversy">
+<h2>Controversy<a class="headerlink" href="#controversy" title="Permalink to this headline"></a></h2>
+<p>Naturally, the miners aren’t very happy about this. This is because mining is expensive and they want to get paid. This update would cut the amount of profit they made, and so they resisted. However, the community writ large of developers and consumers came together to support this update.</p>
+<p>If the fee for your transaction is <code class="docutils literal notranslate"><span class="pre">~.05</span> <span class="pre">ether</span></code> but half of it goes to the <em>burnt base fee</em>, then miners only receive half as much as they normally would. Good for the trader, bad for the miner.</p>
+<p>This is also why the update to Ethereum 2.0 is so important. Without miners, this update wouldn’t run be controversial to block producers, because there wouldn’t be miners who have high expenses they need to recover from mining.</p>
+<p>Miners got together and tried to stop it. They threatened to do things like pulling their mining-ability, or even attemping a 51% attack. They won’t, and never tried, because at the end of the day Ethereum 2.0 was going to make it irrelevant. They also hold substantial Ether holdings of their own, and to attempt such a rebellion would have caused a massive price shock and devalued their own holdings. It was posturing.</p>
+</section>
+<section id="final-thoughts-and-the-future">
+<h2>Final Thoughts and the future<a class="headerlink" href="#final-thoughts-and-the-future" title="Permalink to this headline"></a></h2>
+<p>Thanks to community consensus and a large public support campaign the eip was approved. It is expected to go into effect in mid-july.</p>
+<dl class="simple">
+<dt><strong>Will this make gas prices go down?</strong></dt><dd><p>No. This is merely a market mechanism to make prices more predictable going forward. It will not lower the amount of gas you have to spend. It is a market based system to help you make predictions and plan your transactions. At any given time the fee may be high, but this lets you know that at some point it will come back down to an amount you find reasonable.</p>
+</dd>
+<dt><strong>Will this make the price go up?</strong></dt><dd><p>I don’t know. Maybe. Maybe not. The biggest thing is that this is going to make being a user of Ethereum better and a major improvement for the long-term health of the network. At its core that is what will help it grow in value and popularity.</p>
+</dd>
+</dl>
+<p>I also think that the controversy and long road this proposal took to be implemented is a testament to the resillience and forward thinking nature of the Ethereum community. It shows just how many people are constantly committed to identifying and solving problems facing Ethereum.</p>
+<p>It’s one of the things that originally drew me to Ethereum, and i’m excited to see where it goes from here.</p>
+<p>I hope you enjoyed this series on Ethereum. The next article is a technically-detailed explanation of Ethereum for developers and people with tech backgrounds. It’s not needed at all unless you’re really interested in the inner mechanism that makes it work.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="eth2.html" class="btn btn-neutral float-left" title="Ethereum 2.0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="layer2.html" class="btn btn-neutral float-right" title="Rollups and Sidechains" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Josh Weintraub.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196042419-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-196042419-1', {
+          'anonymize_ip': true,
+      });
+    </script> 
+
+</body>
+</html>

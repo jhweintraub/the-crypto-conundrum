@@ -1,0 +1,105 @@
+EIP-1559
+==========
+
+What is it?
+-------------
+
+Ethereum's gas fees are out of control. They are unpredictable and make it very difficult to know how much to pay to launch your transaction. Luckily, the community has been hard at work to come up with a solution.
+
+EIP-1559 stands for Ethereum-Improvement-Proposal-1559. It is a proposal intended to massively overhaul the fee-structure of transactions as well as the issuance schedule of new coins. 
+
+The number is arbitrary and used to delineate it from proposals. Anyone in the world can submit an `Ethereum Improvement Proposal <https://eips.ethereum.org/EIPS/eip-1>`_, a feature or update to Ethereum they think the community should implement. If enough of the community agrees on it, then it gets implemented into tech specifications, core development code, etc. 
+
+It was initially proposed by Vitalik in 2018, and despite a very controversial road, deployed in August 2021 to overwhelming community support.
+
+Before we start, it's important you understand how gas works. Check out the link `here <https://thecryptoconundrum.net/ethereum_explained/gas.html#>`_. This is because it is a major change to how it operates. I highly recommend you read that before continuing but if you choose not to, I have included a TL;DR below
+
+	TL;DR - Every time you make an ethereum transaction, that transaction fee is paid in a a unit called *gas*. You pay a certain amount of ether for each unit of gas. The more complex your transaction, the more gas required. Faster confirmations mean paying more gas. Block size is measured in gas usage, with each block having a max amount that can be included. This limit can normally only be increased/decreased by a community vote. All gas/transaction fees go to the miners who make the blocks and process transactions.
+
+The Problem
+-------------
+
+
+The Issues:
+	#. Gas prices are unpredictable and fluctuate rapidly. 
+		#. One minute the average cost could be ``15 Gwei``, and the next ``40 Gwei`` for a simple transaction. Two transactions, exactly the same, have wildly different cost based on time. This presents many headaches for users who want to be able to have a stable transaction cost when planning their transactions. 
+		#. Wallets currently do not have a way to efficiently and accurately calculate your transaction cost. They do their best, but often result in people paying more than they should. 
+		#. This can also result in people submitting transactions with what they think as a reasonable gas cost, experiencing massive delay,s and the transaction fees spiking immediately following their transaction request. This results in very high delays
+
+	#. Inflation vs. Deflation. 
+		#. Many people coming from the Bitcoin world have expressed reasonable concern about inflation. This comes from the rate at which new coins are created. This amount can change at any time with a community vote, and has in the past.
+		#. Ethereum has no halving mechanism, and no hard-cap, like Bitcoin's ``~21 Million``. 
+
+EIP-1559 was not necesarrily intended to solve the latter, but in a way, it does. Let's look at what it does. Fair warning, this gets complicated so i'm going to do my very best to explain it. 
+
+Using a supply-demand structure, eip-1559 attempts to create a transaction-fee *equilibrium* users can come to expect.
+
+Fee Structures
+---------------
+
+If you recall, the current gas limit is ``~15M gas`` per block. For each transaction per in the block, there is no gas floor, only people trying to outbid eachother for space. This means there is no reasonable expectation of how little you can pay and still be included in a block. The solution to this is to introduce a new block parameter, *The Base Fee*. This is a value included in the block alongside hashes, gas limits, timestamps, etc.
+
+The *Base Fee* is a new value, representing the minimal amount a transaction can pay in fees. For example, if a block's *Base Fee* is ``50 Gwei/gas``, then no transaction can be included with less than that amount. You can have more, but no less. Anything extra you pay above the base fee is known as a *Miner Tip*. This goes directly to the miner.
+
+Alongside the base fee, eip-1559 also changes gas limit itself. For each successive block, a miner can increase the gas limit ``± 12.5%`` per block, up to a limit of ``30M gas`` at its peak (2x the current limit). However, miner's can't exclusively choose to just keep block size large. The block size either increases or decreases based on the network congestion. Each time the block size goes up, so does the base fee. 
+
+When the number of transactions waiting to be confirmed is high, the successive blocks will increase size, and the base fee. This allows more transactions, but at a higher cost. The idea of this is to at some point make the fee high enough to dissuade some users from making a trade at that very moment. When this occurs, the network congestion will fall. 
+
+When this congestion falls, so does the base fee and the block size. This continues until the size and fee reach a natural *equilibrium*. The same thing occurs in the opposite direction. When congestion is low, the block size and base fee will decrease to encourage more transactions. This is until activity picks up slightly, and equilibrium is reached oncemore. 
+
+.. image:: images/1559_ex.png
+
+*Image Source: Finematics Youtube*
+
+You can set a base fee manually, lower than the current block base fee. If this happens then your transaction will sit in the waiting-pool (mempool) until a block with an equal or lower base fee.
+
+In case you're worried about block size changes causing more centralization, `don't be <https://notes.ethereum.org/@vbuterin/eip_1559_spikes>`_. 
+
+It is also important to know that although the max size is ``30M gas``, the target size is still ``15M gas``. This means that ideally each block only contains roughly that amount and is half-empty. This is to ensure that the blockchain continues to grow at a very constant rate, but is able to respond positively to changes in demand.
+
+Issuance
+---------
+
+For **every** block, the base-fee is **burned**. It is taken out of circulation and  destroyed. This means that for every transaction, **only** the *miner tip* will go to them directly. This is so that you can still choose to pay extra for a faster confirmation if you wish. For each block they produce, the miners **ONLY** get these tips, and the block reward, which won't change unless decided by the community. 
+
+For reference, ether's issuance rate is currently at about ``~4.5% / year``. It is predicted that after this is implemented, it could stablize at ``~0.5-1% / year``. 
+
+However, over time, with periods of high network congestion, the amount of ether burned from the base fee can be **HIGHER** than the block reward. Creating a **NEGATIVE token issuance** per block. There is more taken out of existence than entering. 
+
+This makes Ether **deflationary**. Delfation, being where the value increases, as a function of decreased supply. As a token holder, this is very good for you. As ether supply starts to come down, your holdings become more valuable. If you're submitting a transaction, then this doesn't effect you anyways cause that eth is already being taken out of your account, in the form of transaction fees. Keep in mind however, that this only occurs at periods of high network traffic. So while high amounts of ether may be burned, it also coincides with higher transaction fees.
+
+For reference, take a look at this chart. If eip-1559 were implemented years ago what the issuance rate would look like. Negative issuance is when the line goes below 0.
+
+.. image:: images/1559_issuance.png
+
+.. image:: images/eth_burnt.jpg
+
+
+Controversy
+-------------
+
+Naturally, the miners aren't very happy about this. This is because mining is expensive and they want to get paid. This update would cut the amount of profit they made, and so they resisted. However, the community writ large of developers and consumers came together to support this update. 
+
+If the fee for your transaction is ``~.05 ether`` but half of it goes to the *burnt base fee*, then miners only receive half as much as they normally would. Good for the trader, bad for the miner.
+
+This is also why the update to Ethereum 2.0 is so important. Without miners, this update wouldn't run be controversial to block producers, because there wouldn't be miners who have high expenses they need to recover from mining.
+
+Miners got together and tried to stop it. They threatened to do things like pulling their mining-ability, or even attemping a 51% attack. They won't, and never tried, because at the end of the day Ethereum 2.0 was going to make it irrelevant. They also hold substantial Ether holdings of their own, and to attempt such a rebellion would have caused a massive price shock and devalued their own holdings. It was posturing. 
+
+
+Final Thoughts and the future
+------------------------------
+
+Thanks to community consensus and a large public support campaign the eip was approved. It is expected to go into effect in mid-july. 
+
+**Will this make gas prices go down?**
+	No. This is merely a market mechanism to make prices more predictable going forward. It will not lower the amount of gas you have to spend. It is a market based system to help you make predictions and plan your transactions. At any given time the fee may be high, but this lets you know that at some point it will come back down to an amount you find reasonable.
+
+**Will this make the price go up?**
+	I don't know. Maybe. Maybe not. The biggest thing is that this is going to make being a user of Ethereum better and a major improvement for the long-term health of the network. At its core that is what will help it grow in value and popularity. 
+
+I also think that the controversy and long road this proposal took to be implemented is a testament to the resillience and forward thinking nature of the Ethereum community. It shows just how many people are constantly committed to identifying and solving problems facing Ethereum.
+
+It's one of the things that originally drew me to Ethereum, and i'm excited to see where it goes from here. 
+
+I hope you enjoyed this series on Ethereum. The next article is a technically-detailed explanation of Ethereum for developers and people with tech backgrounds. It's not needed at all unless you're really interested in the inner mechanism that makes it work. 

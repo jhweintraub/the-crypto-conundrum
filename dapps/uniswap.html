@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uniswap &mdash; The Crypto-Conundrum v1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Decentralized Governance and DAO’s" href="daos.html" />
+    <link rel="prev" title="Mining and Staking" href="../investment-strategies/staking.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> The Crypto-Conundrum
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Who am I?:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/intro.html">My Resume</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/popular_questions.html">What is Cryptocurrency?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/blockchain.html">The Blockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/exchanges.html">Exchanges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/origins.html">Coin Origins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/important_terms.html">Important Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/bitcoin_vs_ethereum.html">Bitcoin Vs. Ethereum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/picking_coins.html">Picking the Right Coins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/coin_suggestions.html">Coin Suggestions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ethereum, Explained:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/what_is_it.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/what_is_it.html#what-is-ethereum">What is Ethereum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/how_it_works.html">How Ethereum Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/usability.html">How do I use it</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/gas.html">Transaction Fees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/tokens.html">Tokens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/eth2.html">Ethereum 2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/eip_1559.html">EIP-1559</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/layer2.html">Rollups and Sidechains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/misconceptions.html">Common Criticism and Misconceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/merge.html">The Merge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/web3.html">Web3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ethereum_explained/developers_corner.html">Developers Corner</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Investment Rules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/rules.html">General Strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/exit_strategies.html">Define your exit strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/due-dilligence.html">Doing your Due-Dilligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/security.html">Protecting your Cryptocurrency</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/confidence.html">Be Confident</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../investment-strategies/staking.html">Mining and Staking</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Decentralized Applications:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Uniswap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#automated-market-makers-amm">Automated Market-Makers (AMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-does-it-work">How does it work?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#providing-liquidity">Providing Liquidity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#price-curves">Price Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arbitrage">Arbitrage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#slippage-sandwich-attacks-and-front-running">Slippage, Sandwich Attacks, and Front-Running</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-thoughts">Final thoughts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="daos.html">Decentralized Governance and DAO’s</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nfts.html">NFTs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="defi.html">DeFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ens.html">Ethereum Name Service</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Altcoins, Explained:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/stablecoins.html">Stablecoins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/monero.html">Monero (XMR)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/polkadot.html">Polkadot (DOT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coins_explained/chainlink.html">Chainlink (LINK)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">The Crypto-Conundrum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Uniswap</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="uniswap">
+<h1>Uniswap<a class="headerlink" href="#uniswap" title="Permalink to this headline"></a></h1>
+<p>Uniswap is arguably the single-most important application to the Ethereum ecosystem. There are many like it, but it is undoubtedly the best of its kind, with no near competitors. With thousands of different tokens being deployed, there needs to be a simple and decentralized way to exchange them. It is fast, decentralized, and easy to use.</p>
+<p>Uniswap is a Decentralized Exchange (DEX) for tokens on the Ethereum blockchain. It gives you the ability to trade Ether, or any ERC-20 token, for something else. It does this by being what is known as an <strong>Automated Market Maker (AMM)</strong></p>
+<section id="automated-market-makers-amm">
+<h2>Automated Market-Makers (AMM)<a class="headerlink" href="#automated-market-makers-amm" title="Permalink to this headline"></a></h2>
+<p>Imagine a normal stock exchange, or even a crypto one like Coinbase. If you go to an advanced trader page, they show you a list of all the transactions happening in real time. This is because normal exchanges work on what’s known as the <em>order book model</em>. This is where in order for you to sell, someone must buy what you are selling, at that price. In order to buy, someone has to be selling. Sometimes, there is nobody at that exact moment selling at the price you want, so a <em>market maker</em> comes into play. This is a person, who provides liquidity to the market, trying to profit off of difference in the <a class="reference external" href="https://www.investopedia.com/terms/b/bid-askspread.asp">bid-ask spread</a>. Without them, many transactions would be slow or fail.</p>
+<img alt="../_images/cex.png" src="../_images/cex.png" />
+<p><em>Source: Coinbase Pro</em></p>
+<p>However, these centralized exchanges have to run all the time, constantly checking for bids from both sides. This can be very slow, and in the world of smart contracts, <strong>incredibly expensive</strong>. Uniswap, and all AMM’s, avoid this by using an automated strategy for calculating price. It is done algorithmically after every trade, constantly adjusting itself to your benefit. It does this through a collection known as a <em>liquidity pool</em>.</p>
+<p><strong>Why would you use this?</strong></p>
+<blockquote>
+<div><p>Let’s say you wanted to trade your Ether for Chainlink, for whatever reason. You might not want to go through an exchange. This can be because of high exchange fees, lack of trust, desire for anonymity, or that exchanges will make you sell your ether first, incurring a taxable profit event. With Uniswap, one transaction can allow you to directly trade one asset for another, without first having to sell on the open market.</p>
+</div></blockquote>
+</section>
+<section id="how-does-it-work">
+<h2>How does it work?<a class="headerlink" href="#how-does-it-work" title="Permalink to this headline"></a></h2>
+<p>Decentralized exchanges utilize <em>liquidity pools</em>. A liquidity pool is exactly what it sounds like. Unused tokens and coins are added to a pool, and people trading withdraw from it. When you want to take something out, you have to first put in an equal amount of value. The pool is managed by the smart contract protocol, and contains two assets, constantly balancing each-other out.</p>
+<p>Let’s revisit the <code class="docutils literal notranslate"><span class="pre">Ether-&gt;Chainlink</span> <span class="pre">example</span></code>. If I wanted to trade, all I would have to do is send a certain amount of Ether to the pool’s contract, and it would calculate the amount of chainlink I am entitled to in return. It has an algorithm that calculates this, of which I will discuss later. You don’t need to know how specifically it works to use it.</p>
+<p>Each pool contains 2 assets. However, if the swap you want to do does not have a pool, then the protocols will still route it for you. More exotic trades, like from <code class="docutils literal notranslate"><span class="pre">Chainlink</span> <span class="pre">-&gt;</span> <span class="pre">Uniswap</span></code>, may not have a pool. The protocols will recognize this, and route it for you. So your final transaction values may be the same, but the path it takes may look like <code class="docutils literal notranslate"><span class="pre">Chainlink</span> <span class="pre">-&gt;</span> <span class="pre">Ether</span> <span class="pre">-&gt;</span> <span class="pre">Uniswap</span></code></p>
+<p>Because of the way these algorithms work, and a series of economic instruments, the price of asset swaps stays relatively close to its true-market value. This is because these contracts cannot reach out to the open internet to get the price of assets in-real time. It would be very slow, difficult, and expensive. You may not get a price exactly as you see on Coinbase, but part of that can be chalked up to the cost of using the application.</p>
+<img alt="../_images/uniswap_tx.png" src="../_images/uniswap_tx.png" />
+<p><em>Image Source: Uniswap Web Interface</em></p>
+<p>This is the web interface for Uniswap. It’s very simple. You simply select the asset you want to trade, the one you want to receive, and the amount you want to put in. It then calculates the amount you get in return, and other necessary data behind the scenes. All you have to do is click send, after connecting your browser-wallet.</p>
+<p><strong>Why does it have the price of Ether listed 3 times? And why is the amount I get in return the lowest?</strong></p>
+<dl class="simple">
+<dt>This is the result of two things:</dt><dd><ol class="arabic simple">
+<li><p>The price of Ether <code class="docutils literal notranslate"><span class="pre">~$2,416.68</span></code> is the current market value, as retrieved by some external website. This tells you want the actual exchange-market-value is.</p></li>
+<li><p>The value it returns to you is an estimate, at your time of transaction. It is defined by the liquidity pool. This number fluctuates every second, as people add and remove from the liquidity pool. It will make more sense later how this number is calculated, when I explain it in depth. The more assets in the pool, and the more people trading, the closer this number gets to its true value.</p></li>
+<li><p>You have to pay a transaction fee to the liquidity providers. Based on the coins you are trading. This is factored into the amount of tokens you receive in exchange.</p></li>
+</ol>
+</dd>
+</dl>
+<p>It’s also important to remember, that without an external source of data, it is truly a mathematical marvel how accurate this system is. If coinbase quotes you a a price of <code class="docutils literal notranslate"><span class="pre">~$2,416/Eth</span></code> and Uniswap gives you <code class="docutils literal notranslate"><span class="pre">~$2,412/Eth</span></code> then it’s only a <code class="docutils literal notranslate"><span class="pre">0.16%</span></code> difference in true value.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(4</span> <span class="pre">/</span> <span class="pre">2416)</span> <span class="pre">*</span> <span class="pre">100</span> <span class="pre">=</span> <span class="pre">0.16%</span></code></p>
+</div></blockquote>
+</section>
+<section id="providing-liquidity">
+<h2>Providing Liquidity<a class="headerlink" href="#providing-liquidity" title="Permalink to this headline"></a></h2>
+<p>Liquidity providers are the heart of this application, and what keeps it decentralized. Anyone who owns any-two coins or tokens can provide liquidity. This means to put it into a pool, and earn fees on all trades. It can be withdrawn at any time.</p>
+<p>Whenever you use a DEX, users pay a fee in the coins they are trading. This fee is different based on the creator of the pool, and is used to incentivize various pools. This is because having a direct-trade pool, instead of routing through different pools, can decrease your exchange fees and gas cost. However, because they may get less exchanges, the fees have to be higher to incentivize people to provide liquidity to it. This can be either <code class="docutils literal notranslate"><span class="pre">1%</span></code>, <code class="docutils literal notranslate"><span class="pre">0.3%</span></code>, or <code class="docutils literal notranslate"><span class="pre">0.05%</span></code>. The more exotic the pair, and less available liquidity, the greater the fee.</p>
+<p>This fee is then distributed to the liquidity providers based on your individual contribution to the pool. If <code class="docutils literal notranslate"><span class="pre">$1</span> <span class="pre">Million</span></code> is collected in fees everyday, and you own <code class="docutils literal notranslate"><span class="pre">1%</span></code> of the liquidity, then you get <code class="docutils literal notranslate"><span class="pre">$10k</span></code> everyday. This is kept track of using tokens. When you deposit your liquidity into a pool, the pool issues you LP-Tokens, ERC-20/721 compliant. They are redeemable at any time for the amount you put in, plus the accrued fees. Since they’re also tokens, they can be traded if you wish.</p>
+<p>Each pool is a smart contract, with it’s own tokens to mint and distribute automatically. In previous versions (v2), this LP (liquidity provider) token was an ERC-20. In V3, this changed to an ERC-721. I will explain why later, but it’s not important if you just want to be a simple user.</p>
+</section>
+<section id="price-curves">
+<h2>Price Curves<a class="headerlink" href="#price-curves" title="Permalink to this headline"></a></h2>
+<p>This next section is a detailed technical explanation of how these liquidity pools and protocols work. You don’t need to know how in order to use it, but it’s some interesting stuff.</p>
+<p>I’m sorry, but</p>
+<img alt="../_images/math.png" src="../_images/math.png" />
+<p><em>Image Source: Futurama</em></p>
+<p>Uniswap is what is known as a <em>constant-product market maker</em>.  The core of Uniswap, and many dex’s, is one fundamental equation:</p>
+<p><span class="math notranslate nohighlight">\(x*y=k\)</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">quantity</span> <span class="pre">of</span> <span class="pre">token</span> <span class="pre">A</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">quantity</span> <span class="pre">of</span> <span class="pre">token</span> <span class="pre">B</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">constant</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">k</span></code> is set at the time of pool creation, and must always be the same.</p>
+<p>This creates the following price curve.</p>
+<img alt="../_images/price_curve.png" src="../_images/price_curve.png" />
+<p>At any point in time the reserves in the pool create a point on that curve. When you put tokens into a pool <code class="docutils literal notranslate"><span class="pre">(x)</span></code>, for a swap, you move it in one direction. The amount you get out <code class="docutils literal notranslate"><span class="pre">(y)</span></code> is the opposite amount of tokens necessary to keep <code class="docutils literal notranslate"><span class="pre">k</span></code> constant.</p>
+<p>Therefore your exchange rate can be expressed as the ratio of tokenX to tokenY, or <code class="docutils literal notranslate"><span class="pre">x/y</span></code>.</p>
+<p>This means that as you trade larger values, your exchange rate gets worse. As you move the curve too far in one direction, your marginal cost gets higher and higher.</p>
+<p>When you provide liquidity you have to provide values of both tokens, to keep the pool in balance.</p>
+<p>In Uniswap-V2, this liquidity was dispersed uniformly over the curve. As long as you provided liquidity, you got fees on every single trade, regardless of price (point on the curve). In Uniswap-V3 (which we’re in right now), this liquidity is concentrated into <em>ranges</em>. When you add your liquidity, you provide a price range. This is two points on the curve. If a trade occurs within that price range, you get the fees associated with the trade.</p>
+<img alt="../_images/concentrated_lp.png" src="../_images/concentrated_lp.png" />
+<p><em>source: medium &#64;arnau ramio</em></p>
+<p>This allows your liquidity to be more efficient, hundreds of times over. Take the above curve, and a stablecoin pair like <code class="docutils literal notranslate"><span class="pre">USDC-&gt;Dai</span></code>. The exchange rate never really trades beyond a range of <code class="docutils literal notranslate"><span class="pre">$0.98</span> <span class="pre">and</span> <span class="pre">$1.02</span></code>. This small range may only be <code class="docutils literal notranslate"><span class="pre">10%</span></code> of the total price curve. When liquidity is provided uniformly across the curve, only <code class="docutils literal notranslate"><span class="pre">10%</span></code> of your liquidity is used to earn fees while the other sits around useless. When you provide a trading range, you can provide less liquidity, while still earning the same amount of fees. This makes your provided capital more efficient.</p>
+<p>For example, if you provided <code class="docutils literal notranslate"><span class="pre">$10k</span> <span class="pre">of</span> <span class="pre">Ether</span> <span class="pre">&amp;</span> <span class="pre">Chainlink</span></code> to a uniform distribution curve, the normal trading range may only be <code class="docutils literal notranslate"><span class="pre">10%</span></code> of the curve. If you can correctly identify this range, you can provide only <code class="docutils literal notranslate"><span class="pre">~10%</span></code> of the amount you normally would and earn the same amount of fees, as long as trading price stays within your defined range. This makes it <code class="docutils literal notranslate"><span class="pre">10x</span></code> more efficient.</p>
+<p>The same logic works with how rewards are distributed. If you own <code class="docutils literal notranslate"><span class="pre">1%</span></code> of the liquidity provided in the range of <code class="docutils literal notranslate"><span class="pre">[0.98,</span> <span class="pre">1.02]</span></code>, then whenever a trade is executed in that price range, you get <code class="docutils literal notranslate"><span class="pre">1%</span></code> of the allocated fees.</p>
+<p>This is also why there are different fee tiers. Price ranges that are more commonly used have lower fees, because of their ubiquity. However, ranges that are more exotic or outside of normal traffic tend to accrue lower fees, therefore the percent charged must be higher. This is necessary to incentivize people to provide liquidity to those ranges. If the fees were the same, then nobody would provide liquidity at certain parts of the curve, and trading there would be impossible. This system of incentives is necessary to ensure that at any time you can make a trade as there is enough liquidity.</p>
+<p>This is a very difficult concept to grasp and I highly recommend you check out the two following videos for further aid. It took me a long time and a bunch of paper, literally writing out these curves myself to finally grasp it.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cizLhxSKrAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/Ehm-OYBmlPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p><em>Video Sources: Finematics Youtube</em></p>
+<p>In the previous version where all provided liquidity was the same, each pool could issue an ERC-20 token, because it was fungible, all liquidity was the same. In V3, due to concentrated liquidity curves, each token is an ERC-721 (NFT) token. This is necessary to ensure proper management and accounting of all provided liquidity across many individualized price curves.</p>
+</section>
+<section id="arbitrage">
+<h2>Arbitrage<a class="headerlink" href="#arbitrage" title="Permalink to this headline"></a></h2>
+<p>A good part of what keeps the exchange rate close to reality, is a financial maneuver called <em>arbitrage</em>. Basically, the existence of multiple decentralized-exchanges allows people to take advantage of price discrepancies and profitability. Let’s imagine this using two stablecoins for simplicity. Let’s imagine on uniswap for a brief period the exchange rate of <code class="docutils literal notranslate"><span class="pre">USDC-&gt;Dai</span></code> is <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">USDC</span> <span class="pre">=</span> <span class="pre">0.99</span> <span class="pre">DAI</span></code>. On Sushiswap, the rate may still be <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Dai</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">USDC</span></code>. People will notice this, and exchange their USDC for Dai. They then take it over to Sushiswap (or another Dex), and convert it back to USDC for a profit of <code class="docutils literal notranslate"><span class="pre">$0.01</span> <span class="pre">/</span> <span class="pre">USDC</span></code>. This is because they bought Dai at <code class="docutils literal notranslate"><span class="pre">$0.99</span></code> on Uniswap and sold it for <code class="docutils literal notranslate"><span class="pre">$1</span></code> somewhere else.</p>
+<img alt="../_images/arbitrage1.png" src="../_images/arbitrage1.png" />
+<p>This pushes the point on the curve slightly to the left, back towards equilibrium. This is because they are decreasing the supply of Dai, and increasing the supply of USDC. This pushes price back towards equilibrium. The same happens when price is too high above a normal range. When the price of Dai goes <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">$1</span></code>, arbitragers will buy Dai from somewhere cheaper, and start selling it on Uniswap, increasing supply and pushing price down.</p>
+<p><strong>If they’re only making 1 cent on each USDC how do they make a profit?</strong></p>
+<p>Good question, by having enough to trade with you can in fact be very profitable. <code class="docutils literal notranslate"><span class="pre">$.01</span></code> doesn’t seem like a lot, but if you’re trading <code class="docutils literal notranslate"><span class="pre">1k</span> <span class="pre">Dai</span></code> on each arbitrage opportunity that can really add up. However, you are limited by gas costs. These maneuvers can be great profit opportunities, but at present are complicated and involve spending a lot of Eth on gas. If you can afford it my hat’s off to you. These are done with bots, not humans who constantly monitor prices for opportunities like such.</p>
+<p>Some more advanced traders will even use something known as a <em>flash loan</em>, allowing them to access huge amounts of borrowed funds temporarily for these maneuvers. I will cover flash loans in a future article.</p>
+</section>
+<section id="slippage-sandwich-attacks-and-front-running">
+<h2>Slippage, Sandwich Attacks, and Front-Running<a class="headerlink" href="#slippage-sandwich-attacks-and-front-running" title="Permalink to this headline"></a></h2>
+<p>When you go to Uniswap’s website, the exchange rate and output value they give you are estimates, at that point at time. If you recall, the exchange rate re-adjusts itself after every transaction involving the pool. This can occur several times within the same block, based on ordering. If someone has a large transaction of the same pool, ordered before you in the block, your exchange rate can change. This can be to your detriment, and the attacker’s profit.</p>
+<p>This situation creates what’s known as <em>slippage</em>, and makes you the victim of a <em>sandwich attack/frontrunning</em>.</p>
+<p>Slippage is simply when the amount you expect to receive is different from the amount you really receive. If you initiate a transaction on Uniswap, expecting to receive <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">Eth</span></code>, and when the transaction finishes you only receive <code class="docutils literal notranslate"><span class="pre">99</span> <span class="pre">Eth</span></code>, your slippage rate is <code class="docutils literal notranslate"><span class="pre">1%</span></code>. This is obviously bad for you, because you get less than you want. This is because of the rapidly fluctuating price of various assets. There are two ways this occurs:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><dl class="simple">
+<dt>Sometimes, when your trade was very large, you can move the point on the liquidity curve. If you’re trading <code class="docutils literal notranslate"><span class="pre">$10k</span></code> worth of assets in a pool with only <code class="docutils literal notranslate"><span class="pre">$100k</span></code> in provided liquidity, then your trade has the potential to dramatically move the point on the price curve. This would result in a devaluation of your own assets. This is also known as the <em>price impact</em>.</dt><dd><ol class="loweralpha simple">
+<li><p>Luckily this can be solved by breaking your large transactions into smaller transactions. This gives arbitragers time to leverage the price change, and keep your transaction from causing too much havoc.</p></li>
+<li><p>This is also solved by simply having larger pools. The more assets there are in a pool, the more difficult it is for one trade to change the price.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Your asset just depreciated on the open market while waiting for the transaction to be processed. You might end up with the same amount of output tokens, but if you wanted to sell it on Coinbase, the lower price just means less profit.</p></li>
+</ol>
+</div></blockquote>
+<p>Sometimes however, you can be victim of a <em>sandwich attack</em>. This is when someone else essentially steals your trade, to make their own profit at your expense. When you submit a trade, before it is processed and put into a block, it sits in what’s known as the <em>mempool</em>. There are bots that look at all waiting transactions, and basically copy your large ones and execute them before you. They then wait until your transaction is also processed, and submits a third transaction immediately after, selling the assets you just bought for profit. It’s a <em>sandwich attack</em> because it sandwiches your own transaction between two others.</p>
+<p>This next part can get difficult. It may help to write out some of these numbers on a piece of paper.</p>
+<p>Let’s take an imaginary liquidity pool with <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">Ether</span> <span class="pre">and</span> <span class="pre">100</span> <span class="pre">Dai</span></code>. This makes the exchange rate <code class="docutils literal notranslate"><span class="pre">10/1</span> <span class="pre">for</span> <span class="pre">Ether-&gt;Dai</span></code> so <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Eth</span> <span class="pre">=</span> <span class="pre">10</span> <span class="pre">Dai</span></code>, or <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Dai</span> <span class="pre">=</span> <span class="pre">.1</span> <span class="pre">Eth</span></code>. In this situation with the equation <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">*</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">k</span></code> you get <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">*</span> <span class="pre">10</span> <span class="pre">=</span> <span class="pre">1,000</span></code>.</p>
+<p>Now let’s imagine I was about to make a trade of <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">Ether</span></code> for what I think is about to be <code class="docutils literal notranslate"><span class="pre">~33.33</span> <span class="pre">Dai</span></code>. This fits the rules because afterwards <code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">Eth</span> <span class="pre">*</span> <span class="pre">66.67</span> <span class="pre">Dai</span> <span class="pre">=</span> <span class="pre">1,000</span></code> and <code class="docutils literal notranslate"><span class="pre">100-66.67</span> <span class="pre">=</span> <span class="pre">33.33</span></code>. For the sake of this example, don’t worry about the bogus exchange deal that results from tons of slippage. You expect that trade to get you <code class="docutils literal notranslate"><span class="pre">6.66</span> <span class="pre">Dai/Eth</span></code>.</p>
+<p>Someone with a mempool bot may see this high impact trade you’re about to make, and decide to sandwich you. They take the exact same trade and execute it before you in the block, at your expected exchange rate. Remember, when this trade executes the bool re-balances and your next transaction would therefore be at a different rate than what you’re expecting. After this transaction, the pool contains <code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">Eth</span> <span class="pre">&amp;</span> <span class="pre">66.67</span> <span class="pre">Dai</span></code>.</p>
+<dl class="simple">
+<dt>When your transaction goes to be executed, you then get the following exchange:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">Ether</span> <span class="pre">-&gt;</span> <span class="pre">16.67</span> <span class="pre">Dai</span></code> or <code class="docutils literal notranslate"><span class="pre">3.334</span> <span class="pre">Dai/Eth</span></code>. This is because after your transaction occurs the pool would contain <code class="docutils literal notranslate"><span class="pre">20</span> <span class="pre">Eth</span> <span class="pre">&amp;</span> <span class="pre">50</span> <span class="pre">Dai</span></code> because <code class="docutils literal notranslate"><span class="pre">20</span> <span class="pre">*</span> <span class="pre">50</span> <span class="pre">=</span> <span class="pre">1,000</span></code>. Therefore you’ve seen basically <code class="docutils literal notranslate"><span class="pre">~50%</span> <span class="pre">slippage</span></code>, a <code class="docutils literal notranslate"><span class="pre">50%</span></code> change in your expected value, and your real value.</p>
+</dd>
+</dl>
+<p>Now, with both transaction executed, this pool is lopsided to Eth, with the price pushed down. The current exchange rate now looks like <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Dai</span> <span class="pre">=</span> <span class="pre">0.4</span> <span class="pre">Eth</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Eth</span> <span class="pre">=</span> <span class="pre">2.5</span> <span class="pre">Dai</span></code>. This has created an arbitrage opportunity for anyone holding Dai to bring the price back to equilibrium. The attacker who sandwiches you then sells their bought Dai back to the pool for Eth. They get the following exchange.</p>
+<p><code class="docutils literal notranslate"><span class="pre">33.33</span> <span class="pre">Dai</span> <span class="pre">-&gt;</span> <span class="pre">8</span> <span class="pre">Eth</span></code>. This is because the pool after the sale contains <code class="docutils literal notranslate"><span class="pre">83.33</span> <span class="pre">Dai</span> <span class="pre">*</span> <span class="pre">12</span> <span class="pre">Eth</span></code>. Remember that the constant product must be <code class="docutils literal notranslate"><span class="pre">1000</span></code>, so with a little bit of algebra we know that <code class="docutils literal notranslate"><span class="pre">1000/83.33</span> <span class="pre">=</span> <span class="pre">12</span></code> and <code class="docutils literal notranslate"><span class="pre">20-12</span> <span class="pre">=</span> <span class="pre">8</span></code>, so the attacker now has <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">Eth</span></code>. They got an exchange rate of <code class="docutils literal notranslate"><span class="pre">4.16</span> <span class="pre">Eth/Dai</span></code>. Now the attacker has <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">Eth</span></code>, instead of the <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">Eth</span></code> he started with, for a <strong>60% Profit</strong>.</p>
+<p>Now, this maneuver can be quite expensive in terms of gas, conducting 2 Uniswap transactions rapidly, as well as unpredictable. This is where it gets interesting. The people conducting these maneuvers are <em>colluding</em> with the miners, to allow them to do it. This only works if you can convince the miner mining the block to order your transactions accordingly. This is a difficult and near impossible task to do by guessing gas prices. These flash traders will collude with the block miner to order transactions accordingly, promising part of the profit if they comply. This is known as <strong>miner extractable value</strong>. The flash traders may submit transactions with low, or even <em>0, gas</em>. If they expect to profit <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">Ether</span></code> off the transaction, they may promise and give the miner <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">Ether</span></code>, or something else high value. This value would be higher than the transaction-fee they get from a regular transaction, and thus make it way more profitable to play-ball with the flash traders.</p>
+<p>There are many <a class="reference external" href="https://forum.openzeppelin.com/t/protecting-against-front-running-and-transaction-reordering/1314">proposed solutions</a> to this problem. It can also help to break up your transactions into smaller chunks, to prevent being front-run.</p>
+</section>
+<section id="final-thoughts">
+<h2>Final thoughts<a class="headerlink" href="#final-thoughts" title="Permalink to this headline"></a></h2>
+<p>Uniswap also has a governance token, <a class="reference external" href="https://coinmarketcap.com/currencies/uniswap/">$UNI</a>, used to initiate changes to the protocol. It is available on most major exchanges.</p>
+<p>Uniswap is an integral part of the DeFi and ethereum platform. Without it there would be no way to swap the millions of tokens circulating in a decentralized way. It currently is the <a class="reference external" href="https://etherscan.io/gastracker">single-largest consumer of gas</a> Dapp, with no near competition.</p>
+<p>This has been a detailed primer on everything you need to know about Uniswap. I didn’t even cover topics such as <a class="reference external" href="https://academy.binance.com/en/articles/impermanent-loss-explained">Impermanent Loss</a>, <a class="reference external" href="https://sushi.com/">Sushiswap</a>, <a class="reference external" href="https://www.coindesk.com/defi-yield-farming-comp-token-explained">yield farming</a>, etc. I may write more articles on those topics later, if I feel I need to, or there’s a community desire to read them.</p>
+<p>I hope you enjoyed this detailed explanation. If you did, please consider donating, to help me be able to continue writing.</p>
+<p>Ether &amp; Token Address: <strong>0xaB5409b0E5a66AcC9D63f668414539A60a5917C1</strong></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../investment-strategies/staking.html" class="btn btn-neutral float-left" title="Mining and Staking" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="daos.html" class="btn btn-neutral float-right" title="Decentralized Governance and DAO’s" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Josh Weintraub.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196042419-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-196042419-1', {
+          'anonymize_ip': true,
+      });
+    </script> 
+
+</body>
+</html>
